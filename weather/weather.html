@@ -1,38 +1,84 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>A Geolocated Tale</title>
-<script src="modernizr.js"></script>
-<script src="geolocation-story.js"></script>
-<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-<style media="screen" type="text/css">
-body {
- margin: 10px 5px 10px 5px;
-}
 
-em {
- font-weight: bold;
- font-style: normal;
- color: red;
-}
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Find User Location using HTML5 Geolocation..and Google Geocode for address - jsFiddle demo</title>
+  
+  <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type='text/css'>
+    
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+$(window).load(function(){
+var userLocation = (function() {
+
+    return {
+
+        init: function() {
+            this.getLocation();
+        },
+
+        getLocation: function() {
+            var self = this;
+            navigator.geolocation.getCurrentPosition(self.geocodeLocation, self.printError);
+        },
+
+        geocodeLocation: function(loc) {
+            var self = userLocation;
+            self.position = {
+                lat: loc.coords.latitude,
+                long: loc.coords.longitude
+            }
+            self.geocoder = new google.maps.Geocoder();
+
+            var currentLocation = new google.maps.LatLng(self.position.lat, self.position.long);
+
+            self.geocoder.geocode({
+                'latLng': currentLocation
+            }, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    self.address = results[2].formatted_address;
+                    self.printLocation();
+                }
+            });
+        },
+
+        printLocation: function() {
+            var self = userLocation;
+            $('#results').append('Estimated address: ' + self.address + '<br>Estimated latlng: ' + self.position.lat + ', ' + self.position.long);
+        },
+
+        printError: function() {
+            $('#results').append('No location found');
+        }
+    };
+
+}());
+
+$(document).ready(function() {
+    userLocation.init();
+});
+});//]]>  
+
+</script>
+
+
 </head>
 <body>
-<h1>A Geolocated Tale</h1>
-<p>It was your typical <em id="weather_temp">LOADING
- TEMPERATURE</em>&#xb0;F day in <em id="city">LOADING CITY NAME</em> when
-Muffin Bukowski was roused from decadent slumber by the
-ear-throttling shriek of an unidentified avian trespassing on the
-grounds of her otherwise-serene home, clearly violating Section I,
-Article 246 of her condo documents.</p>
-
-<p>Groggily stumbling to her bedroom window, Muffin peered
-through the pristine glass out at <em id="street_address">LOADING STREET
-NAME</em>.</p>
-
-<p>&#8220;Are my eyes deceiving me?&#8221; Muffin muttered as she lightly
-  rapped her knuckles against her forehead, unable to process the
-  miraculous scene unfolding before her...</p> 
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;region=US&amp;language=en"></script>
+<div id="results"></div>
+  
 </body>
+
+
 </html>

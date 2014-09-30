@@ -1,0 +1,1570 @@
+/*-----------------------------------------------------------------------------
+[client]            Compiled Style Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Sprites Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 18, ../sass/partials/_sprites.scss */
+.icon {
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -9999px;
+  color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* line 27, ../sass/partials/_sprites.scss */
+p .icon {
+  vertical-align: middle;
+}
+
+/* line 33, ../sass/partials/_sprites.scss */
+.icon.logo-trusted {
+  width: 255px;
+  height: 48px;
+  background-image: url('../sass/images/logo-trusted.png?1402411217');
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Mixins Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Settings Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Structure Stylesheet (custom structure that Grid wont cover)
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 9, ../sass/partials/_scaffolding.scss */
+.container {
+  max-width: 950px;
+  max-width: 95rem;
+}
+
+/* line 15, ../sass/partials/_scaffolding.scss */
+#header .logo-trusted {
+  margin-top: 20px;
+  margin-top: 2rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+}
+/* line 18, ../sass/partials/_scaffolding.scss */
+#header .search {
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 20px;
+  padding-right: 2rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 20px;
+  padding-left: 2rem;
+}
+/* line 22, ../sass/partials/_scaffolding.scss */
+#header #login-navbar {
+  padding-top: 30px;
+  padding-top: 3rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+}
+
+/* line 28, ../sass/partials/_scaffolding.scss */
+#content .content-header {
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 20px;
+  padding-right: 2rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 20px;
+  padding-left: 2rem;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+/* line 37, ../sass/partials/_scaffolding.scss */
+#content .content-header .page-title {
+  font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  line-height: 24px;
+  margin: 0;
+}
+/* line 44, ../sass/partials/_scaffolding.scss */
+#content .content-header .page-title small {
+  font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+  font-size: 11px;
+  font-size: 1.1rem;
+  padding-left: 20px;
+}
+/* line 52, ../sass/partials/_scaffolding.scss */
+#content .content-body {
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 20px;
+  padding-right: 2rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 20px;
+  padding-left: 2rem;
+  border: 1px solid;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+}
+/* line 64, ../sass/partials/_scaffolding.scss */
+#content .content-body.end {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+/* line 74, ../sass/partials/_scaffolding.scss */
+#content .content-body .nav-tabs li a {
+  border-radius: 0;
+}
+/* line 79, ../sass/partials/_scaffolding.scss */
+#content .content-body .tab-content {
+  border-radius: 0;
+}
+/* line 82, ../sass/partials/_scaffolding.scss */
+#content .content-body .content {
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 20px;
+  padding-right: 2rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 20px;
+  padding-left: 2rem;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  border: 1px solid;
+}
+
+/* line 99, ../sass/partials/_scaffolding.scss */
+#footer aside {
+  font-weight: bold;
+  font-size: 12px;
+  font-size: 1.2rem;
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+}
+/* line 104, ../sass/partials/_scaffolding.scss */
+#footer aside .btn-toolbar {
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+}
+/* line 107, ../sass/partials/_scaffolding.scss */
+#footer aside .btn-toolbar .btn {
+  margin-left: 30px;
+}
+/* line 113, ../sass/partials/_scaffolding.scss */
+#footer #copyright {
+  text-align: center;
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+}
+/* line 116, ../sass/partials/_scaffolding.scss */
+#footer #copyright small {
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Font-Face Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+@font-face {
+  font-family: "GothamHTF-Black";
+  src: url('../sass/fonts/GothamHTF-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "GothamHTF-Bold";
+  src: url('../sass/fonts/GothamHTF-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "GothamHTF-Book";
+  src: url('../sass/fonts/GothamHTF-Book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "GothamHTF-Light";
+  src: url('../sass/fonts/GothamHTF-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "GothamHTF-Medium";
+  src: url('../sass/fonts/GothamHTF-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "GothamHTF-Thin";
+  src: url('../sass/fonts/GothamHTF-Thin.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "GothamHTF-Ultra";
+  src: url('../sass/fonts/GothamHTF-Ultra.otf') format('opentype');
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Typography Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 9, ../sass/partials/_typography.scss */
+body {
+  font-size: 10pxpx;
+  font-size: 1pxrem;
+  font-family: "GothamHTF-Book", arial, helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 10px;
+  color: #333333;
+}
+
+/* line 18, ../sass/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+}
+/* line 23, ../sass/partials/_typography.scss */
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: #ffffff;
+}
+/* line 25, ../sass/partials/_typography.scss */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+}
+/* line 26, ../sass/partials/_typography.scss */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  text-decoration: underline;
+}
+
+/* line 29, ../sass/partials/_typography.scss */
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+}
+
+/* line 31, ../sass/partials/_typography.scss */
+h1, .h1 {
+  font-size: 23px;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+/* line 37, ../sass/partials/_typography.scss */
+h1 small, .h1 small {
+  font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+
+/* line 43, ../sass/partials/_typography.scss */
+h2, .h2 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+/* line 48, ../sass/partials/_typography.scss */
+h3, .h3 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+/* line 53, ../sass/partials/_typography.scss */
+h4, .h4 {
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+/* line 57, ../sass/partials/_typography.scss */
+h5, .h5 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+/* line 61, ../sass/partials/_typography.scss */
+h6, .h6 {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+/* line 65, ../sass/partials/_typography.scss */
+p, ul, ol, dl, address {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+}
+
+/* line 71, ../sass/partials/_typography.scss */
+dl dt, dl dd {
+  display: inline-block;
+}
+/* line 74, ../sass/partials/_typography.scss */
+dl dt {
+  font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+  color: #333333;
+}
+
+/* line 81, ../sass/partials/_typography.scss */
+strong {
+  font-weight: bold;
+  font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+}
+
+/* line 87, ../sass/partials/_typography.scss */
+small,
+.small {
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 22px;
+  line-height: 2.2rem;
+}
+
+/* line 93, ../sass/partials/_typography.scss */
+big,
+.big {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* line 97, ../sass/partials/_typography.scss */
+*:focus {
+  outline: none;
+}
+
+/* line 101, ../sass/partials/_typography.scss */
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+/* line 102, ../sass/partials/_typography.scss */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* line 103, ../sass/partials/_typography.scss */
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Links Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 9, ../sass/partials/_links.scss */
+a {
+  text-decoration: none;
+  line-height: inherit;
+}
+/* line 12, ../sass/partials/_links.scss */
+a:hover {
+  outline: none;
+  text-decoration: underline;
+}
+/* line 16, ../sass/partials/_links.scss */
+a:focus {
+  outline: none;
+}
+
+/* line 21, ../sass/partials/_links.scss */
+p a, p a:visited {
+  line-height: inherit;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Button Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 10, ../sass/partials/_buttons.scss */
+button,
+.btn {
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+/* line 13, ../sass/partials/_buttons.scss */
+button:hover,
+.btn:hover {
+  outline: none;
+}
+/* line 16, ../sass/partials/_buttons.scss */
+button:focus,
+.btn:focus {
+  outline: none;
+}
+
+/* line 22, ../sass/partials/_buttons.scss */
+p .btn,
+p button {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* line 27, ../sass/partials/_buttons.scss */
+.btn-save {
+  background-color: #1D80C1;
+  color: #ffffff;
+}
+/* line 30, ../sass/partials/_buttons.scss */
+.btn-save:hover {
+  background-color: #186AA0;
+  color: #ffffff;
+}
+
+/* line 36, ../sass/partials/_buttons.scss */
+.btn-cancel {
+  background-color: #939393;
+  color: #ffffff;
+}
+/* line 39, ../sass/partials/_buttons.scss */
+.btn-cancel:hover {
+  background-color: #7B7B7B;
+  color: #ffffff;
+}
+
+/* line 45, ../sass/partials/_buttons.scss */
+.btn-verify {
+  background-color: #FF0000;
+  color: #ffffff;
+}
+/* line 48, ../sass/partials/_buttons.scss */
+.btn-verify:hover {
+  background-color: #CE0606;
+  color: #ffffff;
+}
+
+/* line 54, ../sass/partials/_buttons.scss */
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: .428571429;
+  border-radius: 50%;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Tables Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Lists Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 9, ../sass/partials/_lists.scss */
+.chevron {
+  padding-left: 20px;
+  list-style: none;
+}
+/* line 14, ../sass/partials/_lists.scss */
+.chevron li:before, .chevron dt:before {
+  font-family: 'FontAwesome';
+  content: '\f054';
+  margin: 0 5px 0 -15px;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Forms Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 10, ../sass/partials/_forms.scss */
+form h2 {
+  padding-top: 10px;
+  padding-top: 1rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 10px;
+  padding-bottom: 1rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  border-bottom: 2px solid;
+}
+
+/* line 19, ../sass/partials/_forms.scss */
+input.form-control,
+textarea.form-control,
+label {
+  padding-top: 10px;
+  padding-top: 1rem;
+  padding-right: 10px;
+  padding-right: 1rem;
+  padding-bottom: 10px;
+  padding-bottom: 1rem;
+  padding-left: 10px;
+  padding-left: 1rem;
+  border: 1px solid;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 12px;
+  line-height: 1.2rem;
+  resize: none;
+}
+
+/* line 28, ../sass/partials/_forms.scss */
+.form-control.datepicker:after {
+  font-family: 'FontAwesome' !important;
+  content: '\f073';
+  margin: 0 5px 0 -15px;
+  float: right;
+}
+/* line 34, ../sass/partials/_forms.scss */
+.form-control.small {
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-right: 50px;
+  padding-right: 5rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 5px;
+  padding-left: 0.5rem;
+  height: auto;
+}
+
+/* line 40, ../sass/partials/_forms.scss */
+label {
+  border: none;
+}
+
+/* line 44, ../sass/partials/_forms.scss */
+select.form-control {
+  -webkit-appearance: none;
+  background: url('../sass/images/chevron-down.png?1403634463') no-repeat right center white;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+/* line 51, ../sass/partials/_forms.scss */
+select.form-control.display-inline {
+  padding-right: 45px;
+}
+
+/* line 57, ../sass/partials/_forms.scss */
+.has-feedback .form-control-feedback {
+  top: 0;
+  font-size: 20px;
+  font-size: 2rem;
+}
+/* line 61, ../sass/partials/_forms.scss */
+.has-feedback .form-control-feedback.fa-asterisk {
+  font-size: 10px;
+  font-size: 1rem;
+}
+
+/* line 77, ../sass/partials/_forms.scss */
+.search .form-control {
+  display: inline-block;
+  font-size: 9px;
+  font-size: 0.9rem;
+  width: 275px;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+/* line 89, ../sass/partials/_forms.scss */
+.search .btn {
+  display: inline-block;
+  color: #8c8c8c;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+  margin-left: -4px;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Navigation Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 9, ../sass/partials/_navigation.scss */
+.navbar-toggle {
+  float: left;
+  padding-top: 15px;
+  padding-top: 1.5rem;
+  padding-right: 15px;
+  padding-right: 1.5rem;
+  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
+  padding-left: 15px;
+  padding-left: 1.5rem;
+  margin-top: 15px;
+  margin-top: 1.5rem;
+  margin-right: 20px;
+  margin-right: 2rem;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  margin-left: 30px;
+  margin-left: 3rem;
+}
+
+/* line 15, ../sass/partials/_navigation.scss */
+.navbar-collapse {
+  max-height: none;
+}
+
+/* line 19, ../sass/partials/_navigation.scss */
+.navbar-nav > li > a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* line 24, ../sass/partials/_navigation.scss */
+.nav {
+  margin: 0;
+}
+/* line 28, ../sass/partials/_navigation.scss */
+.nav > li > a:hover {
+  outline: none;
+}
+/* line 32, ../sass/partials/_navigation.scss */
+.nav > li > a:focus {
+  outline: none;
+}
+
+/* line 39, ../sass/partials/_navigation.scss */
+#header-navbar {
+  border: 1px solid;
+}
+/* line 42, ../sass/partials/_navigation.scss */
+#header-navbar .nav {
+  font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+}
+/* line 45, ../sass/partials/_navigation.scss */
+#header-navbar .nav li {
+  border-left: 1px solid;
+}
+/* line 48, ../sass/partials/_navigation.scss */
+#header-navbar .nav li:last-child {
+  border-right: 1px solid;
+}
+/* line 51, ../sass/partials/_navigation.scss */
+#header-navbar .nav li a {
+  font-size: 13px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+}
+/* line 62, ../sass/partials/_navigation.scss */
+#header-navbar .nav li a .fa {
+  font-size: 9px;
+  font-size: 0.9rem;
+}
+/* line 67, ../sass/partials/_navigation.scss */
+#header-navbar .nav li .dropdown-menu {
+  padding: 0;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  margin-left: -1px;
+  margin-left: -0.1rem;
+}
+/* line 70, ../sass/partials/_navigation.scss */
+#header-navbar .nav li .dropdown-menu li {
+  border-bottom: 1px solid;
+}
+/* line 72, ../sass/partials/_navigation.scss */
+#header-navbar .nav li .dropdown-menu li a {
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 10px;
+  padding-right: 1rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 30px;
+  padding-left: 3rem;
+}
+@media (max-width: 768px) {
+  /* line 91, ../sass/partials/_navigation.scss */
+  #header-navbar .nav-justified > li > a {
+    font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+    font-size: 24px;
+    font-size: 2.4rem;
+    text-align: left;
+    padding-top: 30px;
+    padding-top: 3rem;
+    padding-right: 35px;
+    padding-right: 3.5rem;
+    padding-bottom: 30px;
+    padding-bottom: 3rem;
+    padding-left: 35px;
+    padding-left: 3.5rem;
+    border: 1px solid;
+    margin-bottom: 0;
+  }
+  /* line 100, ../sass/partials/_navigation.scss */
+  #header-navbar .nav-justified > li > a .fa.fa-chevron-down {
+    font-size: 24px;
+    font-size: 2.4rem;
+    float: right;
+  }
+  /* line 108, ../sass/partials/_navigation.scss */
+  #header-navbar .dropdown-menu {
+    position: static;
+    float: none;
+  }
+  /* line 112, ../sass/partials/_navigation.scss */
+  #header-navbar .dropdown-menu > li > a {
+    font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+    font-size: 24px;
+    font-size: 2.4rem;
+    text-indent: 65px;
+  }
+}
+
+/* line 126, ../sass/partials/_navigation.scss */
+#footer-navbar .nav {
+  font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+}
+/* line 130, ../sass/partials/_navigation.scss */
+#footer-navbar .nav li a {
+  text-transform: uppercase;
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+}
+/* line 133, ../sass/partials/_navigation.scss */
+#footer-navbar .nav li a:hover {
+  background: none;
+}
+/* line 136, ../sass/partials/_navigation.scss */
+#footer-navbar .nav li a:focus {
+  background: none;
+}
+/* line 146, ../sass/partials/_navigation.scss */
+#footer-navbar .nav li.dropup a.dropdown-toggle .triangle {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 15px 10px 0px 10px;
+}
+/* line 159, ../sass/partials/_navigation.scss */
+#footer-navbar .nav li.dropup ul.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+/* line 166, ../sass/partials/_navigation.scss */
+#footer-navbar .nav li.dropup ul.dropdown-menu li {
+  border-top: 1px solid;
+}
+/* line 169, ../sass/partials/_navigation.scss */
+#footer-navbar .nav li.dropup ul.dropdown-menu li a {
+  padding-top: 15px;
+  padding-top: 1.5rem;
+  padding-right: 20px;
+  padding-right: 2rem;
+  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
+  padding-left: 20px;
+  padding-left: 2rem;
+  font-family: "GothamHTF-Book", arial, helvetica, sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+/* line 185, ../sass/partials/_navigation.scss */
+#footer-navbar .nav li.dropup.open a.dropdown-toggle .triangle {
+  display: block;
+}
+/* line 189, ../sass/partials/_navigation.scss */
+#footer-navbar .nav li.dropup.open > a {
+  background: none;
+}
+
+/* line 197, ../sass/partials/_navigation.scss */
+#login-navbar {
+  font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+}
+/* line 200, ../sass/partials/_navigation.scss */
+#login-navbar li {
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 20px;
+  padding-left: 2rem;
+}
+/* line 203, ../sass/partials/_navigation.scss */
+#login-navbar li a {
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+/* line 206, ../sass/partials/_navigation.scss */
+#login-navbar li a:hover {
+  background: none;
+}
+/* line 210, ../sass/partials/_navigation.scss */
+#login-navbar li a:focus {
+  background: none;
+}
+/* line 214, ../sass/partials/_navigation.scss */
+#login-navbar li a .fa {
+  font-size: 9px;
+  font-size: 0.9rem;
+}
+/* line 234, ../sass/partials/_navigation.scss */
+#login-navbar li li {
+  padding: 0;
+}
+@media (max-width: 768px) {
+  /* line 242, ../sass/partials/_navigation.scss */
+  #login-navbar > li > a {
+    font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+    font-size: 24px;
+    font-size: 2.4rem;
+    text-align: left;
+    padding-top: 30px;
+    padding-top: 3rem;
+    padding-right: 35px;
+    padding-right: 3.5rem;
+    padding-bottom: 30px;
+    padding-bottom: 3rem;
+    padding-left: 35px;
+    padding-left: 3.5rem;
+    border: 1px solid;
+    margin-bottom: 0;
+  }
+  /* line 251, ../sass/partials/_navigation.scss */
+  #login-navbar > li > a .fa.fa-chevron-down {
+    font-size: 24px;
+    font-size: 2.4rem;
+    float: right;
+  }
+  /* line 257, ../sass/partials/_navigation.scss */
+  #login-navbar .dropdown-menu {
+    position: static;
+    float: none;
+  }
+  /* line 261, ../sass/partials/_navigation.scss */
+  #login-navbar .dropdown-menu > li > a {
+    font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+    font-size: 24px;
+    font-size: 2.4rem;
+    text-indent: 65px;
+  }
+}
+
+/* line 272, ../sass/partials/_navigation.scss */
+#user-navbar {
+  text-transform: uppercase;
+  font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+}
+/* line 277, ../sass/partials/_navigation.scss */
+#user-navbar li a {
+  font-size: 9px;
+  font-size: 0.9rem;
+}
+/* line 280, ../sass/partials/_navigation.scss */
+#user-navbar li a:hover {
+  font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+  background: none;
+}
+/* line 285, ../sass/partials/_navigation.scss */
+#user-navbar li a:focus {
+  font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+  background: none;
+}
+@media (max-width: 768px) {
+  /* line 293, ../sass/partials/_navigation.scss */
+  #user-navbar .nav-justified > li > a {
+    font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+    font-size: 24px;
+    font-size: 2.4rem;
+    text-align: left;
+    padding-top: 30px;
+    padding-top: 3rem;
+    padding-right: 35px;
+    padding-right: 3.5rem;
+    padding-bottom: 30px;
+    padding-bottom: 3rem;
+    padding-left: 35px;
+    padding-left: 3.5rem;
+    border: 1px solid;
+    margin-bottom: 0;
+  }
+  /* line 302, ../sass/partials/_navigation.scss */
+  #user-navbar .nav-justified > li > a .fa.fa-chevron-down {
+    font-size: 24px;
+    font-size: 2.4rem;
+    float: right;
+  }
+  /* line 308, ../sass/partials/_navigation.scss */
+  #user-navbar .dropdown-menu {
+    position: static;
+    float: none;
+  }
+  /* line 312, ../sass/partials/_navigation.scss */
+  #user-navbar .dropdown-menu > li > a {
+    font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+    font-size: 24px;
+    font-size: 2.4rem;
+    text-indent: 65px;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Menu Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Wells Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 9, ../sass/modules/_wells.scss */
+.well {
+  text-transform: uppercase;
+  box-shadow: none;
+}
+/* line 13, ../sass/modules/_wells.scss */
+.well h1 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+/* line 17, ../sass/modules/_wells.scss */
+.well.well-lg {
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 100px;
+  padding-right: 10rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 50px;
+  padding-left: 5rem;
+}
+/* line 29, ../sass/modules/_wells.scss */
+.well.etitle .thumbnail {
+  max-width: 130px;
+  border-radius: 0;
+  margin: 20px auto;
+}
+/* line 34, ../sass/modules/_wells.scss */
+.well.etitle .well-content {
+  min-height: 180px;
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 20px;
+  padding-right: 2rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 20px;
+  padding-left: 2rem;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Alerts Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 9, ../sass/modules/_alerts.scss */
+.alert {
+  position: relative;
+  font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 12px;
+  line-height: 1.2rem;
+  padding-top: 15px;
+  padding-top: 1.5rem;
+  padding-right: 20px;
+  padding-right: 2rem;
+  padding-bottom: 15px;
+  padding-bottom: 1.5rem;
+  padding-left: 20px;
+  padding-left: 2rem;
+}
+/* line 18, ../sass/modules/_alerts.scss */
+.alert .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 1;
+}
+/* line 25, ../sass/modules/_alerts.scss */
+.alert .close:hover, .alert .close:focus {
+  outline: none;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Tabs Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 10, ../sass/modules/_tabs.scss */
+.nav-tabs li {
+  text-transform: uppercase;
+}
+
+/* line 15, ../sass/modules/_tabs.scss */
+.tab-content {
+  padding-top: 20px;
+  padding-top: 2rem;
+  padding-right: 20px;
+  padding-right: 2rem;
+  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  padding-left: 20px;
+  padding-left: 2rem;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+/* line 27, ../sass/modules/_tabs.scss */
+.tab-content.end {
+  border-top-width: 1px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Breadcrumbs Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 9, ../sass/modules/_breadcrumbs.scss */
+.breadcrumbs {
+  font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
+  text-transform: uppercase;
+}
+/* line 12, ../sass/modules/_breadcrumbs.scss */
+.breadcrumbs li:after {
+  font-family: 'FontAwesome';
+  content: '\f054';
+  margin: 0 0 0 10px;
+}
+/* line 18, ../sass/modules/_breadcrumbs.scss */
+.breadcrumbs li:last-child:after {
+  content: none;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Theme Structure Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 9, ../sass/modules/_comment-count.scss */
+.comment-count {
+  position: relative;
+  font-size: 10px;
+  font-size: 1rem;
+  padding-top: 1px;
+  padding-top: 0.1rem;
+  padding-right: 2px;
+  padding-right: 0.2rem;
+  padding-bottom: 1px;
+  padding-bottom: 0.1rem;
+  padding-left: 2px;
+  padding-left: 0.2rem;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  margin-left: 2px;
+  margin-left: 0.2rem;
+}
+/* line 15, ../sass/modules/_comment-count.scss */
+.comment-count span {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 0px;
+}
+
+@media (max-width: 768px) {
+  /* line 27, ../sass/modules/_comment-count.scss */
+  .comment-count {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+}
+/*-----------------------------------------------------------------------------
+[client]            eTitle Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 8, ../sass/modules/_etitle.scss */
+.etitle {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+/* line 18, ../sass/modules/_etitle.scss */
+section.detail h1, section.detail h2, section.detail h3, section.detail h4, section.detail h5, section.detail h6 {
+  border-bottom: 4px solid #000000;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  /* line 24, ../sass/modules/_etitle.scss */
+  section.detail h1:after, section.detail h2:after, section.detail h3:after, section.detail h4:after, section.detail h5:after, section.detail h6:after {
+    font-family: 'FontAwesome';
+    content: '\f054';
+    float: right;
+  }
+  /* line 29, ../sass/modules/_etitle.scss */
+  section.detail h1.open:after, section.detail h2.open:after, section.detail h3.open:after, section.detail h4.open:after, section.detail h5.open:after, section.detail h6.open:after {
+    font-family: 'FontAwesome';
+    content: '\f078';
+  }
+}
+/* line 36, ../sass/modules/_etitle.scss */
+section.detail .collapse {
+  display: block;
+}
+@media (max-width: 768px) {
+  /* line 38, ../sass/modules/_etitle.scss */
+  section.detail .collapse {
+    display: none;
+  }
+  /* line 40, ../sass/modules/_etitle.scss */
+  section.detail .collapse.in {
+    display: block;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Modals Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Accordions Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 11, ../sass/modules/_accordions.scss */
+.accordion .title:after {
+  font-family: 'FontAwesome';
+  content: '\f054';
+}
+/* line 15, ../sass/modules/_accordions.scss */
+.accordion .title.open:after {
+  font-family: 'FontAwesome';
+  content: '\f078';
+}
+/* line 20, ../sass/modules/_accordions.scss */
+.accordion a.title {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Helper classesStylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/* line 10, ../sass/partials/_helpers.scss */
+.display-inline {
+  display: inline;
+  width: auto;
+}
+
+/* line 11, ../sass/partials/_helpers.scss */
+.display-block {
+  display: block;
+  width: 100%;
+}
+
+/* line 14, ../sass/partials/_helpers.scss */
+.no-padding, .well.etitle {
+  padding: 0 !important;
+}
+
+/* line 15, ../sass/partials/_helpers.scss */
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+/* line 16, ../sass/partials/_helpers.scss */
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+/* line 18, ../sass/partials/_helpers.scss */
+.no-margin {
+  margin: 0 !important;
+}
+
+/* line 20, ../sass/partials/_helpers.scss */
+.fluff {
+  padding-top: 80px;
+  padding-top: 8rem;
+  padding-right: 80px;
+  padding-right: 8rem;
+  padding-bottom: 80px;
+  padding-bottom: 8rem;
+  padding-left: 80px;
+  padding-left: 8rem;
+}
+@media (max-width: 768px) {
+  /* line 20, ../sass/partials/_helpers.scss */
+  .fluff {
+    padding: 15px;
+  }
+}
+
+/* line 21, ../sass/partials/_helpers.scss */
+.fluff-left {
+  padding-left: 80px;
+}
+@media (max-width: 768px) {
+  /* line 21, ../sass/partials/_helpers.scss */
+  .fluff-left {
+    padding-left: 15px;
+  }
+}
+
+/* line 22, ../sass/partials/_helpers.scss */
+.fluff-right {
+  padding-right: 80px;
+}
+@media (max-width: 768px) {
+  /* line 22, ../sass/partials/_helpers.scss */
+  .fluff-right {
+    padding-right: 15px;
+  }
+}
+
+/* line 25, ../sass/partials/_helpers.scss */
+.border-top {
+  border-top: 1px solid;
+}
+@media (max-width: 768px) {
+  /* line 25, ../sass/partials/_helpers.scss */
+  .border-top {
+    border: none;
+  }
+}
+
+/* line 26, ../sass/partials/_helpers.scss */
+.border-bottom, section.detail {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+}
+@media (max-width: 768px) {
+  /* line 26, ../sass/partials/_helpers.scss */
+  .border-bottom, section.detail {
+    border: none;
+  }
+}
+
+/* line 27, ../sass/partials/_helpers.scss */
+.border-right {
+  border-right: 1px solid;
+}
+@media (max-width: 768px) {
+  /* line 27, ../sass/partials/_helpers.scss */
+  .border-right {
+    border: none;
+  }
+}
+
+/* line 28, ../sass/partials/_helpers.scss */
+.border-left {
+  border-left: 1px solid;
+}
+@media (max-width: 768px) {
+  /* line 28, ../sass/partials/_helpers.scss */
+  .border-left {
+    border: none;
+  }
+}
+
+/*-----------------------------------------------------------------------------
+[client]            Print Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Screen Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Screen 960 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Screen 720 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Screen 640 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Screen 480 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Screen 320 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Mobile Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Mobile 960 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Mobile 720 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Mobile 640 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Mobile 480 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            Mobile 320 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            IE6 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            IE 7 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            IE8 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+[client]            IE9 Stylesheet
+
+author:             Michael Guild
+email:              michaelguild13@gmail.com
+website:            http://michaelguild13.wordpress.com/
+-----------------------------------------------------------------------------*/
