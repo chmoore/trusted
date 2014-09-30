@@ -1418,7 +1418,6 @@ website:            http://michaelguild13.wordpress.com/
 .border-bottom, section.detail {
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: 1px solid;
 }
 @media (max-width: 768px) {
   /* line 26, ../sass/partials/_helpers.scss */
