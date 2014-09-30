@@ -287,8 +287,8 @@ body {
   font-size: 10pxpx;
   font-size: 1pxrem;
   font-family: "GothamHTF-Book", arial, helvetica, sans-serif;
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 14px;
+  line-height: 18px;
   color: #333333;
 }
 
@@ -366,9 +366,9 @@ h6, .h6 {
 /* line 65, ../sass/partials/_typography.scss */
 p, ul, ol, dl, address {
   font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 24px;
-  line-height: 2.4rem;
+  line-height: 3.2rem;
 }
 
 /* line 71, ../sass/partials/_typography.scss */
