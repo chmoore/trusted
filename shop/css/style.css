@@ -381,6 +381,11 @@ dl dt {
   color: #333333;
 }
 
+ul
+{
+list-style-type: none;
+}
+
 /* line 81, ../sass/partials/_typography.scss */
 strong {
   font-weight: bold;
