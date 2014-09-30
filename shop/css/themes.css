@@ -87,7 +87,7 @@ body.trusted-default-theme #content .content-header {
 /* line 85, ../sass/themes/_theme.scss */
 body.trusted-default-theme #content .content-body {
   background-color: #FFF;
-  border-color: #939393;
+  border-color: #FFF;
 }
 /* line 89, ../sass/themes/_theme.scss */
 body.trusted-default-theme #content .content-body .content {
