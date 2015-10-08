@@ -670,7 +670,7 @@
 /* =Widgets default
    ========================================================================== */
 	
-	.widget { margin-bottom: 60px; }
+	.widget { margin-bottom: 10px; }
 	
 	/**
 	 * 1. The last element of every widget shouldn't have a margin bottom. used for spacing purposes
@@ -681,11 +681,11 @@
 	}
 	
 	#footer .widget:first-child,
-	#footer-bottom .widget:first-child { padding-top: 70px; }
+	#footer-bottom .widget:first-child { padding-top: 0px; }
 	
 	#footer .widget:last-child,
 	#footer-bottom .widget:last-child { 
-		padding-bottom: 70px;
+		padding-bottom: 0px;
 		margin-bottom: 0;
 	}
 	
@@ -1166,10 +1166,12 @@
 		display: inline-block;
 		width: 50%;
 		height: 45px;
-		border: 1px solid #232323;
+/*		border: 1px solid #232323;*/
 		border-radius: 20px;
 		margin-right: 20px;
 		margin-bottom: 0;
+		padding-left:20px;
+		color: #e1e1e1!important;
 	}
 	
 	#newsletter-subscribe-form input[type="submit"] {
