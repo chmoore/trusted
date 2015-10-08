@@ -1,0 +1,863 @@
+
+@font-face {
+    font-family: 'gotham_htfbold';
+    src: url('../fonts/gotham/gothamhtf-bold-webfont.eot');
+    src: url('../fonts/gotham/gothamhtf-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham/gothamhtf-bold-webfont.woff2') format('woff2'),
+         url('../fonts/gotham/gothamhtf-bold-webfont.woff') format('woff'),
+         url('../fonts/gotham/gothamhtf-bold-webfont.ttf') format('truetype'),
+         url('../fonts/gotham/gothamhtf-bold-webfont.svg#gotham_htfbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'gotham_htfbook';
+    src: url('../fonts/gotham/gothamhtf-book-webfont.eot');
+    src: url('../fonts/gotham/gothamhtf-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham/gothamhtf-book-webfont.woff2') format('woff2'),
+         url('../fonts/gotham/gothamhtf-book-webfont.woff') format('woff'),
+         url('../fonts/gotham/gothamhtf-book-webfont.ttf') format('truetype'),
+         url('../fonts/gotham/gothamhtf-book-webfont.svg#gotham_htfbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'gotham_htflight';
+    src: url('../fonts/gotham/gothamhtf-light-webfont.eot');
+    src: url('../fonts/gotham/gothamhtf-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham/gothamhtf-light-webfont.woff2') format('woff2'),
+         url('../fonts/gotham/gothamhtf-light-webfont.woff') format('woff'),
+         url('../fonts/gotham/gothamhtf-light-webfont.ttf') format('truetype'),
+         url('../fonts/gotham/gothamhtf-light-webfont.svg#gotham_htflight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'gotham_htfmedium';
+    src: url('../fonts/gotham/gothamhtf-medium-webfont.eot');
+    src: url('../fonts/gotham/gothamhtf-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham/gothamhtf-medium-webfont.woff2') format('woff2'),
+         url('../fonts/gotham/gothamhtf-medium-webfont.woff') format('woff'),
+         url('../fonts/gotham/gothamhtf-medium-webfont.ttf') format('truetype'),
+         url('../fonts/gotham/gothamhtf-medium-webfont.svg#gotham_htfmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ==========================================================================
+   =Wrap
+   ========================================================================== */
+
+	#wrap {
+		position: relative;
+		background-color: #fff;
+	}
+	
+	@media (max-width: 767px) {
+
+		#wrap {}
+
+	}
+   
+/* ==========================================================================
+   =Header  wrap
+   ========================================================================== */
+   
+   	#header-wrap { margin-bottom: 100px; }
+
+/* ==========================================================================
+   =Header 
+   ========================================================================== */
+   	
+	/**
+ 	 * 1. z-index is 105 because the tp arrows 100
+ 	 */
+	
+	#header {
+		position: absolute;
+		top: 0; 					
+		right: 0;
+		left: 0;
+		padding: 40px 0;
+		margin: 0 auto;
+		z-index: 105;
+		margin-top:60px;
+		background:#333333;
+		height:100px;
+		position:fixed;
+	}
+	
+	#header-1 {
+		position: absolute;
+		top: 0; 					
+		right: 0;
+		left: 0;
+		padding: 40px 0;
+		margin: 0 auto;
+		z-index: 105;
+		    position: fixed;
+    z-index: 1020;
+    top: 0;
+    width: 100%;
+    padding: 10px 0 0 0;
+    margin: 0 auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    background-color: #0b0b0b;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+	height:60px;
+	}
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+		
+		#header {
+			position: relative;
+			padding-bottom: 45px;
+			background-color: #0b0b0b;
+		}
+		
+	}
+	
+	@media (max-width: 767px) {
+		
+		#header {
+			position: relative;
+			padding-bottom: 45px;
+			background-color: #0b0b0b;
+		}
+		
+	}
+	
+/* ==========================================================================
+   =Logo
+   ========================================================================== */
+   
+	#logo { padding: 5px 0 7px 40px; }
+	
+	/**
+	 * 1. displaying the <a> inline-block makes it depends on the size of it's children
+	 *    we add max-width:100% to tell it not that it shouldn't extend beyond the size of it's
+	 *    parent if it's child is very large eg a 1000x1000 logo img
+	 */
+	
+	#logo a {
+		display: inline-block;
+		max-width: 100%; 	/* 1 */	
+	}
+	
+	#logo img {
+		width: 80%;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;	
+	}
+	
+	@media (max-width: 767px) {
+
+		/**
+		 * 1. on mobile devices logo padding right needs to be the width of the
+		 *	  mobile menu trigger + some spacing so as to not let the logo <a>
+		 *    overlap the mobile menu trigger
+		 */
+	
+		#logo {  
+			padding-right: 50px; 	/* 1 */
+		}
+		
+	}
+	
+/* ==========================================================================
+   =Menu 
+   ========================================================================== */
+
+/* =Menu Basics
+   ========================================================================== */
+   
+	.sf-menu,
+	.sf-menu ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	
+	.sf-menu > li { float: left; }
+
+	.sf-menu > li > a {
+		position: relative;
+		display: block;
+	}
+	
+	/**
+ 	 * 1. z-index is 1025 because the sticky menu is 1020
+ 	 */
+	
+	.sf-menu .sf-mega,
+	.sf-menu li.dropdown ul {
+		position: absolute;
+		z-index: 1025;		/* 1 */
+		top: 100%;
+		left: 0;
+		display: none;
+	}
+	
+	.sf-menu li.dropdown ul { left: 15px; }
+	
+	.sf-menu li.dropdown { position: relative; }
+	
+	.sf-menu li.dropdown ul ul {
+		top: -1px;
+		left: 100%;
+		margin-top: -14px;
+	}
+	
+	.sf-menu li:hover > .sf-mega,
+	.sf-menu li.sfHover > .sf-mega,
+	.sf-menu li.dropdown:hover > ul,
+	.sf-menu li.dropdown.sfHover > ul { display: block; }
+
+/* =Menu Skin
+   ========================================================================== */
+	
+	.sf-menu {  } 
+	
+	.menu-right {
+		float:right;
+		margin-right:40px;
+		
+	}
+	
+	.sf-menu a {
+		display: block;
+		padding: 15px 0;
+		font: 12px 'gotham_htfbold', Arial, sans-serif;
+		font-weight: 600;
+		letter-spacing: 1.5px;
+		color: #fff; 
+		text-decoration: none;
+	}
+	
+	.sf-menu li.dropdown a { padding: 15px 25px 15px 35px; }
+	
+	.sf-menu li:last-child > a { border-bottom: none; }
+	
+	.sf-menu > li > a,
+	.sf-menu > li.dropdown > a {
+		padding: 35px 15px;
+		border: none;
+		color: #fff;
+		font-size: 12px;
+		text-transform: uppercase;	
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.sf-menu > li a i { margin-right: 5px; }
+	
+	.sf-menu > li.current > a,
+	.sf-menu li.sfHover > a,
+	.sf-menu a:hover,
+	.sf-menu li.sfHover a:hover {
+		color: #979797;
+		text-decoration: none;	
+	}
+
+/* =DropDown
+   ========================================================================== */
+	
+	/**
+ 	 * 1. allow long menu items to determine submenu width
+ 	 */
+	
+	.sf-menu li.dropdown ul {
+		min-width: 250px; 	/* 1 */
+		padding: 15px 0;	
+		background-color: rgba(0, 0, 0, 0.95);
+	}
+
+	.sf-menu > li.dropdown > ul {}	
+		
+/* =Mega Menu Section
+   ========================================================================== */
+	
+	.sf-mega {
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 15px 0;
+		background-color: rgba(0, 0, 0, 0.95);
+	}
+
+	.sf-mega-section {
+		float: left;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 0 30px;
+	}
+
+	/**
+ 	 * 1. set mega menu section size, as a percentage of the mega menu width
+ 	 */
+	
+	.sf-mega.sf-mega-1-col .sf-mega-section{ width: 100%; } /* 1 */
+	
+	.sf-mega.sf-mega-2-col .sf-mega-section{ width: 50%; }
+	
+	.sf-mega.sf-mega-3-col .sf-mega-section{ width: 33.3333333333%; }
+	
+	.sf-mega.sf-mega-4-col .sf-mega-section{ width: 25%; }
+	
+	.register {     
+	width: 150px;
+    padding: 10px 15px!important;
+    border: 1px solid #f0522C!important;
+    border-radius: 8px; 
+	font: 11px 'gotham_htfbold', Arial, sans-serif!important;
+	font-weight:600;
+	text-align:center;
+	margin-top:8px;
+	color:#fff!important;
+	}
+	
+	.register:hover {
+		color:#fff;
+		background:#f0522C;
+	}
+	
+/* =Menu Arrows
+   ========================================================================== */
+	
+	.sf-arrows .sf-with-ul:after {
+		position: absolute;
+		bottom: 35px;
+		right: 0;
+		display: none;
+		width: 0;
+		height: 0;
+		border: 4px solid transparent;
+		border-top-color: #fff;
+		margin-top: 0;
+		content: "";
+	}
+		
+	.sf-arrows > li > .sf-with-ul:focus:after,
+	.sf-arrows > li:hover > .sf-with-ul:after,
+	.sf-arrows > .sfHover > .sf-with-ul:after { border-top-color: #979797; }
+		
+	.sf-arrows ul .sf-with-ul:after {
+		bottom: 17px;
+		display: block;
+		border-color: transparent;
+		border-left-color: #fff;
+		margin-right: 20px;
+	}
+	
+	.sf-arrows ul li > .sf-with-ul:focus:after,
+	.sf-arrows ul li:hover > .sf-with-ul:after,
+	.sf-arrows ul .sfHover > .sf-with-ul:after { border-left-color: #979797; }
+	
+	@media (min-width: 1200px) {
+		
+		.sf-menu li.dropdown ul { left: 25px; }
+		
+		.sf-menu > li > a,
+		.sf-menu > li.dropdown > a {
+			padding: 35px 25px;
+		}
+		
+	}
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+
+		#menu { display: none; }
+
+	}
+	
+	@media (max-width: 767px) {
+
+		#menu { display: none; }
+	
+	}
+	
+/* ==========================================================================
+   =Mobile Menu 
+   ========================================================================== */
+			
+	#mobile-menu {
+		border-bottom: 1px solid #e1e1e1;
+		margin-bottom: 0;
+		background-color: #0b0b0b;
+	}
+	
+	#mobile-menu li {	
+		display: block;
+		margin: 0;
+	}
+		
+	#mobile-menu > li > ul, 
+	#mobile-menu > li > ul > li > ul {
+		display: none;
+		margin-left: 0;
+	}
+	
+	#mobile-menu .sf-mega {
+		display: none;
+		padding: 0;
+		border: none;
+		margin: 0;
+	}
+	
+	#mobile-menu .sf-mega-section {
+		float: none;
+		width: 100%;
+		padding: 0;
+		border: none;
+	}
+	
+	#mobile-menu .sf-mega-section ul { margin-left: 0; }
+
+	#mobile-menu li a {
+		position: relative;
+		display: block;
+		padding: 15px 25px;
+		border-top: 1px solid #e1e1e1;
+		color: #fff;
+		font-size: 13px;
+		text-align: left;
+		text-decoration: none;
+	}
+	
+	#mobile-menu li a i { margin-right: 5px; }
+	
+	#mobile-menu ul a { padding-left: 45px; }
+	
+	#mobile-menu ul li ul a  { padding-left: 65px; }
+	
+	#mobile-menu .mobile-menu-submenu-arrow {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 70px;
+		height: 100%;
+		border-left: 1px solid #e1e1e1;
+		color: #fff;
+		font-size: 20px;
+		line-height: 50px;
+		text-align: center;
+		cursor: pointer;
+	}
+	
+	#mobile-menu .mobile-menu-submenu-arrow:hover { background-color: #979797; }
+	
+	#mobile-menu li a:hover {}
+	
+	#mobile-menu { display: none; }
+
+/* ==========================================================================
+   =Mobile menu trigger
+   ========================================================================== */
+				
+	#mobile-menu-trigger { 
+		float: right;
+		display: none;
+		font-size: 32px;
+		color: #fff;
+	}
+
+	@media (min-width: 768px) and (max-width: 991px) {
+
+		#mobile-menu-trigger { 
+			display: block;
+			margin-top: 23px;
+			margin-right: 0;
+		}	
+
+	}
+
+	@media (max-width: 767px) {
+
+		#mobile-menu-trigger { 
+			position: absolute;
+			top: 15px;
+			right: 5px;
+			display: block;
+			padding: 10px;
+			margin-top: 0;
+		}
+
+	}
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+		#mobile-menu-trigger {}
+	
+	}		
+		
+/* ==========================================================================
+   =Custom search form 
+   ========================================================================== */
+	
+	#custom-search-button + nav { margin-right: 40px; }
+	
+	#custom-search-button { 
+		position: absolute;
+		top: 32px;
+		right: 15px;
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	#custom-search-button i {
+		font-size: 16px;
+	}
+	
+	#custom-search-form {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		margin-top: -45px;
+	}
+	
+	/**
+ 	 * 1. z-index is 1030 because the dropdown menu has a z-index of 1025 
+ 	 */
+	
+	#custom-search-form-container {
+		position: fixed;
+		z-index: 1030;
+		top: 0;
+		right: 0;
+		left: 0;
+		display: none;
+		padding: 30px 0 20px 0;
+		background-color: rgba(38, 38, 38, 0.95);
+		text-align: center;
+	}
+
+	
+	#custom-search-submit { display: none; }
+	
+	#custom-search-form #s {
+		width: 50%;
+		height: 50px;
+		padding: 10px 60px 10px 20px;
+		border-color: #fff;
+		border-radius: 3px;	
+		background-color: #fff;
+	}
+	
+	#custom-search-submit {
+		display: inline-block;
+		border: none;
+		margin-left: -50px;
+		background: url(../images/bg-search.png) no-repeat center center;
+	}
+	
+	#custom-search-form #s:focus { border-color: #5c5a69; }
+	
+	#custom-search-form a.custom-search-form-close {
+		position: relative;
+		top: 3px;
+		display: inline-block;
+		border-radius: 3px;
+		margin-left: 60px;
+		color: #fff;
+		font-size: 28px;
+		font-weight: 400;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	
+	@media (min-width: 768px) and (max-width: 991px) {
+
+		#custom-search-button {
+			top: 28px;
+			right: 65px;
+		}
+		
+	}
+	
+	@media (max-width: 767px) {
+		
+		#custom-search-button { display: none; }
+		
+	}
+
+/* ==========================================================================
+   =Sticky Header
+   ========================================================================== */
+
+	@media (min-width: 1025px) {
+		
+		/**
+		 * 1. The z-index has to be 1020 so it is bigger than the back to top buttons z-index that is 1010
+		 */
+		
+		#header.stuck {
+			position: fixed;
+			z-index: 1020; /* 1 */
+			top: 0;
+			width: 100%;
+			padding: 10px 0 0 0;
+			margin: 0 auto;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);			
+			background-color: #0b0b0b;
+			-webkit-transition: all 0.3s;
+					transition: all 0.3s;
+		}
+		
+		#header.stuck #logo img { width: 80%; }
+		
+		#header.stuck .sf-menu > li > a,
+		#header.stuck .sf-menu > li.dropdown > a { padding: 26px 15px 36px; }
+
+		#header.stuck .sf-arrows .sf-with-ul:after { margin-top: -1px; }		
+	
+		#header.stuck #custom-search-button { top: 23px; }
+	
+	}
+	
+	@media (min-width: 1200px) {
+		
+		#header.stuck .sf-menu > li > a,
+		#header.stuck .sf-menu > li.dropdown > a {
+			padding: 26px 25px 36px;
+		}
+		
+	}
+	
+	
+/* ==========================================================================
+   =Content
+   ========================================================================== */
+   	
+	#content { padding-bottom: 100px; }
+
+/* ==========================================================================
+   =Page Header
+   ========================================================================== */
+   	
+	#page-header {
+		position: relative; 
+		z-index: 1;
+		padding: 240px 0 210px 0;
+		margin-bottom: 120px;
+		background: no-repeat center center; 
+		color: #fff;
+		text-align: center;
+	}
+	
+	.page-header-overlay {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: url(../images/pattern-2.png) repeat top left;
+	}
+	
+	#page-header h2 {
+		position: relative;
+		z-index: 3; 
+		margin-bottom: 0;
+		color: #fff;
+		font-weight: 700;
+	}
+
+/* ==========================================================================
+   =Fullwidth Section
+   ========================================================================== */
+   
+    /**
+ 	 * Full width section
+ 	 *
+	 * 1. background-image must be supplied using inline css as it is different for every .fullwidth-section
+	 *
+	 */
+	 
+   .fullwidth-section {
+		position: relative;
+		overflow: hidden;
+		z-index: 0;	
+		padding: 60px 0;
+		margin-bottom: 100px;
+		background-color: #232323;
+		color: #fff;
+		background-attachment: scroll;
+		background-repeat: no-repeat; /* 1 */ 
+		background-position: 50% 0;		
+	}
+
+	.fullwidth-section-content {
+		position: relative;
+		z-index: 3;
+	}
+	
+	.fullwidth-section-overlay {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/pattern-2.png);
+		background-repeat: repeat;
+		background-position: 0 0;	
+	}
+	
+	.fullwidth-section-video {
+		position: absolute;
+		overflow: hidden;
+		z-index: 1;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	/**
+ 	 *
+	 * 1. We add background-size cover so the parallax looks ok if you provide smaller images
+	 *
+	 */
+	
+	.parallax.parallax-enabled { 
+		background-attachment: fixed !important;
+		-webkit-background-size: cover;
+				background-size: cover;	/* 1 */
+	}
+	
+	.horizontal-parallax { background-repeat: repeat-x; }
+	
+	.animated-parallax { background-repeat: repeat-x; }
+	
+	@media (max-width: 767px) {
+
+		.fullwidth-section {
+			-webkit-background-size: cover;
+					background-size: cover;		
+		}
+		
+	}
+	
+/* ==========================================================================
+   =Footer Top
+   ========================================================================== */
+
+	#footer-top {
+		padding: 120px 0 60px 0; 
+		background-color: #262626;
+	}
+	
+	#footer-top a,
+	#footer-top h1,
+	#footer-top h2,
+	#footer-top h3,
+	#footer-top h4,
+	#footer-top h5,
+	#footer-top h6 { color: #fff; }
+	
+	#footer-top-widget-area-1 {}
+	#footer-top-widget-area-2 {}
+	#footer-top-widget-area-3 {}
+	#footer-top-widget-area-4 {}
+   
+/* ==========================================================================
+   =Footer
+   ========================================================================== */		
+	
+	#footer { 	
+		background: #0b0b0b url(../images/pattern-2.png) repeat top left;
+		color: #fff;
+	}
+	
+	#footer a,
+	#footer h1,
+	#footer h2,
+	#footer h3,
+	#footer h4,
+	#footer h5,
+	#footer h6 { color: #fff; }
+	
+	#footer-widget-area-1 {}
+	#footer-widget-area-2 {}
+	#footer-widget-area-3 {}
+	#footer-widget-area-4 {}
+	
+/* ==========================================================================
+   =Footer Bottom
+   ========================================================================== */	
+  
+	#footer-bottom { 
+		background-color: #262626;	
+	}
+	
+	#footer-bottom a,
+	#footer-bottom h1,
+	#footer-bottom h2,
+	#footer-bottom h3,
+	#footer-bottom h4,
+	#footer-bottom h5,
+	#footer-bottom h6 { color: #fff; }
+	
+	#footer-bottom-widget-area-1 {}
+	#footer-bottom-widget-area-2 {}
+	#footer-bottom-widget-area-3 {}
+	#footer-bottom-widget-area-4 {}
+	
+/* ==========================================================================
+   =Back to top
+   ========================================================================== */
+
+	#back-to-top {
+		position: fixed;
+		z-index: 1010;
+		right: -40px;
+		bottom: 20px;
+		width: 40px;
+		height: 40px;
+		border-radius: 5px;
+		background-color: #000;
+		color: #fff;
+		font-size: 30px;
+		text-align: center;					
+		cursor: pointer;
+		text-decoration: none;
+		-webkit-transition: all 0.4s ease 0s;
+				transition: all 0.4s ease 0s;
+	}
+	
+	#back-to-top i {
+		font-size: 22px;
+		line-height: 40px;
+		font-weight: normal;
+		vertical-align: top;
+		-webkit-transition: all 0.4s ease 0s;
+				transition: all 0.4s ease 0s;
+	}
+	
+	#back-to-top:hover { background-color: rgba(0, 0, 0, 0.7); }
+	#back-to-top:hover i { color: #fff; }
+	#back-to-top.visible { right: 40px; }
+	#back-to-top.gone { right: -40px; }	
+
+/* ==========================================================================
+   =Misc
+   ========================================================================== */
+   
+	.javascript-required,
+	.modern-browser-required {
+	    padding: 15px 0;
+		background-color: #ff3b3b;
+		color: #fff;
+		font-weight: 700;
+		text-align: center;
+	}
