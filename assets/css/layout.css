@@ -125,9 +125,10 @@
 	@media (max-width: 767px) {
 		
 		#header {
-			position: relative;
-			padding-bottom: 45px;
-			background-color: #0b0b0b;
+			position: fixed;
+			padding-bottom: 25px;
+			background-color:rgba(0, 0, 0, 0.0);
+			z-index: 999999;
 		}
 		
 	}
@@ -169,6 +170,7 @@
 	
 		#logo {  
 			padding-right: 50px; 	/* 1 */
+			width:50%;
 		}
 		
 	}
@@ -405,6 +407,7 @@
 		border-bottom: 1px solid #e1e1e1;
 		margin-bottom: 0;
 		background-color: #0b0b0b;
+		margin-top:70px;
 	}
 	
 	#mobile-menu li {	
@@ -507,7 +510,16 @@
 
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
 
-		#mobile-menu-trigger {}
+		#mobile-menu-trigger {margin-top:-70px;margin-right:12px;}
+		
+		.container-4 {display:none;
+		}
+		
+		.menu-right {
+    float: right;
+    margin-right: 60px;
+	margin-top:-50px;
+}
 	
 	}		
 		
@@ -592,7 +604,7 @@
 	
 	.container-4{
   overflow: hidden;
-  width: 300px;
+  width: 200px;
   vertical-align: middle;
   white-space: nowrap;
   float:right;
@@ -601,7 +613,7 @@
 }
 
 .container-4 input#search{
-  width: 300px;
+  width: 200px;
   height: 40px;
   background: #fff;
   border: none;
@@ -609,10 +621,10 @@
   float: left;
   color: #333;
   padding-left: 15px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  font: 12px 'gotham_htfbook', Arial, sans-serif;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font: 11px 'gotham_htfbook', Arial, sans-serif;
 }
 
 .container-4 input#search::-webkit-input-placeholder {
@@ -662,6 +674,11 @@
  
 .container-4:hover button.icon:hover{
   background: white;
+}
+
+.center {
+	margin:0 auto;
+	float:none;
 }
 	
 	
@@ -738,7 +755,7 @@
 		position: relative; 
 		z-index: 1;
 		padding: 240px 0 210px 0;
-		margin-bottom: 120px;
+		margin-bottom: 40px;
 		background: no-repeat center center; 
 		color: #fff;
 		text-align: center;
