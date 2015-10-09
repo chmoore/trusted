@@ -87,7 +87,7 @@
 		z-index: 105;
 		margin-top:50px;
 		/*background:#333333;*/
-		background: rgba(0,0,0,0.8);
+		background: rgba(0,0,0,1.0);
 		height:65px;
 		/*position:fixed;*/
 	}
@@ -314,8 +314,8 @@
 	.sf-menu li.dropdown ul {
 		min-width: 250px; 	/* 1 */
 		padding: 15px 0;	
-		background: rgba(0,0,0,0.8);
-		margin-top:-13px;
+		background: rgba(0,0,0,1.0);
+		margin-top:-12px;
 	}
 
 	.sf-menu > li.dropdown > ul {}	
@@ -889,7 +889,7 @@
    =Content
    ========================================================================== */
    	
-	#content { padding-bottom: 100px; }
+	#content { padding-bottom: 0px; }
 
 /* ==========================================================================
    =Page Header
@@ -904,6 +904,29 @@
 		color: #fff;
 		text-align: center;
 	}
+	
+	#page-header-new {
+		position: relative; 
+		z-index: 1;
+		padding: 160px 0 100px 20px;
+		margin-bottom: 40px;
+		color: #000;
+		text-align: left;
+	}
+	
+	#page-header-new h2 {
+		font-size:50px;
+		text-align:center;
+	}
+	
+	#page-header-new h2:before {
+    height: 2px;
+    display: block;
+    width: 80px;
+    background: #454545;
+    content: '';
+    margin: 0px auto 30px;
+}
 	
 	.page-header-overlay {
 		position: absolute;
@@ -921,6 +944,10 @@
 		margin-bottom: 0;
 		color: #fff;
 		font-weight: 700;
+	}
+	
+	.right {
+		float:right;
 	}
 
 /* ==========================================================================
