@@ -541,9 +541,9 @@
 			var h = c();
 			
 			if (h >= stickypoint) {
-				$('#header-no').addClass("stuck");
+				$('#header').addClass("stuck");
 			} else {
-				$('#header-no').removeClass("stuck");
+				$('#header').removeClass("stuck");
 			}
 			
 			e = false;

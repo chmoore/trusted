@@ -246,7 +246,8 @@
 		color: #232323 !important;
 		width:180px;
 		text-align:center;
-		font: 11px 'gotham_htfbold', Arial, sans-serif;
+		font: 12px 'gotham_htfbold', Arial, sans-serif;
+		padding:15px;
 	}
 
 	.btn-white:hover { 
@@ -261,7 +262,7 @@
   
 	#contact-form { 
 		overflow: hidden; 
-		margin: 50px 0; 
+		margin: 0px 0 40px; 
 	}
 	
 	#contact-form fieldset {}
@@ -292,7 +293,7 @@
    =Dividers
    ========================================================================== */
 
-	.divider { margin: 30px 0 80px; }
+	.divider { margin: 60px 0 40px; }
 	
 	.divider.single-line { border-top: 1px solid #e1e1e1; }
 	
@@ -307,6 +308,12 @@
 		height: 4px;
 		background: url(../images/bg-double-dotted.png) repeat-x top left; 
 	}	
+	
+	.border {
+		    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: #ededed;
+	}
    
 /* ==========================================================================
    =Google Maps
@@ -346,9 +353,9 @@
 	.headline h6 {
 		margin-bottom: 0;
 		color: #979797;
-		font-family: 'Open Sans', Arial, sans-serif;
 		font-weight: 800;
-		letter-spacing: 2px;
+		letter-spacing: 0.2px;
+		margin-top:5px;
 	}
 	
 /* ==========================================================================
@@ -941,9 +948,9 @@
 		width: 100% !important;
 	}
 	
-	.slider-revolution.fullwidthbanner-container { margin-bottom: 80px; }
+	.slider-revolution.fullwidthbanner-container { margin-bottom: -20px; }
 
-	.slider-revolution.fullwidthbanner-container .fullwidthbanner {}
+	.slider-revolution.fullwidthbanner-container .fullwidthbanner {height: 90%!important;}
 	
 	.slider-overlay {
 		position: absolute;
@@ -1022,11 +1029,12 @@
 	
 	.caption.title {
 		color: #fff;
-		font-size: 30px;
+		font-size: 40px;
 		line-height: 48px;
 		font-weight: 600;
 		letter-spacing: 3px;
 		text-transform: uppercase;
+		font-family:'gotham_htfbold', Arial, sans-serif;
 	}
 	
 	.caption.subtitle {
@@ -1075,9 +1083,10 @@
 		.caption.subtitle:after { display: none; }
 		
 		.caption .btn {
-			padding: 3px 7px;
-			font-size: 6px;
+			padding: 15px;
+			font-size: 12px;
 			line-height: 12px;
+			margin-left:-70px;
 		}
 		
 	}
@@ -1370,7 +1379,7 @@
 
 	.testimonial { 
 		margin: 60px 0;
-		text-align: center;
+		text-align: left;
 	}
 	
 	.testimonial blockquote {
@@ -1877,7 +1886,7 @@
 	.testimonial-slider .bx-viewport { overflow: visible !important; }
 	
 	.testimonial-slider .testimonial { 
-		width: 75%;
+		width: 85%;
 		margin: 60px auto 0 auto;
 	}
 	

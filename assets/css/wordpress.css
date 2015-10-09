@@ -1158,7 +1158,7 @@
 /* =EWF Newsletter subscribe widget
    ========================================================================== */
 
-	.ewf_widget_newsletter {}
+	.ewf_widget_newsletter {margin-top: 45px;}
 	
 	#newsletter-subscribe-form { position: relative; }
 	

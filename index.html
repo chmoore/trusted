@@ -42,9 +42,6 @@
 	<link rel="stylesheet" href="assets/css/layout.css">
 	<link rel="stylesheet" href="assets/css/components.css">
 	<link rel="stylesheet" href="assets/css/wordpress.css">
-    
-	<!-- /// Boxed layout ////////  -->
-	<!-- <link rel="stylesheet" href="assets/css/boxed.css"> -->
  
  	
     
@@ -73,22 +70,24 @@
         <!-- /// HEADER  //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
                 <div class="row">
-                    <div class="span3">
-                    
+                    <div class="span7">
                         <!-- // Logo // -->
-                        <div id="logo">
+                     <!--   <div id="logo">
                             <a href="index.html">
                                 <img src="assets/images/trusted-logo.png" alt="website logo">
                             </a>
-                        </div>
+                        </div>-->
                     
                     </div><!-- end .span3 -->
-                    <div class="span9">
+                    <div class="span5">
                    
                         
                         <!-- // Menu // -->
                         <nav>
                             <ul class="sf-menu fixed menu-right" id="">
+                            <li>
+                             <a href="index.html" class="locator">Store Locator</a>
+                             </li>
                                 <li>
                                 	<a href="index.html" class="register">Register/Sign In</a>
                                 </li>
@@ -108,7 +107,11 @@
 
                 <div class="row">
                     <div class="span12">
-                    
+                     <div id="logo">
+                            <a href="index.html">
+                                <img src="assets/images/trusted-logo.png" alt="website logo">
+                            </a>
+                        </div>
                         <!-- // Mobile menu trigger // -->
                         
                         <a href="#" id="mobile-menu-trigger">
@@ -117,15 +120,15 @@
                         
                         <!-- // Custom search // -->                                        
                     
-					<!--<div class="fullscreen" id="custom-search-form-container">
+					<div class="fullscreen" id="custom-search-form-container">
                         
 						<form id="custom-search-form" action="#">
 							<input type="text" placeholder="Search here and press enter..." name="s" id="s">
 							<input type="submit" id="custom-search-submit" value="">
 						</form>
 						
-					</div>--><!-- end #custom-search-form-container -->
-                    
+					</div><!-- end #custom-search-form-container -->
+                 <!--   
                     <div class="box">
   <div class="container-4">
   <form id="" action="#">
@@ -133,29 +136,29 @@
     <button class="icon"><i class="fa fa-search"></i></button>
     </form>
   </div>
-</div>
-
-					<!--<a id="custom-search-button" href="#"><i class="ifc-search"></i></a>-->
+</div>-->			<a id="locator-icon" class="locator-stuck" href="#"><i class="fa fa-map-marker"></i></a>
+                    <a id="register-icon" class="register-stuck" href="#"><i class="fa fa-user"></i></a>
+					<a id="custom-search-button" href="#"><i class="fa fa-search"></i></a>
                         
                         <!-- // Menu // -->
-                        <nav>
+                        <nav class="main-nav">
                             <ul class="sf-menu fixed" id="menu">
-                                <li class="dropdown current">
-                                	<a href="index.html">Shop</a>
+                             <li class="current">
+                                    <a href="#">Home</a>
+                                </li>        
+                                <li class="dropdown">
+                                	<a href="#">Shop</a>
                                     <ul>
                                     	<li><a href="#">Michael Godard</a></li>
                                         <li><a href="#">Stickman</a></li>
                                     </ul>
                                 </li>
                                 
-                                <li class="dropdown">
+                                <li>
                                     <a href="about-us.html">Request an eTitle</a>
                                 </li>                                
-                                <li class="dropdown">
+                                <li>
                                     <a href="how-it-works.html">How It Works</a> 
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#">Find a Store</a> 
                                 </li>
 								<li class="dropdown">                        	
                                     <a href="#">About Trusted</a>
@@ -184,39 +187,39 @@
 		<!-- /// CONTENT  /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 			
             <div class="fullwidthbanner-container slider-revolution">
-				<div class="fullwidthbanner fullscreen">
+				<div class="fullwidthbanner">
 					<ul>					   						                        
 						
                         <li data-transition="fade">
 						
                             <img src="content/index/slider/trusted-bkgd.jpg" alt="">
                             
-                            <div class="caption subtitle sft"
-                                 data-x="160"
-                                 data-y="165"
+                            <div class="caption title sft"
+                                 data-x="200"
+                                 data-y="220"
                                  data-speed="700"
                                  data-start="1000"
                                  data-easing="easeOutExpo">
-                                  Find a Trusted.com Retailer!
+                                  Find a Trusted.com Retailer
                             </div>
                             
-                            <div class="caption text-2 sfl"
-                                 data-x="160"
+                           <!-- <div class="caption text-2 sfl"
+                                 data-x="200"
                                  data-y="230"
                                  data-speed="700"
                                  data-start="1500"
                                  data-easing="easeOutExpo">
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabi <br>
-								 tur posuere arcu quis justo consequat, eu mollis nisi rhoncus. <br>
-                                 Aenean tincidunt turpis sit amet dolor ultricies, nec tempus eni <br>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabi 
+								 tur posuere arcu quis justo consequat, eu mollis nisi rhoncus. 
+                                 Aenean tincidunt turpis sit amet dolor ultricies, nec tempus eni 
 								 aliquam. Vestibulum euismod lorem at cursus.
-                            </div>
+                            </div>-->
                                                   
                             <div class="caption sfb"
-                                 data-x="160"
-                                 data-y="430"
+                                 data-x="500"
+                                 data-y="380"
                                  data-speed="700"
-                                 data-start="3000"
+                                 data-start="1500"
                                  data-easing="easeOutExpo">
                                  <a class="btn btn-white" href="#">Discover Now</a>
                             </div>
@@ -260,42 +263,25 @@
                             <h1>How It Works</h1>
                         </div>
                         </div>
-                    <div class="span8">
+                    <div class="span6 border">
 						<!-- end .headline -->
-                        <p>Trusted.com has established itself as the new industry standard for product verification and authentication services. Trusted.com software-as-a-service (SaaS) solution provides secure and transferrable electronic titles (eTitles) for luxury products. The Trusted eTitles are created at the time a product is manufactured. <br>
-<br>
-The system then tracks all changes in ownership from the time the product is manufactured through the distribution of the product through authorized supply chain, and ultimately to the point the product is purchased by a consumer and held or resold. These transferrable eTitles offer a new standard for verifying authenticity and provides numerous benefits, including: increased brand protection, the ability to challenge unauthorized sellers as well as enhanced consumer protection to prevent the purchase of luxury goods which are fraudulent or misrepresented in the marketplace.</p>
+                        <div class="container-grid">
+                        <div class="container-grid-img"><img src="assets/images/secure-lock.jpg"></div>
+                        <div class="container-grid-copy">
+                        <p>Trusted.com has established itself as the new industry standard for product verification and authentication services. Trusted.com software-as-a-service (SaaS) solution provides secure and transferrable electronic titles (eTitles) for luxury products. The Trusted eTitles are created at the time a product is manufactured. 
+                        </p>
+                        </div>
+                        </div>
                         
                     </div><!-- end .span6 -->
-                    <div class="span4">
+                    <div class="span6">
                     	
-                        <div class="item">
-								
-								<div class="portfolio-item">
-							
-									<div class="portfolio-item-preview">
-										
-										<img src="content/portfolio/380x350-1.jpg" alt="">
-										
-										<div class="portfolio-item-overlay">
-											
-											<div class="portfolio-item-description">
-												
-												<h4>
-													<a href="portfolio-single.html">Discover More</a>
-												</h4>
-												
-												<p>Click Here</p>
-												
-											</div><!-- end .portfolio-item-description -->
-											
-										</div><!-- end .portfolio-item-overlay -->
-										
-									</div><!-- end .portfolio-item-preview -->
-									
-								</div><!-- end .portfolio-item -->
-								
-							</div>
+                        <div class="container-grid">
+                        <div class="container-grid-img"><img src="assets/images/secure-man.jpg"></div>
+                        <div class="container-grid-copy">
+                        <p>These transferrable eTitles offer a new standard for verifying authenticity and provides numerous benefits, including: increased brand protection, the ability to challenge unauthorized sellers as well as enhanced consumer protection to prevent the purchase of luxury goods which are fraudulent or misrepresented in the marketplace.</p>
+                        </div>
+                        </div>
                         
                     </div><!-- end .span6 -->
                 </div><!-- end .row -->
@@ -345,10 +331,15 @@ The system then tracks all changes in ownership from the time the product is man
 			<div class="container">
             	<div class="row">
                   <div class="span12">
+                  <div class="testimonial-slider">
+                            
+                            <ul class="slides">
+                                <li>
+                                    
+                                    <div class="testimonial">
                 <div class="headline text-center">
                         	
                             <h1>Authenticated Art</h1>
-                        </div>
                         </div>
                 	<div class="span6">
                     <div class="item">
@@ -395,20 +386,77 @@ The system then tracks all changes in ownership from the time the product is man
                         
                     </div><!-- end .span6 -->
                 </div><!-- end .row -->
+                </li>
+                <li>
+                                    
+                                    <div class="testimonial">
+                <div class="headline text-center">
+                        	
+                            <h1>Authenticated Art</h1>
+                        </div>
+                	<div class="span6">
+                    <div class="item">
+								
+								<div class="portfolio-item">
+							
+									<div class="portfolio-item-preview">
+										
+										<img src="assets/images/godard-1.jpg" alt="">
+										
+										<div class="portfolio-item-overlay">
+											
+											<div class="portfolio-item-description">
+												
+												<h4>
+													<a href="#">Discover More</a>
+												</h4>
+												
+												<p>Click Here</p>
+												
+											</div><!-- end .portfolio-item-description -->
+											
+										</div><!-- end .portfolio-item-overlay -->
+										
+									</div><!-- end .portfolio-item-preview -->
+									
+								</div><!-- end .portfolio-item -->
+								
+							</div>
+                    
+                    </div><!-- end .span6 -->
+                    <div class="span6">
+                    	
+                        <div class="headline">
+                        	
+                            <h3>A Good Day Godard Edition by Michael Godard</h3>
+                            
+                            <h6>$500.00</h6>
+                            
+                        </div><!-- end .headline -->
+                        
+                        <p>This piece features a martini glass, martini shaker, and two olives enjoying a cigar on top of a well-earned stack of bills. After a good day, no better way than to relish the day than with a martini and a nice cigar!</p>
+                        <a class="btn" href="#">View All In the Store</a>
+                        
+                    </div><!-- end .span6 -->
+                </div><!-- end .row -->
+                </li>
+                
+                </ul>
+                </div>
             </div><!-- end .row -->
 			</div><!-- end .container -->
-            
+            </div>
              <div class="divider single-line"></div>
             <div class="container">
                 <div class="row">
                 <div class="span12">
-						
-						<h1 class="text-center"><strong>Contact Trusted</strong></h1>
-						
+						  <div class="headline text-center">
+						<h1 class="text-center">Contact Trusted</h1>
+						</div>
 					</div>
                     <div class="span12">
 
-                        <div class="map">
+                        <!--<div class="map">
                             <div class="google-map" 
                                 data-zoom="17" 
                                 data-address="96 Lee Avenue Camden, NJ 08102, USA" 
@@ -417,8 +465,8 @@ The system then tracks all changes in ownership from the time the product is man
                                 data-popup="false"
                                 data-mapheight="450">
                                 <p>This will be replaced with the Google Map.</p>
-                            </div><!-- end .google-map -->
-                        </div><!-- end .map -->
+                            </div>
+                        </div>-->
                     
                     </div><!-- end .span12 -->
                 </div><!-- end .row -->
@@ -453,10 +501,8 @@ The system then tracks all changes in ownership from the time the product is man
 
                     </div><!-- end .span4 -->
                     <div class="offset1 span7">
-
-                        <h3>Send us a message</h3>
                         
-                        <form id="contact-form" name="contact-form" method="post" action="_layout/php/send.php">  
+                        <form id="contact-form" name="contact-form" method="post" action="#">  
                             <fieldset>
                                 <div id="formstatus"></div>
                                 <p>
@@ -484,77 +530,19 @@ The system then tracks all changes in ownership from the time the product is man
 		<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 		</div><!-- end #content -->
-        		<div id="footer">
-		
-		<!-- /// FOOTER     ///////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-                <div class="row">
-                     <div class="span3">
-                    
-                        <!-- // Logo // -->
-                        <div id="logo" class="logotop">
-                            <a href="index.html">
-                                <img src="assets/images/trusted-logo.png" alt="website logo">
-                            </a>
-                        </div>
-                    
-                    </div><!-- end .span3 -->
-                    <div class="span9">
-                        
-                        <nav>
-                            <ul class="sf-menu fixed" id="menu">
-                                <li class="dropdown current">
-                                	<a href="index.html">Shop</a>
-                                    <ul>
-                                    	<li><a href="#">Michael Godard</a></li>
-                                        <li><a href="#">Stickman</a></li>
-                                    </ul>
-                                </li>
-                                
-                                <li class="dropdown">
-                                    <a href="about-us.html">Request an eTitle</a>
-                                </li>                                
-                                <li class="dropdown">
-                                    <a href="#">How It Works</a> 
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#">Find a Store</a> 
-                                </li>
-								<li class="dropdown">                        	
-                                    <a href="#">About Trusted</a>
-                                     <ul>
-                                        <li><a href="#">Press</a></li>
-                                    </ul>
-                                    
-                                </li>                                
-                                <li class="dropdown">
-                                    <a href="#">Contact Us</a>
-                                    <ul>
-                                        <li><a href="#">FAQs</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav><!-- end .widget_text -->
-                        
-                    </div><!-- end .span12 -->                    
-                </div><!-- end .row -->
-            
-		<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-		</div><!-- end #footer -->
+        
 		<div id="footer-bottom">
             
 		<!-- /// FOOTER-BOTTOM     ////////////////////////////////////////////////////////////////////////////////////////////// -->	
 		
                 <div class="row">
                     <div class="span3" id="footer-bottom-widget-area-1">
-                        
                        <div class="widget widget_text">
                         
                             <div class="textwidget">
                                 
-                                <p class="text-center">
-                                	<small>&copy; 2015 Trusted.com. All rights reserved.</small>
+                                <p class="copyright">
+                                	&copy; 2015 Trusted.com. All rights reserved.
                                 </p>
                                 
                             </div><!-- end .textwidget -->
@@ -565,9 +553,6 @@ The system then tracks all changes in ownership from the time the product is man
                      <div class="span9" id="footer-bottom-widget-area-1">
                         
                        <div class="widget widget_text">
-                        
-                            <div class="textwidget">
-                                
                                 <nav>
                             <ul class="sf-menu menuright" id="menu">
                                 <li class="dropdown current">
@@ -582,8 +567,16 @@ The system then tracks all changes in ownership from the time the product is man
                                 </li>
                                 </ul>
                                 </nav>
+                                 <div class="textwidget">
+                             <div class="social">
+                    <i class="fa fa-facebook-square"></i>
+                    <i class="fa fa-twitter-square"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                    </div>
                                 
-                            </div><!-- end .textwidget -->
+                            </div>
+                                
+                                 <!-- end .textwidget -->
                             
                         </div><!-- end .widget_text -->
                         
