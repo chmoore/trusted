@@ -261,6 +261,7 @@
 		letter-spacing: 1.5px;
 		color: #fff; 
 		text-decoration: none;
+		text-transform: uppercase;
 	}
 	
 	.sf-menu li.dropdown a { padding: 15px 25px 15px 35px; }

@@ -66,15 +66,17 @@
 	}
 	
 	h4 {
-		font-size: 16px; 
+		font-size: 20px; 
 		line-height: 28px;
-		letter-spacing: 2px;   
+		letter-spacing: 0px; 
+		margin-top:15px;
 	}
 	
 	h5 { 
-		font-size: 14px; 
+		font-size: 16px; 
 		line-height: 25px;
-		letter-spacing: 2px;
+		letter-spacing: 0px;
+		text-transform:none;
 	}
 	
 	h6 { 
@@ -224,7 +226,7 @@
 	a, 
 	a:visited { 
 		color: #232323; 
-		text-decoration: none; 
+		text-decoration: underline; 
 	}
 	
    /**
