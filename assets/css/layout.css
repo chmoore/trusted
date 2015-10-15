@@ -342,6 +342,12 @@
 	padding:40px;
 	color:#fff;
 }
+
+.container-grid-copy.gray {
+	padding:40px;
+	background:#efefef;
+	color:#000;
+}
 		
 /* =Mega Menu Section
    ========================================================================== */
@@ -420,6 +426,19 @@
     font-size: 13px;
 	margin-right:8px;
 	}
+	
+	.twitter:before {
+    font-family: FontAwesome;
+    content: '\f099';
+    margin: 0;
+    font-size: 13px;
+    margin-right: 8px;
+}
+
+.twitter {
+	    font: 12px 'gotham_htfmedium', Arial, sans-serif;
+    font-weight: 500;
+}
 	
 /* =Menu Arrows
    ========================================================================== */
