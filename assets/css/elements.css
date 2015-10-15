@@ -85,7 +85,7 @@
 		letter-spacing: 0px;
 	}
 
-	p { margin-bottom: 20px; }
+	p { margin-bottom: 35px; color:#5b5b5b;line-height:28px;}
 	
 	em { font-style: italic; }
 	
@@ -183,7 +183,7 @@
 	.text-center { text-align: center; padding-top:30px; }
 	.text-center p{font-style:italic; color:#000;}
 	.text-justify { text-align: justify; }
-	.text-left-2 {text-align:left;margin-left:25px;margin-top:5px;}
+	.text-left-2 {text-align:left;margin-left:25px;margin-top:-7px;}
 	
 	.text-uppercase { text-transform: uppercase; }
 	
@@ -226,7 +226,7 @@
 	a, 
 	a:visited { 
 		color: #232323; 
-		text-decoration: underline; 
+		text-decoration: none; 
 	}
 	
    /**
@@ -260,7 +260,8 @@
 		margin-left: 30px; 
 	}
 	
-	li {margin-bottom:10px;}
+	li {margin-bottom:10px;color: #5b5b5b;
+    line-height: 28px;}
 	
 	ul {  border-radius: 3px 3px 3px 3px;
     list-style: disc outside none;
@@ -384,7 +385,14 @@
 		border: none; 
 		vertical-align: middle;
 	}
+	
+	.img-span {
+		margin-bottom:80px;
+		margin-top:0px;
+	}
 
+
+.spaced {padding:0 40px;}
 /* ==========================================================================
    =Tables
    ========================================================================== */

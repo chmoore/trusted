@@ -53,8 +53,9 @@
    ========================================================================== */
 
 	#wrap {
-		position: relative;
+/*		position: relative;*/
 		background-color: #fff;
+		min-height:100%;
 	}
 	
 	@media (max-width: 767px) {
@@ -145,7 +146,7 @@
    =Logo
    ========================================================================== */
    
-	#logo { padding: 18px 0 7px 40px; float:left; }
+	#logo { padding: 18px 0 10px 40px; float:left; }
 	
 	/**
 	 * 1. displaying the <a> inline-block makes it depends on the size of it's children
@@ -249,7 +250,7 @@
 	
 	.menu-right {
 		float:right;
-		margin-right:40px;
+		margin-right:32px;
 		
 	}
 	
@@ -257,7 +258,7 @@
 		display: block;
 		padding: 15px 0;
 		font: 12px 'gotham_htfbold', Arial, sans-serif;
-		font-weight: 600;
+		font-weight: 500;
 		letter-spacing: 1.5px;
 		color: #fff; 
 		text-decoration: none;
@@ -890,7 +891,7 @@
    =Content
    ========================================================================== */
    	
-	#content { padding-bottom: 0px; }
+	#content { padding-bottom: 100px; }
 
 /* ==========================================================================
    =Page Header
@@ -909,14 +910,14 @@
 	#page-header-new {
 		position: relative; 
 		z-index: 1;
-		padding: 160px 0 100px 20px;
+		padding: 200px 0 100px 20px;
 		margin-bottom: 40px;
 		color: #000;
 		text-align: left;
 	}
 	
 	#page-header-new h2 {
-		font-size:50px;
+		font-size:42px;
 		text-align:center;
 	}
 	
@@ -1076,6 +1077,10 @@
   
 	#footer-bottom { 
 		background-color: #000;	
+		position : relative;
+    bottom : 0;
+	width:100%;
+    margin-top : 40px;
 	}
 	
 	#footer-bottom a,
@@ -1138,4 +1143,9 @@
 		color: #fff;
 		font-weight: 700;
 		text-align: center;
+	}
+	
+	.border-bottom {    
+	border-bottom: 1px solid #ccc;
+    padding-bottom: 40px;
 	}

@@ -293,7 +293,7 @@
    =Dividers
    ========================================================================== */
 
-	.divider { margin: 60px 0 40px; }
+	.divider { margin: 20px 0 40px; }
 	
 	.divider.single-line { border-top: 1px solid #e1e1e1; }
 	
@@ -950,7 +950,7 @@
 	
 	.slider-revolution.fullwidthbanner-container { margin-bottom: -65px; }
 
-	.slider-revolution.fullwidthbanner-container .fullwidthbanner {height: 80%!important;}
+	.slider-revolution.fullwidthbanner-container .fullwidthbanner {height: 520px!important;}
 	
 	.slider-overlay {
 		position: absolute;
