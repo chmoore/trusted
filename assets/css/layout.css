@@ -146,7 +146,7 @@
    =Logo
    ========================================================================== */
    
-	#logo { padding: 18px 0 10px 40px; float:left; }
+	#logo { padding: 15px 0 10px 40px; float:left; }
 	
 	/**
 	 * 1. displaying the <a> inline-block makes it depends on the size of it's children
@@ -194,6 +194,8 @@
    	nav {
 		margin-left:15px;
 	}
+	
+	.div-right {border-right:1px solid #ededed;}
    
    
 	.sf-menu,
