@@ -271,4 +271,20 @@
 		height: 0;
 	}
 	
+	.rounded {
+		    padding: 6px 10px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    background-color: #fff;
+    color: #979797;
+    -webkit-appearance: none !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font: 14px 'gotham_htfbold', Arial, sans-serif;
+    padding-left: 20px;
+    border-radius: 20px;
+	}
+	
 }
