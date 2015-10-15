@@ -85,7 +85,7 @@
 		letter-spacing: 0px;
 	}
 
-	p { margin-bottom: 35px; color:#5b5b5b;line-height:28px;}
+	p { margin-bottom: 35px; /*color:#5b5b5b;*/line-height:28px;}
 	
 	em { font-style: italic; }
 	
