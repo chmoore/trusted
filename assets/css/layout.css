@@ -1108,6 +1108,10 @@
     margin-top : 40px;
 	}
 	
+	#footer-bottom a:hover {
+		color:#fff;
+	}
+	
 	#footer-bottom a,
 	#footer-bottom h1,
 	#footer-bottom h2,
