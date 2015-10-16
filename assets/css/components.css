@@ -196,8 +196,9 @@
 		display: inline-block; 
 		padding: 8px 20px; 
 		border: 2px solid #232323;
-		border-radius: 20px;
-		margin: 0 5px 20px 0;
+		/*border-radius: 20px;*/
+		border-radius:0px;
+		margin: 0 5px 0px 0;
 		background-color: #232323;
 		color: #fff;
 		font-size: 10px;
@@ -951,7 +952,7 @@
 	
 	.slider-revolution.fullwidthbanner-container { /*margin-bottom: -65px;*/ margin-bottom:0px;}
 
-	.slider-revolution.fullwidthbanner-container .fullwidthbanner {height: 520px!important;}
+	.slider-revolution.fullwidthbanner-container .fullwidthbanner {height: 520px!important; border-bottom:6px solid #000;}
 	
 	.slider-overlay {
 		position: absolute;
@@ -1033,7 +1034,7 @@
 		font-size: 40px;
 		line-height: 48px;
 		font-weight: 600;
-		letter-spacing: 3px;
+		letter-spacing: 0px!important;
 		text-transform: uppercase;
 		font-family:'gotham_htfbold', Arial, sans-serif;
 	}
@@ -2008,9 +2009,10 @@
 	
 	#bg-1 {
 		padding: 60px 0 60px 0;
-		margin-top: 100px;
+		margin-top: 60px;
 		background-color: #efefef;
 		color: #979797;
+		margin-bottom:60px;
 	}
 	
 	#bg-1a {

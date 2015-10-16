@@ -134,7 +134,7 @@
    
 	@media (max-width: 767px) {
 		
-		.container { width: auto; }
+		.container { width: auto; padding:0 20px;}
 		
 		.span1, 
 		.span2, 
@@ -149,7 +149,30 @@
 		.span11, 
 		.span12 {
 			width: 100%;
+			
 		}
+		
+		.divider {
+    margin: 10px 0 20px;
+}
+
+.bx-viewport ul {
+	padding:0;
+}
+
+#back-to-top.visible {
+    right: 10px;
+}
+
+.btn {
+	width:100%;
+}
+
+.container-grid-copy {
+    padding: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+}
 		
 		.visible-phone { display: block !important; }
 		table.visible-phone { display: table; }
@@ -274,7 +297,7 @@
 	
 	.rounded {
 		    padding: 6px 10px;
-    height: 40px;
+    height: 42px;
     width: 100%;
     border: 1px solid #e1e1e1;
     background-color: #fff;
@@ -285,7 +308,7 @@
     box-sizing: border-box;
     font: 14px 'gotham_htfbold', Arial, sans-serif;
     padding-left: 20px;
-    border-radius: 20px;
+    border-radius: 0px;
 	}
 	
 }
