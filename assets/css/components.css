@@ -2019,6 +2019,16 @@
 		border-bottom:1px solid #dadada;
 	}
 	
+	#bg-1b {
+		padding: 60px 0 60px 0;
+		margin-top: -60px;
+		background-color: #efefef;
+		color: #979797;
+		margin-bottom:60px;
+		border-top:1px solid #dadada;
+		border-bottom:1px solid #dadada;
+	}
+	
 	#bg-1a {
 		padding: 30px 0 30px 0;
 	/*	margin-top: 50px;*/
