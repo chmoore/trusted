@@ -939,6 +939,7 @@
 		width: 100% !important;
 		padding: 0;
 		margin: 0; 
+		height:580px!important;
 	}
 
 	.fullwidthbanner-container ul { list-style: none; }
@@ -948,7 +949,7 @@
 		width: 100% !important;
 	}
 	
-	.slider-revolution.fullwidthbanner-container { margin-bottom: -65px; }
+	.slider-revolution.fullwidthbanner-container { /*margin-bottom: -65px;*/ margin-bottom:0px;}
 
 	.slider-revolution.fullwidthbanner-container .fullwidthbanner {height: 520px!important;}
 	
