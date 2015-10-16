@@ -200,13 +200,14 @@
 	.last { margin-bottom: 0 !important; }
 	
 	.copyright {
-		font-family: 'gotham_htfbold', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-weight: 400;
 		text-transform: uppercase;
 		color:#fff;
 		font-size:11px;
 		margin-left:40px;
 		padding: 22px 0px;
+		letter-spacing:1px;
 	}
 	
 	@media (max-width: 767px) {
