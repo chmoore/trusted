@@ -173,6 +173,32 @@
     color: #fff;
     margin-bottom: 20px;
 }
+
+h1 {
+    font-size: 26px!important;
+    line-height: 34px!important;
+    letter-spacing: 0px;
+}
+
+.caption.title {
+    color: #fff;
+    font-size: 30px!important;
+    line-height: 38px!important;
+    font-weight: 600;
+    letter-spacing: 0px!important;
+    text-transform: uppercase;
+    font-family: 'gotham_htfbold', Arial, sans-serif;
+    max-width: 330px!important;
+    width: 500px;
+    top: 160px!important;
+    left: 40px!important;
+    white-space: normal;
+	text-align:center;
+}
+
+.container-grid-copy p {
+	margin-bottom:0;
+}
 		
 		.visible-phone { display: block !important; }
 		table.visible-phone { display: table; }

@@ -347,6 +347,7 @@
 	padding:40px;
 	background:#efefef;
 	color:#000;
+	border:1px solid #dadada;
 }
 		
 /* =Mega Menu Section
@@ -438,6 +439,8 @@
 .twitter {
 	    font: 12px 'gotham_htfmedium', Arial, sans-serif;
     font-weight: 500;
+	    margin-top: 25px;
+    margin-bottom: 20px;
 }
 	
 /* =Menu Arrows
@@ -718,6 +721,7 @@
 		font-weight: 400;
 		text-align: center;
 		text-decoration: none;
+		font: 24px 'gotham_htfbold', Arial, sans-serif;
 	}
 
 	
