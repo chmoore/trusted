@@ -76,7 +76,7 @@
 		font-size: 16px; 
 		line-height: 25px;
 		letter-spacing: 0px;
-		text-transform:none;
+		text-transform:uppercase;
 	}
 	
 	h6 { 
@@ -268,7 +268,7 @@
     list-style: disc outside none;
     padding: 10px 10px 10px 0px;}
 	
-	.span9 ul {    padding: 10px 10px 10px 20px;}
+	.offset1 ul {    padding: 10px 10px 10px 20px;}
 	ol { list-style-type: decimal; }
 	
 	dl { margin-bottom: 20px; }
@@ -387,6 +387,11 @@
 		height: auto;
 		border: none; 
 		vertical-align: middle;
+	}
+	
+	.offset1a img {
+		width:100%;
+		margin-bottom:40px;
 	}
 	
 	.img-span {
