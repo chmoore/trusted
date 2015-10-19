@@ -101,8 +101,7 @@
 
         </div>
 
-        <div id="header">
-        
+        <div id="header" class="stuck">
         <!-- /// HEADER  //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
                 <div class="row">
@@ -118,16 +117,17 @@
                             <i class="fa fa-bars"></i>
                         </a>
                         
-                        <!-- // Custom search // -->                                        
-                    
-					<div class="fullscreen" id="custom-search-form-container">
-                        
-						<form id="custom-search-form" action="#">
-							<input type="text" placeholder="Search here and press enter..." name="s" id="s">
-							<input type="submit" id="custom-search-submit" value="">
+                        <!-- // Custom search // -->  
+                                                              
+                    <div class="search-wrap">
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
 						</form>
-						
-					</div><!-- end #custom-search-form-container -->
+					</div>
+                    </div>
                  <!--   
                     <div class="box">
   <div class="container-4">
@@ -149,24 +149,17 @@
                                     	<li><a href="#">Michael Godard</a></li>
                                         <li><a href="#">Stickman</a></li>
                                     </ul>
-                                </li>
-                                
-                                <li>
+                                </li> <li>
                                     <a href="request.html">Request an eTitle</a>
-                                </li>                                
-                                <li>
+                                </li>  <li>
                                     <a href="how-it-works.html">How It Works</a> 
                                 </li>
-								<li class="dropdown">                        	
-                                    <a href="about.html">About Trusted</a>
-                                     <ul>
-                                        <li><a href="press.html">Press</a></li>
-                                    </ul>
-                                    
-                                </li>  <li class="dropdown">
+									<li class="dropdown">
                                     <a href="contact-us.html">Contact Us</a>
                                     <ul>
+                                  	    <li><a href="about.html">About Trusted</a></li>
                                         <li><a href="faqs.html">FAQs</a></li>
+                                        <li><a href="press.html">Press</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -176,7 +169,6 @@
                 </div><!-- end .row -->		
         
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
         </div><!-- end #header -->                        
 		<div id="content">
 		
@@ -278,6 +270,19 @@
                     </div><!-- end .span8 -->
                 </div><!-- end .row -->
             </div>
+              <div class="fullwidth-section" id="bg-1-cut">
+            	<div class="fullwidth-section-content">
+					<div class="offset2 span8 text-center">
+						<div class="headline">
+							<h3>Have a quick question or comment? </h3>
+						</div><!-- end .headline -->
+                        <p class="twitter">
+                           <a href="http://www.twitter.com/asktrusted">Reach out to us on Twitter: @asktrusted</a>
+                        </p>
+                        </div>
+                       
+				</div><!-- end .row -->
+			</div>
             <!-- end .span6 -->
 	
                 <!-- end .row -->
@@ -333,7 +338,6 @@
                                  <!-- end .textwidget -->
                             
                         </div><!-- end .widget_text -->
-                        
                     </div><!-- end .span9 -->
                 </div><!-- end .row -->
 		
@@ -407,6 +411,11 @@
 
 	<!-- /// Twitter ////////  -->
 	<script src="assets/vendors/twitter/twitterfetcher.js"></script>
+       <script src="assets/js/classie.js"></script>
+    <script src="assets/js/uisearch.js"></script>
+		<script>
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script>
 	
 	<!-- /// Custom JS ////////  -->
 	<script src="assets/js/main.js"></script>	

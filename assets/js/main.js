@@ -541,9 +541,9 @@
 			var h = c();
 			
 			if (h >= stickypoint) {
-				$('#header').addClass("stuck");
+				$('#header-old').addClass("stuck");
 			} else {
-				$('#header').removeClass("stuck");
+				$('#header-old').removeClass("stuck");
 			}
 			
 			e = false;
@@ -557,7 +557,9 @@
 		
 		f();
 		
-	}	
+	}
+	
+		
 	
 /* ==========================================================================
    handleFullScreen

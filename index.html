@@ -100,8 +100,7 @@
 
         </div>
 
-        <div id="header">
-        
+        <div id="header" class="stuck">
         <!-- /// HEADER  //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
                 <div class="row">
@@ -117,16 +116,17 @@
                             <i class="fa fa-bars"></i>
                         </a>
                         
-                        <!-- // Custom search // -->                                        
-                    
-					<div class="fullscreen" id="custom-search-form-container">
-                        
-						<form id="custom-search-form" action="#">
-							<input type="text" placeholder="Search here and press enter..." name="s" id="s">
-							<input type="submit" id="custom-search-submit" value="">
+                        <!-- // Custom search // -->  
+                                                              
+                    <div class="search-wrap">
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
 						</form>
-						
-					</div><!-- end #custom-search-form-container -->
+					</div>
+                    </div>
                  <!--   
                     <div class="box">
   <div class="container-4">
@@ -153,16 +153,12 @@
                                 </li>  <li>
                                     <a href="how-it-works.html">How It Works</a> 
                                 </li>
-								<li class="dropdown">                        	
-                                    <a href="about.html">About Trusted</a>
-                                     <ul>
-                                        <li><a href="press.html">Press</a></li>
-                                    </ul>
-                                    
-                                </li>  <li class="dropdown">
+									<li class="dropdown">
                                     <a href="contact-us.html">Contact Us</a>
                                     <ul>
+                                  	    <li><a href="about.html">About Trusted</a></li>
                                         <li><a href="faqs.html">FAQs</a></li>
+                                        <li><a href="press.html">Press</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -172,8 +168,7 @@
                 </div><!-- end .row -->		
         
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-        </div><!-- end #header -->                        
+        </div><!-- end #header -->                       
 		<div id="content">
 		
 		<!-- /// CONTENT  /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -249,32 +244,15 @@
                     
                     <div class="container">
                 <div class="row">
-                <div class="span12">
-                <div class="headline text-center">
+                    <div class="offset2 span8 text-center">
+                        <div class="headline text-center">
                         	
                             <h1>How It Works</h1>
                         </div>
-                        </div>
-                    <div class="span6 border">
 						<!-- end .headline -->
-                        <div class="container-grid">
-                        <div class="container-grid-img"><img src="assets/images/secure-lock.jpg"></div>
-                        <div class="container-grid-copy">
                         <p>Trusted.com has established itself as the new industry standard for product verification and authentication services. Trusted.com software-as-a-service (SaaS) solution provides secure and transferrable electronic titles (eTitles) for luxury products. The Trusted eTitles are created at the time a product is manufactured. 
                         </p>
-                        </div>
-                        </div>
-                        
-                    </div><!-- end .span6 -->
-                    <div class="span6">
-                    	
-                        <div class="container-grid">
-                        <div class="container-grid-img"><img src="assets/images/secure-man.jpg"></div>
-                        <div class="container-grid-copy">
-                        <p>These transferrable eTitles offer a new standard for verifying authenticity and provides numerous benefits, including: increased brand protection, the ability to challenge unauthorized sellers as well as enhanced consumer protection to prevent the purchase of luxury goods which are fraudulent or misrepresented in the marketplace.</p>
-                        </div>
-                        </div>
-                        
+                        <a class="button-hover" data-text="Learn More" href="how-it-works.html">Learn More</a>
                     </div><!-- end .span6 -->
                 </div><!-- end .row -->
             </div>
@@ -325,7 +303,7 @@
                   <div class="span12">
                    <div class="headline text-center">
                         	
-                            <h1>Authenticated Art</h1>
+                            <h1>Trusted Shopping</h1>
                         </div>
                   <div class="testimonial-slider">
                             
@@ -333,7 +311,7 @@
                                 <li>
                                     
                                     <div class="testimonial">
-                	<div class="span6">
+                	<div class="span3">
                     <div class="item">
 								
 								<div class="portfolio-item">
@@ -359,30 +337,12 @@
 									</div><!-- end .portfolio-item-preview -->
 									
 								</div><!-- end .portfolio-item -->
-								
+								 <h5>Olive Party 2 Signed and Numbered by Michael Godard</h5>
+                                 <p><strong>$2,995.00</strong></p>
 							</div>
                     
                     </div><!-- end .span6 -->
-                    <div class="span6">
-                    	
-                        <div class="headline">
-                        	
-                            <h3>Olive Party 2 Signed and Numbered by Michael Godard</h3>
-                            
-                            <h6>$2,995.00</h6>
-                            
-                        </div><!-- end .headline -->
-                        
-                        <p>Well the party continues from the first piece I painted in this series Olive Party. The olives are now celebrating after the match finally lit the cigar. I was at the Ritz Carlton for a Cigar and Cognac tasting and was given about 5 different cigars to smoke that night. Well since I do not normally smoke cigars I was a little green after the party. In honor of that night I painted the olive that is bent over the ashtray a different shade of green, as it smoked too much also!</p>
-                        <a class="btn" href="#">View All In the Store</a>
-                        
-                    </div><!-- end .span6 -->
-                </div><!-- end .row -->
-                </li>
-                <li>
-                                    
-                                    <div class="testimonial">
-                	<div class="span6">
+                    <div class="span3">
                     <div class="item">
 								
 								<div class="portfolio-item">
@@ -408,24 +368,202 @@
 									</div><!-- end .portfolio-item-preview -->
 									
 								</div><!-- end .portfolio-item -->
+								 <h5>Olive Party 2 Signed and Numbered by Michael Godard</h5>
+                                 <p><strong>$2,995.00</strong></p>
+							</div>
+                    
+                    </div>
+                    <div class="span3">
+                    <div class="item">
 								
+								<div class="portfolio-item">
+							
+									<div class="portfolio-item-preview">
+										
+										<img src="assets/images/godard.jpg" alt="">
+										
+										<div class="portfolio-item-overlay">
+											
+											<div class="portfolio-item-description">
+												
+												<h4>
+													<a href="#">Discover More</a>
+												</h4>
+												
+												<p>Click Here</p>
+												
+											</div><!-- end .portfolio-item-description -->
+											
+										</div><!-- end .portfolio-item-overlay -->
+										
+									</div><!-- end .portfolio-item-preview -->
+									
+								</div><!-- end .portfolio-item -->
+								 <h5>Olive Party 2 Signed and Numbered by Michael Godard</h5>
+                                 <p><strong>$2,995.00</strong></p>
+							</div>
+                    
+                    </div>
+                    <div class="span3">
+                    <div class="item">
+								
+								<div class="portfolio-item">
+							
+									<div class="portfolio-item-preview">
+										
+										<img src="assets/images/godard-1.jpg" alt="">
+										
+										<div class="portfolio-item-overlay">
+											
+											<div class="portfolio-item-description">
+												
+												<h4>
+													<a href="#">Discover More</a>
+												</h4>
+												
+												<p>Click Here</p>
+												
+											</div><!-- end .portfolio-item-description -->
+											
+										</div><!-- end .portfolio-item-overlay -->
+										
+									</div><!-- end .portfolio-item-preview -->
+									
+								</div><!-- end .portfolio-item -->
+								 <h5>Olive Party 2 Signed and Numbered by Michael Godard</h5>
+                                 <p><strong>$2,995.00</strong></p>
+							</div>
+                    
+                    </div>
+                </div><!-- end .row -->
+                </li>
+                <li>
+                                    
+                                    <div class="testimonial">
+                	<div class="span3">
+                    <div class="item">
+								
+								<div class="portfolio-item">
+							
+									<div class="portfolio-item-preview">
+										
+										<img src="assets/images/godard.jpg" alt="">
+										
+										<div class="portfolio-item-overlay">
+											
+											<div class="portfolio-item-description">
+												
+												<h4>
+													<a href="#">Discover More</a>
+												</h4>
+												
+												<p>Click Here</p>
+												
+											</div><!-- end .portfolio-item-description -->
+											
+										</div><!-- end .portfolio-item-overlay -->
+										
+									</div><!-- end .portfolio-item-preview -->
+									
+								</div><!-- end .portfolio-item -->
+								 <h5>Olive Party 4 Signed and Numbered by Michael Godard</h5>
+                                 <p><strong>$2,995.00</strong></p>
 							</div>
                     
                     </div><!-- end .span6 -->
-                    <div class="span6">
-                    	
-                        <div class="headline">
-                        	
-                            <h3>A Good Day Godard Edition by Michael Godard</h3>
-                            
-                            <h6>$500.00</h6>
-                            
-                        </div><!-- end .headline -->
-                        
-                        <p>This piece features a martini glass, martini shaker, and two olives enjoying a cigar on top of a well-earned stack of bills. After a good day, no better way than to relish the day than with a martini and a nice cigar!</p>
-                        <a class="btn" href="#">View All In the Store</a>
-                        
-                    </div><!-- end .span6 -->
+                    <div class="span3">
+                    <div class="item">
+								
+								<div class="portfolio-item">
+							
+									<div class="portfolio-item-preview">
+										
+										<img src="assets/images/godard-1.jpg" alt="">
+										
+										<div class="portfolio-item-overlay">
+											
+											<div class="portfolio-item-description">
+												
+												<h4>
+													<a href="#">Discover More</a>
+												</h4>
+												
+												<p>Click Here</p>
+												
+											</div><!-- end .portfolio-item-description -->
+											
+										</div><!-- end .portfolio-item-overlay -->
+										
+									</div><!-- end .portfolio-item-preview -->
+									
+								</div><!-- end .portfolio-item -->
+								 <h5>Olive Party 2 Signed and Numbered by Michael Godard</h5>
+                                 <p><strong>$2,995.00</strong></p>
+							</div>
+                    
+                    </div>
+                    <div class="span3">
+                    <div class="item">
+								
+								<div class="portfolio-item">
+							
+									<div class="portfolio-item-preview">
+										
+										<img src="assets/images/godard.jpg" alt="">
+										
+										<div class="portfolio-item-overlay">
+											
+											<div class="portfolio-item-description">
+												
+												<h4>
+													<a href="#">Discover More</a>
+												</h4>
+												
+												<p>Click Here</p>
+												
+											</div><!-- end .portfolio-item-description -->
+											
+										</div><!-- end .portfolio-item-overlay -->
+										
+									</div><!-- end .portfolio-item-preview -->
+									
+								</div><!-- end .portfolio-item -->
+								 <h5>Olive Party 2 Signed and Numbered by Michael Godard</h5>
+                                 <p><strong>$2,995.00</strong></p>
+							</div>
+                    
+                    </div>
+                    <div class="span3">
+                    <div class="item">
+								
+								<div class="portfolio-item">
+							
+									<div class="portfolio-item-preview">
+										
+										<img src="assets/images/godard-1.jpg" alt="">
+										
+										<div class="portfolio-item-overlay">
+											
+											<div class="portfolio-item-description">
+												
+												<h4>
+													<a href="#">Discover More</a>
+												</h4>
+												
+												<p>Click Here</p>
+												
+											</div><!-- end .portfolio-item-description -->
+											
+										</div><!-- end .portfolio-item-overlay -->
+										
+									</div><!-- end .portfolio-item-preview -->
+									
+								</div><!-- end .portfolio-item -->
+								 <h5>Olive Party 2 Signed and Numbered by Michael Godard</h5>
+                                 <p><strong>$2,995.00</strong></p>
+							</div>
+                    
+                    </div>
                 </div><!-- end .row -->
                 </li>
                 
@@ -434,47 +572,6 @@
             </div><!-- end .row -->
 			</div><!-- end .container -->
             </div>
-             <div class="divider single-line"></div>
-            <div class="container">
-                <div class="row">
-                <div class="span12">
-						  <div class="headline text-center">
-						<h1 class="text-center">Contact Trusted</h1>
-						</div>
-					</div>
-                </div><!-- end .row -->
-            </div><!-- end .container --> 	
-			
-	<div class="container">
-                <div class="row">
-                    <!-- end .span4 -->
-                    <div class="offset2 span8 text-center">
-                        
-                        <form id="contact-form" name="contact-form" method="post" action="#">  
-                            <fieldset>
-                                <div id="formstatus"></div>
-                                <p>
-                                    <input class="span12" type="text" id="name" name="name" value="" placeholder="First Name &amp; Last Name**" >
-                                </p>
-                                <p>
-                                    <input class="span12" type="text" id="email" name="email" value="" placeholder="Email Address*" >
-                                </p>
-                                <p>
-                                    <input class="span12" type="text" id="subject" name="subject" value="" placeholder="Subject*"  >
-                                </p>
-                                <p>
-                                    <textarea class="span12" id="message" name="message" rows="7" cols="25" placeholder="Message*"></textarea>
-                                </p>
-                                <p class="last">
-                                    <input class="btn" id="submit" type="submit" name="submit" value="Contact Trusted" >
-                                </p>
-                            </fieldset>
-                        </form><!-- end #contact-form -->
-                    
-                    </div><!-- end .span8 -->
-                </div><!-- end .row -->
-            </div>
-            
 		<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 		</div><!-- end #content -->
@@ -601,6 +698,11 @@
 
 	<!-- /// Twitter ////////  -->
 	<script src="assets/vendors/twitter/twitterfetcher.js"></script>
+      <script src="assets/js/classie.js"></script>
+    <script src="assets/js/uisearch.js"></script>
+		<script>
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script>
 	
 	<!-- /// Custom JS ////////  -->
 	<script src="assets/js/main.js"></script>	

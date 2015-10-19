@@ -98,7 +98,7 @@
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
         </div>
 
-        <div id="header">
+        <div id="header" class="stuck">
         <!-- /// HEADER  //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
                 <div class="row">
@@ -114,16 +114,17 @@
                             <i class="fa fa-bars"></i>
                         </a>
                         
-                        <!-- // Custom search // -->                                        
-                    
-					<div class="fullscreen" id="custom-search-form-container">
-                        
-						<form id="custom-search-form" action="#">
-							<input type="text" placeholder="Search here and press enter..." name="s" id="s">
-							<input type="submit" id="custom-search-submit" value="">
+                        <!-- // Custom search // -->  
+                                                              
+                    <div class="search-wrap">
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"></span>
 						</form>
-						
-					</div><!-- end #custom-search-form-container -->
+					</div>
+                    </div>
                  <!--   
                     <div class="box">
   <div class="container-4">
@@ -150,16 +151,12 @@
                                 </li>  <li>
                                     <a href="how-it-works.html">How It Works</a> 
                                 </li>
-								<li class="dropdown">                        	
-                                    <a href="about.html">About Trusted</a>
-                                     <ul>
-                                        <li><a href="press.html">Press</a></li>
-                                    </ul>
-                                    
-                                </li>  <li class="dropdown">
+									<li class="dropdown">
                                     <a href="contact-us.html">Contact Us</a>
                                     <ul>
+                                  	    <li><a href="about.html">About Trusted</a></li>
                                         <li><a href="faqs.html">FAQs</a></li>
+                                        <li><a href="press.html">Press</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -189,7 +186,10 @@
                         </div></div></div>
             <div class="container">   
 				<div class="row">
-					<div class="offset1 span6">
+                <div class="span12">
+                        <img class="row-img" src="assets/images/secure-lock.jpg">
+                        </div>
+					<div class="span9 center">
 <h4>How the Process Works</h4>
 <p><ul>
   <li>During production, each piece is assigned a serial number by the manufacturer.</li>
@@ -199,9 +199,16 @@
 <li>Once the item is purchased, the customer uses the point-of-sale application while in-store to register ownership of their eTile and create a Trusted.com account.  The eTitle will immediately transfer to that account.</li>
 <li>Upon resale, the owner can transfer the eTitle to the new owner’s account within the Trusted.com user module.</li>
 </ul></p>
- <div class="container-grid">
-                        <div class="container-grid-img"><img src="assets/images/secure-lock.jpg"></div>
-                        </div><br><br>
+</div>
+                        			</div><!-- end .row -->
+			</div> <!-- end .container -->
+<div class="divider single-line"></div>
+  <div class="container">   
+				<div class="row">
+               <div class="span12">
+                        <img class="row-img" src="assets/images/secure-lock.jpg">
+                        </div>
+					<div class="span9 center">
 <h4>The value of owning a Trusted.com eTitle:</h4>
 <p><ul><li>Obtain an item's comprehensive ownership history</li>
 <li>Verify an item’s authenticity on-demand</li>
@@ -209,32 +216,42 @@
 <li>Increase value retention of authentic merchandise</li>
 <li>Accept and initiate eTitle transfers from Trusted.com’s user module</li>
 </ul></p>
-
+</div>
+                        			</div><!-- end .row -->
+			</div> <!-- end .container -->
+<div class="divider single-line"></div>
+  <div class="container">   
+				<div class="row">
+ <div class="span12">
+                        <img class="row-img" src="assets/images/secure-lock.jpg">
+                        </div>
+                        <div class="span9 center">
 <h4>As a brand or authorized retailer, the benefits of Trusted.com go far beyond the eTitle...</h4>
 <p><ul><li>Protect your brand by allowing customers to verify your items' authenticity at any time</li>
 <li>Improve your supply chain security and internal visibility</li>
 <li>Clearly differentiate authorized retailers from unauthorized retailers</li>
 <li>Protect customers from buying stolen goods in the pre-owned market with real-time theft reporting</li>
 </ul></p>
+</div>
                         </div>
-                        <div class="offset1a span4"> <div class="container-grid">
-                        <div class="container-grid-copy gray">
-                       <h4>Have a quick question or comment? </h4>
-                            
+                     </div>
+            <!-- end .span6 -->
+	
+                <!-- end .row -->
+                            <div class="fullwidth-section" id="bg-1-cut">
+            	<div class="fullwidth-section-content">
+					<div class="offset2 span8 text-center">
+						<div class="headline">
+							<h3>Have a quick question or comment? </h3>
+						</div><!-- end .headline -->
                         <p class="twitter">
                            <a href="http://www.twitter.com/asktrusted">Reach out to us on Twitter: @asktrusted</a>
                         </p>
                         </div>
-                        </div><br><br>
+                        </div> 
                         </div>
-                        
-                      
-				</div><!-- end .row -->
-			</div>
-            <!-- end .span6 -->
-	
-                <!-- end .row -->
             </div>
+            
 		<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
         
@@ -360,10 +377,15 @@
 
 	<!-- /// Twitter ////////  -->
 	<script src="assets/vendors/twitter/twitterfetcher.js"></script>
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/uisearch.js"></script>
+		<script>
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script>
 	
 	<!-- /// Custom JS ////////  -->
+  
 	<script src="assets/js/main.js"></script>	
-    
     <script>
 	$(document).ready(function(){
      $('#wrap').delay(500).fadeIn(1000);
