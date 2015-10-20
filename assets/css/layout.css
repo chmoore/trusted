@@ -252,7 +252,8 @@
 	
 	.menu-right {
 		float:right;
-		margin-right:32px;
+		margin-right:60px!important;
+		margin-top:-78px!important;
 		
 	}
 	
