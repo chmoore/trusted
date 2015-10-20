@@ -54,7 +54,7 @@
 	}
 	
 	h2 { 	
-		font-size: 24px; 
+		font-size: 28px; 
 		line-height: 42px; 
 		letter-spacing: 0px;
 	}
@@ -73,14 +73,14 @@
 	}
 	
 	h5 { 
-		font-size: 16px; 
+		font-size: 18px; 
 		line-height: 25px;
 		letter-spacing: 0px;
 		text-transform:uppercase;
 	}
 	
 	h6 { 
-		font-size: 20px; 
+		font-size: 14px; 
 		line-height: 22px;
 		letter-spacing: 0px;
 	}
@@ -567,6 +567,7 @@
 		background-color: #fff;
 		color: #979797;
 		font: 14px 'gotham_htfbold', Arial, sans-serif;
+		border-radius:8px;
 	}
 
 	input[type="text"]:focus,
@@ -666,7 +667,7 @@
 	
 	select {
 		padding: 6px 10px;	
-		height: 42px;
+		height: 45px;
 		width: 100%;
 		border: 1px solid #e1e1e1;
 		background-color: #fff;
@@ -678,7 +679,8 @@
 		font: 14px 'gotham_htfbold', Arial, sans-serif;
 		padding-left:20px;
 		/*border-radius:20px;*/
-		border-radius:0px;
+		border-radius:8px;
+   		border: 2px solid #e1e1e1;
 	}
 
 	select:disabled {
@@ -716,9 +718,9 @@
 	input[type="button"]{
 		position: relative;
 		display: inline-block;
-		padding: 10px 20px;
-		border: 2px solid #333;
-		background-color: #333;
+		padding: 11px 25px;
+		border: 2px solid #504E4E;
+		background-color: #504E4E;
 		-webkit-background-clip: padding-box;
 		   -moz-background-clip: padding-box;
 				background-clip: padding-box;
@@ -727,6 +729,7 @@
 		text-decoration: none;
 		cursor: pointer;
 		-webkit-appearance: none;
+		height:42px;
 	}
 	
 	.widget {

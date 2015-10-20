@@ -146,7 +146,7 @@
    =Logo
    ========================================================================== */
    
-	#logo { padding: 15px 0 10px 40px; float:left; }
+	#logo { padding: 15px 20px 10px 40px; float:left; }
 	
 	/**
 	 * 1. displaying the <a> inline-block makes it depends on the size of it's children
@@ -241,7 +241,7 @@
 	.sf-menu li.dropdown.sfHover > ul { display: block; }
 	
 	.menuright {
-		margin-left:100px;
+		margin-left:40px;
 	}
 	
 
@@ -385,14 +385,14 @@
 	
 	.register {     
 	/*width: 150px;*/
-    padding: 10px 15px!important;
-    border: 1px solid #f0522C!important;
-    border-radius: 20px; 
+    padding: 12px 15px!important;
+    /*border: 1px solid #f0522C!important;
+    border-radius: 8px; */
 	font: 11px 'gotham_htfbold', Arial, sans-serif!important;
 	font-weight:600;
 	text-align:center;
 	margin-top:8px;
-	color:#fff!important;
+	color:#fff;
 	}
 	.register:before {
 	
@@ -405,7 +405,7 @@
 	
 	.register:hover {
 		color:#fff;
-		background:#f0522C;
+		/*background:#f0522C;*/
 	}
 	
 	.locator {
@@ -664,9 +664,11 @@
 	
 	.social {
 		color:#fff!important;
-		float: left;
-   		 margin-left: 12%;
+		/*float: left;
+   		 margin-left: 12%;*/
   	  margin-top: 22px;
+	  position:absolute;
+	  right:100px;
 	}
 	
 	.social i {
@@ -857,7 +859,7 @@
 			z-index: 1020; /* 1 */
 			top: 0;
 			width: 100%;
-			padding: 10px 0 0 0;
+			padding: 0;
 			margin: 0 auto;
 			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);			
 			background-color: #0b0b0b;
@@ -865,7 +867,7 @@
 					transition: all 0.3s;
 		}
 		
-		#header.stuck #logo img { width: 80%; }
+		#header.stuck #logo img { width: 75%; }
 		
 		#header.stuck .register-stuck {
     position: absolute;
@@ -907,7 +909,7 @@
 		
 		#header.stuck .sf-menu > li > a,
 		#header.stuck .sf-menu > li.dropdown > a {
-			padding: 26px 25px 36px;
+			padding: 26px 20px 36px;
 		}
 		
 	}
