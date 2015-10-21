@@ -273,6 +273,10 @@
 		    padding: 10px 10px 10px 25px;
 	}
 	
+	.span6 ul {
+		    padding: 10px 10px 10px 25px;
+	}
+	
 	.offset1 ul {    padding: 10px 10px 10px 20px;}
 	ol { list-style-type: decimal; }
 	

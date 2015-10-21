@@ -2033,6 +2033,15 @@
 		border-bottom:1px solid #dadada;
 	}
 	
+	#bg-1-w {
+		padding: 40px 0 40px 0;
+		margin-bottom: 60px;
+		background-color: #FFF;
+		color: #979797;
+		margin-top:40px;
+	}
+	
+	
 	#bg-1-cut {
 		padding: 60px 0 60px 0;
 		margin-top: 60px;
