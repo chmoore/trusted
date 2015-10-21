@@ -10,16 +10,18 @@
 	.accordion-item {
 		position: relative;
 		display: block;
-		padding: 14px 25px;
-		border: 2px solid #979797;
+		/*padding: 14px 25px;
+		border: 2px solid #979797;*/
+		padding:25px 35px 0px 0px;
 		margin-bottom: 30px;
 		color: #979797;
 		font-family: 'Montserrat', Arial, sans-serif;
 		font-weight: 700;
-		letter-spacing: 2px;
+		letter-spacing: 0px;
 		text-transform: uppercase;
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;
+		border-top: 1px solid #e1e1e1;
 	}
 	
 	a.accordion-item { color: #979797; }
@@ -37,13 +39,13 @@
 	.accordion-item:hover,
 	.accordion-item.active {
 		color: #232323;
-		border-color: #232323;
+		/*border-color: #232323;*/
 		text-decoration: none;
 	}
 	
 	.accordion-item-content { 
 		display: none; 
-		padding: 0 25px 30px 25px; 
+		padding: 0 25px 30px 0px; 
 	}
 	
 	.accordion-item-content :last-child { margin-bottom: 0; }

@@ -98,7 +98,7 @@
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
         </div>
 
-        <div id="header"> 
+        <div id="header" class="stuck">
         <!-- /// HEADER  //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
                 <div class="row">
@@ -114,16 +114,17 @@
                             <i class="fa fa-bars"></i>
                         </a>
                         
-                        <!-- // Custom search // -->                                        
-                    
-					<div class="fullscreen" id="custom-search-form-container">
-                        
-						<form id="custom-search-form" action="#">
-							<input type="text" placeholder="Search here and press enter..." name="s" id="s">
-							<input type="submit" id="custom-search-submit" value="">
+                        <!-- // Custom search // -->  
+                                                              
+                    <div class="search-wrap">
+					<div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Search Trusted.com" type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search"> Search</span>
 						</form>
-						
-					</div><!-- end #custom-search-form-container -->
+					</div>
+                    </div>
                  <!--   
                     <div class="box">
   <div class="container-4">
@@ -132,9 +133,9 @@
     <button class="icon"><i class="fa fa-search"></i></button>
     </form>
   </div>
-</div>-->			<a id="locator-icon" class="locator-stuck" href="store-locator.html"><i class="fa fa-map-marker"></i></a>
-                    <a id="register-icon" class="register-stuck" href="#"><i class="fa fa-user"></i></a>
-					<a id="custom-search-button" href="#"><i class="fa fa-search"></i></a>
+</div>-->			<!--<a id="locator-icon" class="locator-stuck" href="store-locator.html"><i class="fa fa-map-marker"></i></a>
+                    <a id="register-icon" class="register-stuck" href="#"><i class="fa fa-user"></i></a>-->
+					<!--<a id="custom-search-button" href="#"><i class="fa fa-search"></i></a>-->
                         
                         <!-- // Menu // -->
                         <nav class="main-nav">
@@ -146,30 +147,32 @@
                                         <li><a href="#">Stickman</a></li>
                                     </ul>
                                 </li> <li>
-                                    <a href="request.html">Request an eTitle</a>
+                                    <a href="request.html">eTitle Request</a>
                                 </li>  <li>
                                     <a href="how-it-works.html">How It Works</a> 
                                 </li>
-								<li class="dropdown">                        	
-                                    <a href="about.html">About Trusted</a>
-                                     <ul>
-                                        <li><a href="press.html">Press</a></li>
-                                    </ul>
-                                    
-                                </li>  <li class="dropdown">
+                                <li>
+                             <a href="store-locator.html">Store Locator</a>
+                             </li> 
+									<!--<li class="dropdown">
                                     <a href="contact-us.html">Contact Us</a>
                                     <ul>
+                                  	    <li><a href="about.html">About Trusted</a></li>
                                         <li><a href="faqs.html">FAQs</a></li>
+                                        <li><a href="press.html">Press</a></li>
                                     </ul>
+                                </li>-->
+                            </ul>
+                            <ul class="sf-menu fixed menu-right" id="">
+                            <li>
+                                	<a href="https://www.trusted.com/usersso/login" class="register">Sign In</a>
                                 </li>
                             </ul>
                         </nav>	
 
                     </div><!-- end .span9 -->
                 </div><!-- end .row -->		
-        
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        </div><!-- end #header -->                        
+        </div><!-- end #header -->                            
 		<div id="content">
 		
 		<!-- /// CONTENT  /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -195,30 +198,60 @@
             <div class="container">   
 				<div class="row">
 					<div class="center span8">
-<h6>If your issue is not addressed in the FAQ, please <a href="contact-us.html">contact us</a>.</h6>
-<div class="span12 divider single-line"></div>
-<h4>My Trusted.com Account</h4>
-<h5>What items qualify for a Trusted.com eTitle?</h5>
-<ul>
-<li>
-Trusted.com eTitles are exclusively offered by authorized retailers of partnered brands.  Use our Store Locator to find authorized retailers who offer qualified products.
-</li></ul>
-<div class="span12 divider single-line"></div>
-<h5>I purchased a qualified item from a Trusted.com authorized retailer but I don’t see my eTitle in my account.  How do I retrieve my eTitle?</h5>
-<ul><li>An eTitle must be transferred to you directly from the seller.  Check with the retailer or individual whom you purchased your item from to verify whether they have initiated the eTitle transfer to your email address. </li></ul>
-<div class="span12 divider single-line"></div>
-<h5>I am not receiving email notifications when I change my account settings, transfer an eTitle, or order from Trusted.com’s online store.  How do I retrieve these emails?</h5>
-<ul>
+<h3>My Trusted.com Account</h3>
+ <div class="accordion">
+                                
+                            <a class="accordion-item" href="#">What items qualify for a Trusted.com eTitle?</a>
+                
+                            <div class="accordion-item-content">
+                                
+                                <p>Trusted.com eTitles are exclusively offered by authorized retailers of partnered brands.  Use our Store Locator to find authorized retailers who offer qualified products.</p>
+                                
+                            </div><!-- end .accordion-item-content -->
+ <a class="accordion-item" href="#">I purchased a qualified item from a Trusted.com authorized retailer but I don’t see my eTitle in my account.  How do I retrieve my eTitle?</a>
+                
+                            <div class="accordion-item-content">
+                                
+                                <p>An eTitle must be transferred to you directly from the seller.  Check with the retailer or individual whom you purchased your item from to verify whether they have initiated the eTitle transfer to your email address. </p>
+                                
+                            </div><!-- end .accordion-item-content -->
+                            
+                             <a class="accordion-item" href="#">I am not receiving email notifications when I change my account settings, transfer an eTitle, or order from Trusted.com’s online store.  How do I retrieve these emails?</a>
+                
+                            <div class="accordion-item-content">
+                                
+                                <ul>
 <li>Check your spam folder and make sure to mark any Trusted.com emails as a trusted sender. </li>
 <li>Check your account settings to make sure your have the correct primary and secondary email address.  If an eTitle is transferred to your primary email address, your secondary email will not receive a confirmation (and vice versa.)</li></ul>
-<div class="span12 divider single-line"></div>
-<h4>Requesting an eTitle</h4>
-<h5>I purchased a qualified item prior to the offering of Trusted.com eTitles.  How can I receive an eTitle for my item?</h5>
-<ul><li>An eTitle can not be issued for an item until its authenticity is confirmed by an exclusive Authentication Service.  Visit our Request an Item page to begin the authentication process.</li></ul>
-<div class="span12 divider single-line"></div>
-<h4>Trusted.com eCommerce</h4>
-<h5>How can I check on my order’s status or change my shipping information for a purchase made through Trusted.com’s online store?</h5>
-<ul><li>All inquires concerning a product, your order's status, or shipping information related to a purchased placed on our online shop should be directed to the seller that purchase was made from.  The seller information is accessible from the item listing.</li></ul>
+                                
+                            </div><!-- end .accordion-item-content -->
+                            </div>
+ 
+<h3>Requesting an eTitle</h3>
+
+ <div class="accordion">
+                                
+                            <a class="accordion-item" href="#">I purchased a qualified item prior to the offering of Trusted.com eTitles.  How can I receive an eTitle for my item?</a>
+                
+                            <div class="accordion-item-content">
+                                
+                                <p>An eTitle can not be issued for an item until its authenticity is confirmed by an exclusive Authentication Service.  Visit our Request an Item page to begin the authentication process.</p>
+                                
+                            </div><!-- end .accordion-item-content -->
+</div>
+
+<h3>Trusted.com eCommerce</h3>
+ <div class="accordion">
+                                
+                            <a class="accordion-item" href="#">How can I check on my order’s status or change my shipping information for a purchase made through Trusted.com’s online store?</a>
+                
+                            <div class="accordion-item-content">
+                                
+                                <p>All inquires concerning a product, your order's status, or shipping information related to a purchased placed on our online shop should be directed to the seller that purchase was made from.  The seller information is accessible from the item listing.</p>
+                                
+                            </div><!-- end .accordion-item-content -->
+</div>
+<h6>If your issue is not addressed in the FAQ, please <a href="contact-us.html">contact us</a>.</h6>
 				
 					</div><!-- end .span12 -->
 				</div><!-- end .row -->
@@ -399,7 +432,15 @@ Trusted.com eTitles are exclusively offered by authorized retailers of partnered
 	<script src="assets/vendors/twitter/twitterfetcher.js"></script>
 	
 	<!-- /// Custom JS ////////  -->
+	 <script src="assets/js/classie.js"></script>
+    <script src="assets/js/uisearch.js"></script>
+		<script>
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script>
+	
+	<!-- /// Custom JS ////////  -->
 	<script src="assets/js/main.js"></script>	
+   
     
     
 </body>
