@@ -181,7 +181,9 @@
 	.text-left { text-align: left; }
 	.text-right { text-align: right; }
 	.text-center { text-align: center; padding-top:30px; }
+	.text-center-1 { text-align: center;}
 	.text-center p{font-style:italic; color:#000;}
+	.text-center-1 p{color:#FFF;}
 	.text-justify { text-align: justify; }
 	.text-left-2 {text-align:left;margin-left:25px;margin-top:-7px;}
 	
@@ -205,9 +207,8 @@
 		text-transform: uppercase;
 		color:#fff;
 		font-size:11px;
-		margin-left:40px;
-		padding: 22px 0px;
 		letter-spacing:1px;
+		margin-bottom:10px;
 	}
 	
 	@media (max-width: 767px) {
@@ -267,6 +268,10 @@
 	ul {  border-radius: 3px 3px 3px 3px;
     list-style: disc outside none;
     padding: 10px 10px 10px 0px;}
+	
+	.span8 ul {
+		    padding: 10px 10px 10px 25px;
+	}
 	
 	.offset1 ul {    padding: 10px 10px 10px 20px;}
 	ol { list-style-type: decimal; }

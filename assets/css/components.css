@@ -293,7 +293,7 @@
    =Dividers
    ========================================================================== */
 
-	.divider { margin: 20px 0 40px; }
+	.divider { margin: 40px 0 40px; }
 	
 	.divider.single-line { border-top: 1px solid #e1e1e1; }
 	
@@ -312,7 +312,7 @@
 	.border {
 		    border-right-width: 1px;
     border-right-style: solid;
-    border-right-color: #ededed;
+    border-right-color: #dadada;
 	}
    
 /* ==========================================================================
@@ -2335,6 +2335,6 @@
 
 .search-wrap {
 	float:right;
-	width:400px;
+	width:300px;
 	position:relative;
 }
