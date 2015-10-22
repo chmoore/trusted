@@ -346,7 +346,7 @@
 	
 	.sf-menu-1 > li > a,
 	.sf-menu-1 > li.dropdown > a {
-		padding: 35px 15px;
+		padding: 35px 25px;
 		border: none;
 		color: #b2b3b3;
 		font-size: 12px;
@@ -559,7 +559,7 @@
 .press-img {
 	width:100px;
 	float:left;
-	margin-right:25px;
+	margin-right:45px;
 }
 
 .press-img img {
@@ -737,6 +737,14 @@
     float: right;
     margin-right: 60px;
 	margin-top:-50px;
+}
+
+.search-wrap {
+    float: right;
+    width: 300px;
+    position: relative;
+    margin-top: -55px;
+    margin-right: 50px;
 }
 
 	}

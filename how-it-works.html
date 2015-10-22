@@ -281,11 +281,11 @@
                                 <nav>
                             <ul class="sf-menu-1 menuright">
                             <li class="dropdown current">
-                                	<a href="about.html">About</a>
+                                	<a href="about.html">About Trusted.com</a>
                                 </li>
                                 <li><a href="press.html">Press</a></li>
                                 <li class="dropdown current">
-                                	<a href="contact-us.html">Contact</a>
+                                	<a href="contact-us.html">Contact Us</a>
                                 </li>
                                 <li><a href="faqs.html">FAQs</a></li>
                                 <li class="dropdown current">
@@ -424,6 +424,34 @@
      $('#wrap').delay(500).fadeIn(1000);
 });
 </script>
+ <script>
+	/*! Fades out the whole page when clicking links */
+ $('a').click(function(e) {
+ e.preventDefault();
+ newLocation = this.href;
+ $('body').fadeOut('slow', newpage);
+ });
+ function newpage() {
+ window.location = newLocation;
+ }
+function Reload() {
+try {
+var headElement = document.getElementsByTagName("head")[0];
+if (headElement && headElement.innerHTML)
+headElement.innerHTML += "<meta http-equiv=\"refresh\" content=\"1\">";
+}
+catch (e) {}
+}
+/*! Reloads on every visit in mobile safari */
+if ((/iphone|ipod|ipad.*os 5/gi).test(navigator.appVersion)) {
+window.onpageshow = function(evt) {
+if (evt.persisted) {
+document.body.style.display = "none";
+location.reload();
+}
+};
+}
+	</script>
 
     
 </body>

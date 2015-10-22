@@ -1459,12 +1459,16 @@
 	}
 	
 	.item p {
-		font-size:14px;
+		font-size:12px;
 		letter-spacing:0.2px;
+		color:#818181;
+		margin-bottom:0;
 	}
 	
 	.item {
 		font-family: 'gotham_htfmedium', Arial, sans-serif!important;
+		border: 1px solid #e1e1e1;
+        padding: 20px;
 	}
 	
 	.portfolio-item-preview { position: relative; }
