@@ -194,6 +194,9 @@
    	nav {
 		/*margin-left:15px;*/
 	}
+	.main-nav {
+		z-index:999;
+	}
 	
 	.div-right {border-right:1px solid #ededed;}
    
