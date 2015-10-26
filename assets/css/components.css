@@ -2361,5 +2361,7 @@
 .search-wrap {
 	float:right;
 	width:300px;
-	position:relative;
+	position:absolute;
+	right:0;
+	top:0;
 }
