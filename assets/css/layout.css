@@ -559,6 +559,10 @@
 	margin-bottom:20px;
 }
 
+.press-block p {
+	margin-bottom:10px;
+}
+
 .press-img {
 	width:100px;
 	float:left;

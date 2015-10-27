@@ -732,7 +732,35 @@
 		-webkit-box-sizing: border-box; 
 		   -moz-box-sizing: border-box; 
 		   		box-sizing: border-box; 
+		background: url(../images/bg-search.png) no-repeat;
+		    background-position: 11px 50%;
+			padding-left:40px;
 	}
+	
+	.close-icon {
+	border:1px solid transparent;
+	background-color: transparent;
+	vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+      position: absolute;
+    right: 100px;
+    top: 0;
+    margin-top: -3px;
+}
+.close-icon:after {
+	    font-family: FontAwesome;
+    content: '\f057';
+    margin: 0;
+    font-size: 18px;
+    margin-right: 8px;
+	color:#ccc;
+	display:block;
+}
+
+.search-box:not(:valid) ~ .close-icon {
+	display: none;
+}
 	
 	#searchsubmit {
 		position: absolute;

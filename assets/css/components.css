@@ -2365,3 +2365,18 @@
 	right:0;
 	top:0;
 }
+
+.search-hi {
+	    background-color: #efefef;
+		font-weight:bold;
+}
+
+.blue-link {
+	color:#336699!important;
+	margin-top:-10px;
+}
+
+.results-sm {
+	color:#777;
+	font-size:13px;
+}
