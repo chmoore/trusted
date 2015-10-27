@@ -2380,3 +2380,41 @@
 	color:#777;
 	font-size:13px;
 }
+
+.ui-autocomplete-input:focus {color:#ccc;
+border:1px solid #ccc;
+}
+
+.ui-widget-content {
+    border: 1px solid #e1e1e1;
+    background: #ffffff;
+    color: #222222;
+	width:100%;
+}
+
+.ui-menu {
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+    display: block;
+    outline: none;
+}
+.ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+	font: 14px 'gotham_htfbold', Arial, sans-serif;
+	border-radius: 8px;
+}
+
+.ui-menu .ui-menu-item {
+    margin: 0;
+    padding: 10px 10px 10px 20px;
+    zoom: 1;
+    width: 100%;
+}
+
+.ui-menu-item:hover {
+	background:#efefef;
+}
