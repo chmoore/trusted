@@ -580,6 +580,7 @@
 		color: #979797;
 		font: 14px 'gotham_htfbold', Arial, sans-serif;
 		border-radius:8px;
+		z-index:1000;
 	}
 
 	input[type="text"]:focus,
