@@ -2506,7 +2506,7 @@ border:1px solid #ccc;
 }
 
 .ui-widget-content {
-    border: 1px solid #000;
+    border: 1px solid #e1e1e1;
     background: #ffffff;
     color: #222222;
 	width:100%;
@@ -2524,9 +2524,8 @@ border:1px solid #ccc;
     top: 0;
     left: 0;
     cursor: default;
-	font: 14px 'gotham_htfbold', Arial, sans-serif;
+	font: 14px 'gotham_htfmedium', Arial, sans-serif;
 	border-radius: 8px;
-	width:970px;
 }
 
 .ui-menu .ui-menu-item {
@@ -2538,5 +2537,4 @@ border:1px solid #ccc;
 
 .ui-menu-item:hover {
 	background:#efefef;
-	width:970px;
 }
