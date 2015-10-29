@@ -1122,6 +1122,7 @@
 	a.social-icon:hover {
 		color: #fff;
 		text-decoration: none;
+		border:2px solid #fff;
 	}
 	
 	a.facebook-icon:hover { background-color: #0e59a0 !important; }
@@ -1410,6 +1411,7 @@
 		margin-bottom: 40px;
 	}
 	
+	
 	.testimonial h4 {}
 	
 	/*
@@ -1470,6 +1472,11 @@
 		letter-spacing:0.2px;
 		color:#818181;
 		margin-bottom:20px;
+	}
+	
+	.item-shop p a {
+		color:#818181!important;
+
 	}
 	
 	.item-shop-wrap {
