@@ -1446,6 +1446,12 @@
 		margin-bottom: 40px;
 	}
 	
+	.testimonial img:hover {
+		  opacity: 0.5;
+		  -webkit-transition: all 0.3s;
+   		 transition: all 0.3s;
+	}
+	
 	
 	.testimonial h4 {}
 	
@@ -1537,6 +1543,8 @@
 	
 	.item:hover {
 		background-color:#efefef;
+		-webkit-transition: all 0.3s;
+    	transition: all 0.3s;
 	}
 	
 	.item-shop {
@@ -1557,6 +1565,8 @@
 		border:2px solid #504E4E;
 		color:#000;
 		font-family: 'gotham_htfmedium', Arial, sans-serif!important;
+		-webkit-transition: all 0.3s;
+   		transition: all 0.3s;
 	}
 	
 	.portfolio-item-preview { position: relative; }
