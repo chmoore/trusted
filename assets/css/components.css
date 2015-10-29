@@ -238,6 +238,37 @@
 		background: transparent;
 		color: #232323;
 	}
+	
+	.locate {
+		display: inline-block; 
+		padding: 11px 25px; 
+		border: 2px solid #504E4E;
+		background-color:#efefef!important;
+		/*border-radius: 20px;*/
+		border-radius:8px;
+		margin: 0 5px 0px 0;
+		color: #000!important;
+		line-height: 18px;
+		font-weight: 400;
+		letter-spacing: 2px;		
+		text-transform: uppercase;
+		vertical-align: middle;
+		cursor: pointer;
+		-webkit-transition: all 0.3s;
+				transition: all 0.3s;
+		font: 12px 'gotham_htfbold', Arial, sans-serif;
+		    background: #efefef url(../images/location.png) no-repeat;
+    background-position: 11px 50%;
+    padding-left: 40px!important;
+	}
+	
+	.locate:hover {
+		    background: #fff url(../images/location-w.png) no-repeat;
+    background-position: 11px 50%;
+	color:#fff!important;
+	    border: 1px solid #504E4E;
+    background-color: #504E4E!important;
+	}
 
 /* =Colored Buttons
    ========================================================================== */
@@ -2119,6 +2150,16 @@
 		border-bottom:1px solid #dadada;
 	}
 	
+	#bg-1-store {
+		padding: 60px 0 60px 0;
+		margin-top: 0px;
+		background-color: #efefef;
+		color: #979797;
+		margin-bottom:-100px;
+		border-top:1px solid #dadada;
+		border-bottom:1px solid #dadada;
+	}
+	
 	#bg-1b {
 		padding: 40px 0 60px 0;
 		margin-top: -60px;
@@ -2136,6 +2177,16 @@
 		color: #979797;
 	/*	border-top:1px solid #dadada;
 		border-bottom:1px solid #dadada;*/
+	}
+	
+	#bg-1w {
+		padding: 30px 0 50px 0;
+		margin-top: -60px;
+		background-color: #fff;
+		color: #979797;
+	/*	border-top:1px solid #dadada;*/
+		border-bottom:1px solid #dadada;
+		
 	}
 	
 	#bg-1a h4 {
