@@ -48,6 +48,10 @@
 		padding: 0 25px 30px 0px; 
 	}
 	
+	.accordion-item-content ul {
+		padding:10px 10px 10px 20px;
+	}
+	
 	.accordion-item-content :last-child { margin-bottom: 0; }
 	
 	/*
@@ -2478,6 +2482,8 @@
 .blue-link {
 	color:#336699!important;
 	margin-top:-10px;
+	font-family: 'gotham_htfbold', Arial, sans-serif;
+    font-size: 14px;
 }
 
 .results-sm {
