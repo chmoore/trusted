@@ -1105,7 +1105,7 @@
 		display: block;
 		width: 28px;
 		height: 28px;
-		border: 2px solid #232323;
+		border: 2px solid #b2b3b3!important;
 		margin-right: 10px;
 		margin-bottom: 10px;
 		color: #232323;
@@ -1122,7 +1122,7 @@
 	a.social-icon:hover {
 		color: #fff;
 		text-decoration: none;
-		border:2px solid #fff;
+		border:2px solid #fff!important;
 	}
 	
 	a.facebook-icon:hover { background-color: #0e59a0 !important; }
@@ -1498,6 +1498,10 @@
 		border: 1px solid #e1e1e1;
         padding: 20px;
 		height:310px;
+	}
+	
+	.item:hover {
+		background-color:#efefef;
 	}
 	
 	.item-shop {
