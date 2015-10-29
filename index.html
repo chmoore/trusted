@@ -209,10 +209,35 @@
 							
 							<form id="newsletter-subscribe-form" action="#">
 								<input type="text" name="email" placeholder="Enter ID or Serial Number">
-								<input class="btn" type="submit" name="submit" value="Verify Authenticity">
+								<a href="#" id="expand-all-show" class="btn" onclick="showHide('expand-all');return false;">Verify Authenticity</a>
 							</form>
 							
 						</div>
+
+    <div id="expand-all" class="more">
+         <div class="span4">
+								<select id="select-input">
+                                 <option selected disabled>Select Brand</option>
+								  <option value="mille">Richard Mille</option>
+								</select>
+                                </div>
+                                <div class="span4">
+								<select id="select-input">
+                                 <option selected disabled>Select Model</option>
+								  <option value="rm010">RM 010</option>
+                                  <option value="rm011">RM 011</option>
+								</select>
+                                </div>
+                                <div class="span4">
+                                <input type="text" name="submit" value="Enter Serial Number" href="store-locator.html">
+							</div>
+        <p>
+        <div class="span4">
+            <a href="#" id="expand-all-hide" class="btn">Proceed</a></div>
+            <div class="span4">
+            <a href="#" id="expand-all-hide" class="btn" onclick="showHide('expand-all');return false;">Cancel</a></div>
+        </p>
+    </div>
 					</div>
                     </div>
                     </div><!-- end .span6 -->
@@ -250,9 +275,9 @@
                         <div class="span5">
 								<select id="select-input">
                                  <option selected disabled>Select a Trusted Brand</option>
-								  <option value="husker">National Geographic</option>
-								  <option value="starbuck">Richard Mille</option>
-								  <option value="hotdog">Tag Heuer</option>
+								  <option value="ng">National Geographic</option>
+								  <option value="mille">Richard Mille</option>
+								  <option value="heuer">Tag Heuer</option>
 								</select>
                                 </div>
                                 <div class="span5">
@@ -464,7 +489,22 @@
 	
 	<!-- /// Custom JS ////////  -->
 	<script src="assets/js/main.js"></script>	
-      
+      <script>
+	  function showHide(shID) {
+    if (document.getElementById(shID)) {
+        if (document.getElementById(shID+'-show').style.display != 'none') {
+            document.getElementById(shID+'-show').style.display = 'none';
+            document.getElementById(shID+'-hide').style.display = 'inline';
+            document.getElementById(shID).style.height = '100px';
+        }
+        else {
+            document.getElementById(shID+'-show').style.display = 'inline';
+            document.getElementById(shID+'-hide').style.display = 'none';
+            document.getElementById(shID).style.height = '0px';
+        }
+    }
+}
+</script>
     
 </body>
 </html>

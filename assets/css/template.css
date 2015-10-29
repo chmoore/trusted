@@ -772,6 +772,16 @@
 		background: url(../images/bg-search.png) no-repeat center center;
 		vertical-align: inherit;
 	}
+	
+	#expand-all {
+    height: 0px;
+    overflow: hidden;
+	padding-top:20px;
+    transition: height 2s;
+    -moz-transition: height 2s; /* Firefox 4 */
+    -webkit-transition: height 2s; /* Safari and Chrome */
+    -o-transition: height 2s; /* Opera */
+}
 
 /* =Recent Entries Widget
    ========================================================================== */
