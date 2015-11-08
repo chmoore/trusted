@@ -220,8 +220,32 @@
 		z-index:999;
 	}
 	
-	.div-right {border-right:1px solid #ededed;}
-   
+	.div-right {border-right:1px solid #ededed;padding-right:60px;}
+   	.sidebar {
+		background:#efefef;
+		border:1px solid #dadada;
+		padding:20px;
+	}
+	
+	.sidebar p {
+		    font: 14px 'gotham_htfmedium', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-style: normal!important;
+	padding:0;
+	}
+	
+	.sidebar h6 {
+		margin-top:5px;
+		margin-bottom:15px;
+	}
+	
+	.sidebar h4 {
+		margin-top:10px;
+		margin-bottom:20px;
+		border-bottom:1px solid #dadada;
+		padding-bottom:20px;
+	}
    
 	.sf-menu,
 	.sf-menu ul {
@@ -1351,4 +1375,28 @@
 	.border-bottom {    
 	border-bottom: 1px solid #ccc;
     padding-bottom: 40px;
+	}
+	
+	.breadcrumbs {
+		height:40px;
+		padding:20px;
+		position:relative;
+		top:60px;
+		width:1170px;
+		margin:0 auto;
+	}
+	
+	.height40 {
+		height:42px;
+		padding:0;
+	}
+	
+	.align-right {
+		text-align:right;
+		color: #000;
+   		font-family: 'gotham_htfbold', Arial, sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+		font-size:16px;
+		padding-top:10px;
 	}

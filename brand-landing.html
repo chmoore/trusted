@@ -33,6 +33,7 @@
 	<link rel="stylesheet" href="assets/vendors/magnificpopup/magnific-popup.css">
     <link rel="stylesheet" href="assets/vendors/animations/animate.min.css">
 	<link rel="stylesheet" href="assets/vendors/itplayer/css/YTPlayer.css">
+    
 	
 	<!-- /// Template CSS ////////  -->
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -85,9 +86,8 @@
                         <nav>
                             <ul class="sf-menu fixed menu-right" id="">
                             <li>
-                             <a href="index.html" class="locator">Store Locator</a>
-                             </li>
-                             <li>
+                             <a href="store-locator.html" class="locator">Store Locator</a>
+                             </li> <li>
                                 	<a href="https://www.trusted.com/usersso/login" class="register">Register/Sign In</a>
                                 </li>
                             </ul>
@@ -99,7 +99,8 @@
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
         </div>
-           <div id="header" class="stuck">
+
+             <div id="header" class="stuck">
 <div class="container">
         <!-- /// HEADER  //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -132,7 +133,7 @@
                         <!-- // Menu // -->
                         <nav class="main-nav">
                             <ul class="sf-menu fixed" id="menu">       
-                                <li class="dropdown">
+                                <li class="dropdown current">
                                 	<a href="https://www.trusted.com/market/#">Shop</a>
                                     <ul>
                                     	<li><a href="#">Michael Godard</a></li>
@@ -146,14 +147,6 @@
                                 <li>
                              <a href="store-locator.html">Store Locator</a>
                              </li> 
-									<li class="dropdown current">
-                                    <a href="contact-us.html">Contact Us</a>
-                                    <ul>
-                                  	    <li><a href="about.html">About Trusted</a></li>
-                                        <li><a href="faqs.html">FAQs</a></li>
-                                        <li><a href="press.html">Press</a></li>
-                                    </ul>
-                                </li>
                             </ul>
                             <ul class="sf-menu fixed menu-right" id="">
                             <li>
@@ -164,7 +157,7 @@
 						    <div class="search-wrap">
 					<div id="sb-search" class="sb-search">
 						<form>
-							<input class="sb-search-input" placeholder="Search Trusted.com" type="text" value="" name="search" id="search">
+							<input class="sb-search-input" action="search-results.html" placeholder="Search Trusted.com" type="text" value="" name="search" id="search">
 							<input class="sb-search-submit" type="submit" value="">
 							<span class="sb-icon-search"> Search</span>
 						</form>
@@ -175,104 +168,180 @@
         
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
         </div>
-        </div><!-- end #header -->                     
+        </div><!-- end #header -->                         
 		<div id="content">
 		
 		<!-- /// CONTENT  /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-			
-          <div class="fullwidth-section" id="bg-1-sm">
-            
-            	<div class="fullwidth-section-content">
-                    
-                    
-					<div class="offset2 span8 text-center">
+  
+        <div class="breadcrumbs">
+        <div class="span6 height40"> <img src="assets/images/mille-logo.jpg" alt=""></div>
+        <div class="span6 height40 align-right">View All in the Richard Mille Store </div>
+        </div>
+        <div class="fullwidthbanner-container slider-revolution slider-margin">
+				<div class="fullwidthbanner">
+					<ul>					   						                        
 						
-						<div class="headline headline-nomar">
-							
-							<h1>Contact Trusted</h1>
-							
-						</div><!-- end .headline -->
-                        </div></div></div>
+                        <li data-transition="fade">
+						
+                            <img src="assets/images/mille-lead.jpg" alt="">
+                        </li>
+                        <li data-transition="fade">
+						
+                            <img src="content/index/slider/trusted-bkgd.jpg" alt="">
+                        </li>
+                    </ul>
+                </div><!-- fullwidthbanner -->
+            </div>
             <div class="container">
                 <div class="row">
-                    <div class="span12">
-
-                        <!--<div class="map">
-                            <div class="google-map" 
-                                data-zoom="17" 
-                                data-address="96 Lee Avenue Camden, NJ 08102, USA" 
-                                data-caption="Office location 1" 
-                                data-maptype="ROADMAP"
-                                data-popup="false"
-                                data-mapheight="450">
-                                <p>This will be replaced with the Google Map.</p>
-                            </div>
-                        </div>-->
-                    
-                    </div><!-- end .span12 -->
-                </div><!-- end .row -->
-            </div><!-- end .container --> 	
-			
-	<div class="container">
-                <div class="row">
-                    <div class="span4 div-right">
-
-                        <div class="headline">
+                    <div class="offset2 span8 text-center">
+                        <div class="headline text-center">
                         	
-                            <h3>Contact Us</h3>
-                            
-                        </div><!-- end .headline -->
-                        
-                        <p>Have a question? Fill out the contact form below and a representative will reach out shortly.  Any information that you provide will remain confidential and will only be used to address your inquiry.</p>
-                        
-                        <div class="widget">
-                        	
-                            <a href="#" class="facebook-icon social-icon">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            
-                            <a href="#" class="twitter-icon social-icon">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            
-                            <a href="#" class="googleplus-icon social-icon">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            
-                            <a href="#" class="pinterest-icon social-icon">
-                                <i class="fa fa-pinterest"></i>
-                            </a>
-                            
+                            <h1>About Richard Mille</h1>
                         </div>
-  
-                    </div><!-- end .span4 -->
-                    <div class="offset1a span7">
-                        
-                        <form id="contact-form" name="contact-form" method="post" action="#">  
-                            <fieldset>
-                                <div id="formstatus"></div>
-                                <p>
-                                    <input class="span12" type="text" id="name" name="name" value="" placeholder="First Name &amp; Last Name**" >
-                                </p>
-                                <p>
-                                    <input class="span12" type="text" id="email" name="email" value="" placeholder="Email Address*" >
-                                </p>
-                                <p>
-                                    <input class="span12" type="text" id="subject" name="subject" value="" placeholder="Subject*"  >
-                                </p>
-                                <p>
-                                    <textarea class="span12" id="message" name="message" rows="7" cols="25" placeholder="Message*"></textarea>
-                                </p>
-                                <p class="last">
-                                    <input class="btn" id="submit" type="submit" name="submit" value="Contact Trusted" >
-                                </p>
-                            </fieldset>
-                        </form><!-- end #contact-form -->
-                    
-                    </div><!-- end .span8 -->
+						<!-- end .headline -->
+                        <p>Richard Mille’s success is founded upon three crucial elements: the best in technical innovation, the best of artistry and architecture, the best of the heritage and culture of fine watchmaking with hand finishing.
+                        </p>
+                    	<h4>Latest News</h4>
+                        <p><a href="#" class="blue-link">RICHARD MILLE SELECTS Trusted.com</a></p>
+                    </div><!-- end .span6 -->
                 </div><!-- end .row -->
             </div>
-              <div class="fullwidth-section" id="bg-1-cut">
+            <div class="fullwidth-section" id="bg-1-sm">
+            	<div class="container">
+					<div class="span6 text-center border">
+						<div class="headline">
+							<h3>FIND A RETAILER NEAR YOU</h3>
+						</div><!-- end .headline -->
+                        <input class="btn" type="submit" name="submit" value="Find a Store">
+                        </div>
+                        <div class="span6 text-center">
+						<div class="headline">
+							<h3>is your Richard Mille real?</h3>
+						</div><!-- end .headline -->
+                             <div class="widget">
+							
+							<form id="newsletter-subscribe-form" action="#">
+								<input type="text" name="email" placeholder="Enter ID or Serial Number">
+								<input class="btn" type="submit" name="submit" value="Verify Authenticity">
+							</form>
+							
+						</div>
+                        </div>
+                       
+				</div><!-- end .row -->
+			</div>
+			
+            <div class="container">
+                <div class="row">
+                    <div class="span3 div-right sidebar">
+                   <h4>Categories</h4>
+                   <h6>WATCHES </h6>
+ <p><input type="checkbox" name="checkbox" value=""> Men's Watches (944)</p>
+ <p><input type="checkbox" name="checkbox" value=""> Women's Watches (188)</p>
+ 
+ <h4>Refine By</h4>
+
+<h6>Movement Type</h6>
+     <p><input type="checkbox" name="checkbox" value=""> Automatic Self-Wind (444)</p>
+     <p><input type="checkbox" name="checkbox" value=""> Tourbillon (181)</p>
+  
+                    </div><!-- end .span4 -->
+                    <div class="span8 offset1a">
+                     <div class="headline">
+                        	
+                            <h4>Featured Watches</h4>
+                        </div>
+                        
+                        <div class="testimonial-slider">
+                          <ul class="slides">
+                                <li>
+                                    
+                                    <div class="testimonial">
+                	<div class="span4">
+                    <div class="item">
+										<a href="#"><img src="assets/images/godard-sm.jpg" alt=""></a>
+								 <h6><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></h6>
+                                 <p><a href="#">Richard Mille</a></p>
+							</div>
+                    
+                    </div><!-- end .span6 -->
+                    <div class="span4">
+                    <div class="item">
+								
+
+										<img src="assets/images/godard-sm-1.jpg" alt="">
+	
+								 <h6><a href="#">RM 019 TOURBILLON</a></h6>
+                                 <p><a href="#">Richard Mille</a></p>
+							</div>
+                    
+                    </div>
+                    <div class="span4">
+                    <div class="item">
+										<img src="assets/images/godard-sm-2.jpg" alt="">
+
+								 <h6><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></h6>
+                                 <p><a href="#">Richard Mille</a></p>
+							</div>
+                    
+                    </div>
+                    </div>
+                    </li>
+                    </ul>
+                </div>
+                    
+                    </div>
+                    <div class="span8 offset1a">
+                     <div class="headline">
+                        	
+                            <h4>Featured Watches</h4>
+                        </div>
+                        
+                        <div class="testimonial-slider">
+                          <ul class="slides">
+                                <li>
+                                    
+                                    <div class="testimonial">
+                	<div class="span4">
+                    <div class="item">
+										<a href="#"><img src="assets/images/godard-sm.jpg" alt=""></a>
+								 <h6><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></h6>
+                                 <p><a href="#">Richard Mille</a></p>
+							</div>
+                    
+                    </div><!-- end .span6 -->
+                    <div class="span4">
+                    <div class="item">
+								
+
+										<img src="assets/images/godard-sm-1.jpg" alt="">
+	
+								 <h6><a href="#">RM 019 TOURBILLON</a></h6>
+                                 <p><a href="#">Richard Mille</a></p>
+							</div>
+                    
+                    </div>
+                    <div class="span4">
+                    <div class="item">
+										<img src="assets/images/godard-sm-2.jpg" alt="">
+
+								 <h6><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></h6>
+                                 <p><a href="#">Richard Mille</a></p>
+							</div>
+                    
+                    </div>
+                    </div>
+                    </li>
+                    </ul>
+                </div>
+                    
+                    </div>
+                    
+                    <!-- end .span8 -->
+                </div><!-- end .row -->
+            </div>
+            <div class="fullwidth-section" id="bg-1-cut">
             	<div class="container">
 					<div class="span6 text-center border">
 						<div class="headline">
@@ -302,10 +371,7 @@
 	
                 <!-- end .row -->
             </div>
-		<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-        
-<div id="footer-bottom">
+		<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --><div id="footer-bottom">
             
 		<!-- /// FOOTER-BOTTOM     ////////////////////////////////////////////////////////////////////////////////////////////// -->	
 		
@@ -387,31 +453,48 @@
     	<i class="ifc-up4"></i>
     </a>
 
- <!-- /// jQuery ////////  -->
-	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- /// jQuery ////////  -->
+	 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     
     <!-- /// Easing ////////  -->
 	<script src="assets/vendors/easing/jquery.easing.1.3.js"></script>
-    
-    <!-- /// Revolution Slider ////////  -->
+     
+         <!-- /// Revolution Slider ////////  -->
     <script src="assets/vendors/revolutionslider/js/jquery.themepunch.tools.min.js"></script>
     <script src="assets/vendors/revolutionslider/js/jquery.themepunch.revolution.min.js"></script>
     
+    <!-- /// bxSlider ////////  -->
+	<script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+
     <!-- /// gMap ////////  -->
 	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script src="assets/vendors/gmap/jquery.gmap.min.js"></script>
+
+	<!-- /// Twitter ////////  -->
+	<script src="assets/vendors/twitter/twitterfetcher.js"></script>
 	
 	<!-- /// Custom JS ////////  -->
-	<script src="assets/js/main.js"></script>	
-      <script src="assets/js/classie.js"></script>
+	 <script src="assets/js/classie.js"></script>
     <script src="assets/js/uisearch.js"></script>
 		<script>
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
 	
 	<!-- /// Custom JS ////////  -->
-      
+	<script src="assets/js/main.js"></script>	
+      <script>
+	  $(document).ready(function(){
+
+var languages = ["Trusted","Tag Heuer", "Google", "Michael Godard","Stickman","National Geographic","eTitle"]; 
+  //Can add more,separate with commas.
+  //Added CSS,HTML cause people know them more.               
+
+  $("#s").autocomplete({
+    source: languages
+});
+}); 
+	  </script>
     
     
 </body>
