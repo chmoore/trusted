@@ -222,9 +222,14 @@
 	
 	.div-right {border-right:1px solid #ededed;padding-right:60px;}
    	.sidebar {
-		background:#efefef;
+		/*background:#efefef;*/
 		border:1px solid #dadada;
 		padding:20px;
+		width:300px;
+		position: absolute;
+   		top: 40px;
+    	bottom: 0;
+   		left: 0;
 	}
 	
 	.sidebar p {
@@ -233,6 +238,12 @@
     margin-bottom: 10px;
     font-style: normal!important;
 	padding:0;
+	}
+	
+	.sidebar-content {
+		    font: 14px 'Noto Serif', Arial, sans-serif;
+			margin-bottom:20px!important;
+			line-height: 22px;
 	}
 	
 	.sidebar h6 {

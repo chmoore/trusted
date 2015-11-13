@@ -1352,3 +1352,20 @@
 		content: " ";
 		clear: both;
 	}	
+	
+.widget #newsletter-subscribe-form input[type="text"] {
+	width:100%;
+	margin-bottom:20px;
+}
+
+.widget #newsletter-subscribe-form input[type="submit"] {
+	width:100%;
+}
+
+.sidebar input[type="submit"] {
+	width:100%;
+}
+
+.sidebar a {
+	font-size:14px;
+}
