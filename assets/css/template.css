@@ -1354,7 +1354,7 @@
 	}	
 	
 .widget #newsletter-subscribe-form input[type="text"] {
-	width:100%;
+	/*width:100%;*/
 	margin-bottom:20px;
 }
 
