@@ -384,7 +384,7 @@
 
 	.headline { margin-bottom: 30px; }
 	
-	.headline-pad { margin-bottom: 30px; margin-top:40px;}
+	.headline-pad { margin-bottom: 30px; margin-top:40px; float:left;width:70%;}
 	
 	.headline-nomar { margin-bottom: 0px; }
 	
@@ -1427,7 +1427,7 @@
    ========================================================================== */
 
 	.testimonial { 
-		margin: 60px 0;
+		margin: 40px 0 40px;
 		text-align: left;
 	}
 	
@@ -1455,9 +1455,9 @@
 	}
 	
 	.testimonial img:hover {
-		  opacity: 0.5;
+	/*	  opacity: 0.5;
 		  -webkit-transition: all 0.3s;
-   		 transition: all 0.3s;
+   		 transition: all 0.3s;*/
 	}
 	
 	
@@ -1554,6 +1554,7 @@
 		border: 1px solid #e1e1e1;
         padding: 15px;
 		height:220px;
+		position:relative;
 	}
 	
 	.item-sm img {
@@ -2553,6 +2554,13 @@
 	font-family: 'gotham_htfbold', Arial, sans-serif;
 }
 
+.blue-link-14 {
+	color:#0088cc!important;
+	margin-top:-10px;
+	font-family: 'gotham_htfbold', Arial, sans-serif;
+	font-size:14px;
+}
+
 .results-sm {
 	color:#777;
 	font-size:13px;
@@ -2594,4 +2602,21 @@ border:1px solid #ccc;
 
 .ui-menu-item:hover {
 	background:#efefef;
+}
+
+.item-sm:hover .fav {
+	display: block;
+}
+
+.fav {
+	padding-top: 12px;	
+	padding-left: 12px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+
+.fav a {
+	color: #000;
 }

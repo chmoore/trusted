@@ -9,11 +9,17 @@
 	.alignleft {
 		float: left;
 		display: inline;
+		margin-top: 40px;
+    	width: 300px;
+   	    margin-bottom: 30px;
 	}
 
 	.alignright {
 		float: right;
 		display: inline;
+		width:30%;
+		margin-bottom: 30px;
+   		margin-top: 40px;
 	}
 
 	.aligncenter {
@@ -1359,13 +1365,32 @@
 }
 
 .widget #newsletter-subscribe-form input[type="submit"] {
-	width:100%;
+	/*width:100%;*/
 }
 
 .sidebar input[type="submit"] {
 	width:100%;
 }
 
+.sidebar #newsletter-subscribe-form input[type="text"] {
+	width:100%;
+}
+
 .sidebar a {
 	font-size:14px;
+}
+
+.no-left-pad {
+	padding-left:0!important;
+	padding-right:25px;
+}
+
+.no-right-pad {
+	padding-left:0!important;
+	padding-right:0;
+}
+
+
+.testimonial .span4:last child {
+	padding-right:0!important;
 }
