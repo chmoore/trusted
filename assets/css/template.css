@@ -789,6 +789,10 @@
     -o-transition: height 2s; /* Opera */
 }
 
+#expand-all-show {
+    display:inline-block!important
+}
+
 /* =Recent Entries Widget
    ========================================================================== */
 	
