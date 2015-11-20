@@ -4,9 +4,11 @@
    	 
 	body {
 		background-color: #fff;
-	/*	color: #808080;*/
-		font: 16px 'Noto Serif', Arial, sans-serif; 
-		line-height: 25px;
+	/*	color: #808080;
+		font: 16px 'Noto Serif', Arial, sans-serif; */
+		font: 14px 'gotham_htfbook', Arial, sans-serif;
+		/*line-height: 25px;*/
+		line-height:20px;
 		font-weight: 300;
 		letter-spacing: 0px;
     color: #000000;
@@ -93,7 +95,7 @@
 		line-height:44px;
 	}
 
-	p { margin-bottom: 35px; /*color:#5b5b5b;*/line-height:28px;}
+	p { margin-bottom: 35px; /*color:#5b5b5b;line-height:28px;*/line-height:24px;}
 	
 	em { font-style: italic; }
 	

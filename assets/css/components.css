@@ -1,3 +1,5 @@
+@import "http://weloveiconfonts.com/api/?family=entypo";
+
 /* ==========================================================================
    =Accordions and Toggles
    ========================================================================== */
@@ -15,13 +17,14 @@
 		padding:25px 35px 0px 0px;
 		margin-bottom: 30px;
 		color: #979797;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfbold', Arial, sans-serif;
 		font-weight: 700;
 		letter-spacing: 0px;
 		text-transform: uppercase;
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;
 		border-top: 1px solid #e1e1e1;
+		font-size:20px;
 	}
 	
 	a.accordion-item { color: #979797; }
@@ -382,7 +385,10 @@
    =Headlines
    ========================================================================== */
 
-	.headline { margin-bottom: 30px; }
+	.headline { margin-bottom: 30px; margin-top:30px;}
+	
+	.product-title {}
+	.product-brand {margin-bottom:20px;}
 	
 	.headline-pad { margin-bottom: 30px; margin-top:40px; float:left;width:70%;}
 	
@@ -2197,6 +2203,14 @@
 		margin-top:40px;
 	}
 	
+	#bg-1-white {
+		padding: 0;
+		background-color: #FFF;
+		color: #979797;
+		border-top:1px solid #dadada;
+		border-bottom:1px solid #dadada;
+	}
+	
 	
 	#bg-1-cut {
 		padding: 60px 0 60px 0;
@@ -2620,3 +2634,81 @@ border:1px solid #ccc;
 .fav a {
 	color: #000;
 }
+ 
+  .wishlist-container {
+    display: inline-block;
+    background: #fff;
+    border-radius: 15px;}
+
+/* Entypo */
+[class*="entypo-"]:before {
+  font-family: "entypo", sans-serif;}
+
+.entypo-heart {
+  background: #fff;
+  height: 24px;
+  width: 24px;
+  float: left;
+  display: block;
+  border-radius: 50%;
+  color: #000;
+  line-height: 24px;
+  padding: 0;
+  text-align:center;}
+
+  .wishlist.animated span.entypo-heart {
+    color: #fff;
+    background: #ea0202;
+    -webkit-transition: all 0.25s ease;
+            transition: all 0.25s ease;
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);}
+  
+  .wishlist.toggled span.entypo-heart {
+    color: #000;
+    background: #fff;
+    -webkit-transition: all 0.65s ease;
+            transition: all 0.65s ease;
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);}
+
+.wishlist {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;}
+
+// Demo Specific Styles 
+.wishlist,
+.wishlist span,
+.wishlist a {
+  color: #a5b2bf;}
+
+.wish-add {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  overflow: hidden;}
+  
+.wish-add a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-family: 'gotham_htfbold', Arial, sans-serif;
+  font-size:12px;
+  line-height: 24px;
+  white-space: nowrap;
+  color: #000;
+  -webkit-transition: all 0.15s ease;
+          transition: all 0.15s ease;}
+  
+  .wish-add a.added {
+    color: #ea0202; 
+    -webkit-transition: all 0.25s ease;
+            transition: all 0.25s ease;}
+
+.wish-add.mini a {
+  width: 0%;
+  -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;}
