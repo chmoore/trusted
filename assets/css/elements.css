@@ -275,6 +275,25 @@
 	li {margin-bottom:10px;color: #5b5b5b;
     line-height: 28px;}
 	
+	.span5 li {
+		list-style:none;
+		border-bottom:1px solid #c8c8c8;
+	}
+	
+	.span7 li {
+		list-style:none;
+		border-bottom:1px solid #c8c8c8;
+	}
+	
+	.span5 ul {padding: 10px!important;margin-left: -23px;}
+	.span7 ul {padding: 10px!important;margin-left: -50px;}
+	
+	.desc-bold {
+		color:#8b8b8b;
+		font: 14px 'gotham_htfbold', Arial, sans-serif;
+		line-height:28px;
+	}
+	
 	ul {  border-radius: 3px 3px 3px 3px;
     list-style: disc outside none;
     padding: 10px 10px 10px 0px;}
