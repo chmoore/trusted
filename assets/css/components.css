@@ -1461,7 +1461,10 @@
 
 	.testimonial img {
 		display: inline-block;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
+		width:80%;
+		display:block;
+		margin:0 auto 40px;
 	}
 	
 	.testimonial img:hover {
@@ -1520,14 +1523,18 @@
 	}
 	
 	.item h6 {
-		border-top:1px solid #c8c8c8;
+		text-align:center;
 	}
 	
 	.item p {
 		font-size:12px;
 		letter-spacing:0.2px;
-		color:#818181;
-		margin-bottom:0;
+		color:#AAA;
+		margin-bottom:10px;
+		letter-spacing:1px;
+		text-align:center;
+		text-transform:uppercase;
+		font-weight:bold;
 	}
 	
 	.item-shop p {
@@ -1548,6 +1555,7 @@
 	
 	.item-shop-wrap img {
 		margin-bottom:12px;
+		width: 100%;
 	}
 	
 	.item-shop h6 {
@@ -1614,6 +1622,16 @@
 		font-family: 'gotham_htfmedium', Arial, sans-serif!important;
 		-webkit-transition: all 0.3s;
    		transition: all 0.3s;
+	}
+	
+	.price-ital {
+		font-family:'Noto Serif', Arial, sans-serif; 
+		font-style:italic;
+		text-transform: none!important;
+    letter-spacing: 0!important;
+    color: #000!important;
+    font-weight: 300!important;
+    font-size: 14px!important;
 	}
 	
 	.portfolio-item-preview { position: relative; }

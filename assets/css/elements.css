@@ -5,9 +5,9 @@
 	body {
 		background-color: #fff;
 	color: #808080;
-		font: 15px 'Noto Serif', Arial, sans-serif; 
+		font: 16px 'Noto Serif', Arial, sans-serif; 
 		/*	font: 14px 'gotham_htfbook', Arial, sans-serif;*/
-		line-height:22px;
+		line-height:26px;
 		font-weight: 300;    
 		-webkit-font-smoothing: antialiased;
 		letter-spacing: 0.1px;
@@ -302,9 +302,21 @@
 		    padding: 10px 10px 10px 25px;
 	}
 	
+	.span9 ul {
+		padding:10px 10px 10px 25px;
+	}
+	
 	.span6 ul {
 		    padding: 10px 10px 10px 25px;
 	}
+	
+	.anchored {
+  display: block;
+  height: 75px; /*same height as header*/
+  margin-top: -75px; /*same height as header*/
+  visibility: hidden;
+}
+
 	
 	.offset1 ul {    padding: 10px 10px 10px 20px;}
 	ol { list-style-type: decimal; }
