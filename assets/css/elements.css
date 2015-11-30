@@ -310,7 +310,7 @@
 		    padding: 10px 10px 10px 25px;
 	}
 	
-	.anchored {
+	a[name] {
   display: block;
   height: 75px; /*same height as header*/
   margin-top: -75px; /*same height as header*/
