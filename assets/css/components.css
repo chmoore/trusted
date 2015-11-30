@@ -1519,6 +1519,10 @@
 		font-size:18px;
 	}
 	
+	.item h6 {
+		border-top:1px solid #c8c8c8;
+	}
+	
 	.item p {
 		font-size:12px;
 		letter-spacing:0.2px;
