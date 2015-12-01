@@ -223,19 +223,19 @@
 	.div-right {border-right:1px solid #ededed;padding-right:60px;}
    	.sidebar {
 		/*background:#efefef;*/
-		border:1px solid #dadada;
+		/*border:1px solid #dadada;*/
 		padding:20px;
 		width:300px;
 		position: absolute;
-   		top: 40px;
+   		top: 0px;
     	bottom: 0;
    		left: 0;
 	}
 	
 	.sidebar p {
-		    font: 14px 'gotham_htfmedium', Arial, sans-serif;
+		    font: 12px 'gotham_htfmedium', Arial, sans-serif;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-style: normal!important;
 	padding:0;
 	}
@@ -247,8 +247,9 @@
 	}
 	
 	.sidebar h6 {
-		margin-top:5px;
+		margin-top:10px;
 		margin-bottom:15px;
+		font-size:14px;
 	}
 	
 	.sidebar h4 {
@@ -1413,6 +1414,17 @@
 		font-family:'gotham_htfbook', Arial, sans-serif;
 	}
 	
+	.breadcrumbs-search {
+		height:40px;
+		padding:20px;
+		position:relative;
+		top:60px;
+		margin:0 auto;
+		margin-bottom:80px;
+		border-bottom: 1px solid #e1e1e1;
+		font-family:'gotham_htfbook', Arial, sans-serif;
+	}
+	
 	.breadcrumbs-nb {
 		height:15px;
 		padding:20px;
@@ -1460,3 +1472,39 @@
 	.bc-sm {
 		font-size:10px;
 	}
+	
+	.item-div {
+		border-bottom:1px solid #e1e1e1;
+		padding-bottom:20px;
+		margin-bottom:20px;
+		    font: 13px 'gotham_htfbook', Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal!important;
+    padding: 0;
+	}
+	
+	.item-div p {
+		    margin-bottom: 15px!important;
+			line-height: 18px;
+	}
+	
+	.item-div a {
+		color:#0088cc;
+		font: 13px 'gotham_htfbold', Arial, sans-serif;
+	}
+	
+	.price-list {
+		font-size:18px;
+		text-transform:none;
+		margin-bottom:20px;
+	}
+	
+	.brand-list {
+		font-size:11px;
+		text-transform:uppercase;
+		color:#aaa;
+		font-weight:bold;
+		letter-spacing:1px;
+		margin-top: -10px;
+	}
+	
