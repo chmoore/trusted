@@ -173,9 +173,10 @@
 		
 		<!-- /// CONTENT  /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   
-        <div class="breadcrumbs-search">
+        <div class="breadcrumbs">
          <div class="container">
-        <div class="span4 height40"> 
+         <div class="span6 height40"><span class="bc-sm"><strong>HOME ></strong>  SEARCH RESULTS</span></div>
+       <!-- <div class="span4 height40"> 
         <input type="text" class="rounded" id="s" name="text-input" value="" placeholder="Search the Shop">
       </div>
         <div class="span6 height40 align-right">
@@ -183,14 +184,29 @@
         <a href="#" id="list-view" class="">
         <span class="list-icon"></span>&nbsp;List</a>
         <a href="#" id="grid-view" class="">
-        <span class="grid-icon"></span>&nbsp;Grid</a></div></div>
+        <span class="grid-icon"></span>&nbsp;Grid</a></div></div>-->
         </div>
         </div>
             <div class="container">
                 <div class="row">
                     <div class="span3 div-right">
                     <div class="sidebar">
-                   <h6>WATCHES </h6>
+                    <input type="text" class="rounded" id="s" name="text-input" value="" placeholder="Search the Shop">
+                  <div class="divider single-line-side"></div>
+                  <p>
+  <label for="amount">Price:</label>
+  <input type="text" id="amount" readonly style="border:0; color:#0088cc; font-weight:bold;">
+</p>
+ 
+<div id="slider-range"></div>
+<div class="divider single-line-side"></div>
+
+<h6>Brands</h6>
+
+ <p><input type="checkbox" name="checkbox" value=""> Tag Heuer (944)</p>
+ <p><input type="checkbox" name="checkbox" value=""> Richard Mille (188)</p>
+<h6>Categories</h6>
+
  <p><input type="checkbox" name="checkbox" value=""> Men's Watches (944)</p>
  <p><input type="checkbox" name="checkbox" value=""> Women's Watches (188)</p>
 
@@ -201,7 +217,15 @@
                     </div><!-- end .sidebar -->
                     </div>
                     <div class="span8 offset-content item-div">
+                    <div class="span6">
                     <p><strong>1-15 of 900 results for</strong> <a href="#">“ALL COLLECTIONS”</a></p>
+                    </div>
+                     <div class="span6 height40 align-right">
+        <div class="">
+        <a href="#" id="list-view" class="">
+        <span class="list-icon"></span>&nbsp;List</a>
+        <a href="#" id="grid-view" class="">
+        <span class="grid-icon"></span>&nbsp;Grid</a></div></div>
                     </div>
                      <div class="span8 offset-content item-div">
                      <div class="span4 no-left-pad">
@@ -497,6 +521,20 @@ var languages = ["Trusted","Tag Heuer", "Google", "Michael Godard","Stickman","N
     source: languages
 });
 }); 
+$(function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 0, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  });
+
 	  </script>
     
     
