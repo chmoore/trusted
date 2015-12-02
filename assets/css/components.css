@@ -2938,7 +2938,9 @@ border:1px solid #ccc;
 }
 
 .boxed {
-	border:1px solid #e1e1e1;position:relative;
+	border:1px solid #e1e1e1;position:relative; background:#fff;
 }
 
-.product-div {border-right: 1px solid #e1e1e1;top: 0px;bottom: 0;left: 0; display:table-cell; vertical-align:middle;}
+.product-div {display:table-cell; vertical-align:middle;}
+
+.product-div h6 {font-size:14px;}
