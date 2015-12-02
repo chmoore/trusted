@@ -2677,6 +2677,11 @@
 	font-family: 'gotham_htfbold', Arial, sans-serif;
 }
 
+.text-center .blue-link {
+	font-style:normal;
+	font-size:14px;
+}
+
 .blue-link-14 {
 	color:#0088cc!important;
 	margin-top:-10px;
@@ -2941,6 +2946,18 @@ border:1px solid #ccc;
 	border:1px solid #e1e1e1;position:relative; background:#fff;
 }
 
-.product-div {display:table-cell; vertical-align:middle;}
+.boxed:hover {cursor:pointer;background:#f7f7f7;}
 
-.product-div h6 {font-size:14px;}
+.product-div {height:153px;position:relative;}
+
+.product-div h6 {font-size:14px;position: relative;
+  top: 50%;
+  transform: translateY(-50%);font-family: 'gotham_htfmedium', Arial, sans-serif;text-align:left;}
+  
+  .product-div .btn {font-size:14px;position: relative;
+  top: 50%;
+  transform: translateY(-50%); display:block!important;}
+  
+  .product-div .item-img-full {font-size:14px;position: relative;
+  top: 50%;
+  transform: translateY(-50%);}
