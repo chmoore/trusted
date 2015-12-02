@@ -246,6 +246,11 @@
 			line-height: 22px;
 	}
 	
+	.brand-desc .btn {
+		width:100%;
+		text-align:center;
+	}
+	
 	.sidebar h6 {
 		margin-top:10px;
 		margin-bottom:15px;

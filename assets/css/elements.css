@@ -233,7 +233,7 @@
 /* ==========================================================================
    =Links
    ========================================================================== */
-	a {cursor:pointer;}
+	a {cursor:pointer; }
 	
 	a, 
 	a:visited { 
@@ -253,7 +253,7 @@
 	a:hover, 
 	a:focus {
 		outline: 0; 
-		text-decoration: underline;
+		text-decoration:underline;
 	}	
 	
 /* ==========================================================================
@@ -277,12 +277,15 @@
 	
 	.span5 li {
 		list-style:none;
-		border-bottom:1px solid #c8c8c8;
+		/*border-bottom:1px solid #c8c8c8;*/
 	}
 	
 	.span7 li {
 		list-style:none;
-		border-bottom:1px solid #c8c8c8;
+		/*border-bottom:1px solid #c8c8c8;*/
+		    color: #000;
+    font: 14px 'gotham_htfbook', Arial, sans-serif;
+    line-height: 28px;
 	}
 	
 	.span5 ul {padding: 10px!important;margin-left: -23px;}
