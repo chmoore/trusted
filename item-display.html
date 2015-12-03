@@ -323,6 +323,89 @@
                     </div>
                     </div>
                     </div>
+                    <div id="dialog-form" title="Inquire for Price">
+ <!-- <span class="required-right">Required*</span>-->
+ 
+  <form>
+    <fieldset>
+    <div class="span6 no-left-pad">
+      <label for="name">First Name*</label>
+      <input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+      </div>
+      <div class="span6 no-right-pad">
+       <label for="name">Last Name*</label>
+      <input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+      </div>
+      <div class="clear"></div>
+      <label for="email">Email*</label>
+      <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
+      <div class="span6 no-left-pad">
+      <label for="name">Phone</label>
+      <input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+      </div>
+      <div class="span6 no-right-pad">
+       <label for="name">Product</label>
+      <input type="text" name="name" id="name" value="Richard Mille RM 011 Felipe Massa Flyback" class="text ui-widget-content ui-corner-all" disabled> </div>
+      <div class="clear"></div>
+      <label for="email">Comments</label>
+      <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
+     
+  <p><input type="checkbox" name="checkbox" value=""> Mailing List</p>
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <div class="span12 text-center">
+  <input class="btn" type="submit" name="inquire" id="inquire" value="Inquire for Price">
+  </div>
+    </fieldset>
+  </form>
+</div>
+                    
+                    
+                    <div class="fullwidth-section" id="bg-retail">
+            	<div class="container">
+                <h4>Trusted Retailers</h4>
+                <div class="divider single-line-side"></div>
+					<div class="span4 retailer-text">
+                    <img src="assets/images/tag-logo-1.png" alt=""/>
+							<input class="btn" type="submit" name="inquire" id="inquire" value="Contact the Retailer">
+                        </div>
+                        <div class="span4 retailer-text">
+							<h6>MARTIN JEWELERS</h6>
+							<p>607 East Las Olas Boulevard,<br>
+							Fort Lauderdale, FL , 33301</p>
+                            <a href="#" class="blue-link">Store Information</a>
+                        </div>
+                        <div class="span4 retailer-text">
+							<h6>STORE HOURS</h6>
+<p>Mon - Sat:     10:00 a.m. - 11:30 p.m.</p>
+<p>Sun:               11:00 a.m. - 8:30 p.m.</p>
+					
+                        </div>
+                        
+                        
+                        </div>
+                        <div class="clear"></div>
+                        <div class="container retailer-break">
+					<div class="span4 retailer-text">
+                    <img src="assets/images/tag-logo-1.png" alt=""/>
+							<input class="btn" type="submit" name="inquire" value="Contact the Retailer">
+                        </div>
+                        <div class="span4 retailer-text">
+							<h6>MARTIN JEWELERS</h6>
+							<p>607 East Las Olas Boulevard,<br>
+							Fort Lauderdale, FL , 33301</p>
+                            <a href="#" class="blue-link">Store Information</a>
+                        </div>
+                        <div class="span4 retailer-text">
+							<h6>STORE HOURS</h6>
+<p>Mon - Sat:     10:00 a.m. - 11:30 p.m.</p>
+<p>Sun:               11:00 a.m. - 8:30 p.m.</p>
+					
+                        </div>
+                        
+                        
+                        </div>
+                        
+                        </div>   
                     
                      <div class="fullwidth-section" id="bg-1-white">
             <div class="container">
@@ -331,7 +414,7 @@
                            
                             <a class="accordion-item" href="#" id="product-spec">Product Specifications</a>
                 
-                            <div class="accordion-item-content">
+                            <div class="accordion-item-content retailer-text">
 <p><strong>CALIBER RM011-S:</strong> skeletonized automatic winding movement with adjustable rotor geometry offering hours, minutes, seconds, chronograph, 60-minute countdown timer, 12-hour totalizer, oversize date, month.</p>
 <p><strong>Dimensions:</strong> length 50 mm x 40 mm (widest point) x 16.15 mm (thickest area).</p>
 <p><strong>MAIN FEATURES</strong><br>(MANY OF WHICH ARE MAJOR TECHNICAL INNOVATIONS)</p>
@@ -531,6 +614,105 @@ var languages = ["Trusted","Tag Heuer", "Google", "Michael Godard","Stickman","N
   $('.wish-add a').toggleClass('added');
   $('.wishlist').toggleClass('toggled animated');
 });
+
+//jQuery Modal//
+$(function() {
+    var dialog, form,
+ 
+      // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
+      emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+      name = $( "#name" ),
+      email = $( "#email" ),
+      password = $( "#password" ),
+      allFields = $( [] ).add( name ).add( email ).add( password ),
+      tips = $( ".validateTips" );
+ 
+    function updateTips( t ) {
+      tips
+        .text( t )
+        .addClass( "ui-state-highlight" );
+      setTimeout(function() {
+        tips.removeClass( "ui-state-highlight", 1500 );
+      }, 500 );
+    }
+ 
+    function checkLength( o, n, min, max ) {
+      if ( o.val().length > max || o.val().length < min ) {
+        o.addClass( "ui-state-error" );
+        updateTips( "Length of " + n + " must be between " +
+          min + " and " + max + "." );
+        return false;
+      } else {
+        return true;
+      }
+    }
+ 
+    function checkRegexp( o, regexp, n ) {
+      if ( !( regexp.test( o.val() ) ) ) {
+        o.addClass( "ui-state-error" );
+        updateTips( n );
+        return false;
+      } else {
+        return true;
+      }
+    }
+ 
+    function addUser() {
+      var valid = true;
+      allFields.removeClass( "ui-state-error" );
+ 
+      valid = valid && checkLength( name, "username", 3, 16 );
+      valid = valid && checkLength( email, "email", 6, 80 );
+      valid = valid && checkLength( password, "password", 5, 16 );
+ 
+      valid = valid && checkRegexp( name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter." );
+      valid = valid && checkRegexp( email, emailRegex, "eg. ui@jquery.com" );
+      valid = valid && checkRegexp( password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9" );
+ 
+      if ( valid ) {
+        $( "#users tbody" ).append( "<tr>" +
+          "<td>" + name.val() + "</td>" +
+          "<td>" + email.val() + "</td>" +
+          "<td>" + password.val() + "</td>" +
+        "</tr>" );
+        dialog.dialog( "close" );
+      }
+      return valid;
+    }
+ 
+    dialog = $( "#dialog-form" ).dialog({
+      autoOpen: false,
+      height: 500,
+      width: 650,
+      modal: true,
+      buttons: {
+        "Create an account": addUser,
+        Cancel: function() {
+          dialog.dialog( "close" );
+        }
+      },
+      close: function() {
+        form[ 0 ].reset();
+        allFields.removeClass( "ui-state-error" );
+      }
+    });
+ 
+    form = dialog.find( "form" ).on( "submit", function( event ) {
+      event.preventDefault();
+      addUser();
+    });
+ 
+    $( "#inquire" ).button().on( "click", function() {
+      dialog.dialog( "open" );
+    });
+  });
+  $("#dialog-form").dialog({autoOpen:false,modal:true});
+
+$("#inquire").click(function()
+                {
+                    $("#dialog-form").dialog('open');  
+                    $('.ui-widget-overlay').css('background', 'black');
+                });
 	</script>
     
 </body>

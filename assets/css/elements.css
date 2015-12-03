@@ -465,8 +465,7 @@
 
 .spaced {padding:0 40px;}
 
-.button,
-[class*="button-"] {
+.button {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -485,6 +484,27 @@
   -webkit-transition: ease 0.35s all;
   transition: ease 0.35s all;
 }
+
+/*.button,
+[class*="button-"] {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 4em;
+  height: 3.5em;
+  font: 300 1em/3.5em 'gotham_htfbold', Arial, sans-serif;
+  text-transform:uppercase;
+  text-decoration: none!important;
+  letter-spacing: .08em;
+  color: #fff!important;
+  background: #333;
+  border:2px solid #333;
+  -moz-transition: ease 0.35s all;
+  -o-transition: ease 0.35s all;
+  -webkit-transition: ease 0.35s all;
+  transition: ease 0.35s all;
+}*/
 .button:hover,
 [class*="button-"]:hover {
   background: #FFF;
@@ -777,7 +797,7 @@
 		display: inline-block;
 		padding: 11px 25px;
 		border: 1px solid #504E4E;
-		background-color: #504E4E;
+		background: #504E4E;
 		-webkit-background-clip: padding-box;
 		   -moz-background-clip: padding-box;
 				background-clip: padding-box;
@@ -1112,3 +1132,11 @@
 		select.span1 { width: 8.33333333%; }
 		
 	}	
+	
+	input.text {
+    margin-bottom: 12px;
+    width: 100%;
+    padding: 12px;
+	font-family: 'gotham_htfbook', Arial, sans-serif;
+	color:#000;
+}
