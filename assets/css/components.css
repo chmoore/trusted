@@ -51,6 +51,13 @@
 		padding: 0 25px 30px 0px; 
 	}
 	
+	.accordion-item-content p {
+    color: #000;
+    font: 14px 'gotham_htfbook', Arial, sans-serif;
+    line-height: 28px;
+}
+
+	
 	.accordion-item-content ul {
 		padding:10px 10px 10px 20px;
 	}
@@ -1564,6 +1571,7 @@
 	.item-shop-wrap img {
 		margin-bottom:12px;
 		width: 100%;
+		margin:0;
 	}
 	
 	.item-shop h6 {
@@ -1670,23 +1678,21 @@
 	.item-shop {
 		background-color:#FFF;
 		padding:20px;
-		border:2px solid #767676;
+		border:1px solid #e1e1e1;
 		color:#000;
 		font-family: 'gotham_htfmedium', Arial, sans-serif!important;
-		height:308px;
+		height:159px;
 		display: table-cell;
    		 vertical-align: middle;
 	}
 	
 	.item-shop:hover {
-		background-color:#efefef;
-		border:2px solid #504E4E;
+		border:1px solid #504E4E;
 		padding:20px;
-		border:2px solid #504E4E;
 		color:#000;
 		font-family: 'gotham_htfmedium', Arial, sans-serif!important;
-		-webkit-transition: all 0.3s;
-   		transition: all 0.3s;
+		-webkit-transition: all 0.5s;
+   		transition: all 0.5s;
 	}
 	
 	.price-ital {
@@ -2346,7 +2352,8 @@
 	}
 	
 	#bg-1b {
-		padding: 40px 0 60px 0;
+		/*padding: 40px 0 60px 0;*/
+		padding:0 0 20px 0;
 		/*margin-top: -60px;*/
 		background-color: #efefef;
 		color: #979797;
@@ -3118,7 +3125,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 
 .warning-text {
 	color:#FF0004!important;
-	font-size:13px;
+	font-size:14px;
 }
 
 .boxed {
@@ -3257,4 +3264,13 @@ fieldset p {
 }
 .ui-front {
     z-index: 100;
+}
+
+.green {
+	color:#00a453;
+}
+
+.gray {
+	color:#c8c8c8;
+	padding-right:10px;
 }
