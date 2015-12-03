@@ -57,6 +57,12 @@
     line-height: 28px;
 }
 
+.accordion-item-content h6 {
+    color: #000;
+    font: 16px 'gotham_htfbold', Arial, sans-serif!important;
+    line-height: 28px;
+}
+
 	
 	.accordion-item-content ul {
 		padding:10px 10px 10px 20px;
@@ -2287,7 +2293,7 @@
 		margin-top: 60px;
 		background-color: #efefef;
 		color: #979797;
-		margin-bottom:60px;
+		margin-bottom:20px;
 		border-top:1px solid #dadada;
 		border-bottom:1px solid #dadada;
 	}
@@ -3107,7 +3113,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
     border: 1px solid #e1e1e1;
     color: #222222;
 	margin-bottom: 20px;
-	padding:20px;
+	/*padding:20px;*/
 	background:#fff;
 	font-family: 'gotham_htfbook', Arial, sans-serif;
 }
@@ -3149,7 +3155,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
   transform: translateY(-50%);}
   
   .brand-search {
-	  width:100%;
+	  /*width:100%;*/
 	  height:45px;
 	  border-bottom:1px solid #e1e1e1;
 	  padding-bottom:10px;
@@ -3268,9 +3274,14 @@ fieldset p {
 
 .green {
 	color:#00a453;
+	padding-right:10px;
 }
 
 .gray {
 	color:#c8c8c8;
 	padding-right:10px;
+}
+
+.tp-bgimg {
+	background-position: 0!important;
 }

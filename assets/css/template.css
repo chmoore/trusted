@@ -1387,6 +1387,7 @@
 .no-left-pad {
 	padding-left:0!important;
 	/*padding-right:25px;*/
+	 margin-bottom: 15px;
 }
 
 .no-right-pad {
