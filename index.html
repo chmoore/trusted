@@ -16,6 +16,7 @@
 
 <!-- /// Plugins CSS ////////  -->
 <link rel="stylesheet" href="assets/vendors/revolutionslider/css/settings.css">
+<link rel="stylesheet" href="assets/vendors/formvalidation/formValidation.css">
 <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css">
 
 <!-- Latest compiled and minified CSS -->
@@ -124,6 +125,7 @@
           
           <p>Enter the serial number of an item you own or are attempting to buy to confirm its authenticity.<br>
           <a href="authentication.html" class="blue-link">How To Find Your Serial Number</a></p>
+       
           <div class="widget ewf_widget_newsletter">
             <form id="newsletter-subscribe-form" action="#">
               <input type="text" name="email" placeholder="Enter ID or Serial Number">
@@ -188,20 +190,22 @@
       <!-- end .headline -->
       
       <p>Trusted.com eTitles are exclusively provided by authorized retailers for qualifying purchases. Shop with confidence and find a retailer offering eTitles near you.</p>
-      <div class="span5">
-        <select id="select-input">
+      <form id="storelocator">
+      <div class="col-sm-5 form-group">
+        <select id="select-input" name="brandselect">
           <option selected disabled>Select a Trusted Brand</option>
           <option value="ng">National Geographic</option>
           <option value="mille">Richard Mille</option>
           <option value="heuer">Tag Heuer</option>
         </select>
       </div>
-      <div class="span5">
-        <input type="text" class="rounded" id="s" name="text-input" value="" placeholder="Enter City & State or Zip Code">
+      <div class="col-sm-5 form-group">
+        <input type="text" class="rounded" id="s" name="citystate" value="" placeholder="Enter City & State or Zip Code">
       </div>
-      <div class="span2">
-        <input class="btn" type="submit" name="submit" value="Search Stores" href="store-locator.html">
+      <div class="col-sm-2 form-group">
+        <button class="btn" type="submit">Search Stores</button>
       </div>
+      </form>
     </div>
   </div>
   <!-- end .span6 --> 
@@ -361,6 +365,13 @@
 <script src="http://maps.google.com/maps/api/js?sensor=false"></script> 
 <script src="assets/vendors/gmap/jquery.gmap.min.js"></script> 
 
+<!-- /// formValidation //////// -->
+
+<script src="assets/vendors/formvalidation/formValidation.js"></script> 
+<script src="assets/vendors/formvalidation/framework/bootstrap.min.js"></script> 
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 <!-- /// Custom JS ////////  --> 
 <script src="assets/js/classie.js"></script> 
 <script src="assets/js/uisearch.js"></script> 
@@ -369,6 +380,27 @@
 		</script> 
 <script src="assets/js/main.js"></script> 
 <script>
+$(document).ready(function() {
+    $('#storelocator').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            citystate: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter your City & State or Zip Code'
+                    }
+                }
+            }
+        }
+    });
+});
+<!-- show/hide -->
+
 	  function showHide(shID) {
     if (document.getElementById(shID)) {
         if (document.getElementById(shID+'-show').style.display != 'none') {
@@ -384,7 +416,5 @@
     }
 }
 </script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 </html>
