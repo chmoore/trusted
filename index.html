@@ -127,10 +127,17 @@
           <a href="authentication.html" class="blue-link">How To Find Your Serial Number</a></p>
        
           <div class="widget ewf_widget_newsletter">
-            <form id="newsletter-subscribe-form" action="#">
-              <input type="text" name="email" placeholder="Enter ID or Serial Number">
-              <a href="#" id="expand-all-show" class="btn" onclick="showHide('expand-all');return false;">Verify Authenticity</a>
-            </form>
+          <form id="checkauthenticity">
+      <div class="col-sm-10 form-group">
+        <input type="text" name="serialnum" placeholder="Enter ID or Serial Number">
+      </div>
+      <div class="col-sm-2 form-group">
+        <button class="btn" type="submit">Verify Authenticity</button>
+      </div>
+      </form>
+          
+              <!--<input type="text" name="email" placeholder="Enter ID or Serial Number">
+              <a href="#" id="expand-all-show" class="btn" onclick="showHide('expand-all');return false;">Verify Authenticity</a>-->
           </div>
           <div id="expand-all" class="more">
           <p class="warning-text">Multiple matching eTitles found for the provided serial number. Select the appropriate product below.</p>
@@ -393,6 +400,25 @@ $(document).ready(function() {
                 validators: {
                     notEmpty: {
                         message: 'Please enter your City & State or Zip Code'
+                    }
+                }
+            }
+        }
+    });
+});
+$(document).ready(function() {
+    $('#checkauthenticity').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            serialnum: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please Enter ID or Serial Number'
                     }
                 }
             }
