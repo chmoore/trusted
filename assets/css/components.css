@@ -313,12 +313,12 @@
    =Contact form
    ========================================================================== */
   
-	#contact-form { 
+	.contact-form { 
 		overflow: hidden; 
 		margin: 0px 0 40px; 
 	}
 	
-	#contact-form fieldset {}
+	.contact-form fieldset {}
 	
 	label.validation-error { color: #ff3b3b; }
 	
@@ -333,7 +333,7 @@
 	/*
 	 * 1. Clearfix hack 
 	 */
-	#contact-form:after { /* 1 */
+	.contact-form:after { /* 1 */
 		visibility: hidden;
 		display: block;
 		height: 0;

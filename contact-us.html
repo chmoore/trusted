@@ -27,6 +27,11 @@
 	<!-- /// Plugins CSS ////////  -->
 	<link rel="stylesheet" href="assets/vendors/revolutionslider/css/settings.css">
     <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css">
+    <link rel="stylesheet" href="assets/vendors/formvalidation/formValidation.css">
+    
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
 	
 	<!-- /// Template CSS ////////  -->
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -240,27 +245,24 @@
                         </div>
   
                     </div><!-- end .span4 -->
-                    <div class="offset1a span7">
+                    <div class="offset1a col-sm-7">
                         
-                        <form id="contact-form" name="contact-form" method="post" action="#">  
-                            <fieldset>
-                                <div id="formstatus"></div>
-                                <p>
-                                    <input class="span12" type="text" id="name" name="name" value="" placeholder="First Name &amp; Last Name**" >
-                                </p>
-                                <p>
-                                    <input class="span12" type="text" id="email" name="email" value="" placeholder="Email Address*" >
-                                </p>
-                                <p>
-                                    <input class="span12" type="text" id="subject" name="subject" value="" placeholder="Subject*"  >
-                                </p>
-                                <p>
-                                    <textarea class="span12" id="message" name="message" rows="7" cols="25" placeholder="Message*"></textarea>
-                                </p>
-                                <p class="last">
-                                    <input class="btn" id="submit" type="submit" name="submit" value="Contact Trusted" >
-                                </p>
-                            </fieldset>
+                        <form id="contactform" class="contact-form" method="post" action="#">  
+                               <div class="col-xs-12 form-group">
+                                    <input type="text" name="fullname" value="" placeholder="First Name &amp; Last Name*" >
+                                </div>
+                                 <div class="col-xs-12 form-group">
+                                    <input type="text" name="email" value="" placeholder="Email Address*" >
+                                </div>
+                                 <div class="col-xs-12 form-group">
+                                    <input type="text" name="subject" value="" placeholder="Subject*"  >
+                                </div>
+                                 <div class="col-xs-12 form-group">
+                                    <textarea name="message" rows="7" cols="25" placeholder="Message*"></textarea>
+                                </div>
+                                <div class="last col-xs-5">
+                                    <button class="btn" type="submit">Contact Trusted</button>
+                                </div>
                         </form><!-- end #contact-form -->
                     
                     </div><!-- end .span8 -->
@@ -396,6 +398,13 @@
     <!-- /// Revolution Slider ////////  -->
     <script src="assets/vendors/revolutionslider/js/jquery.themepunch.tools.min.js"></script>
     <script src="assets/vendors/revolutionslider/js/jquery.themepunch.revolution.min.js"></script>
+    
+    <!-- /// formValidation //////// -->
+
+<script src="assets/vendors/formvalidation/formValidation.js"></script> 
+<script src="assets/vendors/formvalidation/framework/bootstrap.min.js"></script> 
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	
 	<!-- /// Custom JS ////////  -->
 	<script src="assets/js/main.js"></script>	
@@ -404,8 +413,58 @@
 		<script>
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <script>
+$(document).ready(function() {
+    $('#contactform').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            fullname: {
+                validators: {
+                    notEmpty: {
+                        message: 'The full name is required'
+                    }
+                }
+            },
+            subject: {
+                validators: {
+                    notEmpty: {
+                        message: 'The subject is required'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required'
+                    },
+                    emailAddress: {
+                        message: 'Please enter a valid email address'
+                    }
+                }
+            },
+            message: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter a message'
+                    },
+                }
+            },
+            
+        }
+    });
+});
+</script>
+        
+        <!--<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>-->
 <!--End mc_embed_signup-->
+
+
+
 	
 	<!-- /// Custom JS ////////  -->
       
