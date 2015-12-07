@@ -2289,11 +2289,11 @@
 	}
 	
 	#bg-1-sm {
-		padding: 20px 0 40px 0;
-		margin-top: 60px;
+		padding: 20px 0 20px 0;
+		margin-top: 20px;
 		background-color: #efefef;
 		color: #979797;
-		margin-bottom:20px;
+		margin-bottom:60px;
 		border-top:1px solid #dadada;
 		border-bottom:1px solid #dadada;
 	}
