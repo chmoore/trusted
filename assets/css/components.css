@@ -3295,3 +3295,17 @@ fieldset p {
 	    font: 12px 'gotham_htfmedium', Arial, sans-serif;
 		text-align:left;
 }
+
+.mc-input input[type="email"] {
+	width:100%;
+	margin-left: 20px;
+    margin-right: 15px;
+}
+
+.mc-input .help-block {
+	margin-left:20px;
+}
+
+.mc-input .fv-icon-no-label {
+	right:0;
+}

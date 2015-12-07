@@ -267,7 +267,7 @@
                     
                     </div><!-- end .span8 -->
                 </div><!-- end .row -->
-            </div>
+            </div></div>
               <div class="fullwidth-section" id="bg-1-cut">
             	<div class="container">
 					<div class="span6 text-center border">
@@ -285,12 +285,15 @@
                              <div class="widget">
                              
                              
-                             <form action="http://trusted.us12.list-manage.com/subscribe/post?u=7b09043166b8bbd75858f67f0&amp;id=83773d709f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                             <form action="http://trusted.us12.list-manage.com/subscribe/post?u=7b09043166b8bbd75858f67f0&amp;id=83773d709f" method="post" id="mcmailform" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-<div class="mc-field-group">
+<div class="mc-field-group form-group col-xs-8 mc-input">
 	<input type="email" value="" name="EMAIL" class="required email" placeholder="Enter email address*"i d="mce-EMAIL">
-     <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-</div>
+   </div>  
+<div class="mc-field-group form-group col-xs-2">   
+   <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn">
+   </div>
+
 	<div id="mce-responses" class="clear">
 		<div class="response" id="mce-error-response" style="display:none"></div>
 		<div class="response" id="mce-success-response" style="display:none"></div>
@@ -455,6 +458,25 @@ $(document).ready(function() {
                 }
             },
             
+        }
+    });
+});
+$(document).ready(function() {
+    $('#mcmailform').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter a valid email address'
+                    }
+                }
+            }
         }
     });
 });
