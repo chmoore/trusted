@@ -790,7 +790,12 @@
 }
 
 #expand-all-show {
-    display:inline-block!important
+    display:inline-block!important;
+	color:#fff;
+}
+
+#expand-all-show:hover {
+	color:#000;
 }
 
 /* =Recent Entries Widget

@@ -3309,3 +3309,8 @@ fieldset p {
 .mc-input .fv-icon-no-label {
 	right:0;
 }
+
+.text-div {
+	padding-top:20px;
+	font-size:12px;
+}

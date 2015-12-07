@@ -132,13 +132,14 @@
         <input type="text" name="serialnum" placeholder="Enter ID or Serial Number">
       </div>
       <div class="col-sm-2 form-group">
-        <button class="btn" type="submit">Verify Authenticity</button>
+        <button class="btn" type="submit"> <a href="#" id="expand-all-show" onclick="showHide('expand-all');return false;">Verify Authenticity</a></button>
       </div>
       </form>
           
               <!--<input type="text" name="email" placeholder="Enter ID or Serial Number">
               <a href="#" id="expand-all-show" class="btn" onclick="showHide('expand-all');return false;">Verify Authenticity</a>-->
           </div>
+          <div class="col-sm-12">
           <div id="expand-all" class="more">
           <p class="warning-text">Multiple matching eTitles found for the provided serial number. Select the appropriate product below.</p>
           <div class="span12 product-content boxed">
@@ -171,7 +172,7 @@
         </div>
       </div>
     </div>
-    <!-- end .span6 -->
+    </div>
     
     <div class="container">
       <div class="row">
