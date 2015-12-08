@@ -711,8 +711,8 @@
     </a>
 
     <!-- /// jQuery ////////  -->
-	 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="assets/vendors/jquery-2.1.3.min.js"></script> 
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
     
          <!-- /// Revolution Slider ////////  -->
     <script src="assets/vendors/revolutionslider/js/jquery.themepunch.tools.min.js"></script>
@@ -721,13 +721,6 @@
     <!-- /// bxSlider ////////  -->
 	<script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
     
-        <!-- /// formValidation //////// -->
-
-<script src="assets/vendors/formvalidation/formValidation.js"></script> 
-<script src="assets/vendors/formvalidation/framework/bootstrap.min.js"></script> 
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	
 	<!-- /// Custom JS ////////  -->
 	 <script src="assets/js/classie.js"></script>
     <script src="assets/js/uisearch.js"></script>
@@ -737,9 +730,15 @@
 	
 	<!-- /// Custom JS ////////  -->
 	<script src="assets/js/main.js"></script>	
+      <!-- /// formValidation //////// -->
+
+<script src="assets/vendors/formvalidation/formValidation.js"></script> 
+<script src="assets/vendors/formvalidation/framework/bootstrap.min.js"></script> 
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
       <script>
-	  $(document).ready(function() {
-    $('#contactform').formValidation({
+	 $(document).ready(function() {
+    $('#checkauthenticity').formValidation({
         framework: 'bootstrap',
         icon: {
             valid: 'glyphicon glyphicon-ok',
@@ -747,38 +746,13 @@
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            fullname: {
+            serialnum: {
                 validators: {
                     notEmpty: {
-                        message: 'Your full name is required'
+                        message: 'Please Enter ID or Serial Number'
                     }
                 }
-            },
-            subject: {
-                validators: {
-                    notEmpty: {
-                        message: 'The subject is required'
-                    }
-                }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'Your email address is required'
-                    },
-                    emailAddress: {
-                        message: 'Please enter a valid email address'
-                    }
-                }
-            },
-            message: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please enter a message for Trusted'
-                    },
-                }
-            },
-            
+            }
         }
     });
 });
