@@ -244,6 +244,7 @@
 		    font: 14px 'Noto Serif', Arial, sans-serif;
 			margin-bottom:20px!important;
 			line-height: 22px;
+			 clear: both;
 	}
 	
 	.sidebar-content p {

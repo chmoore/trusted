@@ -349,7 +349,7 @@
 	.divider { margin: 40px 0 40px; }
 	
 	.divider.single-line { border-top: 1px solid #e1e1e1; }
-	.divider.single-line-side { border-top: 1px solid #e1e1e1; /*width: 298px;margin-left: -20px; */width:100%; margin: 20px 0;}
+	.divider.single-line-side { border-top: 1px solid #e1e1e1; /*width: 298px;margin-left: -20px; */width:100%; /*margin: 20px 0;*/margin: 0px 0 20px;float: left;}
 	   
 	
 	.divider.double-line { border-top: 4px double #e1e1e1; }
@@ -2325,6 +2325,12 @@
 		border-bottom:1px solid #dadada;
 	}
 	
+	#bg-sm {
+		padding: 20px;
+		background-color: #efefef;
+		color: #979797;
+	}
+	
 	#bg-side {
     padding: 20px;
     margin-top: -40px;
@@ -3314,4 +3320,8 @@ fieldset p {
 .text-div {
 	padding-top:20px;
 	font-size:12px;
+}
+
+.checkform {
+	width:100%;
 }
