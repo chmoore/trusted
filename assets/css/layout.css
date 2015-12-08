@@ -246,6 +246,10 @@
 			line-height: 22px;
 	}
 	
+	.sidebar-content p {
+		margin-bottom:24px;
+	}
+	
 	.brand-desc .btn {
 		width:100%;
 		text-align:center;
@@ -1418,6 +1422,9 @@
 		border-bottom: 1px solid #e1e1e1;
 		font-family:'gotham_htfbook', Arial, sans-serif;
 		background: #F3F3F3;
+		 -webkit-box-sizing: content-box;
+    	-moz-box-sizing: content-box;
+  	    box-sizing: content-box;
 	}
 	
 	.breadcrumbs-search {

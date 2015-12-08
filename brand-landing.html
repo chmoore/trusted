@@ -30,6 +30,11 @@
 	<!-- /// Plugins CSS ////////  -->
 	<link rel="stylesheet" href="assets/vendors/revolutionslider/css/settings.css">
     <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css">
+    <link rel="stylesheet" href="assets/vendors/formvalidation/formValidation.css">
+    
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
     
 	
 	<!-- /// Template CSS ////////  -->
@@ -177,7 +182,7 @@
         </div>
         </div>
         
-         <div class="fullwidthbanner-container slider-revolution slider-margin product-slide">
+         <div class="fullwidthbanner-container slider-revolution slider-margin">
          <div class="container">
 				<div class="fullwidthbanner product-banner">
 					<ul>					   						                        
@@ -197,15 +202,32 @@
                 <div class="brand-desc">
                 <h4>Richard Mille</h4>
                  <div class="divider single-line-side"></div>
-                 <div class="sidebar-content">Richard Mille’s success is founded upon three crucial elements: the best in technical innovation, the best of artistry and architecture, the best of the heritage and culture of fine watchmaking with hand finishing.</div>
-  				<input class="btn" type="submit" name="submit" value="Visit the Shop">
+                 <div class="sidebar-content"><p>Richard Mille’s success is founded upon three crucial elements: the best in technical innovation, the best of artistry and architecture, the best of the heritage and culture of fine watchmaking with hand finishing.</p>
+                 <p><a href="brand-results.html" class="blue-link"><i class="fa fa-shopping-bag"></i> Visit the Shop</a> | <a href="store-locator.html" class="blue-link"><i class="fa fa-map-marker"></i> Find a Store</a></p>
+                 </div>
                 <div class="divider single-line-side"></div>
+                <div class="sidebar-content">
+          <p>Enter the serial number of an item you own or are attempting to buy to confirm its authenticity.<br>
+          <a href="authentication.html" class="blue-link">How To Find Your Serial Number</a></p>
+       
+          <div class="widget col-lg-12">
+          <form id="checkauthenticity">
+      <div class="col-xs-7 form-group no-left-pad">
+        <input type="text" name="serialnum" placeholder="Enter ID or Serial Number">
+      </div>
+      <div class="col-xs-5 form-group no-left-pad">
+        <button class="btn" type="submit"> <a href="#" id="expand-all-show" onclick="showHide('expand-all');return false;">Verify</a></button>
+      </div>
+      </form>
+          
+              <!--<input type="text" name="email" placeholder="Enter ID or Serial Number">
+              <a href="#" id="expand-all-show" class="btn" onclick="showHide('expand-all');return false;">Verify Authenticity</a>-->
+          </div></div>
+          <div class="divider single-line-side"></div>
+           <div class="sidebar-content">
                 <h6>Latest News</h6>
                             <a href="#" class="blue-link">Richard Mille Selects Trusted.com</a>
-                              <div class="divider single-line-side"></div>
-                              <div class="sidebar-content">Trusted.com eTitles are exclusively provided by authorized retailers for qualifying purchases. Shop with confidence and find a retailer offering eTitles near you.</div>
-                            <a href="brand-results.html" class="blue-link"><input class="btn" type="submit" name="submit" value="Find a Store">
-                          </a>
+                    </div>          
                 </div></div></div>
                 
                 <div class="brand-search breadcrumbs">
@@ -243,7 +265,7 @@
                                          <h6>RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</h6>
                                  <p class="price-ital">Inquire for price</p>
           <div class="fav"><i class="fa fa-heart-o fa-lg"></i></div>
-          <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>  </a>                 		
+          </a><div class="cart-icon"><a href="item-display.html"></a><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>                   		
 	</div>
                     
                     </div><!-- end .span6 -->
@@ -296,7 +318,7 @@
                                          <h6>RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</h6>
                                  <p class="price-ital">Inquire for price</p>
           <div class="fav"><i class="fa fa-heart-o fa-lg"></i></div>
-          <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>  </a>                 		
+          </a><div class="cart-icon"><a href="item-display.html"></a><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>                   		
 	</div>
                     
                     </div><!-- end .span6 -->
@@ -357,7 +379,7 @@
                                          <h6>RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</h6>
                                  <p clsass="price-ital">Inquire for price</p>
           <div class="fav"><i class="fa fa-heart-o fa-lg"></i></div> 
-          <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div> </a>                 		
+          </a><div class="cart-icon"><a href="item-display.html"></a><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>                  		
 	</div>
                     
                     </div><!-- end .span6 -->
@@ -411,7 +433,7 @@
                                          <h6>RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</h6>
                                  <p class="price-ital">Inquire for price</p>
           <div class="fav"><i class="fa fa-heart-o fa-lg"></i></div> 
-          <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div> </a>                 		
+          </a><div class="cart-icon"><a href="item-display.html"></a><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>                  		
 	</div>
                     
                     </div><!-- end .span6 -->
@@ -473,7 +495,7 @@
                                          <h6>RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</h6>
                                  <p class="price-ital">Inquire for price</p>
           <div class="fav"><i class="fa fa-heart-o fa-lg"></i></div> 
-          <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div> </a>                 		
+          </a><div class="cart-icon"><a href="item-display.html"></a><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>                  		
 	</div>
                     
                     </div><!-- end .span6 -->
@@ -527,7 +549,7 @@
                                          <h6>RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</h6>
                                  <p class="price-ital">Inquire for price</p>
           <div class="fav"><i class="fa fa-heart-o fa-lg"></i></div> 
-          <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div> </a>                 		
+          </a><div class="cart-icon"><a href="item-display.html"></a><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>                  		
 	</div>
                     
                     </div><!-- end .span6 -->
@@ -698,6 +720,13 @@
     
     <!-- /// bxSlider ////////  -->
 	<script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    
+        <!-- /// formValidation //////// -->
+
+<script src="assets/vendors/formvalidation/formValidation.js"></script> 
+<script src="assets/vendors/formvalidation/framework/bootstrap.min.js"></script> 
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	
 	<!-- /// Custom JS ////////  -->
 	 <script src="assets/js/classie.js"></script>
@@ -709,16 +738,50 @@
 	<!-- /// Custom JS ////////  -->
 	<script src="assets/js/main.js"></script>	
       <script>
-	  $(document).ready(function(){
-
-var languages = ["Trusted","Tag Heuer", "Google", "Michael Godard","Stickman","National Geographic","eTitle"]; 
-  //Can add more,separate with commas.
-  //Added CSS,HTML cause people know them more.               
-
-  $("#s").autocomplete({
-    source: languages
+	  $(document).ready(function() {
+    $('#contactform').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            fullname: {
+                validators: {
+                    notEmpty: {
+                        message: 'Your full name is required'
+                    }
+                }
+            },
+            subject: {
+                validators: {
+                    notEmpty: {
+                        message: 'The subject is required'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'Your email address is required'
+                    },
+                    emailAddress: {
+                        message: 'Please enter a valid email address'
+                    }
+                }
+            },
+            message: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter a message for Trusted'
+                    },
+                }
+            },
+            
+        }
+    });
 });
-}); 
 
 //Accordion//
 	   $(document).on('show','.accordion', function (e) {

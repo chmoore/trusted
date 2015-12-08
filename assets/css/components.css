@@ -1009,10 +1009,10 @@
 		width: 100% !important;
 		padding: 0;
 		margin: 0; 
-		height:520px!important;
+		height:600px!important;
 	}
 	
-	.product-banner {width:795px!important;float:left;}
+	.product-banner {width:700px!important;float:left;}
 
 	.fullwidthbanner-container ul { list-style: none; }
 
@@ -1023,9 +1023,9 @@
 	
 	.slider-revolution.fullwidthbanner-container { /*margin-bottom: -65px;*/ margin-bottom:0px;margin-top:65px;}
 
-	.slider-revolution.fullwidthbanner-container .fullwidthbanner {height: 520px!important; /*border-bottom:6px solid #000;*/}
+	.slider-revolution.fullwidthbanner-container .fullwidthbanner {height: 520px!important; padding:0; /*border-bottom:6px solid #000;*/}
 	.product-slide {border-bottom: 1px solid #e1e1e1; margin-bottom:20px!important;padding-bottom:40px;}
-	.brand-desc {width:350px;position:absolute;right:0;}
+	.brand-desc {width:435px;position:absolute;right:0;padding-left: 10px;/*overflow: scroll;height: 600px;*/}
 	
 	.slider-overlay {
 		position: absolute;
@@ -2706,6 +2706,7 @@
 	color:#0088cc!important;
 	margin-top:-10px;
 	font-family: 'gotham_htfbold', Arial, sans-serif;
+	font-size: 14px;
 }
 
 .text-center .blue-link {
