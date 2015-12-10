@@ -1010,7 +1010,7 @@
 		width: 100% !important;
 		padding: 0;
 		margin: 0; 
-		height:600px!important;
+		height:520px!important;
 	}
 	
 	.product-banner {width:700px!important;float:left;}
@@ -2280,7 +2280,7 @@
 	
 	
 	#bg-1 {
-		padding: 40px 0 60px 0;
+		padding: 40px 0 20px 0;
 		margin-top: 0px;
 		background-color: #efefef;
 		color: #979797;
@@ -3417,6 +3417,6 @@ fieldset p {
 	padding-left: 0;
 }
 
-.span10 .center {
+.span10.center {
 	margin-top:40px;
 }

@@ -190,7 +190,7 @@
 	
 	.text-left { text-align: left; }
 	.text-right { text-align: right; }
-	.text-center { text-align: center; padding-top:30px; }
+	.text-center { text-align: center; padding-top:30px;     margin-bottom: 60px;}
 	.text-center-1 { text-align: center;}
 	.text-center p{font-style:italic; color:#000;}
 	.text-center-1 p{color:#FFF;}
@@ -313,10 +313,10 @@
 		    padding: 10px 10px 10px 25px;
 	}
 	
-	a[name] {
+	.anchored {
   display: block;
-  height: 75px; /*same height as header*/
-  margin-top: -75px; /*same height as header*/
+  height: 75px; 
+  margin-top: -75px; 
   visibility: hidden;
 }
 
