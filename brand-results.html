@@ -30,9 +30,9 @@
 	<!-- /// Plugins CSS ////////  -->
 	<link rel="stylesheet" href="assets/vendors/revolutionslider/css/settings.css">
     <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css">
-	<link rel="stylesheet" href="assets/vendors/magnificpopup/magnific-popup.css">
-    <link rel="stylesheet" href="assets/vendors/animations/animate.min.css">
-	<link rel="stylesheet" href="assets/vendors/itplayer/css/YTPlayer.css">
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     
 	
 	<!-- /// Template CSS ////////  -->
@@ -202,13 +202,21 @@
 <div class="divider single-line-side"></div>
 
 <h6>Brands</h6>
-
- <p><input type="checkbox" name="checkbox" value=""> Tag Heuer (944)</p>
  <p><input type="checkbox" name="checkbox" value=""> Richard Mille (188)</p>
+ <h6>Collections</h6>
+
+ <p><input type="checkbox" name="checkbox" value=""> RM 010 (944)</p>
+ <p><input type="checkbox" name="checkbox" value=""> RM 011 (188)</p>
+ <p><input type="checkbox" name="checkbox" value=""> RM 012 (188)</p>
+ <p><input type="checkbox" name="checkbox" value=""> RM 013 (188)</p>
 <h6>Categories</h6>
 
  <p><input type="checkbox" name="checkbox" value=""> Men's Watches (944)</p>
  <p><input type="checkbox" name="checkbox" value=""> Women's Watches (188)</p>
+ 
+ <h6>Condition</h6>
+     <p><input type="checkbox" name="checkbox" value=""> New (444)</p>
+     <p><input type="checkbox" name="checkbox" value=""> Used (181)</p>
 
 <h6>Movement Type</h6>
      <p><input type="checkbox" name="checkbox" value=""> Automatic Self-Wind (444)</p>
@@ -217,14 +225,30 @@
                     </div><!-- end .sidebar -->
                     </div>
                     <div class="span8 offset-content item-div">
-                    <div class="span6">
-                    <p><strong>1-15 of 900 results for</strong> <a href="#">“ALL COLLECTIONS”</a></p>
+                    <div class="span5 show-all-txt">
+                    <p><strong>1-15 of 900 for</strong> <a href="#">“ALL COLLECTIONS”</a></p>
                     </div>
-                     <div class="span6 height40 align-right">
-        <div class="">
-        <a href="#" id="list-view" class="">
+                     <div class="span7 height40 align-right">
+        <div class="item-sort"><label for="show">Show: </label><select id="select-input" name="brandselect">
+          <option selected>15</option>
+          <option value="30">30</option>
+          <option value="60">60</option>
+          <option value="90">90</option>
+        </select>
+        
+        </div>
+                <div class="item-sort"><label for="sort">Sort: </label>
+                <select id="select-input" name="brandselect">
+          <option selected>Best Seller</option>
+          <option value="30">Highest Price</option>
+          <option value="60">Lowest Price</option>
+        </select>
+        
+        </div>
+
+         <a href="brand-results.html" id="list-view" class="">
         <span class="list-icon"></span>&nbsp;List</a>
-        <a href="#" id="grid-view" class="">
+        <a href="brand-results-grid.html" id="grid-view" class="">
         <span class="grid-icon"></span>&nbsp;Grid</a></div></div>
                     </div>
                      <div class="span8 offset-content item-div">
@@ -237,12 +261,13 @@
                     
                     </div>
                     <div class="span8 no-left-pad">
+                    <a href="item-display.html">
                     <h4>RM 011 TOURBILLON 519-04-94a</h4>
                     <h6 class="brand-list">Richard Mille</h6>
-                    <h5 class="price-list">Inquire for price</h5>
+                    <h5 class="price-list">Inquire for price</h5> </a>
                     <p>This rose pink gold watch with red trim features skeletonized automatic winding movement with hours, minutes, date and adjustable rotor geometry.</p>
-                    <p>Available from <a href="#">4 Retailers</a></p>
-                     
+                    <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
+                    
                      </div>
                     
                     
@@ -257,11 +282,12 @@
                     
                     </div>
                     <div class="span8 no-left-pad">
+                    <a href="item-display.html">
                     <h4>RM 011 TOURBILLON 519-04-94a</h4>
                     <h6 class="brand-list">Richard Mille</h6>
-                    <h5 class="price-list">Inquire for price</h5>
+                    <h5 class="price-list">Inquire for price</h5></a>
                     <p>This rose pink gold watch with red trim features skeletonized automatic winding movement with hours, minutes, date and adjustable rotor geometry.</p>
-                    <p>Available from <a href="#">4 Retailers</a></p>
+                    <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
                      
                      </div>
                     
@@ -277,11 +303,12 @@
                     
                     </div>
                     <div class="span8 no-left-pad">
+                    <a href="item-display.html">
                     <h4>RM 011 TOURBILLON 519-04-94a</h4>
                     <h6 class="brand-list">Richard Mille</h6>
-                    <h5 class="price-list">Inquire for price</h5>
+                    <h5 class="price-list">Inquire for price</h5></a>
                     <p>This rose pink gold watch with red trim features skeletonized automatic winding movement with hours, minutes, date and adjustable rotor geometry.</p>
-                    <p>Available from <a href="#">4 Retailers</a></p>
+                    <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
                      
                      </div>
                     
@@ -297,11 +324,12 @@
                     
                     </div>
                     <div class="span8 no-left-pad">
+                    <a href="item-display.html">
                     <h4>RM 011 TOURBILLON 519-04-94a</h4>
                     <h6 class="brand-list">Richard Mille</h6>
-                    <h5 class="price-list">Inquire for price</h5>
+                    <h5 class="price-list">Inquire for price</h5></a>
                     <p>This rose pink gold watch with red trim features skeletonized automatic winding movement with hours, minutes, date and adjustable rotor geometry.</p>
-                    <p>Available from <a href="#">4 Retailers</a></p>
+                    <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
                      
                      </div>
                     
@@ -317,11 +345,12 @@
                     
                     </div>
                     <div class="span8 no-left-pad">
+                    <a href="item-display.html">
                     <h4>RM 011 TOURBILLON 519-04-94a</h4>
                     <h6 class="brand-list">Richard Mille</h6>
-                    <h5 class="price-list">Inquire for price</h5>
+                    <h5 class="price-list">Inquire for price</h5></a>
                     <p>This rose pink gold watch with red trim features skeletonized automatic winding movement with hours, minutes, date and adjustable rotor geometry.</p>
-                    <p>Available from <a href="#">4 Retailers</a></p>
+                    <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
                      
                      </div>
                     
@@ -337,11 +366,12 @@
                     
                     </div>
                     <div class="span8 no-left-pad">
+                    <a href="item-display.html">
                     <h4>RM 011 TOURBILLON 519-04-94a</h4>
                     <h6 class="brand-list">Richard Mille</h6>
-                    <h5 class="price-list">Inquire for price</h5>
+                    <h5 class="price-list">Inquire for price</h5></a>
                     <p>This rose pink gold watch with red trim features skeletonized automatic winding movement with hours, minutes, date and adjustable rotor geometry.</p>
-                    <p>Available from <a href="#">4 Retailers</a></p>
+                    <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
                      
                      </div>
                     
@@ -357,17 +387,31 @@
                     
                     </div>
                     <div class="span8 no-left-pad">
+                    <a href="item-display.html">
                     <h4>RM 011 TOURBILLON 519-04-94a</h4>
                     <h6 class="brand-list">Richard Mille</h6>
-                    <h5 class="price-list">Inquire for price</h5>
+                    <h5 class="price-list">Inquire for price</h5></a>
                     <p>This rose pink gold watch with red trim features skeletonized automatic winding movement with hours, minutes, date and adjustable rotor geometry.</p>
-                    <p>Available from <a href="#">4 Retailers</a></p>
+                    <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
                      
                      </div>
-                    
-                    
                     <!-- end .span8 -->
                 </div>
+                 <div class="pagination-holder col-xs-8 offset-content item-div">
+			<div id="light-pagination" class="pagination light-theme simple-pagination col-xs-10"><ul><li class="disabled"><span class="current prev">Prev</span></li><li class="active"><span class="current">1</span></li><li><a href="#page-2" class="page-link">2</a></li><li><a href="#page-3" class="page-link">3</a></li><li><a href="#page-4" class="page-link">4</a></li><li><a href="#page-5" class="page-link">5</a></li><li class=""><span class="ellipse clickable">…</span></li><li><a href="#page-19" class="page-link">19</a></li><li><a href="#page-20" class="page-link">20</a></li><li><a href="#page-2" class="page-link next">Next</a></li></ul></div>
+            
+             <div class="col-xs-2 height40 align-right">
+        <div class="item-sort"><label for="show">Show: </label><select id="select-input" name="brandselect">
+          <option selected>15</option>
+          <option value="30">30</option>
+          <option value="60">60</option>
+          <option value="90">90</option>
+        </select>
+        
+        </div>
+        </div>
+	</div>
+
                 
             </div></div>
             <div class="fullwidth-section" id="bg-1-cut">
