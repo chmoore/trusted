@@ -3416,3 +3416,7 @@ fieldset p {
 	margin-top:10px;
 	padding-left: 0;
 }
+
+.span10 .center {
+	margin-top:40px;
+}
