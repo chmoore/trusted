@@ -422,7 +422,7 @@
 	
 	function showHidebackToTop() {
 	
-		if ($(window).scrollTop() > $(window).height() / 2 ) {
+		if ($(window).scrollTop() > $(window).height()) {
 			$("#back-to-top").removeClass('gone');
 			$("#back-to-top").addClass('visible');
 		} else {
