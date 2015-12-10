@@ -3196,7 +3196,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 
 .widget input[type="email"]{
     /* width: 100%; */
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 	width:50%;
 	color:#000;
 }
@@ -3208,7 +3208,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
     margin-right: 20px;
     margin-bottom: 0;
     padding-left: 20px;
-    color: #e1e1e1;
+    color: #979797;
 }
 
 .widget .btn:hover: {
