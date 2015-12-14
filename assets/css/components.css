@@ -1010,6 +1010,14 @@
 		width: 100% !important;
 		padding: 0;
 		margin: 0; 
+		height:520px;
+	}
+	
+	.brand-slide {
+		height:600px!important;
+	}
+	
+	.lead-slide {
 		height:520px!important;
 	}
 	
@@ -2289,7 +2297,7 @@
 		border-bottom:1px solid #dadada;
 	}
 	
-	#bg-1-sm {
+	/*#bg-1-sm {
 		padding: 20px 0 20px 0;
 		margin-top: 20px;
 		background-color: #efefef;
@@ -2297,7 +2305,17 @@
 		margin-bottom:60px;
 		border-top:1px solid #dadada;
 		border-bottom:1px solid #dadada;
-	}
+	}*/
+	
+	#bg-1-sm {
+    padding: 0px 0 0px 0;
+    margin-top: -20px;
+    background-color: #efefef;
+    color: #979797;
+    margin-bottom: 60px;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
 	
 	#bg-1-w {
 		padding: 40px 0 40px 0;
