@@ -990,7 +990,7 @@
 									$('.portfolio-isotope').isotope('reloadItems').isotope();
 
 								});
-								if( length <= portfolio_items_loaded || portfolio_offset == length ){
+								if( length <= portfolio_items_loaded || portfolio_offset === length ){
 									$('.load-more').text('No more Posts to show').css({"cursor":"default"});
 								}
 
