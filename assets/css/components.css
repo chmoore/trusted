@@ -2310,11 +2310,12 @@
 	#bg-1-sm {
     padding: 0px 0 0px 0;
     margin-top: -20px;
-    background-color: #efefef;
+    /*background-color: #efefef;*/
+	background-color:#F7F7F7;
     color: #979797;
     margin-bottom: 60px;
-    border-top: 1px solid #dadada;
-    border-bottom: 1px solid #dadada;
+    /*border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;*/
 }
 	
 	#bg-1-w {
