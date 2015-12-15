@@ -1140,7 +1140,7 @@
 		
 		#header.stuck .sf-menu > li > a,
 		#header.stuck .sf-menu > li.dropdown > a {
-			padding: 26px 16px 36px;
+			padding: 26px 20px 36px;
 		}
 		
 	}
@@ -1230,9 +1230,8 @@
 		/*margin-bottom: 40px;*/
 		background-color: #232323;
 		color: #fff;
-		background-attachment: scroll;
-		background-repeat: no-repeat; /* 1 */ 
-		background-position: 50% 0;		
+		width: 100%;
+   	    top: 42px;	
 	}
 
 	.fullwidth-section-content {
@@ -1417,10 +1416,12 @@
 		height:15px;
 		padding:20px;
 		position:relative;
-		top:60px;
+		/*top:60px;*/
+		top:50px;
 		margin:0 auto;
-		margin-bottom:80px;
-		/*border-bottom: 1px solid #e1e1e1;*/
+		margin-bottom:20px;
+		/*margin-bottom:80px;
+		border-bottom: 1px solid #e1e1e1;*/
 		font-family:'gotham_htfbook', Arial, sans-serif;
 		/*background: #F3F3F3;*/
 		background:#DEDEDE;

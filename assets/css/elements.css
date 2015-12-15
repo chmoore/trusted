@@ -4,7 +4,6 @@
    	 
 	body {
 		background-color: #fff;
-	color: #808080;
 		font: 16px 'Noto Serif', Arial, sans-serif; 
 		/*	font: 14px 'gotham_htfbook', Arial, sans-serif;*/
 		line-height:26px;
@@ -190,7 +189,7 @@
 	
 	.text-left { text-align: left; }
 	.text-right { text-align: right; }
-	.text-center { text-align: center; padding-top:30px;     margin-bottom: 60px;}
+	.text-center { text-align: center; padding-top:20px;     margin-bottom: 40px;}
 	.text-center-1 { text-align: center;}
 	.text-center p{font-style:italic; color:#000;}
 	.text-center-1 p{color:#FFF;}
