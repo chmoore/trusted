@@ -1018,7 +1018,7 @@
 	}
 	
 	.lead-slide {
-		height:520px!important;
+		height:475px!important;
 	}
 	
 	.product-banner {width:700px!important;float:left;}
@@ -2309,11 +2309,11 @@
 	
 	#bg-1-sm {
     padding: 0px 0 0px 0;
-    margin-top: -20px;
+    margin-top: -80px;
     /*background-color: #efefef;*/
 	background-color:#F7F7F7;
     color: #979797;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     /*border-top: 1px solid #dadada;
     border-bottom: 1px solid #dadada;*/
 }
@@ -2340,7 +2340,7 @@
 		margin-top: 60px;
 		background-color: #efefef;
 		color: #979797;
-		margin-bottom:-100px;
+		margin-bottom:-60px;
 		border-top:1px solid #dadada;
 		border-bottom:1px solid #dadada;
 	}
