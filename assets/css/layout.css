@@ -135,7 +135,7 @@
 			background-color:#000;
 			z-index: 999999;
 			margin-top:0;
-			height:40px;
+			height:65px;
 		}
 		
 		#header-1 {display:none;}
@@ -810,9 +810,16 @@
 
 		#mobile-menu-trigger { 
 			display: block;
-			margin-top: 23px;
+			margin-top: 20px;
 			margin-right: 0;
+			position:relative;
+			right:0;
+			font-size:26px;
 		}	
+		
+		.search-wrap {
+			display:none;
+		}
 
 	}
 
@@ -820,7 +827,7 @@
 
 		#mobile-menu-trigger { 
 			position: absolute;
-			top: 15px;
+			top: 8px;
 			right: 5px;
 			display: block;
 			padding: 10px;
@@ -844,6 +851,10 @@
     position: relative;
     margin-top: -55px;
     margin-right: 50px;
+}
+
+#expand-all {
+	padding-top:0;
 }
 
 	}
@@ -1065,7 +1076,7 @@
 		.locator-stuck {position: absolute;
     top: 20px;
     right: 160px;
-    display: block;
+    display: none;
     color: #fff!important;
     text-decoration: none;
     -webkit-transition: all 0.3s;

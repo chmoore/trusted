@@ -189,7 +189,7 @@
 	
 	.text-left { text-align: left; }
 	.text-right { text-align: right; }
-	.text-center { text-align: center; padding-top:20px;     margin-bottom: 40px;}
+	.text-center { text-align: center; padding-top:0px;     margin-bottom: 40px;}
 	.text-center-1 { text-align: center;}
 	.text-center p{font-style:italic; color:#000;}
 	.text-center-1 p{color:#FFF;}
