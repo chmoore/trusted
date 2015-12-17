@@ -1069,7 +1069,7 @@
 		.register-stuck {position: absolute;
     top: 20px;
     right: 80px;
-    display: block;
+    display: none;
     color: #fff!important;
     text-decoration: none;
     -webkit-transition: all 0.3s;
@@ -1088,6 +1088,9 @@
 	 border-right: 1px solid #979797;
     padding-right: 20px;
 	font-size:28px;}
+	#bg-1-sm {
+		margin-top:50px!important;
+	}
 	}
 
 /* ==========================================================================
