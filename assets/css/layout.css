@@ -193,6 +193,10 @@
   			line-height: 18px;
 		}
 		
+		.sf-menu-1 li.dropdown a  {
+			padding:15px 25px;
+		}
+		
 		.copyright {
 			text-align: left;
    			padding-left: 25px;
@@ -834,7 +838,7 @@
 			margin-top: 0;
 		}
 		
-		#mobile-menu-trigger {margin-top:-7px;margin-right:12px;}
+		#mobile-menu-trigger {margin-top:0px;margin-right:12px;}
 		
 		.container-4 {display:none;
 		}
