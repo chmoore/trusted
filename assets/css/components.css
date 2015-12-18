@@ -146,7 +146,7 @@
    =Alerts
    ========================================================================== */
 
-	.alert {
+	/*.alert {
 		position: relative;
 		padding: 13px 20px;
 		border: 2px solid #212121;
@@ -156,13 +156,19 @@
 		font-family: 'Montserrat', Arial, sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 2px;
+	}*/
+	
+	.alert {
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 	}
 	
 	.alert:after {
+		font-family: FontAwesome;
 		position: absolute;
 		top: 14px;
 		right: 20px;
-		content: "x";
+		content: "\f06a";
+		font-size:20px;
 	}
 	
 	.alert i {
@@ -3481,4 +3487,10 @@ fieldset p {
 
 .gray-bkgd {
 	background:#efefef;
+}
+
+.sent-msg {
+	 display: inline-block;
+  vertical-align: middle;
+  line-height: normal;     
 }
