@@ -1616,6 +1616,14 @@
 		position:relative;
 	}
 	
+	.item-full {
+		font-family: 'gotham_htfmedium', Arial, sans-serif!important;
+		/*border: 1px solid #e1e1e1;*/
+       /* padding: 15px;
+		height:220px;*/
+		position:relative;
+	}
+	
 	.item-sm img {
 		/*width:70%;
 		margin-top:10px;
@@ -1626,10 +1634,24 @@
     margin: 20px;
 	}
 	
+	.item-full img {
+		/*width:70%;
+		margin-top:10px;
+		margin-left:30px;*/
+		    margin-bottom: 20px;
+    display: block;
+	}
+	
 	.item-sm h6 {
 		font-size:12px;
 		line-height:18px;
 		text-align:left;
+	}
+	
+	.item-full h6 {
+		font-size:12px;
+		line-height:18px;
+		text-align:center;
 	}
 	
 	.item-sm p {
@@ -3224,6 +3246,17 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	  padding-top: 20px;
   }
   
+  .brand-search-main {
+	  /*width:100%;*/
+	  height:45px;
+	  border-top:1px solid #e1e1e1;
+	  border-bottom:1px solid #e1e1e1;
+	  padding-bottom:20px;
+	  top: 40px;
+      margin-bottom: 60px;
+	  padding-top: 20px;
+  }
+  
   .search-back {
 	  text-align:right;
 	  font-size:11px;
@@ -3510,4 +3543,8 @@ fieldset p {
 	width:50%;
 	margin-left:0;
 	margin-bottom:20px;
+}
+
+.brand-full {
+	margin-top:50px!important;
 }

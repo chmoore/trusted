@@ -1448,6 +1448,24 @@
   	    box-sizing: content-box;
 	}
 	
+	.breadcrumbs-slider {
+		height:15px;
+		padding:20px;
+		position:relative;
+		/*top:60px;*/
+		top:50px;
+		margin:0 auto;
+		/*margin-bottom:20px;*/
+		margin-bottom:0px;
+		border-bottom: 1px solid #e1e1e1;
+		font-family:'gotham_htfbook', Arial, sans-serif;
+		/*background: #F3F3F3;*/
+		background:#DEDEDE;
+		 -webkit-box-sizing: content-box;
+    	-moz-box-sizing: content-box;
+  	    box-sizing: content-box;
+	}
+	
 	.breadcrumbs-search {
 		height:40px;
 		padding:20px;
