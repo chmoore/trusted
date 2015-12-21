@@ -1042,7 +1042,7 @@
 
 	.slider-revolution.fullwidthbanner-container .fullwidthbanner {height: 520px!important; padding:0; /*border-bottom:6px solid #000;*/}
 	.product-slide {border-bottom: 1px solid #e1e1e1; margin-bottom:20px!important;padding-bottom:40px;}
-	.brand-desc {/*width:435px;position:absolute;right:0;padding-left: 10px;overflow: scroll;height: 600px;*/padding:40px;}
+	.brand-desc {/*width:435px;position:absolute;right:0;padding-left: 10px;overflow: scroll;height: 600px;*/padding:40px 80px;}
 	
 	.slider-overlay {
 		position: absolute;
