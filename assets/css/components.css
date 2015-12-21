@@ -3354,7 +3354,6 @@ fieldset p {
 
 .tp-bgimg {
 	background-position: 0!important;
-	background-size: contain!important;
 }
 
 .fv-form-bootstrap .fv-icon-no-label {
@@ -3501,4 +3500,8 @@ fieldset p {
     margin-top: 85px;
     margin-bottom: -40px!important;
 	position:relative;
+}
+
+.tp-leftarrow.default {
+	display:none;
 }
