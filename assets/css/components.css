@@ -3505,3 +3505,9 @@ fieldset p {
 .tp-leftarrow.default {
 	display:none;
 }
+
+.logo-brand img {
+	width:50%;
+	margin-left:0;
+	margin-bottom:20px;
+}
