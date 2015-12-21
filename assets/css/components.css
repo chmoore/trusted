@@ -1020,8 +1020,9 @@
 	}
 	
 	.brand-slide {
-		height:600px!important;
+		height:570px!important;
 		margin-top:0!important;
+		background:#000;
 	}
 	
 	.lead-slide {
@@ -3217,10 +3218,10 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	  height:45px;
 	  border-top:1px solid #e1e1e1;
 	  border-bottom:1px solid #e1e1e1;
-	  padding-bottom:10px;
+	  padding-bottom:20px;
 	  top: -20px;
       margin-bottom: 5px;
-	  padding-top: 12px;
+	  padding-top: 20px;
   }
   
   .search-back {
@@ -3353,6 +3354,7 @@ fieldset p {
 
 .tp-bgimg {
 	background-position: 0!important;
+	background-size: contain!important;
 }
 
 .fv-form-bootstrap .fv-icon-no-label {
@@ -3486,7 +3488,7 @@ fieldset p {
 }
 
 .gray-bkgd {
-	background:#efefef;
+	background:#F9F9F9;
 }
 
 .sent-msg {
