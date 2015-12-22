@@ -1472,7 +1472,7 @@
    ========================================================================== */
 
 	.testimonial { 
-		margin: 40px 0 40px;
+		margin: 40px 0 0px;
 		text-align: left;
 	}
 	
@@ -3565,4 +3565,10 @@ fieldset p {
 	margin:0 auto;
 	text-align:center;
 	width:50%
+}
+
+:-moz-any(.custom-select):before {
+	background-color: #fff; 
+	pointer-events: none; 
+	z-index: 1; 
 }

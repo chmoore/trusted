@@ -189,7 +189,7 @@
 	
 	.text-left { text-align: left; }
 	.text-right { text-align: right; }
-	.text-center { text-align: center; padding-top:0px;     margin-bottom: 40px;}
+	.text-center { text-align: center; padding-top:0px;     /*margin-bottom: 40px;*/}
 	.text-center-1 { text-align: center;}
 	.text-center p{font-style:italic; color:#000;}
 	.text-center-1 p{color:#FFF;}
@@ -747,16 +747,18 @@
 		width: 100%;
 		border: 1px solid #e1e1e1;
 		color: #979797;
-		-webkit-appearance: none !important;
-		-webkit-box-sizing: border-box;
-		   -moz-box-sizing: border-box;
-			    box-sizing: border-box;
 		font: 14px 'gotham_htfmedium', Arial, sans-serif;
 		padding-left:20px;
 		/*border-radius:20px;*/
 		border-radius:8px;
-    background: #fff url('../images/down-arrow.png') no-repeat 92%;
+    background: #fff url('../images/down-arrow.png') no-repeat 95%;
     background-size: 10px 6px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 	}
 
 	select:disabled {
