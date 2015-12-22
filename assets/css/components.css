@@ -3500,6 +3500,19 @@ fieldset p {
 	margin:0 6px;
 }
 
+.item-sort-brand {
+	font-size:12px;
+	padding:0;
+	text-align:left;
+}
+
+.item-sort-brand select {
+	height:42px;
+	padding:4px 12px;
+	width:auto;
+	margin:0 6px;
+}
+
 .show-all-txt {
 	margin-top:10px;
 	padding-left: 0;
