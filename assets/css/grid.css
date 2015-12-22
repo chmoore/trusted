@@ -214,6 +214,16 @@ h1 {
 
 		.hidden-phone { display: none !important; }
 		
+		.contact-form {
+    overflow: visible!important;
+    margin: 100px 0 40px!important;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    padding: 0;
+}
+		
 	}
 	
 /* =Landscape
