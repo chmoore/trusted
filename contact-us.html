@@ -448,12 +448,12 @@ $(document).ready(function() {
             },
             email: {
                 validators: {
-                    notEmpty: {
-                        message: 'Your email address is required'
-                    },
                     emailAddress: {
-                        message: 'Please enter a valid email address'
-                    }
+                            message: 'The value is not a valid email address'
+                        },
+                        regexp: {
+                            regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                        }
                 }
             },
             message: {
@@ -467,6 +467,7 @@ $(document).ready(function() {
         }
     });
 });
+
 $(document).ready(function() {
     $('#mcmailform').formValidation({
         framework: 'bootstrap',
