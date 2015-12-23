@@ -3590,10 +3590,10 @@ fieldset p {
 .visuallyhidden {
 	    border: 0;
     clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
+    height: 0;
+    margin: -24px;
     overflow: hidden;
     padding: 0;
-    position: absolute;
+    display:none;
     width: 1px;
 }
