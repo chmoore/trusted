@@ -64,6 +64,13 @@
 	margin-bottom:20px;
 }
 
+.acc-hdr {
+	 color: #000;
+    font: 16px 'gotham_htfbold', Arial, sans-serif!important;
+    line-height: 28px;
+	margin-bottom:20px;
+	
+}
 	
 	.accordion-item-content ul {
 		padding:10px 10px 10px 20px;
