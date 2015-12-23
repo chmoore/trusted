@@ -53,7 +53,7 @@
 	
 	.accordion-item-content p {
     color: #000;
-    font: 14px 'gotham_htfbook', Arial, sans-serif;
+    font: 16px 'Noto Serif', Arial, sans-serif;
     line-height: 28px;
 }
 
@@ -61,6 +61,7 @@
     color: #000;
     font: 16px 'gotham_htfbold', Arial, sans-serif!important;
     line-height: 28px;
+	margin-bottom:20px;
 }
 
 	
@@ -2336,7 +2337,7 @@
 	}*/
 	
 	#bg-1-sm {
-    padding: 0px 0 0px 0;
+    padding: 0px 0 20px 0;
     margin-top: -80px;
     /*background-color: #efefef;*/
 	background-color:#F7F7F7;

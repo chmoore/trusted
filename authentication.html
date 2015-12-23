@@ -29,7 +29,11 @@
     
 	<!-- /// Plugins CSS ////////  -->
 	<link rel="stylesheet" href="assets/vendors/revolutionslider/css/settings.css">
+    <link rel="stylesheet" href="assets/vendors/formvalidation/formValidation.css">
     <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css">
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	
 	<!-- /// Template CSS ////////  -->
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -179,23 +183,39 @@
         <span class="grid-icon"></span>&nbsp;Grid</a></div></div>-->
         </div>
         </div>
-                        
+             <div class="fullwidth-section" id="bg-1-sm">
+            
+            	<div class="fullwidth-section-content">
+                    
+                    
+					<div class="offset2 span8 text-center">
+						
+						<div class="headline headline-nomar">
+							
+							<h1>Contact Trusted</h1>
+							
+						</div><!-- end .headline -->
+                        </div></div></div>           
                         
             <div class="container">
       <div class="row">
         <div class="offset2 span8 text-center">
-          <div class="headline">
-            <h1>Check Authenticity</h1>
-          </div>
           <!-- end .headline -->
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis faucibus mollis. Vestibulum imperdiet purus id nunc ultricies, vitae cursus nisi porta. Donec feugiat magna eu nibh elementum semper. Duis lacinia dui ac ipsum aliquam, eget mattis dui vulputate. Vivamus at volutpat nunc.</p> <p>Sed quis congue nibh. Morbi posuere purus augue, non malesuada massa sagittis eu. Aliquam efficitur lacus sed velit semper efficitur. Maecenas semper elementum volutpat. Nulla facilisi. Aenean mollis turpis ut risus iaculis, id maximus ante maximus.</p>
           
           <p>Enter the serial number of an item you own or are attempting to buy to confirm its authenticity.</p>
           <div class="widget ewf_widget_newsletter">
-            <form id="newsletter-subscribe-form" action="#">
-              <input type="text" name="email" placeholder="Enter ID or Serial Number">
-              <a href="#" id="expand-all-show" class="btn" onclick="showHide('expand-all');return false;">Verify Authenticity</a>
-            </form>
+          <form id="checkauthenticity">
+      <div class="col-sm-8 form-group">
+        <input type="text" name="serialnum" placeholder="Enter ID or Serial Number">
+      </div>
+      <div class="col-sm-2 form-group">
+        <button class="btn" type="submit"> <a href="#" id="expand-all-show" onclick="showHide('expand-all');return false;">Verify Authenticity</a></button>
+      </div>
+      </form>
+          
+              <!--<input type="text" name="email" placeholder="Enter ID or Serial Number">
+              <a href="#" id="expand-all-show" class="btn" onclick="showHide('expand-all');return false;">Verify Authenticity</a>-->
           </div>
           <div id="expand-all" class="more">
             <div class="span3">
@@ -392,16 +412,18 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     
-    <!-- /// Easing ////////  -->
-	<script src="assets/vendors/easing/jquery.easing.1.3.js"></script>
     
     <!-- /// Revolution Slider ////////  -->
     <script src="assets/vendors/revolutionslider/js/jquery.themepunch.tools.min.js"></script>
     <script src="assets/vendors/revolutionslider/js/jquery.themepunch.revolution.min.js"></script>
     
-    <!-- /// gMap ////////  -->
-	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	<script src="assets/vendors/gmap/jquery.gmap.min.js"></script>
+    <!-- /// formValidation //////// -->
+
+<script src="assets/vendors/formvalidation/formValidation.js"></script> 
+<script src="assets/vendors/formvalidation/framework/bootstrap.min.js"></script> 
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
 	
 	<!-- /// Custom JS ////////  -->
  <script src="assets/js/classie.js"></script>
@@ -409,10 +431,28 @@
 		<script>
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
-	
-	<!-- /// Custom JS ////////  -->
 	<script src="assets/js/main.js"></script>	
-      
+      <script>
+	  $(document).ready(function() {
+    $('#checkauthenticity').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            serialnum: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please Enter ID or Serial Number'
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
     
     
 </body>
