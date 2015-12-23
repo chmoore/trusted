@@ -3574,3 +3574,7 @@ fieldset p {
 	pointer-events: none; 
 	z-index: 1; 
 }
+
+.zoomWrapper {
+	margin-bottom:40px;
+}
