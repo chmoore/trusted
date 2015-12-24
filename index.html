@@ -89,8 +89,8 @@
 </select>
 </div>
 
-                <input class="sb-search-input" placeholder="Search Trusted.com" type="text" value="" name="search" id="search">
-                <input class="sb-search-submit" type="submit" value="" action="search-results.html" method="get" >
+                <input class="sb-search-input" placeholder="Search Trusted.com" type="text" value="" name="search" id="search"><label for="subinput" class="visuallyhidden">Search </label>
+                <input class="sb-search-submit" type="submit" name="subinput" value="" action="search-results.html" method="get" >
                 <span class="sb-icon-search"> Search</span>
               </form>
             </div>
@@ -217,6 +217,7 @@
       <p>Trusted.com eTitles are exclusively provided by authorized retailers for qualifying purchases. Shop with confidence and find a retailer offering eTitles near you.</p>
       <form id="storelocator">
       <div class="col-sm-5 form-group">
+      <label for="brandselect" class="visuallyhidden">Select a Trusted Brand </label>
         <select id="select-input" name="brandselect">
           <option selected disabled>Select a Trusted Brand</option>
           <option value="viewall">View All Brands</option>
@@ -230,7 +231,8 @@
         <input type="text" class="rounded" id="s" name="citystate" value="" placeholder="Enter City & State or Zip Code">
       </div>
       <div class="col-sm-2 form-group">
-        <button class="btn" type="submit">Search Stores</button>
+      <label for="searchstores" class="visuallyhidden">Search Trusted.com: </label>
+        <button class="btn" type="submit" name="searchstores">Search Stores</button>
       </div>
       </form>
     </div>
