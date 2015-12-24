@@ -48,7 +48,11 @@
           <div id="logo"> <a href="index.html"> <img src="assets/images/trusted-logo.png" alt="website logo"> </a> </div>
           <!-- // Mobile menu trigger // --> 
           
-          <a href="#" id="mobile-menu-trigger"> <i class="fa fa-bars"></i></a>  <a id="register-icon" class="register-stuck" href="#"><i class="fa fa-user"></i></a> 
+           <a href="#" id="mobile-menu-trigger">
+                            <i class="fa fa-bars"></i>
+                            <span class="visuallyhidden">Trusted Mobile Menu</span>
+                        </a>  
+                        <a id="register-icon" class="register-stuck" href="#"><i class="fa fa-user"></i> <span class="visuallyhidden">Sign in/Register</span></a> 
           
           <!-- // Menu // -->
           <nav class="main-nav">
@@ -77,12 +81,14 @@
           <div class="search-wrap">
             <div id="sb-search" class="sb-search">
               <form>
+              <label for="search" class="visuallyhidden">Search Trusted.com: </label>
               <div class="col-sm-2 input-group-addon">
               <select class="selectpicker">
   <option>Site</option>
   <option>Shop</option>
 </select>
 </div>
+
                 <input class="sb-search-input" placeholder="Search Trusted.com" type="text" value="" name="search" id="search">
                 <input class="sb-search-submit" type="submit" value="" action="search-results.html" method="get" >
                 <span class="sb-icon-search"> Search</span>
@@ -139,6 +145,7 @@
           <div class="widget ewf_widget_newsletter">
           <form id="checkauthenticity">
       <div class="col-sm-8 form-group">
+      <label for="serialnum" class="visuallyhidden">Enter ID or Serial Number</label>
         <input type="text" name="serialnum" placeholder="Enter ID or Serial Number">
       </div>
       <div class="col-sm-2 form-group">
@@ -219,6 +226,7 @@
         </select>
       </div>
       <div class="col-sm-5 form-group">
+      <label for="citystate" class="visuallyhidden">Enter City & State or Zip Code: </label>
         <input type="text" class="rounded" id="s" name="citystate" value="" placeholder="Enter City & State or Zip Code">
       </div>
       <div class="col-sm-2 form-group">
@@ -248,8 +256,8 @@
 
 								 <h6><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></h6>
                                  <p class="price-ital">Inquire for price</p>
-                                 <div class="fav"><a href="#"><i class="fa fa-heart-o fa-lg"></i></a></div> 
-                                 <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div> 
+                                 <div class="fav"><a href="#"><i class="fa fa-heart-o fa-lg"> <span class="visuallyhidden">Add to Wishlist</span></i></a></div> 
+                                 <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i> <span class="visuallyhidden">Add to Cart</span></a></div>  
 							</div>
                     </div>
         <!-- end .span6 -->
@@ -261,8 +269,8 @@
 	
 								 <h6><a href="#">RM 019 TOURBILLON</a></h6>
                                   <p class="price-ital">Inquire for price</p>
-                                 <div class="fav"><a href="#"><i class="fa fa-heart-o fa-lg"></i></a></div>
-                                 <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>  
+                                 <div class="fav"><a href="#"><i class="fa fa-heart-o fa-lg"> <span class="visuallyhidden">Add to Wishlist</span></i></a></div> 
+                                 <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i> <span class="visuallyhidden">Add to Cart</span></a></div>  
 							</div>
                     
                     </div>
@@ -274,8 +282,8 @@
 
 								 <h6><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></h6>
                                  <p class="price-ital">Inquire for price</p>
-                                 <div class="fav"><a href="#"><i class="fa fa-heart-o fa-lg"></i></a></div> 
-                                 <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div> 
+                                 <div class="fav"><a href="#"><i class="fa fa-heart-o fa-lg"> <span class="visuallyhidden">Add to Wishlist</span></i></a></div> 
+                                 <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i> <span class="visuallyhidden">Add to Cart</span></a></div> 
 							</div>
                     </div> 
         <div class="span3">
@@ -374,7 +382,10 @@
   
   <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
 
-<a id="back-to-top" href="#"> <i class="ifc-up4"></i> </a> 
+<a id="back-to-top" href="#">
+    	<i class="ifc-up4"></i>
+        <span class="visuallyhidden">Back to Top</span>
+    </a> 
 
 <!-- /// jQuery ////////  --> 
 <script src="assets/vendors/jquery-2.1.3.min.js"></script> 
