@@ -3597,3 +3597,20 @@ fieldset p {
     display:none;
     width: 1px;
 }
+
+.breadcrumbs ol {
+    list-style-type: none;
+	font-size: 11px;
+	text-transform:uppercase;
+}
+
+.breadcrumbs a {
+	font-weight:700;
+	padding-right: 2px;
+}
+
+.breadcrumbs li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 2px;
+}
