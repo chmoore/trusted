@@ -146,10 +146,10 @@
           <form id="checkauthenticity">
       <div class="col-sm-8 form-group">
       <label for="serialnum" class="visuallyhidden">Enter ID or Serial Number</label>
-        <input type="text" name="serialnum" placeholder="Enter ID or Serial Number">
+        <input type="text" name="serialnum" id="serialnum" placeholder="Enter ID or Serial Number">
       </div>
       <div class="col-sm-2 form-group">
-        <button class="btn" type="submit"> <a href="#" id="expand-all-show" onclick="showHide('expand-all');return false;">Verify Authenticity</a></button>
+        <a href="#" id="expand-all-show" onclick="showHide('expand-all');return false;"><button class="btn" type="submit"> Verify Authenticity</button></a>
       </div>
       </form>
           
@@ -228,11 +228,11 @@
       </div>
       <div class="col-sm-5 form-group">
       <label for="citystate" class="visuallyhidden">Enter City & State or Zip Code: </label>
-        <input type="text" class="rounded" id="s" name="citystate" value="" placeholder="Enter City & State or Zip Code">
+        <input type="text" class="rounded" id="citystate" name="citystate" value="" placeholder="Enter City & State or Zip Code">
       </div>
       <div class="col-sm-2 form-group">
       <label for="searchstores" class="visuallyhidden">Search Trusted.com: </label>
-        <button class="btn" type="submit" name="searchstores">Search Stores</button>
+        <button class="btn" type="submit" id="searchstores" name="searchstores">Search Stores</button>
       </div>
       </form>
     </div>
