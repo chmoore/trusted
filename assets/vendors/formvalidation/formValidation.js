@@ -227,6 +227,7 @@ if (typeof jQuery === 'undefined') {
             // I create a first hidden submit button
             this.$hiddenButton = $('<button/>')
                                     .attr('type', 'submit')
+									.attr('name', 'hidden')
                                     .prependTo(this.$form)
                                     .addClass('fv-hidden-submit')
                                     .css({ display: 'none', width: 0, height: 0 });
