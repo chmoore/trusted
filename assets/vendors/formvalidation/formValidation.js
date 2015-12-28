@@ -225,9 +225,9 @@ if (typeof jQuery === 'undefined') {
             // When pressing Enter on any field in the form, the first submit button will do its job.
             // The form then will be submitted.
             // I create a first hidden submit button
-            this.$hiddenButton = $('<label for="hidden" class="visuallyhidden">Hidden Field</label><button/>')
+            this.$hiddenButton = $('<button/>')
                                     .attr('type', 'submit')
-									.attr('name', 'hidden')
+									.attr('alt', 'hidden')
                                     .prependTo(this.$form)
                                     .addClass('fv-hidden-submit')
                                     .css({ display: 'none', width: 0, height: 0 });
