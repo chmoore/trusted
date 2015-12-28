@@ -459,6 +459,7 @@
 	  $(document).ready(function() {
     $('#checkauthenticity').formValidation({
         framework: 'bootstrap',
+		excluded: [':disabled', ':hidden', ':not(:visible)'],
         icon: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
