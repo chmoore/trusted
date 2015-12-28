@@ -3633,3 +3633,7 @@ fieldset p {
 .breadcrumbs li:last-of-type:after {
     content: none;
 }
+
+.fv-hidden-submit {
+	display:none;
+}
