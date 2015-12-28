@@ -3618,7 +3618,7 @@ fieldset p {
 .breadcrumbs li:after {
     content: '\203A';
     color: #000;
-    margin: 0 4px;
+    margin: -2px 2px;
 }
 
 .breadcrumbs li:last-of-type:after {
