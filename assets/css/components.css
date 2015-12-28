@@ -3614,3 +3614,13 @@ fieldset p {
 	list-style-type: none;
 	padding-right: 2px;
 }
+
+.breadcrumbs li:after {
+    content: '\203A';
+    color: #000;
+    margin: 0 4px;
+}
+
+.breadcrumbs li:last-of-type:after {
+    content: none;
+}
