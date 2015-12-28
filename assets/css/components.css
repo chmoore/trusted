@@ -1579,7 +1579,6 @@
 		letter-spacing:0.2px;
 		color:#AAA;
 		margin-bottom:10px;
-		letter-spacing:1px;
 		text-align:center;
 		text-transform:uppercase;
 		font-weight:bold;
@@ -1655,6 +1654,12 @@
 	}
 	
 	.item-sm h6 {
+		font-size:12px;
+		line-height:18px;
+		text-align:left;
+	}
+	
+	.item-sm .item-title {
 		font-size:12px;
 		line-height:18px;
 		text-align:left;
