@@ -1663,6 +1663,7 @@
 		font-size:12px;
 		line-height:18px;
 		text-align:left;
+		font-weight: bold;
 	}
 	
 	.item-full h6 {
@@ -3072,10 +3073,10 @@ border:1px solid #ccc;
 
 .ui-dialog .ui-dialog-titlebar-close {
     /*position: absolute;*/
-    right: .3em;
+    right: -45px;
     top: 50%;
     width: 20px;
-    margin: -10px 0 0 0;
+    margin: 15px 0 0 0;
     padding: 1px;
     height: 20px;
 }
@@ -3091,6 +3092,10 @@ border:1px solid #ccc;
     margin-top: -8px;
 }
 .ui-icon-closethick {
+    background-position: -96px -128px;
+}
+
+.ui-icon-closethick:hover {
     background-position: -96px -128px;
 }
 .ui-icon {
@@ -3115,11 +3120,12 @@ border:1px solid #ccc;
 
 .ui-dialog .ui-dialog-title {
     float: left;
-    margin: .1em 0;
+    /*margin: .1em 0;*/
     white-space: nowrap;
-    width: 95%;
+    width: 85%;
     overflow: hidden;
     text-overflow: ellipsis;
+	margin: 15px 0 15px 15px;
 }
 
 .ui-button-text-only .ui-button-text {
@@ -3151,6 +3157,11 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 
 .ui-state-default .ui-icon {
     background-image: url("../images/ui-icons_888888_256x240.png");
+}
+
+.ui-state-hover {
+    background-image: url("../images/ui-icons_888888_256x240.png");
+	background-position: -96px -128px;
 }
 
 .ui-button {
@@ -3186,9 +3197,10 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
     font: 18px 'gotham_htfbold', Arial, sans-serif;
     color: #000;
 	text-transform:uppercase;
-	padding-bottom:20px;
+	padding-bottom:15px;
 	margin-bottom:20px;
 	border-bottom:1px solid #e1e1e1;
+	    border-radius: 0;
 }
 
 .ui-dialog .ui-dialog-content {
@@ -3622,6 +3634,9 @@ fieldset p {
 	display: inline;
 	list-style-type: none;
 	padding-right: 2px;
+	width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .breadcrumbs li:after {
@@ -3636,4 +3651,18 @@ fieldset p {
 
 .fv-hidden-submit {
 	display:none;
+}
+
+.item-wrap {
+	width:100%;
+	margin-top:80px;
+}
+
+.contact-modal .ui-dialog-title {
+    float: left;
+    margin: 20px;
+    white-space: nowrap;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

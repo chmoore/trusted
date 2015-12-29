@@ -179,12 +179,13 @@
 		
             <div class="container">
                 <div class="row">
+                <div class="item-wrap">
                 <div class="span5 product-zoom">
-                 <img id="zoom" src="assets/images/small/carrera-1.jpg" data-zoom-image="assets/images/large/carrera-1.jpg"/> <div id="gallery_01"> 
+                 <img id="zoom" src="assets/images/small/carrera-1.jpg" data-zoom-image="assets/images/large/carrera-1.jpg" alt="Image"/> <div id="gallery_01"> 
                  <a href="#" data-image="assets/images/small/carrera-1.jpg" data-zoom-image="assets/images/large/carrera-1.jpg"> 					
-                 <img id="img_01" src="assets/images/thumb/carrera-1.jpg" /></a> 
+                 <img id="img_01" src="assets/images/thumb/carrera-1.jpg" alt="Image" /></a> 
                  <a href="#" data-image="assets/images/small/carrera-2.jpg" data-zoom-image="assets/images/large/carrera-2.jpg"> 
-                 <img id="img_01" src="assets/images/thumb/carrera-2.jpg" /> </a> 
+                 <img id="img_02" src="assets/images/thumb/carrera-2.jpg" alt="Image" /> </a> 
                  </div>
                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <div class="addthis_sharing_toolbox"></div>
@@ -257,6 +258,7 @@
                     </div>
                     <!-- end .span8 -->
                 </div><!-- end .row -->
+              </div>
             </div>
             
             <div class="fullwidth-section" id="bg-1-white">
@@ -320,32 +322,32 @@
                     </div>
                     </div>
                     </div>
-                    <div id="dialog-form" title="Contact Retailer">
+                    <div id="dialog-form" title="Contact Retailer" class="contact-modal">
  <!-- <span class="required-right">Required*</span>-->
  
   <form>
     <fieldset>
     <div class="span6 no-left-pad">
-      <label for="name">First Name*</label>
-      <input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+      <label for="fname">First Name*</label>
+      <input type="text" name="fname" id="fname" value="" class="text ui-widget-content ui-corner-all">
       </div>
       <div class="span6 no-right-pad">
-       <label for="name">Last Name*</label>
-      <input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+       <label for="lname">Last Name*</label>
+      <input type="text" name="lname" id="lname" value="" class="text ui-widget-content ui-corner-all">
       </div>
       <div class="clear"></div>
       <label for="email">Email*</label>
       <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
       <div class="span6 no-left-pad">
-      <label for="name">Phone</label>
-      <input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+      <label for="phone">Phone</label>
+      <input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all">
       </div>
       <div class="span6 no-right-pad">
-       <label for="name">Product</label>
-      <input type="text" name="name" id="name" value="Richard Mille RM 011 Felipe Massa Flyback" class="text ui-widget-content ui-corner-all" disabled> </div>
+       <label for="product">Product</label>
+      <input type="text" name="product" id="product" value="Richard Mille RM 011 Felipe Massa Flyback" class="text ui-widget-content ui-corner-all" disabled> </div>
       <div class="clear"></div>
-      <label for="email">Comments</label>
-      <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
+      <label for="comments">Comments</label>
+      <input type="text" name="comments" id="comments" value="" class="text ui-widget-content ui-corner-all">
      
   <p><input type="checkbox" name="checkbox" value=""> Mailing List</p>
       <!-- Allow form submission with keyboard without duplicating the dialog button -->
