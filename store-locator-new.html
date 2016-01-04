@@ -391,6 +391,16 @@
     <!-- /// Custom JS ////////  -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/storelocator.js"></script>
+    
+   <script>
+   google.maps.event.addListener(this.map, 'tilesloaded', function(evt){
+    $(this.getDiv()).find("img").each(function(i, eimg){
+      if(!eimg.alt || eimg.alt ===""){
+         eimg.alt = "Google Maps Image";
+      }
+    });
+ });
+ </script>
 
     <div style="display:none;">
         <input id="street_number" type="hidden" />
