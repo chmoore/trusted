@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
 	
 	"use strict";
 	
@@ -863,60 +863,7 @@
 		
 		// gMap -  embed Google Maps into your website; uses Google Maps v3
 		// http://labs.mario.ec/jquery-gmap/
-		
-		if(typeof $.fn.gMap !== 'undefined'){
-		
-			//handleGoogleMapHeight();
-			
-			$('.google-map').each(function() {
-				
-				var $t = $(this),
-					mapZoom = 15,
-					mapAddress = $t.attr("data-address"),
-					mapCaption = $t.attr("data-caption"),
-					mapType = "ROADMAP",
-					mapHeight = $t.attr("data-mapheight"),
-					popUp = false;
-				
-				if ($t.attr("data-zoom") !== undefined) {
-					mapZoom = parseInt($t.attr("data-zoom"),10);
-				}	
-				
-				if ($t.attr("data-mapHeight") !== undefined) {
-					$t.css( "height", mapHeight+'px');
-				}
-				
-				if ($t.attr("data-maptype") !== undefined) {
-					mapType = $t.attr("data-maptype");
-				} 
-				
-				if ($t.attr("data-popup") !== undefined) {
-					popUp = $t.data("popup");
-				} 
-				
-				$t.gMap({
-					maptype: mapType,
-					scrollwheel: false,
-					zoom: mapZoom,
-					markers: [{
-						address: mapAddress,
-						html: mapCaption,
-						popup: popUp
-					}],
-					controls: {
-						panControl: true,
-						zoomControl: true,
-						mapTypeControl: true,
-						scaleControl: false,
-						streetViewControl: false,
-						overviewMapControl: false
-					}
-				});
-		
-			});
-			
-		}
-		
+		 
 		// Isotope - portfolio filtering
 		// http://isotope.metafizzy.co/beta/
 		

@@ -264,16 +264,16 @@
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;
 		font: 12px 'gotham_htfbold', Arial, sans-serif;
-		    background: #efefef url(../images/location.png) no-repeat;
+		   /* background: #efefef url(../images/location.png) no-repeat;*/
     background-position: 11px 50%;
     padding-left: 40px!important;
 	}
 	
 	.locate:hover {
-		    background: #fff url(../images/location-w.png) no-repeat;
+	/*background: #fff url(../images/location-w.png) no-repeat;*/
     background-position: 11px 50%;
 	color:#fff!important;
-	    border: 1px solid #504E4E;
+	border: 1px solid #504E4E;
     background-color: #504E4E!important;
 	}
 
