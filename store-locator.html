@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -393,13 +393,10 @@
     <script src="assets/js/storelocator.js"></script>
     
    <script>
-   google.maps.event.addListener(this.map, 'tilesloaded', function(evt){
-    $(this.getDiv()).find("img").each(function(i, eimg){
-      if(!eimg.alt || eimg.alt ===""){
-         eimg.alt = "Google Maps Image";
-      }
-    });
- });
+   $('#map img').each(function() {
+    if ( ! $(this).attr('alt'))
+        $(this).attr('alt', 'Google Maps Image');
+});
  </script>
 
     <div style="display:none;">
