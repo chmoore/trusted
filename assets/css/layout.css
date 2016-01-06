@@ -1545,6 +1545,11 @@
 		font: 13px 'gotham_htfbold', Arial, sans-serif;
 	}
 	
+	.item-div a:hover {
+		color:#0088cc;
+		text-decoration:none;
+	}
+	
 	.price-list {
 		font-size:18px;
 		text-transform:none;

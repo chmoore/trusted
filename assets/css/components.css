@@ -296,13 +296,13 @@
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;
 		font: 12px 'gotham_htfbold', Arial, sans-serif;
-		    background: #efefef url(../images/location.png) no-repeat;
+		    background: #efefef url(../images/location.png) 5% no-repeat!important;
     background-position: 11px 50%;
     padding-left: 40px!important;
 	}
 	
 	.locate:hover {
-		    background: #fff url(../images/location-w.png) no-repeat;
+		    background: #fff url(../images/location-w.png) 5% no-repeat!important;
     background-position: 11px 50%;
 	color:#fff!important;
 	    border: 1px solid #504E4E;
@@ -1716,6 +1716,13 @@
 		-webkit-transition: all 0.3s;
     	transition: all 0.3s;
 		/*border:1px solid #333;*/
+	}
+	
+	.item-sm a:hover {
+		-webkit-transition: all 0.3s;
+    	transition: all 0.3s;
+		text-decoration:none;
+		color:#336699!important;
 	}
 	
 	.item-prod {
@@ -3558,6 +3565,11 @@ fieldset p {
 	margin-top: 50px;
 }
 
+.results-main {
+	margin-top: 50px;
+}
+
+
 .no-pad {
 	padding:0!important;
 }
@@ -3665,4 +3677,34 @@ fieldset p {
     width: 95%;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.warning-text a {
+	font-weight:bold;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	color:#FF0004!important;
+	text-decoration:underline;
+}
+
+.warning-text a:hover {
+	color:#333!important;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    filter: alpha(opacity=65)!important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65!important;
+	background-color: #504E4E;
+	color:#fff!important;
+}
+
+.top-space {
+	margin-top:10px;
+}
+
+.blue-link:hover {
+	text-decoration:underline;
 }

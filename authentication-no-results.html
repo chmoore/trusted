@@ -207,9 +207,10 @@
       <div class="row">
         <div class="offset1 span10 text-center">
           <!-- end .headline -->
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis faucibus mollis. Vestibulum imperdiet purus id nunc ultricies, vitae cursus nisi porta. Donec feugiat magna eu nibh elementum semper. Duis lacinia dui ac ipsum aliquam, eget mattis dui vulputate. Vivamus at volutpat nunc.</p>
-          
-          <p>Enter the serial number of an item you own or are attempting to buy to confirm its authenticity.</p>
+          <div class="col-xs-12">
+       <p class="warning-text"> Unfortunately, the serial number you entered was not returned. Please try again and ensure you have entered the serial number correctly. If you would like to request eTitle ownership for this product, please use the <a href="request.html">eTitle Request</a> feature. <br>Questions? <a href="contact-us.html">Contact Us</a></p>
+       </div>
+       
           <div class="widget ewf_widget_newsletter">
           <form id="checkauthenticity">
       <div class="col-sm-8 form-group">
@@ -217,9 +218,11 @@
         <input type="text" name="serialnum" id="serialnum" placeholder="Enter ID or Serial Number">
       </div>
       <div class="col-sm-2 form-group">
-       <a href="#" id="expand-all-show" onclick="showHide('expand-all');return false;"> <button class="btn" type="submit" name="submit" id="submit"> Verify Authenticity</button></a>
+       <a href="#" id="expand-all-show" onclick="showHide('expand-all');return false;"> <button class="btn" type="submit" name="submit" id="submit" disabled> Verify Authenticity</button></a>
       </div> 
       </form>
+     
+          
           
               <!--<input type="text" name="email" placeholder="Enter ID or Serial Number">
               <a href="#" id="expand-all-show" class="btn" onclick="showHide('expand-all');return false;">Verify Authenticity</a>-->
@@ -252,7 +255,7 @@
                      <div class="divider single-line"></div>
                     <div class="container">   
 				<div class="row">
-                        <div class="offset1 span10">
+                        <div class="span12">
                         <h2>How to find your serial number</h2>
 
 <div class="accordion">
