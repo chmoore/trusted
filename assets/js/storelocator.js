@@ -247,7 +247,7 @@ var StoreLocator = {
     LoadAllRetailer: function () {
         $.ajax({
             type: "GET",
-            url: "/api/Location/GetAllRetailer",
+            url: "http://googlemap.jhuree.com.lotus.arvixe.com/api/Location",
             data: { 'brand': $("#select-storelist-brand").val(), 'country': $("#select-storelist-country").val() },
             dataType: "json",
             success: function (response) {
