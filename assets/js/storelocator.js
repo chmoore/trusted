@@ -83,7 +83,7 @@ var StoreLocator = {
             addresstext = $("#street_number").val() + ',' + $("#route").val()
         $.ajax({
             type: "GET",
-            url: "/api/Location/GetRetailer",
+            url: "http://googlemap.jhuree.com.lotus.arvixe.com/api/Location",
             data: { 'textSearch': textCriteria, 'address': addresstext, 'city': $("#locality").val(), 'state': $("#administrative_area_level_1").val(), 'zipcode': $("#postal_code").val() },
             dataType: "json",
             success: function (response) {
