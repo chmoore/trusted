@@ -83,7 +83,7 @@ var StoreLocator = {
             addresstext = $("#street_number").val() + ',' + $("#route").val()
         $.ajax({
             type: "GET",
-            url: "https://www.trusted.com/webservices/Location",
+            url: "https://www.trusted.com/webservices",
             data: { 'textSearch': textCriteria, 'address': addresstext, 'city': $("#locality").val(), 'state': $("#administrative_area_level_1").val(), 'zipcode': $("#postal_code").val() },
             dataType: "json",
             success: function (response) {
@@ -171,12 +171,12 @@ var StoreLocator = {
             zIndex: null,
             boxStyle: {
                 // top arrow in the info window
-                background: "url('http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/examples/tipbox.gif') no-repeat",
+                background: "url('https://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/examples/tipbox.gif') no-repeat",
                 opacity: 0.9,
                 width: "450px"
             },
             closeBoxMargin: "12px -36px 2px 2px",
-            closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif", //close button icon
+            closeBoxURL: "https://www.google.com/intl/en_us/mapfiles/close.gif", //close button icon
             infoBoxClearance: new google.maps.Size(1, 1)
         });
         var bounds = new google.maps.LatLngBounds();
@@ -221,7 +221,7 @@ var StoreLocator = {
                         storedetail += "<span class='desc'>" + storeList[j] + "</span><br>";
                     }
                     var localaddress = $("#street_number").val() + $("#route").val() + ", " + $("#locality").val() + ", " + $("#administrative_area_level_1").val() + $("#postal_code").val();
-                     var drivinglink = "http://maps.google.com/?saddr=" + currentLatlng.lat() + "," + currentLatlng.lng() + "&daddr=" + localItem.Latitude + "," + localItem.Longitude;
+                     var drivinglink = "https://maps.google.com/?saddr=" + currentLatlng.lat() + "," + currentLatlng.lng() + "&daddr=" + localItem.Latitude + "," + localItem.Longitude;
                     console.log(drivinglink);
                     infowindow.setContent("<div class='card info-card'><div class='span12'><img src='" + localItem.Logo + "'/> </div><div class='span6'>"
                                           + " <h1 class='title'>" + localItem.Name+ "</h1>"
@@ -247,7 +247,7 @@ var StoreLocator = {
     LoadAllRetailer: function () {
         $.ajax({
             type: "GET",
-            url: "https://www.trusted.com/webservices/Location",
+            url: "https://www.trusted.com/webservices",
             data: { 'brand': $("#select-storelist-brand").val(), 'country': $("#select-storelist-country").val() },
             dataType: "json",
             success: function (response) {
