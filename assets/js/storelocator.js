@@ -83,7 +83,7 @@ var StoreLocator = {
             addresstext = $("#street_number").val() + ',' + $("#route").val()
         $.ajax({
             type: "GET",
-            url: "http://googlemap.jhuree.com.lotus.arvixe.com/api/Location",
+            url: "https://www.trusted.com/webservices/Location",
             data: { 'textSearch': textCriteria, 'address': addresstext, 'city': $("#locality").val(), 'state': $("#administrative_area_level_1").val(), 'zipcode': $("#postal_code").val() },
             dataType: "json",
             success: function (response) {
@@ -247,7 +247,7 @@ var StoreLocator = {
     LoadAllRetailer: function () {
         $.ajax({
             type: "GET",
-            url: "http://googlemap.jhuree.com.lotus.arvixe.com/api/Location",
+            url: "https://www.trusted.com/webservices/Location",
             data: { 'brand': $("#select-storelist-brand").val(), 'country': $("#select-storelist-country").val() },
             dataType: "json",
             success: function (response) {

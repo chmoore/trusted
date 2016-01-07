@@ -3708,3 +3708,12 @@ fieldset p {
 .blue-link:hover {
 	text-decoration:underline;
 }
+
+.retailer-text a {
+    color: #0088cc!important;
+    font-family: 'gotham_htfbold', Arial, sans-serif;
+	}
+	
+	.retailer-text a:hover {
+    text-decoration:underline;
+	}
