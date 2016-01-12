@@ -1298,8 +1298,15 @@
 
 		.fullwidth-section {
 			-webkit-background-size: cover;
-					background-size: cover;		
+					background-size: cover;	
+					top:0;	
 		}
+		
+		.border {
+    border-bottom: 1px solid #dadada;
+    padding-right: 40px;
+	border-right:none!important;
+}
 		
 	}
 	

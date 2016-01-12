@@ -3717,3 +3717,24 @@ fieldset p {
 	.retailer-text a:hover {
     text-decoration:underline;
 	}
+	
+	 .show-all-div {
+		 display:none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+   }
+   
+   a.show-more {
+	   margin-top:-5px;
+   }
+ a.show-more, a.show-less {
+  text-decoration: none;
+  padding-left: 8px;
+  color: #0088cc;
+    font: 12px 'gotham_htfbold', Arial, sans-serif!important;
+ }
+ a.show-less {
+ }
+ a.show-more:hover, a.show-less:hover {
+ }
