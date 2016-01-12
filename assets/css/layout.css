@@ -255,6 +255,32 @@
 		margin-bottom:24px;
 	}
 	
+	.sidebar ul {
+    font: 12px 'gotham_htfmedium', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-style: normal!important;
+    padding: 0;
+}
+
+.sidebar .active {
+	 font-family: 'gotham_htfbold', Arial, sans-serif;
+}
+
+	.sidebar ul li{
+    color:#000;
+	list-style:none;
+	margin-left:15px;
+	margin-bottom:0;
+}
+
+.sidebar ul ul li{
+    color:#333;
+	list-style:none;
+	margin-left:30px;
+	margin-bottom:0;
+}
+	
 	.brand-desc .btn {
 		width:100%;
 		text-align:center;
