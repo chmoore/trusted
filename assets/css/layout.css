@@ -1254,6 +1254,11 @@
 	.right {
 		float:right;
 	}
+	
+	.search-right {
+		float:right;
+		text-align:right;
+	}
 
 /* ==========================================================================
    =Fullwidth Section
@@ -1560,12 +1565,11 @@
 	
 	.item-div {
 		border-bottom:1px solid #e1e1e1;
-		padding-bottom:20px;
+		padding:20px 0;
 		margin-bottom:20px;
 		    font: 13px 'gotham_htfbook', Arial, sans-serif;
     font-weight: 300;
     font-style: normal!important;
-    padding: 0;
 	}
 	
 	.item-div p {
