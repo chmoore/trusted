@@ -790,7 +790,7 @@
 }
 
 #expand-all-show {
-    display:inline-block!important;
+    display:inline-block;
 	color:#fff;
 }
 
