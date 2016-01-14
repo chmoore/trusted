@@ -421,7 +421,11 @@
 	
 	.headline-full { margin-bottom: 30px; margin-top:30px;width:100%;height:45px;}
 	
+	.headline-retail {margin-bottom: 30px; margin-top:30px;width:100%;height:45px;border-top: 1px solid #e1e1e1;}
+	
 	.headline-full h4 {float:left;}
+	
+	.headline-retail h4 {float:left;}
 	
 	.product-title {}
 	.product-brand {margin-bottom:10px;    width: 100%;
