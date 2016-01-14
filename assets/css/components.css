@@ -368,6 +368,7 @@
 	.divider { margin: 40px 0 40px; }
 	
 	.divider.single-line { border-top: 1px solid #e1e1e1; }
+	.single-line { border-top: 1px solid #e1e1e1; margin-top: 40px; }
 	.divider.single-line-side { border-top: 1px solid #e1e1e1; /*width: 298px;margin-left: -20px; */width:100%; /*margin: 20px 0;*/margin: 0px 0 20px;float: left;}
 	   
 	
@@ -3347,8 +3348,20 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	letter-spacing:0;
 }
 
+.retailer-text-ind {
+	font: 13px 'gotham_htfbook', Arial, sans-serif;
+	color:#000;
+	letter-spacing:0;
+	margin-bottom:20px;
+}
+
 .retailer-text p {
 	    margin-bottom: 12px;
+    line-height: 24px;
+}
+
+.retailer-text-ind p {
+	    margin-bottom: 5px;
     line-height: 24px;
 }
 
@@ -3356,7 +3369,15 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	font: 13px 'gotham_htfbold', Arial, sans-serif;
 }
 
+.retailer-text-ind h4 {
+	margin:20px 0;
+}
+
 .retailer-text img {
+	width:50%;
+}
+
+.retailer-text-ind img {
 	width:50%;
 }
 	
@@ -3367,6 +3388,10 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 }
 
 .retailer-text .btn {
+	margin-top:20px;
+}
+
+.retailer-text-ind .btn {
 	margin-top:20px;
 }
 
