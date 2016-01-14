@@ -3738,4 +3738,18 @@ fieldset p {
  }
  a.show-more:hover, a.show-less:hover {
  }
+ .retailer-hdr {
+	 width:100%;
+	 height:auto;
+	 margin-bottom:100px;
+ }
  
+ .logo-brand img {
+	 width:100%;
+	 margin-top:5px;
+ }
+ 
+ .logo-brand-sm img {
+	 width:70%;
+	 padding-bottom:20px;
+ }

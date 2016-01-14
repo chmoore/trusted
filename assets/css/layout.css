@@ -1377,6 +1377,20 @@
     padding-right: 40px;
 	border-right:none!important;
 }
+
+.sf-menu-1 > li > a, .sf-menu-1 > li.dropdown > a {
+    padding: 15px 25px;
+    border: none;
+    color: #b2b3b3;
+    font-size: 12px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.widget_text {
+    padding: 20px 0!important;
+}
 		
 	}
 	
@@ -1639,5 +1653,9 @@
 		font-weight:bold;
 		letter-spacing:1px;
 		margin-top: -10px;
+	}
+	
+	#store-list {
+		padding-top:40px!important;
 	}
 	
