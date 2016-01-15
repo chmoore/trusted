@@ -421,7 +421,8 @@
 	
 	.headline-full { margin-bottom: 30px; margin-top:30px;width:100%;height:45px;}
 	
-	.headline-retail {margin-bottom: 30px; margin-top:30px;width:100%;height:45px;border-top: 1px solid #e1e1e1;}
+	.headline-retail {margin-bottom: 30px; margin-top:30px;width:100%;height:45px;border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 60px;}
 	
 	.headline-full h4 {float:left;}
 	
@@ -3782,3 +3783,8 @@ fieldset p {
 	 width:70%;
 	 padding-bottom:20px;
  }
+ 
+.has-feedback label~.form-control-feedback {
+    top: 5px;
+    right: 20px;
+}
