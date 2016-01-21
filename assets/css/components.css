@@ -2401,8 +2401,8 @@
 		background-color: #efefef;
 		color: #979797;
 		margin-bottom:5px;
-		border-top:1px solid #dadada;
-		border-bottom:1px solid #dadada;
+		/*border-top:1px solid #dadada;
+		border-bottom:1px solid #dadada;*/
 	}
 	
 	#bg-sm {
@@ -3257,6 +3257,8 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 .warning-text {
 	color:#FF0004!important;
 	font-size:14px;
+	width:80%;
+	margin:0 auto;
 }
 
 .boxed {
