@@ -3354,9 +3354,16 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 }
 
 .retailer-text {
-	font: 13px 'gotham_htfbook', Arial, sans-serif;
+	font: 14px 'gotham_htfbook', Arial, sans-serif;
 	color:#000;
 	letter-spacing:0;
+}
+
+.retailer-text strong{
+	font: 14px 'gotham_htfbold', Arial, sans-serif;
+	color:#000;
+	letter-spacing:0;
+	margin-bottom:20px;
 }
 
 .retailer-text-ind {
@@ -3800,4 +3807,18 @@ fieldset p {
 	margin-top:-10px;
 	font-family: 'gotham_htfbold', Arial, sans-serif;
 	font-size: 14px;
+}
+
+.country-div {
+	margin:5px 0;
+	padding:20px 0 40px 0;
+	border-top: 1px solid #e1e1e1;
+}
+
+.country-div:after {
+    height: 2px;
+    display: block;
+    width: 80px;
+    background: #454545;
+    content: '';
 }
