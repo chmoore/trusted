@@ -216,9 +216,9 @@
                             </div>
                             <div class="col-xs-4 select-country form-group">
                              <label for="select-storelist-country" class="visuallyhidden">Select a Country </label>
-                                <select id="select-storelist-country">
+                                <select id="select-storelist-country" onChange="top.location.href=this.options[this.selectedIndex].value;" value="GO">
                                     <option selected disabled>Country</option>
-                                    <option value="ALL" selected>All Countries</option>
+                                    <option value="view-all-locations-all-countries.html" selected>All Countries</option>
                                     <option value="USA" selected>United States</option>
                                     <option value="Canada">Canada</option>
                                 </select>
