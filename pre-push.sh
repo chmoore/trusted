@@ -27,7 +27,11 @@ if echo "$answer" | grep -iq "^y" ;then
   echo "Syncing assets now, be sure to check for conflicts in SVN afterwards."
   # Sync up
   rsync -vur --delete --exclude=.DS_Store $GITHUB_ASSETS_PATH $SVN_ASSETS_PATH
+  # OK Git push..
+  exit 0
 else
-  echo "Connect to VPN for this script to run, SVN update needs it..."
+  echo "Connect to VPN for this script to run, SVN update needs it...Git push failed."
+  # Git push will not occur
+  exit 1
 fi
 
