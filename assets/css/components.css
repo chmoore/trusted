@@ -2473,6 +2473,16 @@
 		
 	}
 	
+	#bg-1wc {
+		padding: 30px 0 50px 0;
+		margin-top: -60px;
+		background-color: #fff;
+		color: #979797;
+	/*	border-top:1px solid #dadada;*/
+		border-bottom:1px solid #dadada;
+		
+	}
+	
 	#bg-1a h4 {
 		color:#fff!important;
 	}
@@ -3370,7 +3380,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	font: 13px 'gotham_htfbook', Arial, sans-serif;
 	color:#000;
 	letter-spacing:0;
-	margin-bottom:20px;
+	margin-bottom:40px;
 }
 
 .retailer-text p {
@@ -3784,11 +3794,7 @@ fieldset p {
  .retailer-hdr {
 	 width:100%;
 	 height:auto;
-	 margin-bottom:40px;
- }
- 
- .retailer-wrap {
-	 margin-top:40px;
+	 margin-bottom:100px;
  }
  
  .logo-brand img {
