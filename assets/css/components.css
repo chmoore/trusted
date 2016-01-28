@@ -3784,7 +3784,11 @@ fieldset p {
  .retailer-hdr {
 	 width:100%;
 	 height:auto;
-	 margin-bottom:100px;
+	 margin-bottom:40px;
+ }
+ 
+ .retailer-wrap {
+	 margin-top:40px;
  }
  
  .logo-brand img {

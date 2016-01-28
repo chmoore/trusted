@@ -206,9 +206,9 @@
                         <div class="col-xs-7 no-pad">
                             <div class="col-xs-6 select-brand form-group">
                              <label for="select-storelist-brand" class="visuallyhidden">Select a Trusted Brand </label>
-                                <select id="select-storelist-brand">
+                                <select id="select-storelist-brand" onChange="top.location.href=this.options[this.selectedIndex].value;" value="GO">
                                     <option selected disabled>Select a Trusted Brand</option>
-                                    <option value="all">All Brands</option>
+                                    <option value="view-all-locations-all.html">All Brands</option>
                                     <option value="ng">National Geographic</option>
                                     <option value="mille" selected>Richard Mille</option>
                                     <option value="heuer">Tag Heuer</option>
@@ -225,7 +225,7 @@
                             </div>
                         </div>
                         <div class="col-xs-5"> <div class="back-to-search right">
-                                <span><a href="store-locator.html" class="blue-link">Search Retailers</a></span>
+                                <a href="store-locator.html" class="blue-link">Search Retailers</a>
                             </div></div>
                     </div>
                     <div id="store-list" class="col-xs-12">
@@ -234,9 +234,10 @@
                                  <div class="logo-brand">
                 <img src="assets/images/Logo_Richard_Mille.svg" alt="Richard Mille logo">
                 </div>
-                            </div>
+                            </div> </div>
+                            <div class="retailer-wrap">
                             <div class="col-xs-12 country-div"><h3>United States</h3></div>
-                            </div>
+                           
                     <div class="col-md-4 retailer-text no-pad">
                     <h4>Alabama</h4>
 <p>Birmingham, <a href="view-all-retailer.html">The Summit</a></p>
@@ -297,16 +298,10 @@
 <p>Victor, Eastview</p>
 <p>White Plains, The Westchester</p>
 <p>Yonkers, Ridge Hill</p></div>
-                    </div>
-                    <div id="store-list" class="col-xs-12 single-line">
-                    <div class="retailer-hdr">
-                      <div class="col-xs-3 no-pad">
-                                 <div class="logo-brand">
-                <img src="assets/images/ng-fab5.png" alt="National Geographic Logo">
-                </div>
-                            </div>
-                            <div class="col-xs-12 country-div"><h3>United States</h3></div>
-                            </div>
+</div>
+<div class="retailer-wrap">
+                            <div class="col-xs-12 country-div"><h3>Canada</h3></div>
+                           
                     <div class="col-md-4 retailer-text no-pad">
                     <h4>Alabama</h4>
 <p>Birmingham, <a href="view-all-retailer.html">The Summit</a></p>
@@ -367,8 +362,8 @@
 <p>Victor, Eastview</p>
 <p>White Plains, The Westchester</p>
 <p>Yonkers, Ridge Hill</p></div>
+</div>
                     </div>
-                    
                 </div>
             </div>
             
