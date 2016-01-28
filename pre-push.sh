@@ -18,9 +18,9 @@ GITHUB_CHECKOUT="$(git rev-parse --show-toplevel)"
 SVN_ASSETS_PATH=$COMMON_STATIC"/Installation-Kit/staticfiles/static/global/assets/"
 GITHUB_ASSETS_PATH=$GITHUB_CHECKOUT"/assets/"
 
-echo -n "Connected to VPN? (y/n)? "
-read answer
-if echo "$answer" | grep -iq "^y" ;then
+read -p "Connected to VPN? (y/n)?" -n 1 -r < /dev/tty
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
 # Update both SVN repo and Github repo. SVN repo requires VPN.
   cd $COMMON_STATIC
   svn update
