@@ -6,7 +6,7 @@ PATH=/usr/local/bin:/bin:/usr/bin
 #
 # 2. Link up this git hook up by copying, pasting, and executing this:
 #
-#      cd $(git rev-parse --show-toplevel) && chmod +x pre-push.sh && ln -s pre-push.sh .git/hooks/
+#      cd $(git rev-parse --show-toplevel) && chmod +x pre-push.sh && cd .git/hooks/ && ln -s ../../pre-push.sh .
 #
 # 3. PROFIT! After that before you push to GitHub this script will run and ensure the change is also copied to our SVN repo.
 
