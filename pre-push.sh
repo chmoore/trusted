@@ -2,13 +2,16 @@
 
 PATH=/usr/local/bin:/bin:/usr/bin
 
-# 1. Edit this script's 'COMMON_STATIC' variable with your local SVN path
+# INSTRUCTIONS
+# 1. Link up this git hook up by copying, pasting, and executing this:
 #
-# 2. Link up this git hook up by copying, pasting, and executing this:
+#    cd $(git rev-parse --show-toplevel) && cp pre-push.sh .git/hooks/pre-push && chmod +x pre-push && cd ../..
 #
-#      cd $(git rev-parse --show-toplevel) && chmod +x pre-push.sh && cd .git/hooks/ && ln -s ../../pre-push.sh pre-push && cd ../..
+# 2. Edit this script's 'COMMON_STATIC' variable with your local SVN path
 #
-# 3. PROFIT! After that before you push to GitHub this script will run and ensure the change is also copied to our SVN repo.
+# 3. PROFIT! Now whenever you push to GitHub this script will run and ensure the change is also copied to our SVN repo.
+#
+#  TO DISABLE: cd $(git rev-parse --show-toplevel) && rm .git/hooks/pre-push
 
 COMMON_STATIC="/Users/YOUR-USER-HERE/Documents/workspace/Common"
 
