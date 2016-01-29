@@ -223,6 +223,14 @@ h1 {
     margin-bottom: 15px;
     padding: 0;
 }
+
+.col-xs-8 {
+    width: 100%;
+}
+
+.col-xs-2 {
+    width: 100%;
+}
 		
 	}
 	

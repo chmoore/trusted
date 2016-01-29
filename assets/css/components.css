@@ -3491,7 +3491,7 @@ fieldset p {
 
 .mc-input input[type="email"] {
 	width:100%;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
     margin-right: 15px;
 }
 
