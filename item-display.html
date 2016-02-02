@@ -1,4 +1,100 @@
-<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><body class="sticky-header"><script>
+	  $(document).ready(function(){
+
+var languages = ["Trusted","Tag Heuer", "Google", "Michael Godard","Stickman","National Geographic","eTitle"]; 
+  //Can add more,separate with commas.
+  //Added CSS,HTML cause people know them more.               
+
+  $("#s").autocomplete({
+    source: languages
+});
+}); 
+
+//Accordion//
+	   $(document).on('show','.accordion', function (e) {
+         //$('.accordion-heading i').toggleClass(' ');
+         $(e.target).prev('.accordion-heading').addClass('accordion-opened');
+    });
+    
+    $(document).on('hide','.accordion', function (e) {
+        $(this).find('.accordion-heading').not($(e.target)).removeClass('accordion-opened');
+        //$('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
+    });
+	
+	//Image Zoom//
+	$("#zoom").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true});
+	
+	//Wishlist//
+	$('.wish-add').bind('click', function(e) {
+  e.preventDefault();
+  $('.wish-add a').toggleClass('added');
+  $('.wishlist').toggleClass('toggled animated');
+});
+
+//jQuery Modal//
+ 
+    form = dialog.find( "form" ).on( "submit", function( event ) {
+      event.preventDefault();
+      addUser();
+    });
+ 
+    $( "#inquire" ).button().on( "click", function() {
+      dialog.dialog( "open" );
+    });
+  });
+  $("#dialog-form").dialog({autoOpen:false,modal:true});
+
+$("#inquire").click(function()
+                {
+                    $("#dialog-form").dialog('open');  
+                    $('.ui-widget-overlay').css('background', 'black');
+                });
+				
+//Responsive Modal//
+$("#dialog-form").dialog({
+    width: 'auto', // overcomes width:'auto' and maxWidth bug
+    maxWidth: 600,
+    height: 'auto',
+    modal: true,
+    fluid: true, //new option
+    resizable: false
+});
+
+
+// on window resize run function
+$(window).resize(function () {
+    fluidDialog();
+});
+
+// catch dialog if opened within a viewport smaller than the dialog width
+$(document).on("dialogopen", ".ui-dialog", function (event, ui) {
+    fluidDialog();
+});
+
+function fluidDialog() {
+    var $visible = $(".ui-dialog:visible");
+    // each open dialog
+    $visible.each(function () {
+        var $this = $(this);
+        var dialog = $this.find(".ui-dialog-content").data("ui-dialog");
+        // if fluid option == true
+        if (dialog.options.fluid) {
+            var wWidth = $(window).width();
+            // check window width against dialog width
+            if (wWidth < (parseInt(dialog.options.maxWidth) + 50))  {
+                // keep dialog from filling entire screen
+                $this.css("max-width", "90%");
+            } else {
+                // fix maxWidth bug
+                $this.css("max-width", dialog.options.maxWidth + "px");
+            }
+            //reposition dialog
+            dialog.option("position", dialog.options.position);
+        }
+    });
+
+}
+	</script></body></html><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 
@@ -296,7 +392,7 @@
                                          <h6>RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</h6>
                                  <p class="price-ital">Inquire for price</p>
           <div class="fav"><i class="fa fa-heart-o fa-lg"></i></div>
-          <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>  </a>                 		
+          </a><div class="cart-icon"><a href="item-display.html"></a><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>                   		
 	</div>
                     
                     </div><!-- end .span6 -->

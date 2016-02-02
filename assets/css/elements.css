@@ -469,6 +469,10 @@
 
 .spaced {padding:0 40px;}
 
+.space-height {
+	margin-top:40px;
+}
+
 .button {
   position: relative;
   display: inline-block;
