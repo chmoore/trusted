@@ -2816,7 +2816,7 @@
 
 .search-wrap {
 	float:right;
-	width:350px;
+	/*width:350px;*/
 	position:absolute;
 	right:0;
 	top:0;
