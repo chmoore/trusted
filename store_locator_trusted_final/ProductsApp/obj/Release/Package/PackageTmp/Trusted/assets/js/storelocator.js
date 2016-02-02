@@ -247,7 +247,7 @@ var StoreLocator = {
                     StoreLocator.FillThreeColumnData(rawData);
                 }
                 else {
-                    $("#store-list").html("<div class='span4'>No data found.</div>");
+                    $(".store-list").html("<div class='span4'>No data found.</div>");
                 }
             },
             error: function (req, response) {
@@ -297,7 +297,7 @@ var StoreLocator = {
             }
         }
 
-        $("#store-list").html(mainHtml);
+        $(".store-list").html(mainHtml);
     },
     DetectCurrectLocation: function () {
         if (navigator.geolocation) {
