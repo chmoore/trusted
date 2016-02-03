@@ -1373,6 +1373,10 @@
 					top:0;	
 		}
 		
+		#bg-1wc {
+			margin-bottom:30px!important;
+		}
+		
 		.border {
     border-bottom: 1px solid #dadada;
     padding-right: 40px;

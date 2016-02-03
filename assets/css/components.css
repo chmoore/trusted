@@ -2473,12 +2473,13 @@
 	}
 	
 	#bg-1wc {
-		padding: 30px 0 50px 0;
-		margin-top: -60px;
-		background-color: #fff;
-		color: #979797;
-	/*	border-top:1px solid #dadada;*/
-		border-bottom:1px solid #dadada;
+		    padding: 30px 0 10px 0;
+    margin-top: -60px;
+    background-color: #fff;
+    color: #979797;
+    /* border-top: 1px solid #dadada; */
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 90px;
 		
 	}
 	
