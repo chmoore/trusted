@@ -767,26 +767,34 @@
 .search-box:not(:valid) ~ .close-icon {
 	display: none;
 }
-	
-	#searchsubmit {
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 40px;
-		padding: 0 20px;
-		border: none;
-		background: url(../images/bg-search.png) no-repeat center center;
-		vertical-align: inherit;
-	}
-	
-	#expand-all {
-    height: 0px;
-    overflow: hidden;
-	padding-top:20px;
-    transition: height 2s;
-    -moz-transition: height 2s; /* Firefox 4 */
-    -webkit-transition: height 2s; /* Safari and Chrome */
-    -o-transition: height 2s; /* Opera */
+
+#searchsubmit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 40px;
+        padding: 0 20px;
+        border: none;
+        background: url(../images/bg-search.png) no-repeat center center;
+        vertical-align: inherit;
+}
+
+#expand-all {
+  max-height: 0;
+  opacity: 0;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  -webkit-transition: max-height .5s ease-in, opacity .5s ease-in ;
+  transition: max-height .5s ease-in, opacity .5s ease-in ;
+}
+
+#expand-all.open {
+  opacity: 1;
+  max-height: 5000px;
+  -webkit-transition: max-height 1.5s ease-in, opacity .5s ease-in ;
+  transition: max-height 1.5s ease-in, opacity .5s ease-in ;
 }
 
 #expand-all-show {
@@ -796,6 +804,14 @@
 
 #expand-all-show:hover {
 	color:#000;
+}
+
+#expand-all .result-message {
+  display: none;
+}
+
+#expand-all .warning-text {
+  display: block;
 }
 
 /* =Recent Entries Widget
@@ -1212,9 +1228,9 @@
    ========================================================================== */
 
 	.ewf_widget_newsletter {margin-top: 45px;}
-	
-	#newsletter-subscribe-form { position: relative; }
-	
+
+	#authenticate-form, #newsletter-subscribe-form { position: relative; }
+
 	#newsletter-subscribe-form input[type="text"] {
 		display: inline-block;
 		width: 50%;
@@ -1236,7 +1252,13 @@
 		font-weight: 400;
 		color:#fff;
 	}
-	
+
+        #authenticate-form canvas {
+          position: absolute;
+          top: 7px;
+          right: 20px;
+        }
+
 	#footer-top #newsletter-subscribe-form input[type="submit"],
 	#footer #newsletter-subscribe-form input[type="submit"], 
 	#footer-bottom #newsletter-subscribe-form input[type="submit"] { border-color: #fff; }
@@ -1255,7 +1277,11 @@
 			width: 100%;
 			margin-bottom: 20px;
 		}
-		
+
+                #authenticate-form canvas {
+                  right: 10px;
+                }
+
 	}
 
 /* =EWF Latest posts widget
