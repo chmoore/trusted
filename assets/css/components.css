@@ -2472,6 +2472,16 @@
 		
 	}
 	
+	#bg-ret {
+    /* padding: 30px 0 50px 0; */
+    margin-top: -95px;
+    background-color: #fff;
+    color: #979797;
+    /* border-top: 1px solid #dadada; */
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 40px;
+}
+	
 	#bg-1wc {
 		    padding: 30px 0 10px 0;
     margin-top: -60px;
@@ -3804,7 +3814,7 @@ fieldset p {
  .retailer-hdr {
 	 width:100%;
 	 height:auto;
-	 margin-bottom:100px;
+	 margin-bottom:20px;
  }
  
  .logo-brand img {
@@ -3919,4 +3929,61 @@ fieldset p {
     column-count: 3;
     column-gap: 3%;
     column-width: 30%;
+}
+
+@media (max-width: 767px) {
+	
+	.retailer-col {
+	 -moz-column-count:2;
+    -moz-column-gap: 2%;
+    -moz-column-width: 20%;
+    -webkit-column-count:2;
+    -webkit-column-gap: 2%;
+    -webkit-column-width: 20%;
+    column-count: 2;
+    column-gap: 2%;
+    column-width: 20%;
+}
+.col-xs-3 {
+	width:100%;
+}
+.col-xs-4 {
+	width:100%;
+}
+.col-xs-5 {
+	width:100%;
+}
+.col-xs-6 {
+	width:100%;
+}
+.col-xs-7 {
+	width:100%;
+}
+.retailer-hdr {
+	margin-bottom:10px;
+}
+logo-brand {
+	width:70%;
+}
+.back-to-search.right {
+	float:none;
+}
+#bg-1w {
+	padding:0 0 50px 0;
+}
+}
+
+@media (max-width: 480px) {
+	
+	.retailer-col {
+	 -moz-column-count:1;
+    -moz-column-gap: 1%;
+    -moz-column-width: 10%;
+    -webkit-column-count:1;
+    -webkit-column-gap: 1%;
+    -webkit-column-width: 10%;
+    column-count: 1;
+    column-gap: 1%;
+    column-width: 10%;
+}
 }
