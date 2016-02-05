@@ -3832,7 +3832,7 @@ fieldset p {
 .country-div {
 	margin:5px 0;
 	padding:20px 0 40px 0;
-	border-top: 1px solid #e1e1e1;
+	/*border-top: 1px solid #e1e1e1;*/
 }
 
 .country-div:after {
@@ -3883,7 +3883,8 @@ fieldset p {
   flex-direction: row;
   margin-left: -10px;
 	margin-top: -10px;*/
-	display:inline-block;
+	display:block;
+	width:100%;
 }
 
 .retailer-child {
@@ -3895,9 +3896,9 @@ fieldset p {
 	margin-top: 10px;
   box-sizing: border-box;*/
     display: inline-block;
-    margin: 0 0 1em;
+   /* margin: 0 0 1em;*/
     width: 100%;
-	padding:10px;
+	padding: 10px 10px 10px 0;
   }
   
   
