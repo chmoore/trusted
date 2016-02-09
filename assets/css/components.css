@@ -3743,6 +3743,11 @@ fieldset p {
 	margin-top:40px;
 }
 
+.display-wrap {
+	width:100%;
+	margin-top:100px;
+}
+
 .contact-modal .ui-dialog-title {
     float: left;
     margin: 20px;
@@ -3881,10 +3886,10 @@ fieldset p {
 	float:left;
 }*/
 
-.ewf_widget_authenticate {
+/*.ewf_widget_authenticate {
 	width:80%;
 	margin:0 auto;
-}
+}*/
 
 .retailer-wrap {
 	/*display: inline-flex;
