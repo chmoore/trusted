@@ -2493,6 +2493,16 @@
 		
 	}
 	
+	#bg-1view {
+		    padding: 30px 0 10px 0;
+    margin-top: -60px;
+    background-color: #fff;
+    color: #979797;
+    border-top: 1px solid #dadada; 
+    border-bottom: 1px solid #dadada;
+		
+	}
+	
 	#bg-1wh {
 		padding: 30px 0 50px 0;
 		margin-top: -60px;
