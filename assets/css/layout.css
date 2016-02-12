@@ -225,6 +225,7 @@
 	}
 	
 	.div-right {border-right:1px solid #ededed;padding-right:60px;}
+	.div-left {border-right:1px solid #ededed;padding-right:60px;height:100%;}
    	.sidebar {
 		/*background:#efefef;*/
 		/*border:1px solid #dadada;*/
@@ -1687,6 +1688,11 @@
 		    font: 13px 'gotham_htfbook', Arial, sans-serif;
     font-weight: 300;
     font-style: normal!important;
+	}
+	
+	.item-border {
+		border-left:1px solid #ededed;
+		padding-left:60px;
 	}
 	
 	.item-div p {

@@ -743,6 +743,20 @@
 			padding-left:40px;
 	}
 	
+	#search-ret { 
+		display: inline-block; 
+		width: 400px;
+		height: 45px; 
+		-webkit-box-sizing: border-box; 
+		   -moz-box-sizing: border-box; 
+		   		box-sizing: border-box; 
+		background: #fff url(../images/search-gray.png) no-repeat;
+		    background-position: 11px 50%;
+			padding-left:40px;
+			border:none;
+			margin-bottom:0;
+	}
+	
 	.close-icon {
 	border:1px solid transparent;
 	background-color: transparent;
