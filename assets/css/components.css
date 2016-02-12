@@ -2963,6 +2963,17 @@ border:1px solid #ccc;
 .cart-icon a {
 	color: #000;
 }
+
+.etitle-icon {
+	padding-top: 12px;	
+	padding-right: 12px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity:1;
+	-webkit-transition: all 0.5s;
+    	transition: all 0.5s;
+}
  
   .wishlist-container {
     display: inline-block;
@@ -3871,6 +3882,8 @@ fieldset p {
 	width:50%;
 	float:left;
 	height:auto;
+	    text-align: left;
+    margin-bottom: 10px;
 }
 
 .item-name h6 {
@@ -3966,6 +3979,12 @@ fieldset p {
     column-count: 3;
     column-gap: 3%;
     column-width: 30%;
+}
+
+.etitle-ret-wrap {
+	float:none;
+	margin:0 auto;
+	width:80%;
 }
 
 /* Search */
