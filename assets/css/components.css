@@ -3821,6 +3821,11 @@ fieldset p {
   transition: visibility 0s, opacity 0.5s linear;
    }
    
+   .show-black {
+	   color:#000!important;
+	   padding-left:0!important;
+   }
+   
    a.show-more {
 	   margin-top:-5px;
    }
