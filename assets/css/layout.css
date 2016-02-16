@@ -1434,7 +1434,7 @@
     /* top: 50%; */
    transform: none!important;
     padding: 0 20px;
-	margin-bottom:20px;
+	/*margin-bottom:20px;*/
 }
 
 .text-center {
@@ -1684,7 +1684,7 @@
 	.item-div {
 		border-bottom:1px solid #e1e1e1;
 		padding:20px 0;
-		margin-bottom:20px;
+		/*margin-bottom:20px;*/
 		    font: 13px 'gotham_htfbook', Arial, sans-serif;
     font-weight: 300;
     font-style: normal!important;
@@ -1696,7 +1696,7 @@
 	}
 	
 	.item-div p {
-		    margin-bottom: 15px!important;
+		    margin-bottom: 8px!important;
 			line-height: 18px;
 	}
 	
