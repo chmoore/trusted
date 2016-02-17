@@ -3831,7 +3831,7 @@ fieldset p {
    }
  a.show-more, a.show-less {
   text-decoration: none;
-  padding-left: 8px;
+  /*padding-left: 8px;*/
   color: #0088cc;
     font: 12px 'gotham_htfbold', Arial, sans-serif!important;
  }
