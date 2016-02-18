@@ -131,7 +131,7 @@
 		
 		#header {
 			position: fixed;
-			padding-bottom: 25px;
+			padding-bottom: 0px;
 			background-color:#000;
 			z-index: 999999;
 			margin-top:0;
@@ -225,6 +225,7 @@
 	}
 	
 	.div-right {border-right:1px solid #ededed;padding-right:60px;}
+	.div-left {border-right:1px solid #ededed;padding-right:60px;height:100%;}
    	.sidebar {
 		/*background:#efefef;*/
 		/*border:1px solid #dadada;*/
@@ -1433,7 +1434,7 @@
     /* top: 50%; */
    transform: none!important;
     padding: 0 20px;
-	margin-bottom:20px;
+	/*margin-bottom:20px;*/
 }
 
 .text-center {
@@ -1682,15 +1683,20 @@
 	
 	.item-div {
 		border-bottom:1px solid #e1e1e1;
-		padding:20px 0;
-		margin-bottom:20px;
+		padding:20px 0 20px 0;
+		margin-bottom:10px;
 		    font: 13px 'gotham_htfbook', Arial, sans-serif;
     font-weight: 300;
     font-style: normal!important;
 	}
 	
+	.item-border {
+		border-left:1px solid #ededed;
+		padding-left:60px;
+	}
+	
 	.item-div p {
-		    margin-bottom: 15px!important;
+		    margin-bottom: 8px!important;
 			line-height: 18px;
 	}
 	

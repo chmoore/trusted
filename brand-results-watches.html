@@ -87,7 +87,7 @@
       
       <div class="row">
         <div class="span12">
-          <div id="logo"> <a href="index.html"> <img src="assets/images/trusted-logo.svg" alt="website logo"> </a> </div>
+          <div id="logo"> <a href="index.html"> <img src="assets/images/trusted-logo.png" alt="website logo"> </a> </div>
           <!-- // Mobile menu trigger // --> 
           
           <a href="#" id="mobile-menu-trigger"> <i class="fa fa-bars"></i> <span class="visuallyhidden">Trusted Mobile Menu</span> </a> 
@@ -116,7 +116,7 @@
               </li>
               <li> <a href="authentication.html">Authenticate</a> </li>
               <li> <a href="request.html">eTitle Request</a> </li>
-              <li> <a href="store-locator.html">Retailers</a> </li>
+              <li> <a href="store-locator.html">Stores</a> </li>
               <li> <a href="how-it-works.html">How It Works</a> </li>
             </ul>
             <ul class="sf-menu fixed menu-right" id="">
@@ -148,7 +148,7 @@
     <div class="breadcrumbs">
       <div class="container">
         <div class="span6 height40"><span class="bc-sm"><strong><a href="index.html">HOME</a> > <a href="brand-landing.html">SHOP</a> ></strong> SEARCH RESULTS</span></div>
-        <!-- <div class="col-xs-4 height40"> 
+        <!-- <div class="span4 height40"> 
         <input type="text" class="rounded" id="s" name="text-input" value="" placeholder="Search the Shop">
       </div>
         <div class="span6 height40 align-right">
@@ -161,18 +161,20 @@
     </div>
     <div class="results-main container no-pad">
       <div class="row">
-        <div class="col-xs-3 div-left">
+        <div class="col-xs-3 div-right">
           <div class="sidebar">
+            <input type="text" class="rounded" id="s" name="text-input" value="" placeholder="Search the Shop">
+            <div class="divider single-line-side"></div>
                         <h6>Categories</h6>
                         <ul>
                         <li class="active">Watches</li>
-            <!--<ul>
+            <ul>
             <li class="active">
               Men's Watches (944)</li>
             <li>
               Women's Watches (188)</li>
               </ul>
-              </ul>-->
+              </ul>
                <div class="divider single-line-side"></div>
             <!--<p>
   <label for="amount">Price:</label>
@@ -180,85 +182,30 @@
 </p>
  
 <div id="slider-range"></div>-->
+            <h6>Filter by price</h6>
+              <p>
+              <input type="checkbox" name="checkbox" value="">
+              $0 - $2,000 </p>
+            <p>
+              <input type="checkbox" name="checkbox" value="">
+              $2,000 - $4,000 </p>
+            <p>
+              <input type="checkbox" name="checkbox" value="">
+              $4,000 - $6,000 </p>
+            <p>
+              <input type="checkbox" name="checkbox" value="">
+              $6,000 - $8,000 </p>
+               <p>
+              <input type="checkbox" name="checkbox" value="">
+              $8,000 - $10,000 </p>
+               <p>
+              <input type="checkbox" name="checkbox" value="">
+              Over $10,000 </p>
            <!-- <div class="divider single-line-side"></div>-->
             <h6>Brands</h6>
             <p>
-              <input type="checkbox" name="checkbox" value="" checked>
+              <input type="checkbox" name="checkbox" value="">
               Richard Mille (188)</p>
-                <h6>Gender</h6>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Men's</p>
-               <p>
-              <input type="checkbox" name="checkbox" value="">
-             Women's</p>
-              <p>
-              <input type="checkbox" name="checkbox" value="">
-             Unisex</p>
-                <h6>Watch Band Material</h6>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Ceramic</p>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Fabric</p>
-              <p>
-              <input type="checkbox" name="checkbox" value="">
-              Leather</p>
-              <p>
-              <input type="checkbox" name="checkbox" value="">
-              Stainless Steel</p>
-              <p>
-              <input type="checkbox" name="checkbox" value="">
-              Titanium</p>
-                <h6>Watch Feature</h6>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Alarm</p>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Altimeter</p>
-              <p>
-              <input type="checkbox" name="checkbox" value="">
-              Atomic</p>
-              <p>
-              <input type="checkbox" name="checkbox" value="">
-              Calculator</p>
-              <p>
-              <input type="checkbox" name="checkbox" value="">
-              Calendar</p>
-                <h6>Movement Type</h6>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Automatic Self-Wind</p>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Mechanical Self-Wind</p>
-               <p>
-              <input type="checkbox" name="checkbox" value="">
-              Quartz</p>
-               <p>
-              <input type="checkbox" name="checkbox" value="">
-              Tourbillion</p>
-               <h6>Watch Band Color</h6>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Beige</p>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Black</p>
-               <p>
-              <input type="checkbox" name="checkbox" value="">
-              Blue</p>
-               <p>
-              <input type="checkbox" name="checkbox" value="">
-              Black</p>
-               <p>
-              <input type="checkbox" name="checkbox" value="">
-              Brown</p>
-               <p>
-              <input type="checkbox" name="checkbox" value="">
-              Gold</p>
             <h6>Collections</h6>
             <p>
               <input type="checkbox" name="checkbox" value="">
@@ -277,11 +224,12 @@
               <input type="checkbox" name="checkbox" value="">
               RM 014 (188)</p>
               
-              <a href="" id="collections-all-show" class="show-more" onclick="showHide('collections-all');return false;">+ Show More</a>
-<div id="collections-all" class="show-all-div">
-<p>
+              <p>
               <input type="checkbox" name="checkbox" value="">
               RM 015 (188)</p>
+              
+              <a href="" id="collections-all-show" class="show-more" onclick="showHide('collections-all');return false;">+ Show More</a>
+<div id="collections-all" class="show-all-div">
    <p>
               <input type="checkbox" name="checkbox" value="">
               RM 016 (188)</p>
@@ -297,71 +245,14 @@
             <p>
               <input type="checkbox" name="checkbox" value="">
               Tourbillon (181)</p>
-              <div class="divider single-line-side"></div>
-              <h6>Condition</h6>
-              <p>
-              <input type="checkbox" name="checkbox" value="" checked>
-              New</p>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Pre-Owned</p>
-              <h6>Filter by price</h6>
-              <p>
-              <input type="checkbox" name="checkbox" value="" checked>
-              $0 - $2,000 </p>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              $2,000 - $4,000 </p>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              $4,000 - $6,000 </p>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              $6,000 - $8,000 </p>
-               <p>
-              <input type="checkbox" name="checkbox" value="">
-              $8,000 - $10,000 </p>
-               <p>
-              <input type="checkbox" name="checkbox" value="">
-              Over $10,000 </p>
-              <p>
-              $ <input type="text" name="text" value="" class="prices"> to $ <input type="text" name="text" value="" class="prices"></p>
-              <h6>Seller</h6>
-              <p>
-              <input type="checkbox" name="checkbox" value="">
-              Trusted.com</p>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Trusted Retailer </p>
-            <p>
-             <input type="checkbox" name="checkbox" value="">
-              Individual Seller</p>
           </div>
           <!-- end .sidebar --> 
         </div>
-        
-        <div class="col-xs-9 item-div item-border">
-         <div class="col-xs-12 item-div">
-         <form class="shop-search-wrap">
-         <div class="search-dropdown">
-    <button class="button dropdown-toggle" type="button">
-      <span class="toggle-active">Search All</span>
-      <span class="fa fa-chevron-down"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <li class="menu-active"><a href="#">Entire Shop</a></li>
-      <li><a href="#">Watches</a></li>
-      <li><a href="#">Art</a></li>
-    </ul>
-  </div>
-         <input type="text" class="rounded" id="search-ret" name="text-input" value="" placeholder="Search the Shop">
-         </form>
-         </div>
-        <div class="col-xs-12 item-div">
-          <div class="col-xs-5 show-all-txt">
+        <div class="span8 offset-content item-div">
+          <div class="span5 show-all-txt">
             <p><strong>1-15 of 900 for</strong> <a href="#">“ALL COLLECTIONS”</a></p>
           </div>
-          <div class="col-xs-7 height40 align-right">
+          <div class="span7 height40 align-right">
             <div class="item-sort">
               <label for="show">Show: </label>
               <select id="select-input" name="brandselect">
@@ -381,25 +272,12 @@
             </div>
             <a href="brand-results.html" id="list-view" class=""> <span class="list-icon"></span>&nbsp;List</a> <a href="brand-results-grid.html" id="grid-view" class=""> <span class="grid-icon"></span>&nbsp;Grid</a></div>
         </div>
-        <div class="col-xs-12 item-div">
-        <div class="filter-label">
-        <h6>Filter:</h6>
-        </div>
-         <span class="tag label label-info">
-  <span>Brands: Richard Mille</span>
-  <a><i class="remove glyphicon glyphicon-remove glyphicon-black"></i></a> 
-</span>
-        <span class="tag label label-info">
-  <span>Price: $0 - $2,000</span>
-  <a><i class="remove glyphicon glyphicon-remove glyphicon-black"></i></a> 
-</span>
-        </div>
-        
-      <div class="col-xs-12 item-div">
-        <div class="col-xs-4 no-left-pad">
+      </div>
+      <div class="span8 offset-content item-div">
+        <div class="span4 no-left-pad">
           <div class="item-prod"> <a href="item-display.html"> <img src="assets/images/godard-sm.jpg" alt=""> </a> </div>
         </div>
-        <div class="col-xs-8 no-left-pad"> <a href="item-display.html">
+        <div class="span8 no-left-pad"> <a href="item-display.html">
           <h4>RM 011 TOURBILLON 519-04-94a</h4>
           <h6 class="brand-list">Richard Mille</h6>
           <h5 class="price-list">Inquire for price</h5>
@@ -408,15 +286,15 @@
           <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
         </div>
         
-        <!-- end .col-xs-8 --> 
+        <!-- end .span8 --> 
       </div>
       <!-- end .row -->
       
-      <div class="col-xs-12 item-div">
-        <div class="col-xs-4 no-left-pad">
+      <div class="span8 offset-content item-div">
+        <div class="span4 no-left-pad">
           <div class="item-prod"> <img src="assets/images/godard-sm.jpg" alt=""> </div>
         </div>
-        <div class="col-xs-8 no-left-pad"> <a href="item-display.html">
+        <div class="span8 no-left-pad"> <a href="item-display.html">
           <h4>RM 011 TOURBILLON 519-04-94a</h4>
           <h6 class="brand-list">Richard Mille</h6>
           <h5 class="price-list">Inquire for price</h5>
@@ -425,13 +303,13 @@
           <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
         </div>
         
-        <!-- end .col-xs-8 --> 
+        <!-- end .span8 --> 
       </div>
-      <div class="col-xs-12 item-div">
-        <div class="col-xs-4 no-left-pad">
+      <div class="span8 offset-content item-div">
+        <div class="span4 no-left-pad">
           <div class="item-prod"> <img src="assets/images/godard-sm.jpg" alt=""> </div>
         </div>
-        <div class="col-xs-8 no-left-pad"> <a href="item-display.html">
+        <div class="span8 no-left-pad"> <a href="item-display.html">
           <h4>RM 011 TOURBILLON 519-04-94a</h4>
           <h6 class="brand-list">Richard Mille</h6>
           <h5 class="price-list">Inquire for price</h5>
@@ -440,13 +318,13 @@
           <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
         </div>
         
-        <!-- end .col-xs-8 --> 
+        <!-- end .span8 --> 
       </div>
-      <div class="col-xs-12 item-div">
-        <div class="col-xs-4 no-left-pad">
+      <div class="span8 offset-content item-div">
+        <div class="span4 no-left-pad">
           <div class="item-prod"> <img src="assets/images/godard-sm.jpg" alt=""> </div>
         </div>
-        <div class="col-xs-8 no-left-pad"> <a href="item-display.html">
+        <div class="span8 no-left-pad"> <a href="item-display.html">
           <h4>RM 011 TOURBILLON 519-04-94a</h4>
           <h6 class="brand-list">Richard Mille</h6>
           <h5 class="price-list">Inquire for price</h5>
@@ -455,13 +333,13 @@
           <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
         </div>
         
-        <!-- end .col-xs-8 --> 
+        <!-- end .span8 --> 
       </div>
-      <div class="col-xs-12 item-div">
-        <div class="col-xs-4 no-left-pad">
+      <div class="span8 offset-content item-div">
+        <div class="span4 no-left-pad">
           <div class="item-prod"> <img src="assets/images/godard-sm.jpg" alt=""> </div>
         </div>
-        <div class="col-xs-8 no-left-pad"> <a href="item-display.html">
+        <div class="span8 no-left-pad"> <a href="item-display.html">
           <h4>RM 011 TOURBILLON 519-04-94a</h4>
           <h6 class="brand-list">Richard Mille</h6>
           <h5 class="price-list">Inquire for price</h5>
@@ -470,13 +348,13 @@
           <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
         </div>
         
-        <!-- end .col-xs-8 --> 
+        <!-- end .span8 --> 
       </div>
-      <div class="col-xs-12 item-div">
-        <div class="col-xs-4 no-left-pad">
+      <div class="span8 offset-content item-div">
+        <div class="span4 no-left-pad">
           <div class="item-prod"> <img src="assets/images/godard-sm.jpg" alt=""> </div>
         </div>
-        <div class="col-xs-8 no-left-pad"> <a href="item-display.html">
+        <div class="span8 no-left-pad"> <a href="item-display.html">
           <h4>RM 011 TOURBILLON 519-04-94a</h4>
           <h6 class="brand-list">Richard Mille</h6>
           <h5 class="price-list">Inquire for price</h5>
@@ -485,13 +363,13 @@
           <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
         </div>
         
-        <!-- end .col-xs-8 --> 
+        <!-- end .span8 --> 
       </div>
-      <div class="col-xs-12 item-div">
-        <div class="col-xs-4 no-left-pad">
+      <div class="span8 offset-content item-div">
+        <div class="span4 no-left-pad">
           <div class="item-prod"> <img src="assets/images/godard-sm.jpg" alt=""> </div>
         </div>
-        <div class="col-xs-8 no-left-pad"> <a href="item-display.html">
+        <div class="span8 no-left-pad"> <a href="item-display.html">
           <h4>RM 011 TOURBILLON 519-04-94a</h4>
           <h6 class="brand-list">Richard Mille</h6>
           <h5 class="price-list">Inquire for price</h5>
@@ -499,9 +377,9 @@
           <p>This rose pink gold watch with red trim features skeletonized automatic winding movement with hours, minutes, date and adjustable rotor geometry.</p>
           <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
         </div>
-        <!-- end .col-xs-8 --> 
+        <!-- end .span8 --> 
       </div>
-      <div class="pagination-holder col-xs-12 item-div">
+      <div class="pagination-holder col-xs-8 offset-content item-div">
         <div id="light-pagination" class="pagination light-theme simple-pagination col-xs-10">
           <ul>
             <li class="disabled"><span class="current prev">Prev</span></li>
@@ -529,7 +407,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
   <div class="fullwidth-section" id="bg-1-cut">
     <div class="container">
@@ -668,24 +545,6 @@ $("#filter-options :checkbox").click(function()
         }
         
     });
-	
-	$('.dropdown-toggle').click(function(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  $(this).closest('.search-dropdown').toggleClass('open');
-});
-
-$('.dropdown-menu > li > a').click(function(e) {
-  e.preventDefault();
-  var clicked = $(this);
-  clicked.closest('.dropdown-menu').find('.menu-active').removeClass('menu-active');
-  clicked.parent('li').addClass('menu-active');
-  clicked.closest('.search-dropdown').find('.toggle-active').html(clicked.html());
-});
-
-$(document).click(function() {
-  $('.search-dropdown.open').removeClass('open');
-});
 	  </script>
     
 </body>
