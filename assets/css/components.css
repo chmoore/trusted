@@ -3461,7 +3461,8 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 }
 
 .retailer-text h6 {
-	font: 13px 'gotham_htfbold', Arial, sans-serif;
+	/*font: 13px 'gotham_htfbold', Arial, sans-serif;*/
+	margin-top:20px;
 }
 
 .retailer-text-ind h4 {
