@@ -1,5 +1,5 @@
 /* ==========================================================================
-   =Template Default Classes (test, delete)
+   =Template Default Classes
    ========================================================================== */
    
     .ewf-inline-style { display: none; }
@@ -794,8 +794,8 @@
 }
 
 #expand-all {
-  /*max-height: 0;
-  opacity: 0;*/
+  max-height: 0;
+  opacity: 0;
   height: auto;
   overflow: hidden;
   margin-bottom: 20px;
@@ -1299,7 +1299,7 @@
 
 	}
 
-/* =EWF Latest posts widget TEST
+/* =EWF Latest posts widget
    ========================================================================== */
 
 	.ewf_widget_latest_posts {}

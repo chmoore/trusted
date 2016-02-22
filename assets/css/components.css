@@ -1021,6 +1021,25 @@
 	}
 
 /* ==========================================================================
+   =Throbber
+   ========================================================================== */
+
+    .throbber-container {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .throbber-container > canvas {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 210px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+/* ==========================================================================
    =Revolution Slider
    ========================================================================== */
    
@@ -1036,6 +1055,8 @@
 		height:470px!important;
 	}
 	
+    .fullwidthbanner { visibility: hidden }
+
 	.brand-slide {
 		height:400px!important;
 		margin-top:0!important;
