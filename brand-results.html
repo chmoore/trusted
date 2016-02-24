@@ -116,7 +116,7 @@
               </li>
               <li> <a href="authentication.html">Authenticate</a> </li>
               <li> <a href="request.html">eTitle Request</a> </li>
-              <li> <a href="store-locator.html">Retailers</a> </li>
+              <li> <a href="store-locator.html">Stores</a> </li>
               <li> <a href="how-it-works.html">How It Works</a> </li>
             </ul>
             <ul class="sf-menu fixed menu-right" id="">
@@ -166,13 +166,15 @@
                         <h6>Categories</h6>
                         <ul>
                         <li class="active">Watches</li>
-            <!--<ul>
+           <ul>
             <li class="active">
-              Men's Watches (944)</li>
+              Men's Watches</li>
             <li>
-              Women's Watches (188)</li>
+              Women's Watches</li>
               </ul>
-              </ul>-->
+              <li class="inactive-text">
+              Artists</li>
+              </ul>
                <div class="divider single-line-side"></div>
             <!--<p>
   <label for="amount">Price:</label>
@@ -182,9 +184,13 @@
 <div id="slider-range"></div>-->
            <!-- <div class="divider single-line-side"></div>-->
             <h6>Brands</h6>
-            <p>
-              <input type="checkbox" name="checkbox" value="" checked>
-              Richard Mille (188)</p>
+            <ul id="brand-filters">
+            <li>
+              <input type="checkbox" name="checkbox" value="richard-mille" checked>
+              Richard Mille</li>
+               <li>
+              <input type="checkbox" name="checkbox" value="tag-heuer">
+              Tag Heuer</li>
                 <h6>Gender</h6>
             <p>
               <input type="checkbox" name="checkbox" value="">
@@ -262,41 +268,41 @@
             <h6>Collections</h6>
             <p>
               <input type="checkbox" name="checkbox" value="">
-              RM 010 (944)</p>
+              RM 010</p>
             <p>
               <input type="checkbox" name="checkbox" value="">
-              RM 011 (188)</p>
+              RM 011</p>
             <p>
               <input type="checkbox" name="checkbox" value="">
-              RM 012 (188)</p>
+              RM 012</p>
             <p>
               <input type="checkbox" name="checkbox" value="">
-              RM 013 (188)</p>
+              RM 013</p>
               
               <p>
               <input type="checkbox" name="checkbox" value="">
-              RM 014 (188)</p>
+              RM 014</p>
               
               <a href="" id="collections-all-show" class="show-more" onclick="showHide('collections-all');return false;">+ Show More</a>
 <div id="collections-all" class="show-all-div">
 <p>
               <input type="checkbox" name="checkbox" value="">
-              RM 015 (188)</p>
+              RM 015</p>
    <p>
               <input type="checkbox" name="checkbox" value="">
-              RM 016 (188)</p>
+              RM 016</p>
               <p>
               <input type="checkbox" name="checkbox" value="">
-              RM 017 (188)</p>
+              RM 017</p>
    <p><a href="" id="collections-all-hide" class="show-less" onclick="showHide('collections-all');return false;">- Show Less</a></p>
           </div>    
             <h6>Movement Type</h6>
             <p>
               <input type="checkbox" name="checkbox" value="">
-              Automatic Self-Wind (444)</p>
+              Automatic Self-Wind</p>
             <p>
               <input type="checkbox" name="checkbox" value="">
-              Tourbillon (181)</p>
+              Tourbillon</p>
               <div class="divider single-line-side"></div>
               <h6>Condition</h6>
               <p>
@@ -351,7 +357,7 @@
     <ul class="dropdown-menu">
       <li class="menu-active"><a href="#">Entire Shop</a></li>
       <li><a href="#">Watches</a></li>
-      <li><a href="#">Art</a></li>
+      <li><a href="#">Artists</a></li>
     </ul>
   </div>
          <input type="text" class="rounded" id="search-ret" name="text-input" value="" placeholder="Search the Shop">
@@ -393,25 +399,30 @@
   <span>Price: $0 - $2,000</span>
   <a><i class="remove glyphicon glyphicon-remove glyphicon-black"></i></a> 
 </span>
+<span class="tag label label-info">
+  <span>Reset</span>
+</span>
         </div>
-        
+        <ul id="product-list">
+  <li class="richard-mille">
       <div class="col-xs-12 item-div">
+      
         <div class="col-xs-4 no-left-pad">
-          <div class="item-prod"> <a href="item-display.html"> <img src="assets/images/godard-sm.jpg" alt=""> </a> </div>
+          <div class="item-prod"> <a href="item-display.html"> <img src="assets/images/mille-watch-1.jpg" alt=""> </a> </div>
         </div>
         <div class="col-xs-8 no-left-pad"> <a href="item-display.html">
-          <h4>RM 011 TOURBILLON 519-04-94a</h4>
+          <h4>RM 019 TOURBILLON 519.04.94A</h4>
           <h6 class="brand-list">Richard Mille</h6>
           <h5 class="price-list">Inquire for price</h5>
           </a>
           <p>This rose pink gold watch with red trim features skeletonized automatic winding movement with hours, minutes, date and adjustable rotor geometry.</p>
-          <p>Available from <a href="item-display.html#trustedret">4 Retailers</a></p>
+          <p>Available from <a href="item-display.html#trustedret">1 Retailer</a></p>
         </div>
         
         <!-- end .col-xs-8 --> 
       </div>
       <!-- end .row -->
-      
+      </li>
       <div class="col-xs-12 item-div">
         <div class="col-xs-4 no-left-pad">
           <div class="item-prod"> <img src="assets/images/godard-sm.jpg" alt=""> </div>
@@ -501,6 +512,7 @@
         </div>
         <!-- end .col-xs-8 --> 
       </div>
+      </ul>
       <div class="pagination-holder col-xs-12 item-div">
         <div id="light-pagination" class="pagination light-theme simple-pagination col-xs-10">
           <ul>
@@ -686,6 +698,24 @@ $('.dropdown-menu > li > a').click(function(e) {
 $(document).click(function() {
   $('.search-dropdown.open').removeClass('open');
 });
+
+<!-- Filtering -->
+$("#brand-filters :checkbox").click(function() 
+	{
+       	$("#product-list li").hide();
+       	$("#brand-filters :checkbox:checked").each(function() 
+       	{
+           $("." + $(this).val()).fadeIn();
+		});
+       
+        if($('#brand-filters :checkbox').filter(':checked').length < 1) 
+        {
+        	$("#product-list li").fadeIn();
+        	
+        }
+        
+    });
+
 	  </script>
     
 </body>

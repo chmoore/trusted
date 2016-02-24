@@ -4134,6 +4134,33 @@ fieldset p {
 		font: 14px 'gotham_htfbold', Arial, sans-serif;
 	}
 
+#search-ret {
+	position: relative;
+    top: 0;
+    display: inline-block;
+    height: auto;
+    width: 150px;
+    float: left;
+    border: 0;
+    font-size: 16px;
+    z-index: 2;
+    box-shadow: none;
+    border-radius: 0;
+    transition: 250ms all ease-in-out;
+	-webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+	margin-bottom: 0;
+    left: 20px;
+	background: #fff url(../images/search-gray.png) no-repeat;
+    background-position: 0 50%;
+	padding-left:30px;
+}
+
+.inactive-text {
+	color:#979797!important;
+}
 
 @media (max-width: 767px) {
 	
