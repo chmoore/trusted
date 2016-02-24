@@ -238,7 +238,7 @@
 	}
 	
 	.sidebar p {
-		    font: 12px 'gotham_htfmedium', Arial, sans-serif;
+		    font: 12px 'gotham_htfbook', Arial, sans-serif;
     font-weight: 500;
     margin-bottom: 5px;
     font-style: normal!important;
@@ -246,7 +246,7 @@
 	}
 	
 	.sidebar-content {
-		    font: 14px 'Noto Serif', Arial, sans-serif;
+		    font: 12px 'gotham_htfmedium', Arial, sans-serif;
 			margin-bottom:20px!important;
 			line-height: 22px;
 			 clear: both;
@@ -258,9 +258,9 @@
 	}
 	
 	.sidebar ul {
-    font: 12px 'gotham_htfmedium', Arial, sans-serif;
+    font: 12px 'gotham_htfbook', Arial, sans-serif;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-style: normal!important;
     padding: 0;
 }
@@ -272,14 +272,14 @@
 	.sidebar ul li{
     color:#000;
 	list-style:none;
-	margin-left:15px;
+	margin-left:0px;
 	margin-bottom:0;
 }
 
 .sidebar ul ul li{
     color:#333;
 	list-style:none;
-	margin-left:30px;
+	margin-left:15px;
 	margin-bottom:0;
 }
 	

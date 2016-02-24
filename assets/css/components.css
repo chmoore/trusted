@@ -3987,10 +3987,14 @@ fieldset p {
 	margin-left:20px;
 	color:#000;
     background-color: #f0f0f0;
-	padding:8px;
+	padding: 8px 10px 7px 10px;
 	border-radius: 8px;
 	border:1px solid #d1d1d1;
-	font-size: 11px;
+	font-size: 12px;
+}
+
+.reset {
+	background-color:#fff!important;
 }
 
 .label-info a {
@@ -4160,6 +4164,7 @@ fieldset p {
 
 .inactive-text {
 	color:#979797!important;
+	font: 12px 'gotham_htfmedium', Arial, sans-serif!important;
 }
 
 @media (max-width: 767px) {
