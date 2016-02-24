@@ -243,6 +243,7 @@
     margin-bottom: 5px;
     font-style: normal!important;
 	padding:0;
+	color:#535353;
 	}
 	
 	.sidebar-content {
@@ -267,17 +268,18 @@
 
 .sidebar .active {
 	 font-family: 'gotham_htfbold', Arial, sans-serif;
+	 color:#000;
 }
 
 	.sidebar ul li{
-    color:#000;
+    color:#535353;
 	list-style:none;
 	margin-left:0px;
 	margin-bottom:0;
 }
 
 .sidebar ul ul li{
-    color:#333;
+    color:#535353;
 	list-style:none;
 	margin-left:15px;
 	margin-bottom:0;

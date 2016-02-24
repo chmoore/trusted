@@ -821,6 +821,7 @@
 	input[type="checkbox"] {
     -webkit-transition: border 0.4s;
     transition: border 0.4s;
+	margin-right:8px;
 	}
 	input[type="checkbox"]:after {
 	    content: '';

@@ -3878,6 +3878,10 @@ fieldset p {
 	 margin-bottom:20px;
  }
  
+ .logo-brand {
+	 float:left;
+ }
+ 
  .logo-brand img {
 	 width:100%;
 	 margin-top:5px;
