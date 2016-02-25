@@ -4233,6 +4233,13 @@ fieldset p {
     padding: 0;
     color: #535353;
 }
+.sidr-class-prices {
+    width: 80px!important;
+    display: inline!important;
+    padding: 5px!important;
+    margin-right: 8px;
+}
+
 .sidr.right {
   left: auto;
   right: -260px;
