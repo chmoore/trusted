@@ -812,6 +812,7 @@
 
 #expand-all .warning-text {
   display: block;
+  margin-bottom: 40px;
 }
 
 /* =Recent Entries Widget
