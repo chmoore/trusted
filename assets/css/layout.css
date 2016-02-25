@@ -1695,6 +1695,7 @@
 	.item-border {
 		border-left:1px solid #ededed;
 		padding-left:60px;
+		padding-top: 20px;
 	}
 	
 	.item-div p {
