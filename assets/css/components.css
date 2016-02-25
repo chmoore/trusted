@@ -3698,6 +3698,10 @@ fieldset p {
 	padding:0!important;
 }
 
+.no-side-pad {
+	padding:30px 0!important;
+}
+
 .gray-bkgd {
 	background:#F9F9F9;
 }
@@ -3880,11 +3884,13 @@ fieldset p {
  
  .logo-brand {
 	 float:left;
+	 text-align: left;
  }
  
  .logo-brand img {
 	 width:80%;
 	 margin-top:5px;
+	 margin-bottom:30px;
  }
  
  .logo-brand-sm img {
