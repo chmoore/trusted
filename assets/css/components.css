@@ -3798,6 +3798,10 @@ fieldset p {
 	margin-top:40px;
 }
 
+.item-wrap h6 {
+	margin:20px 0;
+}
+
 .display-wrap {
 	width:100%;
 	margin-top:100px;
