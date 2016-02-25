@@ -4199,13 +4199,39 @@ fieldset p {
     letter-spacing: 0.1px;
     color: #000000;
   background: #fff;
+  overflow:scroll;
 }
 .sidr .sidr-inner {
-  padding: 0 0 15px;
+  padding: 0 20px 15px;
 }
+
+.sidr .sidr-inner h6{
+     margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.sidr-inner ul {
+	    font: 12px 'gotham_htfmedium', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-style: normal!important;
+    padding: 0;
+}
+
+.sidr-inner ul li {
+	    color: #535353;
+    list-style: none;
+    margin-left: 0px;
+    margin-bottom: 0;
+}
+
 .sidr .sidr-inner > p {
-  margin-left: 15px;
-  margin-right: 15px;
+  font: 12px 'gotham_htfmedium', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-style: normal!important;
+    padding: 0;
+    color: #535353;
 }
 .sidr.right {
   left: auto;
@@ -4309,7 +4335,7 @@ fieldset p {
 .sidr input[type="url"],
 .sidr textarea,
 .sidr select {
-  width: 100%;
+ /* width: 100%;
   font-size: 13px;
   padding: 5px;
   -moz-box-sizing: border-box;
@@ -4321,10 +4347,10 @@ fieldset p {
   background: rgba(0, 0, 0, 0.1);
   color: rgba(51, 51, 51, 0.6);
   display: block;
-  clear: both;
+  clear: both;*/
 }
 .sidr input[type=checkbox] {
-  width: auto;
+  width: 12px;
   display: inline;
   clear: none;
 }
@@ -4377,6 +4403,18 @@ fieldset p {
 	width:100%;
 }
 .col-xs-7 {
+	width:100%;
+}
+.col-xs-8 {
+	width:100%;
+}
+.col-xs-9 {
+	width:100%;
+}
+.col-xs-10 {
+	width:100%;
+}
+.col-xs-11 {
 	width:100%;
 }
 .retailer-hdr {
