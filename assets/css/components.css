@@ -369,7 +369,7 @@
 	
 	.divider.single-line { border-top: 1px solid #e1e1e1; }
 	.single-line { border-top: 1px solid #e1e1e1; margin-top: 40px; }
-	.divider.single-line-side { border-top: 1px solid #e1e1e1; /*width: 298px;margin-left: -20px; */width:100%; /*margin: 20px 0;*/margin: 0px 0 20px;float: left;}
+	.divider.single-line-side { border-top: 1px solid #e1e1e1; /*width: 298px;margin-left: -20px; */width:100%; /*margin: 20px 0;*/margin: 10px 0 20px;float: left;}
 	   
 	
 	.divider.double-line { border-top: 4px double #e1e1e1; }
@@ -2397,6 +2397,17 @@
     /*border-top: 1px solid #dadada;
     border-bottom: 1px solid #dadada;*/
 }
+
+#bg-1-ret {
+    padding: 0px 0 20px 0;
+    margin-top: -80px;
+    /*background-color: #efefef;*/
+	background-color:#F7F7F7;
+    color: #979797;
+    margin-bottom: 60px;
+    /*border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;*/
+}
 	
 	#bg-1-w {
 		padding: 40px 0 40px 0;
@@ -2490,6 +2501,15 @@
 		color: #979797;
 	/*	border-top:1px solid #dadada;*/
 		border-bottom:1px solid #dadada;
+		
+	}
+	
+	#bg-ret-wrap {
+		padding: 30px 0 0 0;
+		margin-top: -60px;
+		background-color: #fff;
+		color: #979797;
+	/*	border-top:1px solid #dadada;*/
 		
 	}
 	
@@ -3698,8 +3718,12 @@ fieldset p {
 	padding:0!important;
 }
 
+.no-pad-right {
+	padding:0 15px 0 0!important;
+}
+
 .no-side-pad {
-	padding:30px 0!important;
+	padding:30px 0 0 0!important;
 }
 
 .gray-bkgd {
@@ -4374,6 +4398,27 @@ fieldset p {
 
 #mobile-header {
     display: none;
+}
+
+.reset-box {
+	border-top: 1px solid #e1e1e1;
+	margin-top:20px;
+	padding-top:20px;
+}
+
+.reset-box button {
+	width:100%;
+}
+
+.logo-brand-sm img{
+	width:60%;
+	text-align:center;
+	margin-bottom:10px;
+	padding-bottom:0;
+}
+
+.no-pad p {
+	    margin-bottom: 10px;
 }
 @media only screen and (max-width: 767px){
     #mobile-header {
