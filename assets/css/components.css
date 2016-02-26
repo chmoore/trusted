@@ -229,6 +229,16 @@
 /* =Default Button
    ========================================================================== */
    
+	.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+	
 	.btn { 
 		display: inline-block; 
 		padding: 11px 25px; 
@@ -1688,7 +1698,7 @@
 	.item-sm .item-title {
 		font-size:12px;
 		line-height:18px;
-		text-align:left;
+		text-align:center;
 		font-weight: bold;
 	}
 	
@@ -1699,7 +1709,7 @@
 	}
 	
 	.item-sm p {
-		text-align:left;
+		text-align:center;
 	}
 	
 	.item-img {
@@ -4041,7 +4051,7 @@ fieldset p {
 
 .glyphicon {
 	top:2px;
-	margin-left: 5px;
+	/*margin-left: 5px;*/
 }
 
 .retailer-wrap {
