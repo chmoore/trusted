@@ -419,7 +419,7 @@
 	@media (max-width: 767px) {
 
 		.map { padding: 0 20px; }
-		.row .map { padding: 0; }
+		.row .map { padding: 0;margin-bottom: 20px!important; }
 
 	}
 
@@ -4482,14 +4482,38 @@ fieldset p {
 .retailer-hdr {
 	margin-bottom:10px;
 }
-logo-brand {
+.logo-brand {
+	width:100%;
+	float:none;
+	text-align:center;
+}
+.logo-brand img {
 	width:70%;
 }
+
+.logo-brand-sm {
+}
+
 .back-to-search.right {
 	float:none;
 }
+
+.search-right {
+	float:left;
+	text-align:center;
+}
+
 #bg-1w {
 	padding:0 0 50px 0;
+}
+
+#bg-1-ret {
+	margin-top:0px;
+	padding:20px 0 5px 0;
+}
+
+.no-side-pad {
+	padding:0 20px 5px 20px!important;
 }
 }
 

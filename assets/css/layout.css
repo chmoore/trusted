@@ -1389,6 +1389,12 @@
     padding-right: 40px;
 	border-right:none!important;
 }
+.retailer-text-ind .col-xs-6{
+	width:50%;
+	float:left;
+	
+}
+
 #bg-1 {
 	margin-bottom:20px!important;
 }
