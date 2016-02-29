@@ -155,7 +155,7 @@
 	 */
 	
 	#logo a {
-		display: inline-block;
+		display: block;
 		max-width: 100%; 	/* 1 */	
 	}
 	
