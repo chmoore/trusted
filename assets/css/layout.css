@@ -146,7 +146,7 @@
    =Logo
    ========================================================================== */
    
-	#logo { padding: 15px 0px 10px 0px; float:left; }
+	#logo { margin-right: 110px; padding: 15px 0px 10px 0px; float:left; width: 250px; }
 	
 	/**
 	 * 1. displaying the <a> inline-block makes it depends on the size of it's children
@@ -156,7 +156,8 @@
 	
 	#logo a {
 		display: block;
-		max-width: 100%; 	/* 1 */	
+		/*max-width: 100%;*/ 	/* 1 */
+        width: inherit;
 	}
 	
 	.logotop {
@@ -165,7 +166,8 @@
 	
 	#logo img,
     #logo object {
-		width: 80%;
+		/*width: 80%;*/
+        width: inherit;
 		-webkit-transition: all 0.3s;
 				transition: all 0.3s;	
 	}
@@ -180,7 +182,8 @@
 	
 		#logo {  
 			padding-right: 50px; 	/* 1 */
-			width:70%;
+			/*width:70%;*/
+            width: 160px;
 			margin-left: 0px;
   		    margin-top: 5px;
 		}
@@ -1189,7 +1192,7 @@
 					transition: all 0.3s;
 		}
 		
-		#header.stuck #logo img, #logo object { width: 60%; }
+		#header.stuck #logo img, #logo object { /*width:60%;*/ width: inherit; }
 		
 		#header.stuck .register-stuck {
     position: absolute;
