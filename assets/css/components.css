@@ -4420,8 +4420,14 @@ fieldset p {
 	width:100%;
 }
 
+.logo-brand-sm {
+	float: left;
+    width: 50%;
+    margin-top: 15px;
+}
+
 .logo-brand-sm img{
-	width:60%;
+	width:80%;
 	text-align:center;
 	margin-bottom:10px;
 	padding-bottom:0;

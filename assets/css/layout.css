@@ -1189,7 +1189,7 @@
 					transition: all 0.3s;
 		}
 		
-		#header.stuck #logo img, #logo object { width: 75%; }
+		#header.stuck #logo img, #logo object { width: 60%; }
 		
 		#header.stuck .register-stuck {
     position: absolute;
