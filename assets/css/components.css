@@ -4459,6 +4459,12 @@ fieldset p {
 	float:right;
 	margin-top: -40px;
 }
+
+.retailer-text-ind h4 {
+    margin: 20px 0;
+    border-bottom: 1px solid #c8c8c8;
+    padding-bottom: 20px;
+}
 }
 
 @media (max-width: 767px) {
