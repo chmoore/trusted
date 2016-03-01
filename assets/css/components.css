@@ -4423,11 +4423,11 @@ fieldset p {
 .logo-brand-sm {
 	float: left;
     width: 50%;
-    margin-top: 15px;
+    margin-top: -10px;
 }
 
 .logo-brand-sm img{
-	width:80%;
+	width:60%;
 	text-align:center;
 	margin-bottom:10px;
 	padding-bottom:0;
