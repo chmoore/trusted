@@ -3452,6 +3452,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 }
 
 .retailer-text {
+        clear: both;
 	font: 14px 'gotham_htfbook', Arial, sans-serif;
 	color:#000;
 	letter-spacing:0;
