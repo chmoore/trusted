@@ -164,6 +164,7 @@
         <div class="col-xs-3 div-left">
           <div class="sidebar" id="side-filters">
                         <h6>Categories</h6>
+                        <span class="small-close">Close</span>
                         <ul>
                         <li class="inactive-text">Watches</li>
 <div id="collections-all" class="show-all-div">
@@ -473,7 +474,8 @@ $("#brand-filters :checkbox").click(function()
 	
 	  $('#responsive-menu-button').sidr({
       name: 'sidr-main',
-      source: '#side-filters'
+      source: '#side-filters',
+	  renaming: false
     });
 	
 	 $('body').swipe( {

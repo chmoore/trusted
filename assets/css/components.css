@@ -419,7 +419,7 @@
 	@media (max-width: 767px) {
 
 		.map { padding: 0 20px; }
-		.row .map { padding: 0;margin-bottom: 20px!important; }
+		.row .map { padding: 0;margin-bottom: 20px!important; overflow:hidden; }
 
 	}
 
@@ -3452,9 +3452,14 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 }
 
 .retailer-text {
+        clear: both;
 	font: 14px 'gotham_htfbook', Arial, sans-serif;
 	color:#000;
 	letter-spacing:0;
+}
+
+.retailer-text ~ .retailer-text {
+  clear: none;
 }
 
 .retailer-text strong{
@@ -4118,6 +4123,10 @@ fieldset p {
  .button {
     padding: 0 20px;
  }
+ 
+ .small-close {
+	 display:none;
+ }
 
  .button:hover {
 	 color:#333!important;
@@ -4222,7 +4231,7 @@ fieldset p {
   top: 0;
   height: 100%;
   z-index: 999999;
-  width: 260px;
+  width: 300px;
   overflow-x: hidden;
   overflow-y: auto;
       background-color: #fff;
@@ -4243,6 +4252,7 @@ fieldset p {
      margin-top: 10px;
     margin-bottom: 15px;
     font-size: 14px;
+	padding:0;
 }
 .sidr-inner ul {
 	    font: 12px 'gotham_htfmedium', Arial, sans-serif;
@@ -4276,10 +4286,10 @@ fieldset p {
 
 .sidr.right {
   left: auto;
-  right: -260px;
+  right: -300px;
 }
 .sidr.left {
-  left: -260px;
+  left: -300px;
   right: auto;
 }
 .sidr h1,
@@ -4423,11 +4433,11 @@ fieldset p {
 .logo-brand-sm {
 	float: left;
     width: 50%;
-    margin-top: 15px;
+    margin-top: -10px;
 }
 
 .logo-brand-sm img{
-	width:80%;
+	width:60%;
 	text-align:center;
 	margin-bottom:10px;
 	padding-bottom:0;
@@ -4443,6 +4453,23 @@ fieldset p {
 	.sidebar {
 		display:none;
 	}
+
+#retail-wrap { display:flex; flex-direction: column; text-align:left;}
+#ret-address { order: 2 }
+#ret-map { order: 1 }
+
+.small-close {
+	display:block;
+	font-size:10px;
+	float:right;
+	margin-top: -40px;
+}
+
+.retailer-text-ind h4 {
+    margin: 20px 0;
+    border-bottom: 1px solid #c8c8c8;
+    padding-bottom: 20px;
+}
 }
 
 @media (max-width: 767px) {
@@ -4494,10 +4521,14 @@ fieldset p {
 	text-align:center;
 }
 .logo-brand img {
-	width:70%;
+	width:60%;
 }
 
 .logo-brand-sm {
+}
+
+.logo-brand-sm img {
+	width: 80%;
 }
 
 .back-to-search.right {
