@@ -3458,6 +3458,10 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	letter-spacing:0;
 }
 
+.retailer-text ~ .retailer-text {
+  clear: none;
+}
+
 .retailer-text strong{
 	font: 14px 'gotham_htfbold', Arial, sans-serif;
 	color:#000;
@@ -4459,6 +4463,12 @@ fieldset p {
 	font-size:10px;
 	float:right;
 	margin-top: -40px;
+}
+
+.retailer-text-ind h4 {
+    margin: 20px 0;
+    border-bottom: 1px solid #c8c8c8;
+    padding-bottom: 20px;
 }
 }
 
