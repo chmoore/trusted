@@ -2918,6 +2918,14 @@
 	font-size:14px;
 }
 
+.blue-link-12 {
+	color:#0088cc!important;
+	margin-top:-10px;
+	font-family: 'gotham_htfbold', Arial, sans-serif;
+	font-size:12px;
+}
+
+
 .results-sm {
 	color:#777;
 	font-size:13px;
@@ -4446,6 +4454,10 @@ fieldset p {
 .no-pad p {
 	    margin-bottom: 10px;
 }
+
+.menu-hidden {
+	display:none;
+}
 @media only screen and (max-width: 767px){
     #mobile-header {
         display: block;
@@ -4473,6 +4485,11 @@ fieldset p {
 }
 
 @media (max-width: 767px) {
+
+.menu-hidden {
+	display:block;
+}
+	
 
 	.retailer-col {
 	 -moz-column-count:2;
