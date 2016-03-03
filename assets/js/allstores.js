@@ -171,6 +171,7 @@ jQuery.fn.render = Transparency.jQueryPlugin;
       //Take results of getRetailerData and template up, display
       var outputResults = function(data, callResult) {
         if (data.length && typeof jQuery.fn.render === 'function') {
+          var brandStatesSort = {};
           //Reset (important when dropdowns change)
           brandIndex = [];
           $retailerListContainer.empty();
@@ -204,12 +205,26 @@ jQuery.fn.render = Transparency.jQueryPlugin;
           var countrySort = function(params) {
             var $countryContainer = $(params.element);
             $countryContainer.attr('data-country', this.countryName);
+            $countryContainer.attr('id', this.brandUniqueName + '_' + this.country);
           };
 
           //Stamps on state data attr
           var statesSort = function(params) {
             var $stateContainer = $(params.element);
             $stateContainer.attr('data-state', this.state);
+
+            //State count per country for columns
+            brandStatesSort[this.brandUniqueName] = brandStatesSort[this.brandUniqueName] || {};
+            brandStatesSort[this.brandUniqueName][this.country] = brandStatesSort[this.brandUniqueName][this.country] || {};
+
+            brandStatesSort[this.brandUniqueName][this.country].states =
+              typeof brandStatesSort[this.brandUniqueName][this.country].states === 'object' && brandStatesSort[this.brandUniqueName][this.country].states.length ?
+                brandStatesSort[this.brandUniqueName][this.country].states : [];
+
+            if (brandStatesSort[this.brandUniqueName][this.country].states.indexOf(this.state) === -1) {
+              brandStatesSort[this.brandUniqueName][this.country].states.push(this.state);
+            }
+
           };
 
           //Helps prevent duplicate headings
@@ -272,15 +287,52 @@ jQuery.fn.render = Transparency.jQueryPlugin;
           var $brandListing = $retailerCont.clone().render(data, directives).removeClass('render hide');
           //Stop the loading spinner
           showLoading(false);
-          $brandListing.find('.store-list').first().removeClass('single-line');
-          $retailerListContainer.append($brandListing);
-          //End Transparency.js templating logic
+          $retailerListContainer.append(postRenderCleanup($brandListing));
         }
 
         if (callResult === 'fail') {
           console.log('API failure');
         }
 
+      };
+
+      //Run before outputResults() to clean up and sort display
+      var postRenderCleanup = function($listingEle) {
+        var $retailConts = $listingEle.find('.retailer-text');
+
+        //Alphabetizes, reprints columns TODO: remove
+        $listingEle.find('.retailer-wrap').each(function () {
+          var stateList = [];
+          var $wrapDiv = $('<div class="col-md-4 retailer-text no-pad" />');
+          var maxCols = 3;
+          var alphaOrderedStates = function (a, b) {
+            return $(a).data('state') > $(b).data('state');
+          };
+          $(this).find('.retailer-text').each(function () {
+            var stateEles =  $(this).find('.state-container');
+            stateList.push(stateEles);
+            $(this).remove();
+          });
+
+          var flatStates = [];
+          $(stateList).each(function() {$.merge(flatStates, this);});
+          var alphaStateList = flatStates.sort(alphaOrderedStates);
+          var numInRow = Math.ceil(alphaStateList.length / maxCols);
+
+          while (alphaStateList.length) {
+            var colItems = alphaStateList.splice(0, numInRow);
+            var newCol = $wrapDiv.clone().html(colItems);
+            if (newCol.length) {
+              $(this).append(newCol);
+            }
+          }
+
+        });
+
+        //Cleanup leading line on results
+        $listingEle.find('.store-list').first().removeClass('single-line');
+
+        return $listingEle;
       };
 
       //Push selection to history state
