@@ -4446,6 +4446,10 @@ fieldset p {
 .no-pad p {
 	    margin-bottom: 10px;
 }
+
+.menu-hidden {
+	display:none;
+}
 @media only screen and (max-width: 767px){
     #mobile-header {
         display: block;
@@ -4473,6 +4477,11 @@ fieldset p {
 }
 
 @media (max-width: 767px) {
+
+.menu-hidden {
+	display:block;
+}
+	
 
 	.retailer-col {
 	 -moz-column-count:2;
