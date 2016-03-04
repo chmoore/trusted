@@ -14,7 +14,7 @@ jQuery.fn.render = Transparency.jQueryPlugin;
       $retailerCont = $('.retailer-container.render').remove(),
       isLoading = true,
       brandIndex = [],
-      selectedOption = {
+      selectedOptions = {
         'brand' : 'all-brands',
         'country' : 'all-countries'
       },
@@ -35,11 +35,30 @@ jQuery.fn.render = Transparency.jQueryPlugin;
 
       //Load
       var init = function() {
+        var refPathname = window.location.pathname.split('/'),
+            popped = ('state' in window.history && window.history.state !== null);
         showLoading(true);
         selectListener();
         window.onpopstate = historyAction;
-        historyUpdate(selectedOption);
-        getRetailerData(endpoints.all);
+
+        //Handle urls, all-stores base path
+        if (refPathname.length === 3) {
+          historyUpdate(selectedOptions);
+          getRetailerData(endpoints.all);
+        } else if (!popped) {
+          //URL has brand or country permalink
+          switch (refPathname.length) {
+            case 4:
+              selectedOptions.country = refPathname[3];
+              $countryDrop.val(selectedOptions.country).trigger('change');
+              break;
+            case 5:
+              selectedOptions.brand = refPathname[4];
+              $brandDrop.val(selectedOptions.brand).trigger('change');
+              break;
+          }
+        }
+
       };
 
       //Listener: Bind event listeners to dropdowns
@@ -56,52 +75,52 @@ jQuery.fn.render = Transparency.jQueryPlugin;
         if (selValue.length) {
           switch(filterType) {
             case 'brand':
-              selectedOption.brand = selValue;
-              if (selectedOption.country === 'all-countries') {
+              selectedOptions.brand = selValue;
+              if (selectedOptions.country === 'all-countries') {
 
-                if (selectedOption.brand === 'all-brands') {
+                if (selectedOptions.brand === 'all-brands') {
                   getRetailerData(endpoints.all, 'brandDropdown');
                 } else {
-                  getRetailerData(endpoints.brandAll+selectedOption.brand, 'brandDropdown');
+                  getRetailerData(endpoints.brandAll+selectedOptions.brand, 'brandDropdown');
                 }
 
               } else {
                 // Update Country dropdown for specific value (e.g. 'Gucci-Watches' for countries available)
-                if (selectedOption.brand !== 'all-brands') {
-                  getRetailerData(endpoints.brandHasCountries+selectedOption.brand, 'brandDropdown');
+                if (selectedOptions.brand !== 'all-brands') {
+                  getRetailerData(endpoints.brandHasCountries+selectedOptions.brand, 'brandDropdown');
                 } else {
-                  ////getRetailerData(endpoints.countryHasBrands+selectedOption.country, 'countryDropdown');
-                  getRetailerData(endpoints.countryAll+selectedOption.country, 'countryDropdown');
+                  ////getRetailerData(endpoints.countryHasBrands+selectedOptions.country, 'countryDropdown');
+                  getRetailerData(endpoints.countryAll+selectedOptions.country, 'countryDropdown');
                 }
               }
               break;
             case 'country':
-              selectedOption.country = selValue;
-              if (selectedOption.brand === 'all-brands') {
-                if (selectedOption.country === 'all-countries') {
+              selectedOptions.country = selValue;
+              if (selectedOptions.brand === 'all-brands') {
+                if (selectedOptions.country === 'all-countries') {
                   getRetailerData(endpoints.all, 'countryDropdown');
                 } else {
                   // Update Brand dropdown for specific value (e.g. 'US' for brands in US)
-                  getRetailerData(endpoints.countryAll+selectedOption.country, 'countryDropdown');
+                  getRetailerData(endpoints.countryAll+selectedOptions.country, 'countryDropdown');
                 }
               } else {
                 // Update Brand dropdown for specific value
-                //getRetailerData(endpoints.countryHasBrands+selectedOption.country, 'countryDropdown');
-                if (selectedOption.country !== 'all-countries') {
+                //getRetailerData(endpoints.countryHasBrands+selectedOptions.country, 'countryDropdown');
+                if (selectedOptions.country !== 'all-countries') {
                   //Specific country and brand
-                  getRetailerData(endpoints.brandCountryDetail+selectedOption.brand+'/'+selectedOption.country);
+                  getRetailerData(endpoints.brandCountryDetail+selectedOptions.brand+'/'+selectedOptions.country);
                 } else {
                   //All countries selected, brand selected
-                  getRetailerData(endpoints.brandAll+selectedOption.brand, 'brandDropdown');
+                  getRetailerData(endpoints.brandAll+selectedOptions.brand, 'brandDropdown');
                 }
               }
               break;
           }
         }
 
-        //Only update browser history if user selects option
+        //Only update url and browser history if user selects option
         if (e.type !== 'historyActionEvt') {
-          historyUpdate(selectedOption);
+          historyUpdate(selectedOptions);
         }
 
       };
@@ -337,10 +356,28 @@ jQuery.fn.render = Transparency.jQueryPlugin;
 
       //Push selection to history state
       var historyUpdate = function(selectionObj) {
+        var refPathname = window.location.pathname.split('/'),
+            basePath = window.location.origin + '/' + refPathname[1] + '/' + refPathname[2],
+            pushUrl;
+
+        if (selectionObj.brand === 'all-brands' && selectionObj.country !== 'all-countries') {
+          //Country selected, all brands available
+          pushUrl =  basePath + '/' + selectionObj.country;
+        } else if (selectionObj.brand !== 'all-brands' && selectionObj.country === 'all-countries') {
+          //Brand selected, all countries available
+          pushUrl =  basePath + '/brands/' + selectionObj.brand;
+        } else if (selectionObj.brand !== 'all-brands' && selectionObj.country !== 'all-countries') {
+          //Brand selected, country selected
+          pushUrl = basePath + '/' + selectionObj.brand + '/' + selectionObj.country;
+        } else {
+          pushUrl = basePath;
+        }
+
         if (typeof selectionObj === 'object') {
           var selectionData = JSON.stringify(selectionObj);
-          window.history.pushState(selectionData, 'ALL AUTHORIZED RETAILERS', window.location.pathname);
+          window.history.pushState(selectionData, 'ALL AUTHORIZED RETAILERS', pushUrl);
         }
+
       };
 
       //Handle onpopstate event for history actions
