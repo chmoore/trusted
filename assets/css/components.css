@@ -1068,9 +1068,8 @@
     .fullwidthbanner { visibility: hidden }
 
 	.brand-slide {
-		height:400px!important;
+		height:100%!important;
 		margin-top:0!important;
-		background:#000;
 	}
 
 	.lead-slide {
@@ -3730,6 +3729,12 @@ fieldset p {
 	width:100%;
 	margin-top: 50px;
 	background:#F9F9F9;
+	height: auto;
+    position: relative;
+}
+
+.auto-height {
+	height:auto!important;
 }
 
 .results-main {
