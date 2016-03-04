@@ -260,9 +260,16 @@
 	
 	.sidebar-content p {
 		margin-bottom:24px;
-		font: 16px 'Noto Serif', Arial, sans-serif; 
+		font: 14px 'Noto Serif', Arial, sans-serif; 
 		/*	font: 14px 'gotham_htfbook', Arial, sans-serif;*/
-		line-height:28px;
+		line-height:24px;
+	}
+	
+	.sidebar-content li {
+	 margin-bottom: 15px;
+    color: #5b5b5b;
+    line-height: 20px;
+	list-style:none;
 	}
 	
 	.sidebar ul {
