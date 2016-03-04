@@ -42,7 +42,7 @@ jQuery.fn.render = Transparency.jQueryPlugin;
         window.onpopstate = historyAction;
 
         //Handle urls, all-stores base path
-        if (refPathname.length === 3) {
+        if (refPathname.length <= 4 && !refPathname[3].length) {
           historyUpdate(selectedOptions);
           getRetailerData(endpoints.all);
         } else if (!popped) {
