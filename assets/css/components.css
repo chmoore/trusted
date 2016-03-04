@@ -3504,7 +3504,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 }
 
 .retailer-text p {
-	margin-bottom: 0px!important;
+	margin-bottom: 5px!important;
     line-height: 20px;
 }
 
