@@ -21,9 +21,9 @@ jQuery.fn.render = Transparency.jQueryPlugin;
       endpoints = {
         //All brands, all countries
         'all' : '/webservices/store/storelist',
-        //List all brands available in specific country: /store/manufacturer/names/<country> NOTE: only returns brands for brandDrop
+        //List all brands available in specific country: /store/manufacturer/names/<country> NOTE: only returns brands for brandDrop, no HTML for results
         'countryHasBrands' : '/webservices/store/manufacturer/names/',
-        //List of countries for a selected brand: store/countrieslist/<manufacturerId> NOTE: only returns countries for countryDrop
+        //List of countries for a selected brand: store/countrieslist/<manufacturerId> NOTE: only returns countries for countryDrop, no HTML for results
         'brandHasCountries' : '/webservices/store/countrieslist/',
         //All brands and listings for this country: store/storelist/<country>
         'countryAll': '/webservices/store/storelist/',
@@ -85,38 +85,38 @@ jQuery.fn.render = Transparency.jQueryPlugin;
 
         if (selValue.length) {
           switch(filterType) {
+
             case 'brand':
               selectedOptions.brand = selValue;
               if (selectedOptions.country === 'all-countries') {
-
                 if (selectedOptions.brand === 'all-brands') {
-                  getRetailerData(endpoints.all, 'brandDropdown');
+                  getRetailerData(endpoints.all, 'allDropdown');
                 } else {
                   getRetailerData(endpoints.brandAll+selectedOptions.brand, 'brandDropdown');
                 }
-
               } else {
                 // Update Country dropdown for specific value (e.g. 'Gucci-Watches' for countries available)
                 if (selectedOptions.brand !== 'all-brands') {
+                  getRetailerData(endpoints.brandCountryDetail+selectedOptions.brand+'/'+selectedOptions.country);
                   getRetailerData(endpoints.brandHasCountries+selectedOptions.brand, 'brandDropdown', false);
                 } else {
                   ////getRetailerData(endpoints.countryHasBrands+selectedOptions.country, 'countryDropdown', false);
-                  getRetailerData(endpoints.countryAll+selectedOptions.country, 'countryDropdown');
+                  getRetailerData(endpoints.countryAll+selectedOptions.country, 'brandDropdown');
                 }
               }
               break;
+
             case 'country':
               selectedOptions.country = selValue;
               if (selectedOptions.brand === 'all-brands') {
                 if (selectedOptions.country === 'all-countries') {
-                  getRetailerData(endpoints.all, 'countryDropdown');
+                  getRetailerData(endpoints.all, 'allDropdown');
                 } else {
                   // Update Brand dropdown for specific value (e.g. 'US' for brands in US)
                   getRetailerData(endpoints.countryAll+selectedOptions.country, 'countryDropdown');
                 }
               } else {
                 // Update Brand dropdown for specific value
-                //getRetailerData(endpoints.countryHasBrands+selectedOptions.country, 'countryDropdown', false);
                 if (selectedOptions.country !== 'all-countries') {
                   //Specific country and brand
                   getRetailerData(endpoints.brandCountryDetail+selectedOptions.brand+'/'+selectedOptions.country);
@@ -127,6 +127,7 @@ jQuery.fn.render = Transparency.jQueryPlugin;
                 }
               }
               break;
+
           }
         }
 
@@ -145,12 +146,17 @@ jQuery.fn.render = Transparency.jQueryPlugin;
           }
           $.get(webserviceUrl)
           .done(function(data) {
-            if (isDropdown === 'brandDropdown' || isDropdown === 'countryDropdown') {
+            if (isDropdown === 'brandDropdown' || isDropdown === 'countryDropdown' || isDropdown === 'allDropdown') {
               //If false renderBool, endpoint only updates dropdowns (e.g. countryHasBrands, brandHasCountries)
               if (renderBool === undefined || renderBool === true) {
                 outputResults(data);      
               }
-              updateDropdowns(data, isDropdown);
+              if (isDropdown === 'allDropdown') {
+                updateDropdowns(data, 'brandDropdown');
+                updateDropdowns(data, 'countryDropdown');
+              } else {
+                updateDropdowns(data, isDropdown);      
+              }
             } else {
               outputResults(data);
             }
@@ -176,9 +182,9 @@ jQuery.fn.render = Transparency.jQueryPlugin;
                   countryOptions = [];
               countryOptions.push($countryDrop.children('option[disabled="disabled"], option[value="all-countries"]'));
               for (var j=0; j < data.length; j++) {
-                var countryOptionValue = data[j].country,
+                var countryOptionValue = data[j].country || data[j].countryCode,
                   countryOptionTxt = data[j].countryName,
-                  countryOptionSelected = data[j].country === currCountry ? 'selected="true"' : '',
+                  countryOptionSelected = countryOptionValue === currCountry ? 'selected="true"' : '',
                   countryOptionResult = '<option value="' + countryOptionValue + '" ' + countryOptionSelected + '>' + countryOptionTxt + '</option>';
                 if (countryOptions.indexOf(countryOptionResult) === -1 && countryOptionValue) {
                   countryOptions.push(countryOptionResult);
@@ -194,7 +200,7 @@ jQuery.fn.render = Transparency.jQueryPlugin;
               for (var k=0; k < data.length; k++) {
                 var brandOptionValue = data[k].brandUniqueName,
                     brandOptionTxt = data[k].brandName,
-                    brandOptionSelected = data[k].brandUniqueName === currBrand ? 'selected="true"' : '',
+                    brandOptionSelected = brandOptionValue === currBrand ? 'selected="true"' : '',
                     brandOptionResult = '<option value="' + brandOptionValue + '" ' + brandOptionSelected + '>' + brandOptionTxt + '</option>';
                 if (brandOptions.indexOf(brandOptionResult) === -1 && brandOptionValue) {
                   brandOptions.push(brandOptionResult);
