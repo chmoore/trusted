@@ -1697,6 +1697,10 @@
 		line-height:18px;
 		text-align:left;
 	}
+	
+	.item-sm h6 a {
+		text-align:center;
+	}
 
 	.item-sm .item-title {
 		font-size:12px;
@@ -1800,6 +1804,10 @@
 		font-family: 'gotham_htfmedium', Arial, sans-serif!important;
 		-webkit-transition: all 0.5s;
    		transition: all 0.5s;
+	}
+	
+	.item-txt {
+		text-align:left;
 	}
 
 	.price-ital {
@@ -2412,7 +2420,7 @@
 }
 
 #bg-1-ret {
-    padding: 0px 0 20px 0;
+    padding: 15px 0 30px 0;
     margin-top: -80px;
     /*background-color: #efefef;*/
 	background-color:#F7F7F7;
@@ -3992,7 +4000,7 @@ fieldset p {
 
 .country-div {
 	margin:5px 0;
-	padding:20px 0 40px 0;
+	padding:20px 0 0 0;
 	/*border-top: 1px solid #e1e1e1;*/
 }
 
@@ -4509,7 +4517,41 @@ fieldset p {
 .retailer-text-ind h4 {
     margin: 20px 0;
     border-bottom: 1px solid #c8c8c8;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+}
+
+.headline {
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.country-div {
+    margin: 5px 0;
+    padding: 20px 0 20px 0;
+}
+
+.retailer-text p {
+    margin-bottom: 10px!important;
+    line-height: 20px;
+}
+
+.item-img-full {
+	float:left;
+	width:50%;
+}
+
+.item-txt {
+	float:left;
+	width:50%;
+}
+
+.ewf_widget_authenticate {
+    width: 100%;
+}
+
+.item-sm {
+	width: 100%;
+    float: left;
 }
 }
 
