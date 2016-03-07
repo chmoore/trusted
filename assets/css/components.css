@@ -1705,18 +1705,31 @@
 	.item-sm .item-title {
 		font-size:12px;
 		line-height:18px;
-		text-align:center;
-		font-weight: bold;
+		text-align:left;
+		font: 12px 'gotham_htfmedium', Arial, sans-serif!important;
 	}
+	
+	.item-sm .item-title a {
+		color: #0088cc!important;
+    font-family: 'gotham_htfbold', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.item-sm .item-title a:hover {
+	text-decoration:underline;
+}
 
 	.item-full h6 {
 		font-size:12px;
 		line-height:18px;
-		text-align:center;
+		text-align:left;
 	}
 
 	.item-sm p {
-		text-align:center;
+		text-align:left;
+		font: 13px 'gotham_htfbold', Arial, sans-serif!important;
+   		text-transform: uppercase!important;
+    	margin-top: 10px;
 	}
 
 	.item-img {
@@ -4552,6 +4565,10 @@ fieldset p {
 .item-sm {
 	width: 100%;
     float: left;
+}
+
+#bg-1b {
+	margin-bottom:0;
 }
 }
 
