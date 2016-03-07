@@ -36,29 +36,40 @@ jQuery.fn.render = Transparency.jQueryPlugin;
       //Load
       var init = function() {
         var refPathname = window.location.pathname.split('/'),
-            popped = ('state' in window.history && window.history.state !== null);
+            historyPop = ('state' in window.history && window.history.state !== null),
+            allStoresState = refPathname.length <= 4 && (refPathname[3] === undefined || !refPathname[3].length);
         showLoading(true);
         selectListener();
         window.onpopstate = historyAction;
 
-        //Handle urls, all-stores base path
-        if (refPathname.length <= 4 && !refPathname[3].length) {
-          historyUpdate(selectedOptions);
-          getRetailerData(endpoints.all);
-        } else if (!popped) {
-          //URL has brand or country permalink
-          switch (refPathname.length) {
-            case 4:
-              selectedOptions.country = refPathname[3];
-              $countryDrop.val(selectedOptions.country).trigger('change');
-              break;
-            case 5:
-              selectedOptions.brand = refPathname[4];
-              $brandDrop.val(selectedOptions.brand).trigger('change');
-              break;
+        //Refresh or back button vs. initial load
+        if (!historyPop) {
+          //Handle urls, all-stores base path
+          if (!allStoresState) {
+            //For brand or country direct URLs (not back button), stores/all-stores/brands/<brandUniqueName>
+            if (refPathname.length === 4) {
+                //stores/all-stores/US
+                selectedOptions.country = refPathname[3];
+                $countryDrop.val(selectedOptions.country).trigger('change');
+              } else if (refPathname.length === 5) {
+                if (refPathname[3] !== 'brands') {
+                  //stores/all-stores/Gucci-Watches/CA
+                  selectedOptions.brand = refPathname[3];
+                  selectedOptions.country = refPathname[4];
+                  $brandDrop.val(selectedOptions.brand).trigger('change');
+                  $countryDrop.val(selectedOptions.country).trigger('change');
+                } else {
+                  //stores/all-stores/Gucci-Watches
+                  selectedOptions.brand = refPathname[4];
+                  $brandDrop.val(selectedOptions.brand).trigger('change');
+                }
+            }
           }
+          getRetailerData(endpoints.all);
+          historyUpdate(selectedOptions);
+        } else {
+          historyAction(window.history.state);
         }
-
       };
 
       //Listener: Bind event listeners to dropdowns
@@ -382,9 +393,9 @@ jQuery.fn.render = Transparency.jQueryPlugin;
 
       //Handle onpopstate event for history actions
       var historyAction = function(e) {
-         var selectionRestore = JSON.parse(e.state);
-         $brandDrop.val(selectionRestore.brand).trigger('historyActionEvt');
-         $countryDrop.val(selectionRestore.country).trigger('historyActionEvt');
+           var selectionRestore = e.state ? JSON.parse(e.state) : JSON.parse(window.history.state);
+           $brandDrop.val(selectionRestore.brand).trigger('historyActionEvt');
+           $countryDrop.val(selectionRestore.country).trigger('historyActionEvt');
       };
 
       //Show or hide Throbber loading indicator
