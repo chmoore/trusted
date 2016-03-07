@@ -21,9 +21,9 @@ jQuery.fn.render = Transparency.jQueryPlugin;
       endpoints = {
         //All brands, all countries
         'all' : '/webservices/store/storelist',
-        //List all brands available in specific country: /store/manufacturer/names/<country>
+        //List all brands available in specific country: /store/manufacturer/names/<country> NOTE: only returns brands for brandDrop
         'countryHasBrands' : '/webservices/store/manufacturer/names/',
-        //List of countries for a selected brand: store/countrieslist/<manufacturerId>
+        //List of countries for a selected brand: store/countrieslist/<manufacturerId> NOTE: only returns countries for countryDrop
         'brandHasCountries' : '/webservices/store/countrieslist/',
         //All brands and listings for this country: store/storelist/<country>
         'countryAll': '/webservices/store/storelist/',
@@ -98,9 +98,9 @@ jQuery.fn.render = Transparency.jQueryPlugin;
               } else {
                 // Update Country dropdown for specific value (e.g. 'Gucci-Watches' for countries available)
                 if (selectedOptions.brand !== 'all-brands') {
-                  getRetailerData(endpoints.brandHasCountries+selectedOptions.brand, 'brandDropdown');
+                  getRetailerData(endpoints.brandHasCountries+selectedOptions.brand, 'brandDropdown', false);
                 } else {
-                  ////getRetailerData(endpoints.countryHasBrands+selectedOptions.country, 'countryDropdown');
+                  ////getRetailerData(endpoints.countryHasBrands+selectedOptions.country, 'countryDropdown', false);
                   getRetailerData(endpoints.countryAll+selectedOptions.country, 'countryDropdown');
                 }
               }
@@ -116,10 +116,11 @@ jQuery.fn.render = Transparency.jQueryPlugin;
                 }
               } else {
                 // Update Brand dropdown for specific value
-                //getRetailerData(endpoints.countryHasBrands+selectedOptions.country, 'countryDropdown');
+                //getRetailerData(endpoints.countryHasBrands+selectedOptions.country, 'countryDropdown', false);
                 if (selectedOptions.country !== 'all-countries') {
                   //Specific country and brand
                   getRetailerData(endpoints.brandCountryDetail+selectedOptions.brand+'/'+selectedOptions.country);
+                  getRetailerData(endpoints.countryHasBrands+selectedOptions.country, 'countryDropdown', false);
                 } else {
                   //All countries selected, brand selected
                   getRetailerData(endpoints.brandAll+selectedOptions.brand, 'brandDropdown');
@@ -137,7 +138,7 @@ jQuery.fn.render = Transparency.jQueryPlugin;
       };
 
       //Getter: GET request to endpoint with serial number, call results fn if successful
-      var getRetailerData = function(webserviceUrl, isDropdown) {
+      var getRetailerData = function(webserviceUrl, isDropdown, renderBool) {
         if (webserviceUrl && typeof webserviceUrl === 'string') {
           if (!isLoading) {
             showLoading(true);
@@ -145,7 +146,10 @@ jQuery.fn.render = Transparency.jQueryPlugin;
           $.get(webserviceUrl)
           .done(function(data) {
             if (isDropdown === 'brandDropdown' || isDropdown === 'countryDropdown') {
-              outputResults(data);
+              //If false renderBool, endpoint only updates dropdowns (e.g. countryHasBrands, brandHasCountries)
+              if (renderBool === undefined || renderBool === true) {
+                outputResults(data);      
+              }
               updateDropdowns(data, isDropdown);
             } else {
               outputResults(data);
@@ -168,12 +172,14 @@ jQuery.fn.render = Transparency.jQueryPlugin;
           switch (dropdownType) {
             case 'brandDropdown':
               //Update country dropdown
-              var countryOptions = [];
+              var currCountry = $countryDrop.val(),
+                  countryOptions = [];
               countryOptions.push($countryDrop.children('option[disabled="disabled"], option[value="all-countries"]'));
               for (var j=0; j < data.length; j++) {
                 var countryOptionValue = data[j].country,
                   countryOptionTxt = data[j].countryName,
-                  countryOptionResult = '<option value="' + countryOptionValue + '">' + countryOptionTxt + '</option>';
+                  countryOptionSelected = data[j].country === currCountry ? 'selected="true"' : '',
+                  countryOptionResult = '<option value="' + countryOptionValue + '" ' + countryOptionSelected + '>' + countryOptionTxt + '</option>';
                 if (countryOptions.indexOf(countryOptionResult) === -1 && countryOptionValue) {
                   countryOptions.push(countryOptionResult);
                 }
@@ -182,12 +188,14 @@ jQuery.fn.render = Transparency.jQueryPlugin;
               break;
             case 'countryDropdown':
               //Update brand dropdown
-              var brandOptions = [];
+              var currBrand = $brandDrop.val(),
+                  brandOptions = [];
               brandOptions.push($brandDrop.children('option[disabled="disabled"], option[value="all-brands"]'));
               for (var k=0; k < data.length; k++) {
-                var brandOptionValue = data[[k]].brandUniqueName,
-                    brandOptionTxt = data[[k]].brandName,
-                    brandOptionResult = '<option value="' + brandOptionValue + '">' + brandOptionTxt + '</option>';
+                var brandOptionValue = data[k].brandUniqueName,
+                    brandOptionTxt = data[k].brandName,
+                    brandOptionSelected = data[k].brandUniqueName === currBrand ? 'selected="true"' : '',
+                    brandOptionResult = '<option value="' + brandOptionValue + '" ' + brandOptionSelected + '>' + brandOptionTxt + '</option>';
                 if (brandOptions.indexOf(brandOptionResult) === -1 && brandOptionValue) {
                   brandOptions.push(brandOptionResult);
                 }
@@ -242,19 +250,6 @@ jQuery.fn.render = Transparency.jQueryPlugin;
           var statesSort = function(params) {
             var $stateContainer = $(params.element);
             $stateContainer.attr('data-state', this.state);
-
-            //State count per country for columns
-            brandStatesSort[this.brandUniqueName] = brandStatesSort[this.brandUniqueName] || {};
-            brandStatesSort[this.brandUniqueName][this.country] = brandStatesSort[this.brandUniqueName][this.country] || {};
-
-            brandStatesSort[this.brandUniqueName][this.country].states =
-              typeof brandStatesSort[this.brandUniqueName][this.country].states === 'object' && brandStatesSort[this.brandUniqueName][this.country].states.length ?
-                brandStatesSort[this.brandUniqueName][this.country].states : [];
-
-            if (brandStatesSort[this.brandUniqueName][this.country].states.indexOf(this.state) === -1) {
-              brandStatesSort[this.brandUniqueName][this.country].states.push(this.state);
-            }
-
           };
 
           //Helps prevent duplicate headings
