@@ -124,14 +124,21 @@
             </ul>
           </nav>
           <div class="search-wrap">
-            <div id="sb-search" class="sb-search">
-              <form>
-                <label for="search" class="visuallyhidden">Search Trusted.com: </label>
-                <input class="sb-search-input" placeholder="Search Trusted.com" type="text" value="" name="search" id="search">
-                <span class="sb-icon-search"> Search</span>
-              </form>
-            </div>
-          </div>
+           <div id="sb-search" class="sb-search">
+    <form class="searchbox">
+        <input type="search" placeholder="Search Trusted.com" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+         <div class="col-sm-3 input-group-addon search-drop-down">
+              <label for="selected" class="visuallyhidden">Search Trusted.com: </label>
+              <select class="selectpicker" name="selected" id="selected">
+  <option>Site</option>
+  <option>Shop</option>
+</select>
+</div>
+        <input type="submit" class="searchbox-submit" value="GO">
+        <span class="searchbox-icon sb-icon-search"> Search</span>
+    </form>
+</div>
+</div>
         </div>
         <!-- end .span9 --> 
       </div>

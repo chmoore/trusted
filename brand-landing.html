@@ -153,15 +153,22 @@
                                 </li>
                             </ul>
                         </nav>	
-						    <div class="search-wrap">
-					<div id="sb-search" class="sb-search">
-						<form>
-                        <label for="search" class="visuallyhidden">Search Trusted.com: </label>
-							<input class="sb-search-input" placeholder="Search Trusted.com" type="text" value="" name="search" id="search">
-							<span class="sb-icon-search"> Search</span>
-						</form>
-					</div>
-                    </div>
+						   <div class="search-wrap">
+           <div id="sb-search" class="sb-search">
+    <form class="searchbox">
+        <input type="search" placeholder="Search Trusted.com" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+         <div class="col-sm-3 input-group-addon search-drop-down">
+              <label for="selected" class="visuallyhidden">Search Trusted.com: </label>
+              <select class="selectpicker" name="selected" id="selected">
+  <option>Site</option>
+  <option>Shop</option>
+</select>
+</div>
+        <input type="submit" class="searchbox-submit" value="GO">
+        <span class="searchbox-icon sb-icon-search"> Search</span>
+    </form>
+</div>
+</div>
                     </div><!-- end .span9 -->
                 </div><!-- end .row -->		
         
@@ -229,7 +236,13 @@
                 <h4>About Richard Mille</h4>
                  <div class="divider single-line-side"></div>
                   <div class="sidebar-content">
-                 <p>Richard Mille’s success is founded upon three crucial elements: the best in technical innovation, the best of artistry and architecture, the best of the heritage and culture of fine watchmaking with hand finishing.</p>  
+                 <p>Richard Mille’s success is founded upon three crucial elements: the best in technical innovation, the best of artistry and architecture, the best of the heritage and culture of fine watchmaking with hand finishing.<br>
+                  <a href="" id="collections-all-show" class="show-more" onclick="showHide('collections-all');return false;">Read More</a></p>  
+<div id="collections-all" class="show-all-div">
+<p><strong>FOR RICHARD MILLE, THE PERFECT TIMEPIECE MUST BE A TRUE EXERCISE IN THE CREATION OF COMPLEX, HOLISTIC RELATIONSHIPS THAT UNITE THE INTERIOR AND EXTERIOR OF THE WATCH.</strong></p>
+<p>The exterior issues of comfort offered by the ergonomic design approach and visually striking lines are important; yet they represent only the beginning of a long process in the creation of a timepiece. The interior of the watch, the entire movement, right down to seemingly inconsequential details of the shape and finish of screws, the architectural way the interior space of the case is utilized for the movement layout (which must also be a work of art on its own) is an aspect of equal importance to me. This is perhaps the essential heart of his approach – a view of watchmaking in which every detail in a timepiece is of crucial importance and easy solutions are not part of the working vocabulary. It is only when a complete unity of approach has been planned and executed in this manner that one can attempt to define and achieve perfection. These are core principles that define every timepiece within the Richard Mille collection.</p>
+   <p><a href="" id="collections-all-hide" class="show-less" onclick="showHide('collections-all');return false;">- Close</a></p>
+          </div>  
                  </div> 
            <div class="sidebar-content">
                 <h6>Latest News</h6>
@@ -241,7 +254,9 @@
             </div>
                 
                         
-                </div></div></div>
+                </div></div>
+                <div class="clearer"></div>
+                </div>
                 
                 <!-- <div class="brand-search breadcrumbs">
                      <div class="container">
@@ -265,7 +280,7 @@
         <span class="grid-icon"></span>&nbsp;Grid</a></div></div>
         </div></div>-->
         
-        <div class="fullwidth-section" id="bg-1wh">
+        <div class="fullwidth-section" id="bg-brand">
         <div class="container">
         <div class="row">
         <div class="offset1 span10 text-center">
@@ -293,7 +308,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 product-content gray">
-                    <div class="divider single-line-side space-height"></div>
                       <div class="headline-retail">
                         	
                             <h4>Featured Products</h4>
@@ -308,8 +322,8 @@
                     <div class="item-img-full">
 <img src="assets/images/godard-sm.jpg" alt="">
 </div>
-                                         <div class="item-title">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</div>
-                                 <p class="price-ital">Inquire for price</p>
+                                         <div class="item-title"><a href="item-display.html">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></div>
+                                 <p class="price-ital">$9,999.00</p>
           <div class="fav"><i class="fa fa-heart-o fa-lg"></i><span class="visuallyhidden">Add to Wishlist</span></div>
                                  <div class="cart-icon"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></div> </a> </div>
                     
@@ -321,8 +335,8 @@
 										<img src="assets/images/godard-sm-1.jpg" alt="">
                                         </div>
 	
-								 <div class="item-title">RM 019 TOURBILLON</div>
-                                  <p class="price-ital">Inquire for price</p>
+								 <div class="item-title"><a href="#">RM 019 TOURBILLON</a></div>
+                                  <p class="price-ital">$15,000.00</p>
                                  <div class="fav"><i class="fa fa-heart-o fa-lg"></i><span class="visuallyhidden">Add to Wishlist</span></div>
                                  <div class="cart-icon"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></div></a></div>
                     
@@ -334,23 +348,23 @@
 										<img src="assets/images/godard-sm-2.jpg" alt="">
                                         </div>
 
-								 <div class="item-title">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</div>
-                                 <p class="price-ital">Inquire for price</p>
+								 <div class="item-title"><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></div>
+                                 <p class="price-ital">$22,000.00</p>
                                  <div class="fav"><i class="fa fa-heart-o fa-lg"></i><span class="visuallyhidden">Add to Wishlist</span></div>
                                  <div class="cart-icon"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></div> </a> </div>
                     </div>
                     <div class="col-sm-3 no-left-pad">
                     <div class="item-sm">
-                    <a href="item-display.html">	
-                     <div class="item-img-full">
-										<img src="assets/images/godard-sm-2.jpg" alt="">
+                    
+                     <div class="item-img-full"><a href="item-display.html">	
+										<img src="assets/images/godard-sm-2.jpg" alt=""></a> 
                                         </div>
 
-								 <div class="item-title">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</div>
+								 <div class="item-title"><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></div>
                                  <p class="price-ital">Inquire for price</p>
                                  <div class="fav"><i class="fa fa-heart-o fa-lg"></i><span class="visuallyhidden">Add to Wishlist</span></div>
                                  
-                                 <div class="cart-icon"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></div> </a> 
+                                 <div class="cart-icon"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></div> 
                                  </div>
                     
                     </div>
@@ -361,7 +375,7 @@
                     <div class="item-img-full">
 <img src="assets/images/godard-sm.jpg" alt="">
 </div>
-                                         <div class="item-title">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</div>
+                                         <div class="item-title"><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></div>
                                  <p class="price-ital">Inquire for price</p>
           <div class="fav"><i class="fa fa-heart-o fa-lg"></i></div>
          <div class="cart-icon"><i class="fa fa-cart-plus fa-lg"></i></div> </a>                  		
@@ -375,7 +389,7 @@
 										<img src="assets/images/godard-sm-1.jpg" alt="">
                                         </div>
 	
-								 <div class="item-title">RM 019 TOURBILLON</div>
+								 <div class="item-title"><a href="#">RM 019 TOURBILLON</a></div>
                                   <p class="price-ital">Inquire for price</p>
                                  <div class="fav"><i class="fa fa-heart-o fa-lg"></i><span class="visuallyhidden">Add to Wishlist</span></div>
                                  <div class="cart-icon"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></div></a>   
@@ -389,7 +403,7 @@
 										<img src="assets/images/godard-sm-2.jpg" alt="">
                                         </div>
 
-								 <div class="item-title">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</div>
+								 <div class="item-title"><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></div>
                                  <p class="price-ital">Inquire for price</p>
                                  <div class="fav"><i class="fa fa-heart-o fa-lg"></i><span class="visuallyhidden">Add to Wishlist</span></div>
                                  <div class="cart-icon"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></div> </a>   
@@ -397,15 +411,13 @@
                     </div>
                     <div class="col-sm-3 no-left-pad">
                     <div class="item-sm">
-                    <a href="item-display.html">
-                     <div class="item-img-full">
-										<img src="assets/images/godard-sm-2.jpg" alt="">
+                    <a href="brand-results.html">				
+				  <div class="item-img-full">
+										<img src="assets/images/rm-brand-logo.jpg" alt="">
                                         </div>
-
-								 <div class="item-title">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</div>
-                                 <p class="price-ital">Inquire for price</p>
-                                 <div class="fav"><i class="fa fa-heart-o fa-lg"></i><span class="visuallyhidden">Add to Wishlist</span></div>
-                                 <div class="cart-icon"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></div> </a>  
+	
+								 <h6>View All Richard Mille</h6>
+                                 </a>
 							</div>
                     
                     </div>
@@ -610,6 +622,60 @@
     $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
       " - $" + $( "#slider-range" ).slider( "values", 1 ) );
   });
+  
+  function showHide(shID) {
+ if (document.getElementById(shID)) {
+  if (document.getElementById(shID+'-show').style.display != 'none') {
+   document.getElementById(shID+'-show').style.display = 'none';
+   document.getElementById(shID).style.opacity = '1';
+   document.getElementById(shID).style.visibility = 'visible';
+   document.getElementById(shID).style.display = 'block';
+  }
+  else {
+   document.getElementById(shID+'-show').style.display = 'inline';
+   document.getElementById(shID).style.display = 'none';
+  }
+ }
+}
+  $(document).ready(function(){
+            var submitIcon = $('.searchbox-icon');
+            var inputBox = $('.searchbox-input');
+            var searchBox = $('.searchbox');
+            var isOpen = false;
+            submitIcon.click(function(){
+                if(isOpen == false){
+                    searchBox.addClass('searchbox-open');
+                    inputBox.focus();
+                    isOpen = true;
+                } else {
+                    searchBox.removeClass('searchbox-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                }
+            });  
+             submitIcon.mouseup(function(){
+                    return false;
+                });
+            searchBox.mouseup(function(){
+                    return false;
+                });
+            $(document).mouseup(function(){
+                    if(isOpen == true){
+                        $('.searchbox-icon').css('display','block');
+                        submitIcon.click();
+                    }
+                });
+        });
+            function buttonUp(){
+                var inputVal = $('.searchbox-input').val();
+                inputVal = $.trim(inputVal).length;
+                if( inputVal !== 0){
+                    $('.searchbox-icon').css('display','none');
+                } else {
+                    $('.searchbox-input').val('');
+                    $('.searchbox-icon').css('display','block');
+                }
+            }
 	</script>
     
 </body>

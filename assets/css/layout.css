@@ -1388,6 +1388,8 @@
 			-webkit-background-size: cover;
 					background-size: cover;	
 					top:0;	
+					  margin-top: 0;
+   			 padding-top: 0!important;
 		}
 		
 		#bg-1wc {
@@ -1396,7 +1398,7 @@
 		
 		.border {
     border-bottom: 1px solid #dadada;
-    padding-right: 40px;
+    padding-right: 0px!important;
 	border-right:none!important;
 }
 .retailer-text-ind .col-xs-6{
