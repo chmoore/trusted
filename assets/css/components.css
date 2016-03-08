@@ -4576,8 +4576,8 @@ fieldset p {
 }
 
 .item-txt {
-	float:left;
-	width:50%;
+	/*float:left;
+	width:50%;*/
 }
 
 .ewf_widget_authenticate {
