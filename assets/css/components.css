@@ -3608,10 +3608,6 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	float:right;
 }
 
-.no-left-pad {
-	padding-left:0!important;
-}
-
 fieldset p {
 	margin-bottom:0;
 }
