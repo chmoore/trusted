@@ -1,8 +1,11 @@
+/*jshint loopfunc: true*/
 /*global Transparency */
 /*global google */
 /*global Throbber */
 /*global InfoBox */
 /*global _ */
+/*global MarkerWithLabel */
+/*global handleLocationError */
 
 var map, markerList = [], locations = [];
 var infowindow;
@@ -46,7 +49,7 @@ function fillInAddress() {
   } else {
       currentLatlng = { 'lat': place.geometry.location.lat, 'lng': place.geometry.location.lng };
       for (var component in componentForm) {
-        if (component) {
+        if (component !== undefined) {
           document.getElementById(component).value = '';
           document.getElementById(component).disabled = false;
         }
