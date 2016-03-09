@@ -3549,7 +3549,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 }
 
 .ret-links {
-	margin-bottom:20px!important;
+	margin-bottom:40px!important;
 }
 
 .retailer-text-ind {
@@ -4545,7 +4545,7 @@ fieldset p {
 
 .retailer-text-ind h4 {
     margin: 20px 0;
-    border-bottom: 1px solid #c8c8c8;
+    /*border-bottom: 1px solid #c8c8c8;*/
     padding-bottom: 0px;
 }
 
