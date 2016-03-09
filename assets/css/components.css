@@ -2937,6 +2937,7 @@
 	position:absolute;
 	right:0;
 	top:0;
+	display:none;
 }
 
 .search-hi {
@@ -3988,9 +3989,7 @@ fieldset p {
   text-decoration: none;
   /*padding-left: 8px;*/
   color: #0088cc;
-    font: 12px 'gotham_htfbold', Arial, sans-serif!important;
- }
- a.show-less {
+    font: 14px 'gotham_htfbold', Arial, sans-serif!important;
  }
  a.show-more:hover, a.show-less:hover {
  }
