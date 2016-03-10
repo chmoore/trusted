@@ -165,17 +165,7 @@
           <div class="sidebar">
                         <h6>Categories</h6>
                         <ul>
-                        <li><a href="" id="collections-all-show" class="show-more show-black" onclick="showHide('collections-all');return false;">Watches</a></li>
-<div id="collections-all" class="show-all-div">
-  <ul>
-            <li class="active">
-              <a href="brand-results.html">Men's Watches</a></li>
-            <li>
-              Women's Watches</li>
-              </ul>
-          </div>   
-              </ul>
-               <ul>
+                        <li class="active">Watches</li>
                         <li class="active">Artists</li>
               </ul>
             <!--<p>
@@ -187,37 +177,44 @@
            <!-- <div class="divider single-line-side"></div>-->
             
               <div class="divider single-line-side"></div>
-              <h6>Filter by price</h6>
+              <h6>Price</h6>
               <p>
               <input type="checkbox" name="checkbox" value="" checked>
-              $0 - $2,000 </p>
+              $0 - $1,999 </p>
             <p>
               <input type="checkbox" name="checkbox" value="">
-              $2,000 - $4,000 </p>
+              $2,000 - $3,999 </p>
             <p>
               <input type="checkbox" name="checkbox" value="">
-              $4,000 - $6,000 </p>
+              $4,000 - $5,999 </p>
             <p>
               <input type="checkbox" name="checkbox" value="">
-              $6,000 - $8,000 </p>
+              $6,000 - $7,999 </p>
                <p>
               <input type="checkbox" name="checkbox" value="">
               $8,000 - $10,000 </p>
                <p>
               <input type="checkbox" name="checkbox" value="">
               Over $10,000 </p>
-              <p>
-              $ <input type="text" name="text" value="" class="prices"> to $ <input type="text" name="text" value="" class="prices"></p>
-              <h6>Seller</h6>
-              <p>
+               <p>
               <input type="checkbox" name="checkbox" value="">
-              Trusted.com</p>
-            <p>
-              <input type="checkbox" name="checkbox" value="">
-              Trusted Retailer </p>
-            <p>
-             <input type="checkbox" name="checkbox" value="">
-              Individual Seller</p>
+              Inquire for Price </p>
+              <p>
+              $ <input type="text" name="text" value="" class="prices"> to $ <input type="text" name="text" value="" class="prices">
+              <button type="button" class="btn-default btn-circle"><i class="glyphicon glyphicon-chevron-right"></i></button>
+              </p>
+             <h6>Brands</h6>
+            <ul id="brand-filters">
+            <li>
+              <input type="checkbox" name="checkbox" value="richard-mille" checked>
+              Richard Mille</li>
+               <li>
+              <input type="checkbox" name="checkbox" value="tag-heuer">
+              Tag Heuer</li>
+              </ul>
+              <div class="reset-box">
+              <button type="button" class="btn btn-primary">Reset</button>
+              </div>
           </div>
           <!-- end .sidebar --> 
         </div>
@@ -241,7 +238,7 @@
          </div>
         <div class="col-xs-12 item-div">
           <div class="col-xs-5 show-all-txt">
-            <p><strong>1-15 of 900 for</strong> <a href="#">“SEARCH ALL”</a></p>
+            <p><strong>1-15 of 900 for</strong> <a href="#">“SEARCH TERM”</a></p>
           </div>
           <div class="col-xs-7 height40 align-right">
             <div class="item-sort">
