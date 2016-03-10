@@ -3,7 +3,6 @@
 /*global google */
 /*global Throbber */
 /*global InfoBox */
-/*global _ */
 /*global MarkerWithLabel */
 /*global handleLocationError */
 
@@ -20,13 +19,25 @@ var componentForm = {
   country: 'long_name',
   postal_code: 'short_name'
 };
+var brandDropdown = document.getElementById('brandselect');
+var selectedOption = {
+  'brand' : 'all-brands'
+};
+var endpoints = {
+  'all' : '/webservices/store/storelist',
+  'brandAll' : '/webservices/store/manufacturer/storelist/'
+};
 
 function initialize() {
-   map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 40.745812, lng: -100.913895 },
-        zoom: 4,
-        scrollwheel: false,
-    });
+  var defaultLat = 40.745812;
+  var defaultLng = -100.913895;
+  var webserviceUrl = selectedOption.brand === 'all-brands' ? endpoints.all : endpoints.brandAll + '/' + selectedOption.brand;
+  brandDropdown.addEventListener('change', selectEndpoint);
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: defaultLat, lng: defaultLng },
+      zoom: 4,
+      scrollwheel: false,
+  });
   // Create the autocomplete object, restricting the search
   // to geographical location types.
   autocomplete = new google.maps.places.Autocomplete(
@@ -35,9 +46,18 @@ function initialize() {
   // When the user selects an address from the dropdown,
   // populate the address fields in the form.
   google.maps.event.addListener(autocomplete, 'place_changed', function() {
-      fillInAddress();
-      StoreLocator.LocationSearch();
+    fillInAddress();
+    StoreLocator.LocationSearch(webserviceUrl);
   });
+}
+
+function selectEndpoint() {
+  var selection = brandDropdown.value;
+  if (!selection.length || selection === 'all-brands') {
+    selectedOption.brand = 'all-brands';
+  } else {
+    selectedOption.brand = selection;
+  }
 }
 
 // [START region_fillform]
@@ -84,8 +104,9 @@ function geolocate() {
   }
 }
 // [END region_geolocation]
+
 var StoreLocator = {
-    LocationSearch: function () {
+    LocationSearch: function (webserviceUrl) {
         var textCriteria = '';
         textCriteria = $('#autocomplete').val();
         var  addresstext = '';
@@ -94,7 +115,7 @@ var StoreLocator = {
         }
         $.ajax({
             type: 'GET',
-            url: '/api/Location/GetRetailer',
+            url: webserviceUrl,
             data: { 'textSearch': textCriteria, 'address': addresstext, 'city': $('#locality').val(), 'state': $('#administrative_area_level_1').val(), 'zipcode': $('#postal_code').val() },
             dataType: 'json',
             success: function (response) {
@@ -250,71 +271,6 @@ var StoreLocator = {
 
         map.fitBounds(bounds);
         map.setCenter();
-    },
-    LoadAllRetailer: function () {
-        $.ajax({
-            type: 'GET',
-            url: '/api/Location/GetAllRetailer',
-            data: { 'brand': $('#select-storelist-brand').val(), 'country': $('#select-storelist-country').val() },
-            dataType: 'json',
-            success: function (response) {
-                var rawData = response;
-                console.log(rawData);
-                if (rawData.length > 0) {
-                    StoreLocator.FillThreeColumnData(rawData);
-                }
-                else {
-                    $('#store-list').html('<div class="span4">No data found.</div>');
-                }
-            },
-            error: function (req, response) {
-                console.log('Error:' + response);
-            }
-        });
-    },
-    FillThreeColumnData: function (rawData) {
-        var StateData = _.uniq(rawData, function (item, key, State) {
-            return item.State;
-        });
-        var stateID = [];
-        for (var it = 0; it < StateData.length; it++) {
-            stateID.push(StateData[it].Id);
-        }
-        var totalRecord = rawData.length;
-        var cellVal = Math.ceil((totalRecord / 3));
-        var cellCounter = 0;
-        var tempHtml = '';
-        var mainHtml = '';
-        for (var st = 0; st < StateData.length; st++) {
-            tempHtml += '<span class="r-title">' + StateData[st].State + '</span> <br />';
-            cellCounter++;
-            if (cellCounter === cellVal) {
-                mainHtml += '<div class="span4">' + tempHtml + '</div>';
-                tempHtml = '';
-                cellCounter = 0;
-            }
-            var outData = _.filter(rawData, function (a) {
-                return a.State === StateData[st].State;
-            });
-            console.log(outData);
-            for (var rw = 0; rw < outData.length; rw++) {
-
-                tempHtml += '<span class="r-city">' + outData[rw].Name + '</span> <br />';
-                cellCounter++;
-                if (cellCounter === cellVal) {
-                    mainHtml += '<div class="span4">' + tempHtml + '</div>';
-                    tempHtml = '';
-                    cellCounter = 0;
-                }
-
-            }
-
-            if (st === StateData.length - 1) {
-                mainHtml += '<div class="span4">' + tempHtml + '</div>';
-            }
-        }
-
-        $('#store-list').html(mainHtml);
     },
     DetectCurrectLocation: function () {
         if (navigator.geolocation) {
