@@ -1,5 +1,5 @@
-@import "http://weloveiconfonts.com/api/?family=entypo";
-
+/*@import "http://weloveiconfonts.com/api/?family=entypo";
+*/
 /* ==========================================================================
    =Accordions and Toggles
    ========================================================================== */
@@ -3086,7 +3086,7 @@ border:1px solid #ccc;
     border-radius: 15px;}
 
 /* Entypo */
-[class*="entypo-"]:before {
+/*[class*="entypo-"]:before {
   font-family: "entypo", sans-serif;}
 
 .entypo-heart {
@@ -3115,7 +3115,7 @@ border:1px solid #ccc;
     -webkit-transition: all 0.65s ease;
             transition: all 0.65s ease;
     -webkit-transform: rotateZ(-360deg);
-            transform: rotateZ(-360deg);}
+            transform: rotateZ(-360deg);}*/
 
 .wishlist {
   display: inline-block;
