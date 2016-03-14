@@ -1673,6 +1673,7 @@
        /* padding: 15px;
 		height:220px;*/
 		position:relative;
+		padding: 0px 15px 0 0;
 	}
 
 	.item-full {
@@ -3408,6 +3409,11 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	float:right;
 }
 
+.headline-retail .float-right {
+    float: right;
+	padding-right:30px;
+}
+
 .warning-text {
 	color:#FF0004!important;
 	font-size:14px;
@@ -4604,6 +4610,75 @@ fieldset p {
 
 #bg-1wh {
 	margin-top:0;
+}
+
+#register-icon {
+    display: none;
+}
+
+.headline-retail h4 {
+    float: left;
+    font-size: 18px;
+}
+
+.headline-retail .float-right {
+    float: right;
+    padding-right: 0;
+	padding-top: 5px;
+}
+
+.headline-retail .float-right a {
+    font-size:11px;
+}
+
+.item-sm .item-title a {
+    color: #0088cc!important;
+    font-family: 'gotham_htfbold', Arial, sans-serif;
+    font-size: 13px;
+}
+
+.text-center .headline {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.item-prod {
+}
+
+.item-prod img {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.item-div h4 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-top: 0px;
+}
+
+.item-div .col-xs-4 {
+	width:40%;
+	float:left;
+}
+.item-div .col-xs-8 {
+	width:60%;
+	float:left;
+}
+
+.item-div p {
+	display:none;
+}
+
+.item-border {
+	padding: 40px;
+}
+#list-view {
+	display:none;
+}
+#grid-view {
+	display:none;
 }
 }
 
