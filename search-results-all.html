@@ -162,7 +162,7 @@
     <div class="results-main container no-pad">
       <div class="row">
         <div class="col-xs-3 div-left">
-          <div class="sidebar">
+          <div class="sidebar" id="side-filters">
                         <h6>Categories</h6>
                         <ul>
                         <li class="active">Watches</li>
@@ -561,6 +561,24 @@ $('.dropdown-menu > li > a').click(function(e) {
 $(document).click(function() {
   $('.search-dropdown.open').removeClass('open');
 });
+  $('#responsive-menu-button').sidr({
+      name: 'sidr-main',
+      source: '#side-filters',
+	  renaming: false
+    });
+	
+	 $('body').swipe( {
+        //Single swipe handler for left swipes
+        swipeLeft: function () {
+            $.sidr('close', 'sidr-main');
+        },
+        swipeRight: function () {
+            $.sidr('open', 'sidr-main');
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold: 45
+    });
+
 	  </script>
     
 </body>
