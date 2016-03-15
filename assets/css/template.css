@@ -1432,3 +1432,8 @@
 .testimonial .span4:last child {
 	padding-right:0!important;
 }
+
+#dvResult {
+  overflow: scroll;
+  z-index: 1;
+}

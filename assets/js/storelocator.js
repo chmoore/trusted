@@ -19,7 +19,11 @@ var componentForm = {
   country: 'long_name',
   postal_code: 'short_name'
 };
+var locatorForm = document.getElementById('storelocator');
 var brandDropdown = document.getElementById('brandselect');
+var geoDetectButton = document.getElementById('currentLocationBtn');
+var addressInput = document.getElementById('autocomplete');
+
 var selectedOption = {
   'brand' : 'all-brands'
 };
@@ -28,11 +32,20 @@ var endpoints = {
   'brandAll' : '/webservices/store/manufacturer/storelist/'
 };
 
+var webserviceUrl = endpoints.all;
+
 function initialize() {
   var defaultLat = 40.745812;
   var defaultLng = -100.913895;
-  var webserviceUrl = selectedOption.brand === 'all-brands' ? endpoints.all : endpoints.brandAll + '/' + selectedOption.brand;
+
+  $(locatorForm).bind('submit', function(e) {
+    e.preventDefault();
+    return false;
+  });
+
   brandDropdown.addEventListener('change', selectEndpoint);
+  geoDetectButton.addEventListener('click', StoreLocator.DetectCurrentLocation);
+
   map = new google.maps.Map(document.getElementById('map'), {
       center: { lat: defaultLat, lng: defaultLng },
       zoom: 4,
@@ -55,8 +68,9 @@ function selectEndpoint() {
   var selection = brandDropdown.value;
   if (!selection.length || selection === 'all-brands') {
     selectedOption.brand = 'all-brands';
+    webserviceUrl = endpoints.all;
   } else {
-    selectedOption.brand = selection;
+    webserviceUrl = endpoints.brandAll + selection;
   }
 }
 
@@ -121,7 +135,7 @@ var StoreLocator = {
             success: function (response) {
                 var completeHtml = '';
                 for (var con = 0; con < response.length; con++) {
-                    completeHtml += StoreLocator.GenerateCard(response[con]);
+                    completeHtml += StoreLocator.GenerateCard(response[con], con);
                 }
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: { lat: 40.745812, lng: -100.913895 },
@@ -147,27 +161,30 @@ var StoreLocator = {
             }
         });
         $('.google-map').height($('#dvResult').height());
+        $('#dvResult').height($('.google-map').height());
     },
-    GenerateCard: function (item) {
+    GenerateCard: function (item, idx) {
         //0 markerlabel
         //1 miles
         //2 assets/logo/Richard-Mille-logo.png
         //3 Richard Mille Boutique
         //4 9700 Collins Ave, Bal Harbour, FL 33154
-        console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(currentLatlng.lat(), currentLatlng.lng()), new google.maps.LatLng(item.Latitude, item.Longitude)));
-        console.log(StoreLocator.GetDistance (currentLatlng ,  {'lat': item.Latitude,'lng': item.Longitude}));
-        var caludatedmeter = StoreLocator.GetDistance(currentLatlng, { 'lat': item.Latitude, 'lng': item.Longitude });
-        var calculatedmile = (caludatedmeter / 1609.34).toFixed(2);
-        var taddress = item.Address + ', ' + item.City + ', ' + item.State + item.Zip;
-        var templateCard = '<div class="card span12" id="'+ item.Id + '">' + '<div class="span3 nopadding">' +
-          '    <div class="numberCircle">' + item.MarkerSerial + '</div>' +
+        var cardNum = idx + 1;
+        var calculatedMeter = StoreLocator.GetDistance(currentLatlng, { 'lat': item.latitude, 'lng': item.longitude });
+        var calculatedmile = (calculatedMeter / 1609.34).toFixed(2);
+        var addressLine = item.address1 !== null && item.address2 !== null ? (item.address1 + '<br />' + item.address2) : (item.address1 || item.address2);
+        var taddress = addressLine + ', ' + item.city + ', ' + item.state + ' ' + item.zipCode;
+        var itemID = item.uniqueRetailerName+'_'+item.locationUniqueName;
+        var logoOrNot = item.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + item.brandLogo + '" />'  : '';
+        var templateCard = '<div class="resultCard card span12" id="'+ itemID + '">' + '<div class="span3 nopadding">' +
+          '    <div class="numberCircle">' + cardNum + '</div>' +
           '    <div> <span class="miles">' + calculatedmile + ' mile(s)</span></div>' +
           '</div>' +
           '<div class="span9">' +
-          '    <img src="' + item.Logo + '">' +
-          '    <h1 class="title">' + item.Name + '</h1>' +
-          '    <span class="desc">' + taddress + '</span><br>' +
-          '    <a class="link" href="javascript:StoreLocator.OpenMarker(' + item.Id + ')">Store Details</a>' +
+          logoOrNot +
+          '    <h1 class="title">' + item.retailerName + '</h1>' +
+          '    <span class="desc">' + taddress + '</span><br />' +
+          '    <a class="link" href="javascript:StoreLocator.OpenMarker(\'' + itemID + '_details\'' + ')">Store Details</a>' +
           '</div>' +
           '</div>';
         return templateCard;
@@ -224,12 +241,13 @@ var StoreLocator = {
 
         for (var i = 0; i < data.length; i++) {
             var retailer = data[i];
+            var retailerId = retailer.uniqueRetailerName+'_'+retailer.locationUniqueName+'_details';
             marker = new MarkerWithLabel({
-                position: { lat: retailer.Latitude, lng: retailer.Longitude },
+                position: { lat: retailer.latitude, lng: retailer.longitude },
                 map: map,
                 icon: image,
-                Id:retailer.Id,
-                labelContent: retailer.MarkerSerial,
+                Id: retailerId,
+                labelContent: i+1,
                 labelAnchor: new google.maps.Point(-18, 28),
                 labelClass: 'labels', // the CSS class for the label
                 labelStyle: { opacity: 0.75 }
@@ -244,7 +262,7 @@ var StoreLocator = {
                     var localItem = locations[i];
                     $('#' + localItem.Id).addClass('selected');
                     console.log(localItem);
-                    var storeList = localItem.StoreHours;
+                    var storeList = StoreLocator.FormatStoreHours(localItem.storeHours);
                     console.log(storeList);
 
                     var storedetail = '';
@@ -252,16 +270,18 @@ var StoreLocator = {
                         storedetail += '<span class="desc">' + storeList[j] + '</span><br>';
                     }
                     var localaddress = $('#street_number').val() + $('#route').val() + ', ' + $('#locality').val() + ', ' + $('#administrative_area_level_1').val() + $('#postal_code').val();
-                     var drivinglink = 'http://maps.google.com/?saddr=' + currentLatlng.lat() + ',' + currentLatlng.lng() + '&daddr=' + localItem.Latitude + ',' + localItem.Longitude;
+                    var drivinglink = 'http://maps.google.com/?saddr=' + currentLatlng.lat() + ',' + currentLatlng.lng() + '&daddr=' + localItem.latitude + ',' + localItem.longitude;
+                    var addressLine = localItem.address1 !== null && localItem.address2 !== null ? (localItem.address1 + '<br />' + localItem.address2) : (localItem.address1 || localItem.address2);
                     console.log(drivinglink);
-                    infowindow.setContent('<div class="card info-card"><div class="span12"><img src="' +
-                     localItem.Logo + '"/> </div><div class="span6">' + ' <h1 class="title">' + localItem.Name+ '</h1>' +
-                     ' <span class="desc">' + localItem.Address + ', '  + localItem.City + ', ' + localItem.State + localItem.Zip+ '</span><br>' +
+                    var logoArea = localItem.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + localItem.brandLogo + '" />'  : '';
+                    infowindow.setContent('<div class="card info-card"><div class="span12">' +
+                     logoArea + '</div><div class="span6">' + ' <h1 class="title">' + localItem.retailerName+ '</h1>' +
+                     ' <span class="desc">' + addressLine + ', '  + localItem.city + ', ' + localItem.state + ' ' + localItem.zipCode + '</span><br>' +
                      '<a class="link" target="_blank" href="' + drivinglink + '">Driving Directions</a>' + '</div><div class="span6">' +
                      '<h1 class="title">Store Detail</h1>' + storedetail + '</div>');
                     infowindow.open(map, marker);
                     $('.gm-style-iw').next('div').remove();
-                    map.setCenter({ 'lat': localItem.Latitude, 'lng': localItem.Longitude });
+                    map.setCenter({ 'lat': localItem.latitude, 'lng': localItem.longitude });
                 };
             })(marker, i));
             map.setOptions({ maxZoom: 18 });
@@ -272,13 +292,23 @@ var StoreLocator = {
         map.fitBounds(bounds);
         map.setCenter();
     },
-    DetectCurrectLocation: function () {
+    FormatStoreHours: function (hoursObj) {
+      if (typeof hoursObj === 'object') {
+        //TODO temporary
+        return '';
+      }
+    },
+    DetectCurrentLocation: function () {
         if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+              console.log(position.coords);
+            });
             navigator.geolocation.getCurrentPosition(function (position) {
                 var pos = {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
                 };
+                $(addressInput).attr('placeholder', position.coords.latitude + ',' + position.coords.longitude);
                 map.setCenter(pos);
                 currentLatlng = pos;
                 var geocoder = new google.maps.Geocoder();
@@ -334,7 +364,7 @@ var StoreLocator = {
                 if (results.length > 0) {
                     var pos = {
                         lat: results[0].geometry.location.lat(),
-                        lng: results[0].geometry.location.lat()
+                        lng: results[0].geometry.location.lng()
                     };
                     map.setCenter(pos);
                     currentLatlng = pos;
@@ -361,41 +391,35 @@ var StoreLocator = {
     }
 };
 $(document).ready(function(){
+
     initialize();
+
     $('#autocomplete').keyup(function (ev) {
         console.log(ev.keyCode);
         if (ev.keyCode === 13) {
-            StoreLocator.LocationSearch();
-        }
-        else {
-            requiredRegularSearch = true;
-        }
-        if ($('#autocomplete').val() === '') {
-            $('.fa-times-circle').hide();
-        }
-        else {
-            $('.fa-times-circle').show();
-        }
+          StoreLocator.LocationSearch();
+      }
+      else {
+          requiredRegularSearch = true;
+      }
+      if ($('#autocomplete').val() === '') {
+          $('.fa-times-circle').hide();
+      } else {
+          $('.fa-times-circle').show();
+      }
     });
 
     $('.fa-times-circle').click(function () {
         $('.fa-times-circle').hide();
         $('#autocomplete').val('');
-
     });
+
     $('.view-all-location').click(function () {
         $('.map-list').hide();
         $('.retailer-list').show();
     });
-    $('.back-to-search').click(function () {
-        $('.map-list').show();
-        $('.retailer-list').hide();
-    });
-    StoreLocator.LoadAllRetailer();
-    $('#select-storelist-brand,#select-storelist-country').change(function () {
-        StoreLocator.LoadAllRetailer();
-    });
 
     $('.map-list').show();
     $('.retailer-list').hide();
+
 });
