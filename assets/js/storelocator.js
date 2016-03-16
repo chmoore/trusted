@@ -134,17 +134,27 @@ var StoreLocator = {
             data: { 'textSearch': textCriteria, 'address': addresstext, 'city': $('#locality').val(), 'state': $('#administrative_area_level_1').val(), 'zipcode': $('#postal_code').val() },
             dataType: 'json',
             success: function (response) {
-                var completeHtml = '';
+                var completeHtml = [];
                 for (var con = 0; con < response.length; con++) {
-                    completeHtml += StoreLocator.GenerateCard(response[con], con);
+                    completeHtml.push(StoreLocator.GenerateCard(response[con], con));
                 }
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: { lat: 40.745812, lng: -100.913895 },
                     zoom: 4,
                     scrollwheel: false,
                 });
+
+                var sortedHtml = completeHtml.sort(function(a, b){
+                  return a.metersAway - b.metersAway;
+                });
+
+                var sortedHtmlString = '';
+                for (var res = 0; res < sortedHtml.length; res++) {
+                  sortedHtmlString += sortedHtml[res].templateCard;
+                }
+
                 if (response.length > 0) {
-                    $('#dvResult').html(completeHtml);
+                    $('#dvResult').html(sortedHtmlString);
                     StoreLocator.DrawMarker(response);
                 }
                 else {
@@ -177,7 +187,9 @@ var StoreLocator = {
         var taddress = addressLine + ', ' + item.city + ', ' + item.state + ' ' + item.zipCode;
         var itemID = item.uniqueRetailerName+'_'+item.locationUniqueName;
         var logoOrNot = item.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + item.brandLogo + '" />'  : '';
-        var templateCard = '<div class="resultCard card span12" id="'+ itemID + '">' + '<div class="span3 nopadding">' +
+        var templateObj = {
+          'metersAway' : calculatedMeter,
+          'templateCard' : '<div class="resultCard card span12" id="'+ itemID + '">' + '<div class="span3 nopadding">' +
           '    <div class="numberCircle">' + cardNum + '</div>' +
           '    <div> <span class="miles">' + calculatedmile + ' mile(s)</span></div>' +
           '</div>' +
@@ -187,8 +199,9 @@ var StoreLocator = {
           '    <span class="desc">' + taddress + '</span><br />' +
           '    <a class="link" href="javascript:StoreLocator.OpenMarker(\'' + itemID + '_details\'' + ')">Store Details</a>' +
           '</div>' +
-          '</div>';
-        return templateCard;
+          '</div>'
+        };
+                return templateObj;
     },
     OpenMarker :function(id){
         for (var mc = 0; mc < markerList.length; mc++) {
@@ -199,7 +212,7 @@ var StoreLocator = {
         }
     },
     NoResultTemplate: function () {
-        return '<div class="no-result"><p>No result found. Please refine you search criteria.</p></div>';
+        return '<div class="no-result"><p>No results found. Please refine you search criteria.</p></div>';
     },
     ShowList: function(){
         $('#dvResult').show();
@@ -287,7 +300,7 @@ var StoreLocator = {
         map.setCenter();
     },
     FormatStoreHours: function (storeHoursObj) {
-      if (typeof storeHoursObj === 'object') {
+      if (typeof storeHoursObj === 'object' && storeHoursObj.length) {
         var openDaysArr = [];
           var closedDaysArr = [];
           var hoursTableArr = [];
@@ -344,7 +357,7 @@ var StoreLocator = {
           }
           return hoursTableArr.join();
       } else {
-        return false;
+        return 'Call for Store Hours';
       }
     },
     DetectCurrentLocation: function () {
