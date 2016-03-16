@@ -1,36 +1,36 @@
 /* ==========================================================================
    =Typography
    ========================================================================== */
-   	 
+
 	body {
 		background-color: #fff;
-		font: 16px 'Noto Serif', Arial, sans-serif; 
+		font: 16px 'Noto Serif', Arial, sans-serif;
 		/*	font: 14px 'gotham_htfbook', Arial, sans-serif;*/
 		line-height:28px;
-		font-weight: 300;    
+		font-weight: 300;
 		-webkit-font-smoothing: antialiased;
 		letter-spacing: 0.1px;
     	color: #000000;
 	}
-	
+
 	@media (max-width: 767px) {
-	
+
 		/**
 		 * 1. Hide background on mobile devices
 		 */
-	 
-		body { 
-			background: none; 	/* 1 */
-			background-color: #fff; 
-		}
-		
-	}	
 
-	h1, 
-	h2, 
-	h3, 
-	h4, 
-	h5, 
+		body {
+			background: none; 	/* 1 */
+			background-color: #fff;
+		}
+
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
 	h6 {
 		margin-bottom: 10px;
 		color: #000;
@@ -38,103 +38,103 @@
 		font-weight: 400;
 		text-transform: uppercase;
 	}
-		
-	h1 a, 
-	h2 a, 
-	h3 a, 
-	h4 a, 
-	h5 a, 
-	h6 a { 
-		font-weight: inherit; 
+
+	h1 a,
+	h2 a,
+	h3 a,
+	h4 a,
+	h5 a,
+	h6 a {
+		font-weight: inherit;
 	}
-	
-	h1 { 	 
+
+	h1 {
 		/*font-size: 36px;*/
-		font-size:32px; 
+		font-size:32px;
 		line-height: 44px;
 		letter-spacing: -0.5px;
 	}
-	
-	h2 { 	
-		font-size: 28px; 
-		line-height: 42px; 
+
+	h2 {
+		font-size: 28px;
+		line-height: 42px;
 		letter-spacing: -0.5px;
 	}
-	
-	h3 { 
-		font-size: 24px; 
+
+	h3 {
+		font-size: 24px;
 		line-height: 32px;
-		letter-spacing: -0.5px;   
+		letter-spacing: -0.5px;
 	}
-	
+
 	h4 {
-		font-size: 20px; 
+		font-size: 20px;
 		line-height: 28px;
-		letter-spacing: 0px; 
+		letter-spacing: 0px;
 		margin-top:6px;
 	}
-	
-	h5 { 
-		font-size: 18px; 
+
+	h5 {
+		font-size: 18px;
 		line-height: 25px;
 		letter-spacing: 0px;
 		text-transform:uppercase;
 	}
-	
-	h6 { 
-		font-size: 16px; 
+
+	h6 {
+		font-size: 16px;
 		line-height: 22px;
 		letter-spacing: 0px;
 	}
-	
+
 	.14 {
 		font-size:14px;
 	}
-	
+
 	.span1 h6 {
 		line-height:44px;
 	}
 
 	p { margin-bottom: 35px; /*color:#5b5b5b;line-height:28px;*/line-height:24px;}
-	
+
 	em { font-style: italic; }
-	
+
 	strong { font-weight: 700; }
-	
+
 	small { font-size: 90%; }
-	
+
 	big { font-size: 125%; }
-	
-	sub { 
-		vertical-align: sub; 
-		font-size: 75%; 
+
+	sub {
+		vertical-align: sub;
+		font-size: 75%;
 	}
-	
-	sup { 
-		vertical-align: super; 
-		font-size: 75%; 
+
+	sup {
+		vertical-align: super;
+		font-size: 75%;
 	}
-	
-	abbr[title] {  
-		border-bottom: 1px dotted #999; 
+
+	abbr[title] {
+		border-bottom: 1px dotted #999;
 		cursor: help;
 	}
-	
-	address { 
-		display: block; 
-		margin-bottom: 20px; 
+
+	address {
+		display: block;
+		margin-bottom: 20px;
 	}
-	
+
 	blockquote {
 		font-size: 16px;
 		line-height: 26px;
 	}
-	
+
 	blockquote p { font-style: italic; }
-	
-	hr { 
-		height: 0; 
-		border: solid #e1e1e1; 
+
+	hr {
+		height: 0;
+		border: solid #e1e1e1;
 		border-width: 1px 0 0 0;
 		margin: 30px 0;
 	}
@@ -142,52 +142,52 @@
 	kbd,
 	tt,
 	var,
-	samp,	
-	code, 
+	samp,
+	code,
 	pre { font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
-	
-	code { 
+
+	code {
 		padding: 1px 4px;
 		border: 1px solid #e1e1e1;
-		border-radius: 3px;	
-		background-color: #f3f3f3;  
-		color: #ff3b3b;  
+		border-radius: 3px;
+		background-color: #f3f3f3;
+		color: #ff3b3b;
 	}
-	
-	pre { 
-		overflow-x: auto; 
+
+	pre {
+		overflow-x: auto;
 		display: block;
 		padding: 20px;
 		border: 1px solid #e1e1e1;
-		border-radius: 3px;		
-		margin-bottom: 20px;		
-		background-color: #f3f3f3; 
+		border-radius: 3px;
+		margin-bottom: 20px;
+		background-color: #f3f3f3;
 		white-space: pre-wrap;
 	}
-	
+
 	mark,
 	ins {
 		padding: 1px 4px;
 		border: 1px solid #e1e1e1;
-		border-radius: 3px;	
-		background-color: #f3f3f3; 
+		border-radius: 3px;
+		background-color: #f3f3f3;
 		text-decoration: none;
 	}
-	
+
 	s,
 	del { text-decoration: line-through; }
-	
+
 	/* Typography Helper Classes */
-	
+
 	/**
 	 * <div class="hr"></div> acts like an <hr>
 	 */
-	
-	.hr { 
-		border-top: 1px solid #e1e1e1;  
+
+	.hr {
+		border-top: 1px solid #e1e1e1;
 		margin: 30px 0;
 	}
-	
+
 	.text-left { text-align: left; }
 	.text-right { text-align: right; }
 	.text-center { text-align: center; padding-top:0px;     /*margin-bottom: 40px;*/}
@@ -196,21 +196,21 @@
 	.text-center-1 p{color:#FFF;}
 	.text-justify { text-align: justify; }
 	.text-left-2 {text-align:left;margin-left:25px;margin-top:-7px;}
-	
+
 	.text-uppercase { text-transform: uppercase; }
-	
-	.text-highlight { 
+
+	.text-highlight {
 		padding: 1px 5px;
-		border-radius: 2px;	
-		background-color: #232323; 
-		color: #fff; 
+		border-radius: 2px;
+		background-color: #232323;
+		color: #fff;
 	}
 
 	.mute{ color: #999; }
-	
+
 	.no-margin-bottom,
 	.last { margin-bottom: 0 !important; }
-	
+
 	.copyright {
 		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-weight: 400;
@@ -220,12 +220,12 @@
 		letter-spacing:1px;
 		margin-bottom:10px;
 	}
-	
+
 	@media (max-width: 767px) {
 
 		.no-margin-bottom,
 		.last { margin-bottom: 20px !important; }
-		
+
 		.text-right { text-align: left; }
 
 	}
@@ -234,53 +234,53 @@
    =Links
    ========================================================================== */
 	a {cursor:pointer; -webkit-transition: all 0.3s;transition: all 0.3s;}
-	
-	a, 
-	a:visited { 
-		color: #232323; 
-		text-decoration: none; 
+
+	a,
+	a:visited {
+		color: #232323;
+		text-decoration: none;
 	}
-	
+
    /**
 	* 1. Remove the gray background color from active links in IE 10.
 	*/
-	
+
 	a:active {
  		background: transparent; /* 1 */
 	}
-	
+
 	a:active,
-	a:hover, 
+	a:hover,
 	a:focus {
-		outline: 0; 
+		outline: 0;
 		text-decoration:none;
 		color:#333;
-	}	
-	
+	}
+
 /* ==========================================================================
    =Lists
    ========================================================================== */
-	
-	ul, 
-	ol { 
+
+	ul,
+	ol {
 		margin-bottom: 20px;
-		list-style-position: inside; 
+		list-style-position: inside;
 	}
-	 
-	li > ul, 
-	li > ol { 
-		margin-bottom: 0; 
-		margin-left: 30px; 
+
+	li > ul,
+	li > ol {
+		margin-bottom: 0;
+		margin-left: 30px;
 	}
-	
+
 	li {margin-bottom:10px;color: #5b5b5b;
     line-height: 28px;}
-	
+
 	.span5 li {
 		list-style:none;
 		/*border-bottom:1px solid #c8c8c8;*/
 	}
-	
+
 	.span7 li {
 		list-style:none;
 		/*border-bottom:1px solid #c8c8c8;*/
@@ -288,64 +288,64 @@
     font: 14px 'gotham_htfbook', Arial, sans-serif;
     line-height: 28px;
 	}
-	
+
 	.span5 ul {padding: 10px!important;margin-left: -23px;}
 	.span7 ul {padding: 10px!important;margin-left: -50px;}
-	
+
 	.desc-bold {
 		color:#8b8b8b;
 		font: 14px 'gotham_htfbold', Arial, sans-serif;
 		line-height:28px;
 	}
-	
+
 	ul {  border-radius: 3px 3px 3px 3px;
     list-style: disc outside none;
     padding: 10px 10px 10px 0px;}
-	
+
 	.span8 ul {
 		    padding: 10px 10px 10px 25px;
 	}
-	
+
 	.span9 ul {
 		padding:10px 10px 10px 25px;
 	}
-	
+
 	.span6 ul {
 		    padding: 10px 10px 10px 25px;
 	}
-	
+
 	.anchored {
   display: block;
-  height: 75px; 
-  margin-top: -75px; 
+  height: 75px;
+  margin-top: -75px;
   visibility: hidden;
 }
 
-	
+
 	.offset1 ul {    padding: 10px 10px 10px 20px;}
 	ol { list-style-type: decimal; }
-	
+
 	dl { margin-bottom: 20px; }
 
 	dt { font-weight: bold; }
 
 	dd  { margin-bottom: 20px; }
-	
+
 	/* List Helper Classes */
 
 	ul.last,
 	ol.last,
 	dl.last { margin-bottom: 0; }
-	
+
 	@media (max-width: 767px) {
 
-		ul.last, 
+		ul.last,
 		ol.last { margin-bottom: 20px; }
-		
+
 	}
-	
+
 /* =Custom lists
-   ========================================================================== */	
+   ========================================================================== */
 
 	/**
  	 * Custom lists
@@ -355,11 +355,11 @@
 	 * 3. list with discs for bullets
 	 *
 	 */
-	 
+
 	ul.unstyled { list-style-type: none; } /* 1 */
 	ul.square { list-style-type: square; } /* 2 */
 	ul.circle { list-style-type: circle; } /* 3 */
-	
+
 	/**
  	 * Custom Icon Font lists
  	 *
@@ -367,11 +367,11 @@
 	 * 2. Check list 2
 	 *
 	 */
-	
+
 	ul.check, 							/* 1 */
 	ul.check-2 { list-style: none; }	/* 2 */
-	
-	ul.check li:before { 
+
+	ul.check li:before {
 		display: inline-block;
 		width: 18px;
 		height: 18px;
@@ -385,8 +385,8 @@
 		letter-spacing: 0;
 		text-align: center;
 	}
-	
-	ul.check-2 li:before { 
+
+	ul.check-2 li:before {
 		display: inline-block;
 		width: 16px;
 		height: 16px;
@@ -400,23 +400,23 @@
 		letter-spacing: 0;
 		text-align: center;
 	}
-	
+
 	ul.check li:before,
-	ul.check-2 li:before { content: "\ea9f"; }	
-	
+	ul.check-2 li:before { content: "\ea9f"; }
+
 	ul.check li { margin-bottom: 5px; }
 	ul.check li:last-child { margin-bottom: 0; }
-	
+
 	/**
  	 * Font Awesome lists
  	 *
 	 * 1. Check list
 	 *
 	 */
-	 
+
 	 ul.fill-circle { list-style: none; }	/* 1 */
-	
-	ul.fill-circle li:before { 
+
+	ul.fill-circle li:before {
 		position: relative;
 		top: -2px;
 		display: inline-block;
@@ -426,40 +426,40 @@
 		font-size: 8px;
 		line-height: 8px;
 	}
-	
-	ul.fill-circle li:before { content: "\f111"; }	
-	
+
+	ul.fill-circle li:before { content: "\f111"; }
+
 	ul.fill-circle li { margin-bottom: 5px; }
 	ul.fill-circle li:last-child { margin-bottom: 0; }
 
 /* ==========================================================================
    =Images
    ========================================================================== */
-	
-	img { 
+
+	img {
 		max-width: 100%;
 		height: auto;
-		border: none; 
+		border: none;
 		vertical-align: middle;
 	}
-	
+
 	#zoom {
 		    position: relative!important;
 	}
-	
+
 	.span8 img {
 		width:100%;
 		margin-bottom:40px;
 	}
-	
+
 	.span6 img {
 	}
-	
+
 	.img-span {
 		margin-bottom:80px;
 		margin-top:0px;
 	}
-	
+
 	.row-img {
 		width:100%;
 		height:300px;
@@ -558,7 +558,7 @@
 	}
 
 	caption { margin-bottom: 20px; }
-	
+
 	th {
 		border-width: 0 1px 1px 0;
 		font-weight: 700;
@@ -566,44 +566,44 @@
 
 	td { border-width: 0 1px 1px 0; }
 
-	th, 
+	th,
 	td { padding: 8px; }
-	
+
 	@media (max-width: 480px) {
-	
+
 		/**
 		 * Force table to not be like tables anymore
 		 */
-		 
-		table, 
-		thead, 
-		tbody, 
-		th, 
-		td, 
+
+		table,
+		thead,
+		tbody,
+		th,
+		td,
 		tr { display: block; }
 
 		/**
 		 * Hide table headers
 		 */
-	
-		th{ 
+
+		th{
 			position: absolute;
 			top: -9999px;
 			left: -9999px;
 		}
-		
+
 		tr {}
-		
+
 		td:first-child { border-top: none !important; }
-	  
+
 	}
-	
+
 /* ==========================================================================
    =Forms
    ========================================================================== */
 
 	form {}
-	
+
 	fieldset {}
 
 	fieldset legend {
@@ -611,20 +611,20 @@
 		margin: 0;
 		margin-left: -2px;
 		background: #fff;
-		font-weight: 700;								
+		font-weight: 700;
 	}
-	
+
 	::-moz-placeholder,
 	::-webkit-input-placeholder,
 	:-ms-input-placeholder {
 		color: #999;
 	}
-	
+
 	label {
 		/*display: block;*/
 		margin-bottom: 5px;
 	}
-	
+
 	input[type="text"],
 	input[type="password"],
 	input[type="date"],
@@ -646,7 +646,7 @@
 		-webkit-box-sizing: border-box;
 		   -moz-box-sizing: border-box;
 			    box-sizing: border-box;
-		padding: 13px;		
+		padding: 13px;
 		border: 1px solid #e1e1e1;
 		margin-bottom: 10px;
 		background-color: #fff;
@@ -748,11 +748,11 @@
 	/**
 	 *  1. Not allow resize out of parent
 	 */
-	
+
 	textarea { max-width: 100%; /* 1 */ }
-	
+
 	select {
-		padding: 6px 10px;	
+		padding: 6px 10px;
 		height: 45px;
 		width: 100%;
 		border: 1px solid #e1e1e1;
@@ -775,13 +775,13 @@
 		background-color: #f3f3f3;
 		cursor: not-allowed;
 	}
-	
+
 	select:focus { border-color: #bbb; }
 
 	select[multiple] { height: auto; }
 
 	input[type="range"] { width: 100%; }
-	
+
 	input[type="file"],
 	input[type="checkbox"],
 	input[type="radio"],
@@ -799,7 +799,7 @@
 	}
 
 	input[type="file"] { width: 100%; }
-	
+
 	button,
 	input[type="reset"],
 	input[type="submit"],
@@ -843,15 +843,15 @@
 	.widget {
 		margin-top:0px;
 	}
-	
+
 /* =Responsive Form Inputs
    ========================================================================== */
-	
+
 	/**
-	 * 1. Reset float inherited from .span*	
+	 * 1. Reset float inherited from .span*
  	 * 2. Change padding inherited from .span* with the one set in base.css for inputs
  	 */
-	 
+
 	button[class*="span"],
 	input[type="reset"][class*="span"],
 	input[type="submit"][class*="span"],
@@ -876,9 +876,9 @@
 		float: none; 		/* 1 */
 		padding: 12px 10px;  /* 2 */
 	}
-	
+
 	@media (min-width: 767px) {
-	
+
 		button.span12,
 		input[type="range"].span12,
 		input[type="color"].span12,
@@ -900,7 +900,7 @@
 		input[type="url"].span12,
 		textarea.span12,
 		select.span12 { width: 100%; }
-		
+
 		button.span11,
 		input[type="range"].span11,
 		input[type="color"].span11,
@@ -922,7 +922,7 @@
 		input[type="url"].span11,
 		textarea.span11,
 		select.span11 { width: 91.66666667%; }
-		
+
 		button.span10,
 		input[type="range"].span10,
 		input[type="color"].span10,
@@ -944,7 +944,7 @@
 		input[type="url"].span10,
 		textarea.span10,
 		select.span10 { width: 83.33333333%; }
-		
+
 		button.span9,
 		input[type="range"].span9,
 		input[type="color"].span9,
@@ -966,7 +966,7 @@
 		input[type="url"].span9,
 		textarea.span9,
 		select.span9 { width: 75%; }
-		
+
 		button.span8,
 		input[type="range"].span8,
 		input[type="color"].span8,
@@ -988,7 +988,7 @@
 		input[type="url"].span8,
 		textarea.span8,
 		select.span8 { width: 66.66666667%; }
-		
+
 		button.span7,
 		input[type="range"].span7,
 		input[type="color"].span7,
@@ -1010,7 +1010,7 @@
 		input[type="url"].span7,
 		textarea.span7,
 		select.span7 { width: 58.33333333%; }
-		
+
 		button.span6,
 		input[type="range"].span6,
 		input[type="color"].span6,
@@ -1032,7 +1032,7 @@
 		input[type="url"].span6,
 		textarea.span6,
 		select.span6 { width: 50%; }
-		
+
 		button.span5,
 		input[type="range"].span5,
 		input[type="color"].span5,
@@ -1054,7 +1054,7 @@
 		input[type="url"].span5,
 		textarea.span5,
 		select.span5 { width: 41.66666667%; }
-		
+
 		button.span4,
 		input[type="range"].span4,
 		input[type="color"].span4,
@@ -1076,7 +1076,7 @@
 		input[type="url"].span4,
 		textarea.span4,
 		select.span4 { width: 33.33333333%; }
-		
+
 		button.span3,
 		input[type="range"].span3,
 		input[type="color"].span3,
@@ -1098,7 +1098,7 @@
 		input[type="url"].span3,
 		textarea.span3,
 		select.span3 { width: 25%; }
-		
+
 		button.span2,
 		input[type="range"].span2,
 		input[type="color"].span2,
@@ -1120,7 +1120,7 @@
 		input[type="url"].span2,
 		textarea.span2,
 		select.span2 { width: 16.66666667%; }
-		
+
 		button.span1,
 		input[type="range"].span1,
 		input[type="color"].span1,
@@ -1142,9 +1142,9 @@
 		input[type="url"].span1,
 		textarea.span1,
 		select.span1 { width: 8.33333333%; }
-		
-	}	
-	
+
+	}
+
 	input.text {
     margin-bottom: 12px;
     width: 100%;
@@ -1159,7 +1159,7 @@ select{
 .my-location input{
     outline:none;
 }
-#bg-1w{ 
+#bg-1w{
     padding: 30px 0 10px 0;
 }
 .map{
@@ -1171,26 +1171,25 @@ select{
 	border-bottom:1px solid #c8c8c8;
 	margin-bottom:0px;
 	padding:0;
-} 
+}
 .margin-top-zero{
     margin-top:0px;
 	text-align:left;
 }
 .view-all-location{
-    font-size:14px; 
+    font-size:14px;
     padding:15px;
-    cursor:pointer;
-	padding-bottom:50px;
-    
+    padding-bottom:50px;
+
 }
 .view-all-location span{
     border-bottom:1px solid #999;
 }
 .labels {
-     color: white; 
+     color: white;
      font-size: 12px;
      font-weight: bold;
-     text-align: center; 
+     text-align: center;
    }
 .info-card{
     width: 500px;
@@ -1199,7 +1198,7 @@ select{
     padding:0px !important;
 }
 .info-card img{
-    width:160px; 
+    width:160px;
     padding-bottom:20px;
 }
 #dvResult{
@@ -1216,16 +1215,16 @@ select{
     font-weight:bold;
     color:#454545;
 }
-.r-city{ 
+.r-city{
     color:#454545;
 }
 .nopadding{
-    
+
     padding-left: 0;
     padding-right: 0;
     text-align: left;
 }
-.google-map{ 
+.google-map{
     min-height:500px;
 }
 .no-result p{
@@ -1243,7 +1242,7 @@ select{
 .arrow-position{
     font-size: 25px;
     position: absolute;
-    top: 10px; 
+    top: 10px;
     right: 30px;
 }
 .search-area{
@@ -1255,13 +1254,13 @@ select{
 .search-area .fa-search{
      font-size: 20px;
     position: absolute;
-    top: 13px; 
+    top: 13px;
     left: 30px;
 }
 .search-area  .fa-times-circle{
     font-size: 25px;
     position: absolute;
-    top: 13px;  
+    top: 13px;
     right: 25px;
     background-color:#fff;
     display:none;
@@ -1299,14 +1298,14 @@ select{
  	font-size: 13px;
  	font-weight: normal;
  }
- .card a.link{ 
+ .card a.link{
  	color: #54aadc;
  	font-size: 13px;
 }
 .numberCircle {
     border-radius: 50%;
-    width: 14px;
-    height: 14px;
+    width: 28px;
+    height: 28px;
     padding: 5px;
     background: #000 none repeat scroll 0% 0%;
     border: 2px solid #000;

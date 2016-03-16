@@ -1437,3 +1437,32 @@
   overflow: scroll;
   z-index: 1;
 }
+
+.card .store-hours {
+  border: 0;
+  color: #000;
+  font: 12px 'gotham_htfbook', Arial, sans-serif;
+  padding-top: 5px;
+}
+
+.card .store-hours td {
+  border: 0;
+  line-height: 20px;
+  padding: 0;
+  text-transform: uppercase;
+  width: 60px;
+}
+
+.card .store-hours .dayCol {
+  text-transform: capitalize;
+  width: auto;
+}
+
+.card .store-hours .currentDay td {
+  font-weight: bold;
+}
+
+.card .store-hours .timeSep {
+  width: 10px;
+}
+

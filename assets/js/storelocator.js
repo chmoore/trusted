@@ -5,6 +5,7 @@
 /*global InfoBox */
 /*global MarkerWithLabel */
 /*global handleLocationError */
+/*global trustedAssetsURL*/
 
 var map, markerList = [], locations = [];
 var infowindow;
@@ -219,18 +220,18 @@ var StoreLocator = {
             zIndex: null,
             boxStyle: {
                 // top arrow in the info window
-                background: 'url("http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/examples/tipbox.gif") no-repeat',
+                background: 'url("https://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/examples/tipbox.gif") no-repeat',
                 opacity: 0.9,
                 width: '450px'
             },
             closeBoxMargin: '12px -36px 2px 2px',
-            closeBoxURL: 'http://www.google.com/intl/en_us/mapfiles/close.gif', //close button icon
+            closeBoxURL: 'https://www.google.com/intl/en_us/mapfiles/close.gif', //close button icon
             infoBoxClearance: new google.maps.Size(1, 1)
         });
         var bounds = new google.maps.LatLngBounds();
         var marker;
         var image = {
-            url: 'assets/images/marker.png',
+            url: trustedAssetsURL + 'assets/images/marker.png',
             // This marker is 20 pixels wide by 32 pixels high.
             size: new google.maps.Size(40, 42),
             // The origin for this image is (0, 0).
@@ -261,24 +262,17 @@ var StoreLocator = {
                     }
                     var localItem = locations[i];
                     $('#' + localItem.Id).addClass('selected');
-                    console.log(localItem);
-                    var storeList = StoreLocator.FormatStoreHours(localItem.storeHours);
-                    console.log(storeList);
-
-                    var storedetail = '';
-                    for (var j = 0; j < storeList.length; j++) {
-                        storedetail += '<span class="desc">' + storeList[j] + '</span><br>';
-                    }
+                    var $newHoursTable = $('<table class="store-hours"></table>');
+                    var $storeHoursTable = $newHoursTable.html(StoreLocator.FormatStoreHours(localItem.storeHours)).get(0).outerHTML;
                     var localaddress = $('#street_number').val() + $('#route').val() + ', ' + $('#locality').val() + ', ' + $('#administrative_area_level_1').val() + $('#postal_code').val();
-                    var drivinglink = 'http://maps.google.com/?saddr=' + currentLatlng.lat() + ',' + currentLatlng.lng() + '&daddr=' + localItem.latitude + ',' + localItem.longitude;
+                    var drivinglink = 'https://maps.google.com/?saddr=' + currentLatlng.lat() + ',' + currentLatlng.lng() + '&daddr=' + localItem.latitude + ',' + localItem.longitude;
                     var addressLine = localItem.address1 !== null && localItem.address2 !== null ? (localItem.address1 + '<br />' + localItem.address2) : (localItem.address1 || localItem.address2);
-                    console.log(drivinglink);
                     var logoArea = localItem.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + localItem.brandLogo + '" />'  : '';
                     infowindow.setContent('<div class="card info-card"><div class="span12">' +
                      logoArea + '</div><div class="span6">' + ' <h1 class="title">' + localItem.retailerName+ '</h1>' +
                      ' <span class="desc">' + addressLine + ', '  + localItem.city + ', ' + localItem.state + ' ' + localItem.zipCode + '</span><br>' +
                      '<a class="link" target="_blank" href="' + drivinglink + '">Driving Directions</a>' + '</div><div class="span6">' +
-                     '<h1 class="title">Store Detail</h1>' + storedetail + '</div>');
+                     '<h1 class="title">Store Detail</h1>' + $storeHoursTable + '</div>');
                     infowindow.open(map, marker);
                     $('.gm-style-iw').next('div').remove();
                     map.setCenter({ 'lat': localItem.latitude, 'lng': localItem.longitude });
@@ -292,10 +286,65 @@ var StoreLocator = {
         map.fitBounds(bounds);
         map.setCenter();
     },
-    FormatStoreHours: function (hoursObj) {
-      if (typeof hoursObj === 'object') {
-        //TODO temporary
-        return '';
+    FormatStoreHours: function (storeHoursObj) {
+      if (typeof storeHoursObj === 'object') {
+        var openDaysArr = [];
+          var closedDaysArr = [];
+          var hoursTableArr = [];
+          var itemsDone = [];
+
+          //Sort days of week
+          for (var i = 0; i < storeHoursObj.length; i++) {
+              var openCond = storeHoursObj[i].startTime !== null && storeHoursObj[i].closeTime !== null;
+              var closedCond = storeHoursObj[i].closed === true;
+              if (openCond && !closedCond) {
+                  openDaysArr.push(storeHoursObj[i].dayOfWeek);
+              } else {
+                  closedDaysArr.push(storeHoursObj[i].dayOfWeek);
+              }
+          }
+
+          openDaysArr.sort(function(a, b) {
+              return a - b;
+          });
+
+          var daysLength = openDaysArr.length && closedDaysArr.length ? openDaysArr.length + closedDaysArr.length : openDaysArr.length || closedDaysArr.length;
+          var isCurrentDay = function(dayName) {
+            var dateNow = new Date();
+            var dayIndex = dateNow.getDay();
+            var dayNames = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
+            var todayIs = dayNames[dayIndex];
+            if (todayIs === dayName) {
+                return ' class="currentDay"';
+            } else {
+              return '';
+            }
+          };
+
+          for (var j = 0; j < daysLength; j++) {
+              for (var k = 0; k < storeHoursObj.length; k++) {
+                  if (storeHoursObj[k].dayOfWeek === j) {
+                      if (openDaysArr.indexOf(storeHoursObj[k].dayOfWeek) !== -1) {
+                          var OpenTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
+                              '<td class="dayCol" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
+                              '<td>' + storeHoursObj[k].startTime.replace(/\./g, '') + '</td>' +
+                              '<td class="timeSep">&ndash;</td>' +
+                              '<td>' + storeHoursObj[k].closeTime.replace(/\./g, '') + '</td>' +
+                              '</tr>';
+                          hoursTableArr.push(OpenTableLine);
+                      } else if (closedDaysArr.indexOf(storeHoursObj[k].dayOfWeek) !== -1) {
+                          var ClosedTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
+                              '<td class="dayCol' + isCurrentDay(storeHoursObj[k].day) + '" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
+                              '<td>' + 'CLOSED' + '</td>' +
+                              '</tr>';
+                          hoursTableArr.push(ClosedTableLine);
+                      }
+                  }
+              }
+          }
+          return hoursTableArr.join();
+      } else {
+        return false;
       }
     },
     DetectCurrentLocation: function () {
@@ -394,29 +443,38 @@ $(document).ready(function(){
 
     initialize();
 
-    $('#autocomplete').keyup(function (ev) {
-        console.log(ev.keyCode);
-        if (ev.keyCode === 13) {
+    $(addressInput).on({
+      'keyup': function(evt) {
+        if (evt.which === 13) {
           StoreLocator.LocationSearch();
-      }
-      else {
+        }
+        else {
           requiredRegularSearch = true;
-      }
-      if ($('#autocomplete').val() === '') {
+        }
+        if ($('#autocomplete').val() === '') {
           $('.fa-times-circle').hide();
-      } else {
+        } else {
           $('.fa-times-circle').show();
+        }
+      },
+      'paste': function(evt) {
+        if (evt.which === 13) {
+          StoreLocator.LocationSearch();
+        }
+        else {
+          requiredRegularSearch = true;
+        }
+        if ($('#autocomplete').val() === '') {
+          $('.fa-times-circle').hide();
+        } else {
+          $('.fa-times-circle').show();
+        }
       }
     });
 
     $('.fa-times-circle').click(function () {
         $('.fa-times-circle').hide();
         $('#autocomplete').val('');
-    });
-
-    $('.view-all-location').click(function () {
-        $('.map-list').hide();
-        $('.retailer-list').show();
     });
 
     $('.map-list').show();
