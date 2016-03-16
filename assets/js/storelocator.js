@@ -150,12 +150,15 @@ var StoreLocator = {
 
                 var sortedHtmlString = '';
                 for (var res = 0; res < sortedHtml.length; res++) {
-                  sortedHtmlString += sortedHtml[res].templateCard;
+                  sortedHtmlString += sortedHtml[res].templateCard.replace(/@/g,'<div class="numberCircle">' + (res + 1) + '</div>');
                 }
 
                 if (response.length > 0) {
                     $('#dvResult').html(sortedHtmlString);
                     StoreLocator.DrawMarker(response);
+                    $('.resultCard').click(function(e) {
+                      StoreLocator.OpenMarker($(this).attr('id') + '_' + 'details');
+                    });
                 }
                 else {
                     $('#dvResult').html(StoreLocator.NoResultTemplate());
@@ -190,7 +193,8 @@ var StoreLocator = {
         var templateObj = {
           'metersAway' : calculatedMeter,
           'templateCard' : '<div class="resultCard card span12" id="'+ itemID + '">' + '<div class="span3 nopadding">' +
-          '    <div class="numberCircle">' + cardNum + '</div>' +
+          //Index when sorted
+          '@' +
           '    <div> <span class="miles">' + calculatedmile + ' mile(s)</span></div>' +
           '</div>' +
           '<div class="span9">' +
@@ -492,5 +496,7 @@ $(document).ready(function(){
 
     $('.map-list').show();
     $('.retailer-list').hide();
+
+
 
 });
