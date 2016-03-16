@@ -1285,6 +1285,7 @@ select{
     z-index: 555;
 }
 .card{
+    cursor: pointer;
     padding: 20px;
     border-bottom: 1px solid #dadada;
 }
