@@ -4685,6 +4685,10 @@ fieldset p {
 #grid-view {
 	display:none;
 }
+
+.tp-bgimg {
+    background-position: 50% 50%!important;
+}
 }
 
 @media (max-width: 767px) {
@@ -4911,4 +4915,8 @@ fieldset p {
 	font-size:12px;
 	padding: 6px 0!important;
 	
+}
+
+.brand-fixed {
+	width:1420px;
 }
