@@ -4618,17 +4618,22 @@ fieldset p {
 
 .headline-retail h4 {
     float: left;
-    font-size: 18px;
+    font-size: 20px;
+	width:100%;
 }
 
 .headline-retail .float-right {
     float: right;
     padding-right: 0;
 	padding-top: 5px;
+	border-bottom: 1px solid #e1e1e1;
+    width: 100%;
+    margin-bottom: 20px;
+	padding-bottom:10px;
 }
 
 .headline-retail .float-right a {
-    font-size:11px;
+    font-size:12px;
 }
 
 .item-sm .item-title a {
@@ -4652,8 +4657,8 @@ fieldset p {
 }
 
 .item-div h4 {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 18px;
     letter-spacing: 0px;
     margin-top: 0px;
 }
