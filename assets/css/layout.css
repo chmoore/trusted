@@ -56,6 +56,7 @@
 /*		position: relative;*/
 		background-color: #fff;
 		min-height:100%;
+		width: 1380px;
 	}
 
 	@media (max-width: 767px) {
