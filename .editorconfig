@@ -1,0 +1,23 @@
+## Trusted .editorconfig,
+   ## To use: install EditorConfig (http://editorconfig.org/#download) and drop this file into the project's root
+
+# No .editorconfig files above the root directory
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Use 2 spaces for indentation in HTML, JavaScript, JSP, SCSS, and XML
+[*.{html,js,jsp,scss,xml}]
+indent_size = 2
+
+# 4 space indentation for Java
+[*.java]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+max_line_length = 50
