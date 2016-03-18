@@ -4203,6 +4203,7 @@ fieldset p {
     width: 100%;
 	border: 1px solid #e1e1e1;
     border-radius: 8px;
+	margin-top: -20px;
 }
  .button {
     padding: 0 20px;
