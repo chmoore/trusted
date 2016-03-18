@@ -159,23 +159,26 @@ var StoreLocator = {
                     $('.resultCard').click(function(e) {
                       StoreLocator.OpenMarker($(this).attr('id') + '_' + 'details');
                     });
+                    $('.resultCard').first().click();
                 }
                 else {
                     $('#dvResult').html(StoreLocator.NoResultTemplate());
                 }
                 StoreLocator.ShowList();
-                $('.card').click(function () {
-                    var markerId = $(this).attr('id');
-                    StoreLocator.OpenMarker(markerId);
-
-                });
             },
             error: function (req, response) {
                 console.log('Error:' + response);
             }
         });
+
         $('.google-map').height($('#dvResult').height());
         $('#dvResult').height($('.google-map').height());
+
+        $(window).on('resize', function () {
+          $('.google-map').width($(document).width());
+          google.maps.event.trigger('resize');
+        });
+
     },
     GenerateCard: function (item, idx) {
         //0 markerlabel
