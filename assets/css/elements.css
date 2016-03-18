@@ -1289,6 +1289,11 @@ select{
     padding: 20px;
     border-bottom: 1px solid #dadada;
 }
+
+.card.selected{
+  background-color: #E6E6E6;
+}
+
  .card .title{
  	font-size: 15px;
  	font-weight: bold;
