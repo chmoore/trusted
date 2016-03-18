@@ -300,7 +300,7 @@
    handleMobileMenu
    ========================================================================== */
 
-  var MOBILEBREAKPOINT = 991;
+  var MOBILEBREAKPOINT = 1180;
 
   function handleMobileMenu() {
 

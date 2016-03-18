@@ -945,6 +945,19 @@
 	margin-top:20px;
 	padding:20px;
 }
+#mobile-menu-trigger {
+			display: block;
+			margin-top: 20px;
+			margin-right: 0;
+			position:relative;
+			right:0;
+			font-size:26px;
+		}
+
+		.search-wrap {
+			display:none;
+		}
+
 	}
 
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
