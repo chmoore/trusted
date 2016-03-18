@@ -157,6 +157,8 @@ var StoreLocator = {
                     $('#dvResult').html(sortedHtmlString);
                     StoreLocator.DrawMarker(response);
                     $('.resultCard').click(function(e) {
+                      $('.resultCard').removeClass('selected');
+                      $(this).addClass('selected');
                       StoreLocator.OpenMarker($(this).attr('id') + '_' + 'details');
                     });
                     $('.resultCard').first().click();
@@ -277,9 +279,9 @@ var StoreLocator = {
             google.maps.event.addListener(marker, 'click', (function (marker, i) {
                 return function () {
                     var cards = $('.card');
-                    for (var cd = 0; cd < cards.length; cd++) {
+                    /*for (var cd = 0; cd < cards.length; cd++) {
                         $(cards[cd]).removeClass('selected');
-                    }
+                    }*/
                     var localItem = locations[i];
                     $('#' + localItem.Id).addClass('selected');
                     var $newHoursTable = $('<table class="store-hours"></table>');
