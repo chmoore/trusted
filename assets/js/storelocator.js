@@ -196,6 +196,9 @@ var StoreLocator = {
         });
 
     },
+    SanitizeId: function(str) {
+      return String(str).replace(/&/g, '_').replace(/</g, '_').replace(/>/g, '_').replace(/"/g, '_');
+    },
     GenerateCard: function (item, idx) {
         //0 markerlabel
         //1 miles
@@ -207,7 +210,7 @@ var StoreLocator = {
         var calculatedmile = (calculatedMeter / 1609.34).toFixed(2);
         var addressLine = item.address1 !== null && item.address2 !== null ? (item.address1 + '<br />' + item.address2) : (item.address1 || item.address2);
         var taddress = addressLine + ', ' + item.city + ', ' + item.state + ' ' + item.zipCode;
-        var itemID = item.brandUniqueName+'_'+item.locationUniqueName;
+        var itemID = StoreLocator.SanitizeId(item.brandUniqueName+'_'+item.locationUniqueName);
         var logoOrNot = item.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + item.brandLogo + '" />'  : '';
         var templateObj = {
           'metersAway' : calculatedMeter,
@@ -280,7 +283,7 @@ var StoreLocator = {
 
         for (var i = 0; i < data.length; i++) {
             var retailer = data[i];
-            var retailerId = retailer.brandUniqueName+'_'+retailer.locationUniqueName+'_details';
+            var retailerId = StoreLocator.SanitizeId(retailer.brandUniqueName+'_'+retailer.locationUniqueName+'_details');
             var labelCharLength = (i+1).toString().length;
             var labelAnchorPos = labelCharLength > 1 ? new google.maps.Point(-14, 28) : new google.maps.Point(-18, 28) ;
             marker = new MarkerWithLabel({
