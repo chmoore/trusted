@@ -282,12 +282,15 @@ var StoreLocator = {
                     /*for (var cd = 0; cd < cards.length; cd++) {
                         $(cards[cd]).removeClass('selected');
                     }*/
+                    var isLatLngFn = typeof currentLatlng.lat === 'function' && typeof currentLatlng.lng === 'function';
+                    var currentLat = isLatLngFn ? currentLatlng.lat() : currentLatlng.lat;
+                    var currentLng = isLatLngFn ? currentLatlng.lng() : currentLatlng.lng;
                     var localItem = locations[i];
                     $('#' + localItem.Id).addClass('selected');
                     var $newHoursTable = $('<table class="store-hours"></table>');
                     var $storeHoursTable = $newHoursTable.html(StoreLocator.FormatStoreHours(localItem.storeHours)).get(0).outerHTML;
                     var localaddress = $('#street_number').val() + $('#route').val() + ', ' + $('#locality').val() + ', ' + $('#administrative_area_level_1').val() + $('#postal_code').val();
-                    var drivinglink = 'https://maps.google.com/?saddr=' + currentLatlng.lat() + ',' + currentLatlng.lng() + '&daddr=' + localItem.latitude + ',' + localItem.longitude;
+                    var drivinglink = 'https://maps.google.com/?saddr=' + currentLat + ',' + currentLng + '&daddr=' + localItem.latitude + ',' + localItem.longitude;
                     var addressLine = localItem.address1 !== null && localItem.address2 !== null ? (localItem.address1 + '<br />' + localItem.address2) : (localItem.address1 || localItem.address2);
                     var logoArea = localItem.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + localItem.brandLogo + '" />'  : '';
                     infowindow.setContent('<div class="card info-card"><div class="span12">' +
@@ -401,7 +404,7 @@ var StoreLocator = {
                                     document.getElementById(addressType).value = val;
                                 }
                             }
-                            StoreLocator.LocationSearch();
+                            StoreLocator.LocationSearch(webserviceUrl);
                             requiredRegularSearch = false;
                         }
                     }
@@ -418,11 +421,14 @@ var StoreLocator = {
         return x * Math.PI / 180;
     },
     GetDistance : function(p1, p2) {
+        var isPlace = typeof p1.lat === 'function' && typeof p1.lng === 'function';
+        var lat1 = isPlace ? p1.lat() : p1.lat;
+        var lng1 = isPlace ? p1.lng() : p1.lng;
         var R = 6378137; // Earths mean radius in meter
-        var dLat = StoreLocator.Rad(p2.lat - p1.lat());
-        var dLong = StoreLocator.Rad(p2.lng - p1.lng());
+        var dLat = StoreLocator.Rad(p2.lat - lat1);
+        var dLong = StoreLocator.Rad(p2.lng - lng1);
         var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-          Math.cos(StoreLocator.Rad(p1.lat())) * Math.cos(StoreLocator.Rad(p2.lat)) *
+          Math.cos(StoreLocator.Rad(lat1)) * Math.cos(StoreLocator.Rad(p2.lat)) *
           Math.sin(dLong / 2) * Math.sin(dLong / 2);
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         var d = R * c;
@@ -453,7 +459,7 @@ var StoreLocator = {
                             document.getElementById(addressType).value = val;
                         }
                     }
-                    StoreLocator.LocationSearch();
+                    StoreLocator.LocationSearch(webserviceUrl);
                 }
             } else {
                 console.log('Geocode was not successful for the following reason: ' + status);
@@ -468,7 +474,7 @@ $(document).ready(function(){
     $(addressInput).on({
       'keyup': function(evt) {
         if (evt.which === 13) {
-          StoreLocator.LocationSearch();
+          StoreLocator.LocationSearch(webserviceUrl);
         }
         else {
           requiredRegularSearch = true;
@@ -481,7 +487,7 @@ $(document).ready(function(){
       },
       'paste': function(evt) {
         if (evt.which === 13) {
-          StoreLocator.LocationSearch();
+          StoreLocator.LocationSearch(webserviceUrl);
         }
         else {
           requiredRegularSearch = true;
