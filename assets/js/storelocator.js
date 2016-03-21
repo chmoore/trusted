@@ -139,9 +139,18 @@ var StoreLocator = {
             data: { 'textSearch': textCriteria, 'address': addresstext, 'city': $('#locality').val(), 'state': $('#administrative_area_level_1').val(), 'zipcode': $('#postal_code').val() },
             dataType: 'json',
             success: function (response) {
+                var cleanResponse = [];
+
+                for (var result = 0; result < response.length; result++) {
+                  var validPlaceCond = (response[result].latitude !== null || response[result].longitude !== null);
+                  if (validPlaceCond) {
+                    cleanResponse.push(response[result]);
+                  }
+                }
+
                 var completeHtml = [];
-                for (var con = 0; con < response.length; con++) {
-                    completeHtml.push(StoreLocator.GenerateCard(response[con], con));
+                for (var con = 0; con < cleanResponse.length; con++) {
+                    completeHtml.push(StoreLocator.GenerateCard(cleanResponse[con], con));
                 }
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: { lat: 40.745812, lng: -100.913895 },
@@ -158,9 +167,9 @@ var StoreLocator = {
                   sortedHtmlString += sortedHtml[res].templateCard.replace(/@/g,'<div class="numberCircle">' + (res + 1) + '</div>');
                 }
 
-                if (response.length > 0) {
+                if (cleanResponse.length > 0) {
                     $('#dvResult').html(sortedHtmlString);
-                    StoreLocator.DrawMarker(response);
+                    StoreLocator.DrawMarker(cleanResponse);
                     $('.resultCard').click(function(e) {
                       $('.resultCard').removeClass('selected');
                       $(this).addClass('selected');
