@@ -258,6 +258,7 @@ var StoreLocator = {
         });
         var bounds = new google.maps.LatLngBounds();
         var marker;
+
         var image = {
             url: trustedAssetsURL + 'assets/images/marker.png',
             // This marker is 20 pixels wide by 32 pixels high.
@@ -271,13 +272,15 @@ var StoreLocator = {
         for (var i = 0; i < data.length; i++) {
             var retailer = data[i];
             var retailerId = retailer.uniqueRetailerName+'_'+retailer.locationUniqueName+'_details';
+            var labelCharLength = (i+1).toString().length;
+            var labelAnchorPos = labelCharLength > 1 ? new google.maps.Point(-14, 28) : new google.maps.Point(-18, 28) ;
             marker = new MarkerWithLabel({
                 position: { lat: retailer.latitude, lng: retailer.longitude },
                 map: map,
                 icon: image,
                 Id: retailerId,
                 labelContent: i+1,
-                labelAnchor: new google.maps.Point(-18, 28),
+                labelAnchor: labelAnchorPos,
                 labelClass: 'labels', // the CSS class for the label
                 labelStyle: { opacity: 0.75 }
             });
