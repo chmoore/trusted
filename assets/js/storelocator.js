@@ -35,6 +35,8 @@ var endpoints = {
 
 var webserviceUrl = endpoints.all;
 
+var resultsVisible = false;
+
 function initialize() {
   var defaultLat = 40.745812;
   var defaultLng = -100.913895;
@@ -72,6 +74,9 @@ function selectEndpoint() {
     webserviceUrl = endpoints.all;
   } else {
     webserviceUrl = endpoints.brandAll + selection;
+  }
+  if (resultsVisible) {
+    StoreLocator.LocationSearch(webserviceUrl);
   }
 }
 
@@ -224,6 +229,7 @@ var StoreLocator = {
         return '<div class="no-result"><p>No results found. Please refine you search criteria.</p></div>';
     },
     ShowList: function(){
+        resultsVisible = true;
         $('#dvResult').show();
         $('.google-map').css('margin-left', $('#dvResult').width() + 'px');
         $('#map').width(window.innerWidth - $('#dvResult').width());
@@ -278,10 +284,13 @@ var StoreLocator = {
 
             google.maps.event.addListener(marker, 'click', (function (marker, i) {
                 return function () {
+                    if (typeof marker === 'object' && typeof marker.Id === 'string') {
+                      var markerResultId = marker.Id.replace('_details', '');
+                      $('.resultCard.selected').removeClass('selected');
+                      $('#'+markerResultId).addClass('selected');
+                      //TODO add ScrollTo behavior to this result
+                    }
                     var cards = $('.card');
-                    /*for (var cd = 0; cd < cards.length; cd++) {
-                        $(cards[cd]).removeClass('selected');
-                    }*/
                     var isLatLngFn = typeof currentLatlng.lat === 'function' && typeof currentLatlng.lng === 'function';
                     var currentLat = isLatLngFn ? currentLatlng.lat() : currentLatlng.lat;
                     var currentLng = isLatLngFn ? currentLatlng.lng() : currentLatlng.lng;
@@ -293,7 +302,7 @@ var StoreLocator = {
                     var drivinglink = 'https://maps.google.com/?saddr=' + currentLat + ',' + currentLng + '&daddr=' + localItem.latitude + ',' + localItem.longitude;
                     var addressLine = localItem.address1 !== null && localItem.address2 !== null ? (localItem.address1 + '<br />' + localItem.address2) : (localItem.address1 || localItem.address2);
                     var logoArea = localItem.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + localItem.brandLogo + '" />'  : '';
-                    infowindow.setContent('<div class="card info-card"><div class="span12">' +
+                    infowindow.setContent('<div class="card info-card"><div class="span12 info-card-logo">' +
                      logoArea + '</div><div class="span6">' + ' <h1 class="title">' + localItem.retailerName+ '</h1>' +
                      ' <span class="desc">' + addressLine + ', '  + localItem.city + ', ' + localItem.state + ' ' + localItem.zipCode + '</span><br>' +
                      '<a class="link" target="_blank" href="' + drivinglink + '">Driving Directions</a>' + '</div><div class="span6">' +
