@@ -223,7 +223,7 @@ var StoreLocator = {
           logoOrNot +
           '    <h1 class="title">' + item.retailerName + '</h1>' +
           '    <span class="desc">' + taddress + '</span><br />' +
-          '    <a class="link" href="javascript:StoreLocator.OpenMarker(\'' + itemID + '_details\'' + ')">Store Details</a>' +
+          '    <a class="link" href="/stores/' + item.locationUniqueName  + '">Store Details</a>' +
           '</div>' +
           '</div>'
         };
@@ -319,7 +319,8 @@ var StoreLocator = {
                     var logoArea = localItem.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + localItem.brandLogo + '" />'  : '';
                     infowindow.setContent('<div class="card info-card"><div class="span12 info-card-logo">' +
                      logoArea + '</div><div class="span6">' + ' <h1 class="title">' + localItem.retailerName+ '</h1>' +
-                     ' <span class="desc">' + addressLine + ', '  + localItem.city + ', ' + localItem.state + ' ' + localItem.zipCode + '</span><br>' +
+                     ' <span class="desc">' + addressLine + ', '  + localItem.city + ', ' + localItem.state + ' ' + localItem.zipCode + '</span><br />' +
+                     '<a class="link" target="_blank" href="/stores/' + localItem.locationUniqueName + '">View Store Details</a><br />' +
                      '<a class="link" target="_blank" href="' + drivinglink + '">Driving Directions</a>' + '</div><div class="span6">' +
                      '<h1 class="title">Store Detail</h1>' + $storeHoursTable + '</div>');
                     infowindow.open(map, marker);
