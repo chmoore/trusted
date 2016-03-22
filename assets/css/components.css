@@ -263,6 +263,11 @@
 		color: #fff;
 		text-decoration: none;
 	}
+	
+	.btn a {
+		color: #fff;
+		text-decoration: none;
+	}
 
 	.btn:focus { outline: 0; }
 
