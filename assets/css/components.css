@@ -3776,7 +3776,7 @@ fieldset p {
 
 .item-sort select {
 	height:35px;
-	padding:4px 12px;
+	padding:4px 25px 4px 12px;
 	width:auto;
 	margin:0 6px;
 }
