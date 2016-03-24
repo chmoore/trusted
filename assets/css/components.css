@@ -354,9 +354,9 @@
 	}
 
 	.btn-blue:hover {
-		border-color: #232323 !important;
-		background-color: #232323 !important;
-		color: #fff !important;
+		border-color: #fff !important;
+		background-color: #fff !important;
+		color: #000 !important;
 	}
 
 /* ==========================================================================
