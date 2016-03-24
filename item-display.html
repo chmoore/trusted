@@ -22,17 +22,18 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
 <!-- /// FontAwesome Icons 4.3.0 ////////  -->
 	<link rel="stylesheet" href="assets/fonts/fontawesome/font-awesome.min.css">
-
     
-    <!-- /// Custom Icon Font ////////  -->
+     <!-- /// Custom Icon Font ////////  -->
     <link rel="stylesheet" href="assets/fonts/iconfontcustom/icon-font-custom.css">  
-    
-	<!-- /// Plugins CSS ////////  -->
-	<link rel="stylesheet" href="assets/vendors/revolutionslider/css/settings.css">
-    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css">
-	<link rel="stylesheet" href="assets/vendors/magnificpopup/magnific-popup.css">
-    <link rel="stylesheet" href="assets/vendors/animations/animate.min.css">
-	<link rel="stylesheet" href="assets/vendors/itplayer/css/YTPlayer.css">
+
+
+<!-- /// Plugins CSS ////////  -->
+<link rel="stylesheet" href="assets/vendors/revolutionslider/css/settings.css">
+<link rel="stylesheet" href="assets/vendors/formvalidation/formValidation.css">
+<link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     
 	
 	<!-- /// Template CSS ////////  -->
@@ -172,7 +173,7 @@
   
         <div class="breadcrumbs">
         <div class="container">
-       <div class="span6 height40"><ol>
+       <div class="col-xs-6 height40"><ol>
   <li>
     <a href="index.html">Home</a>
   </li>
@@ -187,7 +188,7 @@
    TAG HEUER GRAND CARRERA AUTOMATIC WATCH
   </li>
 </ol></div></div>
-        <!--<div class=" span6 search-back"><a href="search-results-all.html"><i class="fa fa-angle-left"></i> Back to Search Results</a></div>-->
+        <!--<div class=" col-xs-6 search-back"><a href="search-results-all.html"><i class="fa fa-angle-left"></i> Back to Search Results</a></div>-->
         </div>
         
  
@@ -208,7 +209,7 @@
 
                     </div><!-- end .sidebar -->
                     
-                    <div class="span6 offset1a">
+                    <div class="col-xs-6 offset1a">
                       <div class="product-title">
                         	
                             <h2>TAG Heuer Grand Carrera Automatic Watch</h2>
@@ -299,7 +300,7 @@
           </a><div class="cart-icon"><a href="item-display.html"></a><a href="#"><i class="fa fa-cart-plus fa-lg"></i></a></div>                   		
 	</div>
                     
-                    </div><!-- end .span6 -->
+                    </div><!-- end .col-xs-6 -->
                     <div class="span3 no-left-pad">
                     <div class="item-sm">			
 				  <div class="item-img-full">
@@ -308,8 +309,7 @@
 	
 								 <h6><a href="#">RM 019 TOURBILLON</a></h6>
                                   <p class="price-ital">Inquire for price</p>
-                                 <div class="fav"><a href="#"><i class="fa fa-heart-o fa-lg"></i><span class="visuallyhidden">Add to Wishlist</span></a></div>
-                                 <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></a></div>   
+                                    
 							</div>
                     
                     </div>
@@ -321,8 +321,7 @@
 
 								 <h6><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></h6>
                                  <p class="price-ital">Inquire for price</p>
-                                 <div class="fav"><a href="#"><i class="fa fa-heart-o fa-lg"></i><span class="visuallyhidden">Add to Wishlist</span></a></div>
-                                 <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></a></div>   
+                                    
 							</div>
                     </div>
                     <div class="span3 no-left-pad">
@@ -333,8 +332,7 @@
 
 								 <h6><a href="#">RM 011 AUTOMATIC FLYBACK CHRONOGRAPH</a></h6>
                                  <p class="price-ital">Inquire for price</p>
-                                 <div class="fav"><a href="#"><i class="fa fa-heart-o fa-lg"></i><span class="visuallyhidden">Add to Wishlist</span></a></div>
-                                 <div class="cart-icon"><a href="#"><i class="fa fa-cart-plus fa-lg"></i><span class="visuallyhidden">Add to Cart</span></a></div>    
+                                     
 							</div>
                     
                     </div>
@@ -344,24 +342,23 @@
                     <div id="dialog-form" title="Contact Retailer" class="contact-modal">
  <!-- <span class="required-right">Required*</span>-->
  
-  <form>
-    <fieldset>
-    <div class="span6 no-left-pad">
+  <form method="post" id="retailermodal">
+    <div class="col-xs-6 no-left-pad">
       <label for="fname">First Name*</label>
       <input type="text" name="fname" id="fname" value="" class="text ui-widget-content ui-corner-all">
       </div>
-      <div class="span6 no-right-pad">
+      <div class="col-xs-6 no-right-pad">
        <label for="lname">Last Name*</label>
       <input type="text" name="lname" id="lname" value="" class="text ui-widget-content ui-corner-all">
       </div>
       <div class="clear"></div>
       <label for="email">Email*</label>
       <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
-      <div class="span6 no-left-pad">
+      <div class="col-xs-6 no-left-pad">
       <label for="phone">Phone</label>
       <input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all">
       </div>
-      <div class="span6 no-right-pad">
+      <div class="col-xs-6 no-right-pad">
        <label for="product">Product</label>
       <input type="text" name="product" id="product" value="Richard Mille RM 011 Felipe Massa Flyback" class="text ui-widget-content ui-corner-all" disabled> </div>
       <div class="clear"></div>
@@ -375,7 +372,6 @@
       <div class="span12 text-center">
   <input class="btn" type="submit" name="inquire" id="inquire" value="Inquire for Price">
   </div>
-    </fieldset>
   </form>
 </div>
                     
@@ -468,7 +464,7 @@
             
             <div class="fullwidth-section" id="bg-1-cut">
             	<div class="container">
-					<div class="span6 text-center border">
+					<div class="col-xs-6 text-center border">
 						<div class="headline">
 							<h3>Have a quick question or comment? </h3>
 						</div><!-- end .headline -->
@@ -476,7 +472,7 @@
                            <a href="http://www.twitter.com/asktrusted" target="_blank">Reach out to us on Twitter: @asktrusted</a>
                         </p>
                         </div>
-                        <div class="span6 text-center">
+                        <div class="col-xs-6 text-center">
 						<div class="headline">
 							<h3>Receive Updates from Trusted</h3>
 						</div><!-- end .headline -->
@@ -494,7 +490,7 @@
                        
 				</div><!-- end .row -->
 			</div>
-            <!-- end .span6 -->
+            <!-- end .col-xs-6 -->
 	
                 <!-- end .row -->
             </div>
@@ -610,6 +606,11 @@
 		<script>
 			new UISearch( document.getElementById( 'sb-search' ) );
 		</script>
+        
+        <!-- /// formValidation //////// -->
+
+<script src="assets/vendors/formvalidation/formValidation.js"></script> 
+<script src="assets/vendors/formvalidation/framework/bootstrap.min.js"></script>
 	
 	<!-- /// Custom JS ////////  -->
 	<script src="assets/js/main.js"></script>
@@ -797,6 +798,53 @@ function fluidDialog() {
     });
 
 }
+
+// Formvalidation.io //
+$(document).ready(function() {
+    $('#retailermodal').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            fname: {
+                validators: {
+                    notEmpty: {
+                        message: 'Your first name is required'
+                    }
+                }
+            },
+            lname: {
+                validators: {
+                    notEmpty: {
+                        message: 'Your last name is required'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    emailAddress: {
+                            message: 'This is not a valid email address'
+                        },
+                        regexp: {
+                            regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                        }
+                }
+            },
+            message: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter a message for Trusted'
+                    },
+                }
+            },
+            
+        }
+    });
+	
+});
 	</script>
     
 </body>
