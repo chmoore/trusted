@@ -1,100 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><body class="sticky-header"><script>
-	  $(document).ready(function(){
-
-var languages = ["Trusted","Tag Heuer", "Google", "Michael Godard","Stickman","National Geographic","eTitle"]; 
-  //Can add more,separate with commas.
-  //Added CSS,HTML cause people know them more.               
-
-  $("#s").autocomplete({
-    source: languages
-});
-}); 
-
-//Accordion//
-	   $(document).on('show','.accordion', function (e) {
-         //$('.accordion-heading i').toggleClass(' ');
-         $(e.target).prev('.accordion-heading').addClass('accordion-opened');
-    });
-    
-    $(document).on('hide','.accordion', function (e) {
-        $(this).find('.accordion-heading').not($(e.target)).removeClass('accordion-opened');
-        //$('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
-    });
-	
-	//Image Zoom//
-	$("#zoom").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true});
-	
-	//Wishlist//
-	$('.wish-add').bind('click', function(e) {
-  e.preventDefault();
-  $('.wish-add a').toggleClass('added');
-  $('.wishlist').toggleClass('toggled animated');
-});
-
-//jQuery Modal//
- 
-    form = dialog.find( "form" ).on( "submit", function( event ) {
-      event.preventDefault();
-      addUser();
-    });
- 
-    $( "#inquire" ).button().on( "click", function() {
-      dialog.dialog( "open" );
-    });
-  });
-  $("#dialog-form").dialog({autoOpen:false,modal:true});
-
-$("#inquire").click(function()
-                {
-                    $("#dialog-form").dialog('open');  
-                    $('.ui-widget-overlay').css('background', 'black');
-                });
-				
-//Responsive Modal//
-$("#dialog-form").dialog({
-    width: 'auto', // overcomes width:'auto' and maxWidth bug
-    maxWidth: 600,
-    height: 'auto',
-    modal: true,
-    fluid: true, //new option
-    resizable: false
-});
-
-
-// on window resize run function
-$(window).resize(function () {
-    fluidDialog();
-});
-
-// catch dialog if opened within a viewport smaller than the dialog width
-$(document).on("dialogopen", ".ui-dialog", function (event, ui) {
-    fluidDialog();
-});
-
-function fluidDialog() {
-    var $visible = $(".ui-dialog:visible");
-    // each open dialog
-    $visible.each(function () {
-        var $this = $(this);
-        var dialog = $this.find(".ui-dialog-content").data("ui-dialog");
-        // if fluid option == true
-        if (dialog.options.fluid) {
-            var wWidth = $(window).width();
-            // check window width against dialog width
-            if (wWidth < (parseInt(dialog.options.maxWidth) + 50))  {
-                // keep dialog from filling entire screen
-                $this.css("max-width", "90%");
-            } else {
-                // fix maxWidth bug
-                $this.css("max-width", dialog.options.maxWidth + "px");
-            }
-            //reposition dialog
-            dialog.option("position", dialog.options.position);
-        }
-    });
-
-}
-	</script></body></html><!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 
@@ -311,7 +215,7 @@ function fluidDialog() {
                         </div>
                         <div class="product-brand">
                         <h6 class="align-left">By <a href="#" class="blue-link">Tag Heuer</a></h6>
-                         <div class="wishlist-container align-right">
+                         <!--<div class="wishlist-container align-right">
                             <span class="wishlist toggled">
       <span class="entypo-heart"></span>
     </span>
@@ -319,7 +223,7 @@ function fluidDialog() {
     <span class="wish-add">
       <a href="#">Add to Wishlist</a>
     </span>
-    </div>
+    </div>-->
                         </div>
                         <div class="price">
                         <h3 class="gray-price">Inquire for Price</h3>
@@ -465,6 +369,8 @@ function fluidDialog() {
       <input type="text" name="comments" id="comments" value="" class="text ui-widget-content ui-corner-all">
      
   <p><input type="checkbox" name="checkbox" value=""> Mailing List</p>
+  <div class="g-recaptcha" data-sitekey="6Ld_rxsTAAAAAI1-UXkjFlomt0jzbTLKhC9IxEaZ"></div>
+  <br>
       <!-- Allow form submission with keyboard without duplicating the dialog button -->
       <div class="span12 text-center">
   <input class="btn" type="submit" name="inquire" id="inquire" value="Inquire for Price">
@@ -688,6 +594,7 @@ function fluidDialog() {
     <!-- /// jQuery ////////  -->
 	 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      
          <!-- /// Revolution Slider ////////  -->
     <script src="assets/vendors/revolutionslider/js/jquery.themepunch.tools.min.js"></script>
