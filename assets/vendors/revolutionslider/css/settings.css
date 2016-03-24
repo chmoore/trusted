@@ -20,7 +20,7 @@ website:   	http://www.themepunch.com
 .tp-hide-revslider,.tp-caption.tp-hidden-caption	{	visibility:hidden !important; display:none !important}
 
 
-.tp-caption { z-index:1; white-space:nowrap}
+.tp-caption { z-index:1; /*white-space:nowrap*/}
 
 .tp-caption-demo .tp-caption	{	position:relative !important; display:inline-block; margin-bottom:10px; margin-right:20px !important}
 

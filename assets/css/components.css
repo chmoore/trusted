@@ -342,6 +342,22 @@
 		background-color: #232323 !important;
 		color: #fff !important;
 	}
+	
+	.btn-blue {
+		border: none !important;
+		background-color: #0f88ca !important;
+		color: #fff !important;
+		width:180px;
+		text-align:center;
+		font: 12px 'gotham_htfbold', Arial, sans-serif;
+		padding:15px;
+	}
+
+	.btn-blue:hover {
+		border-color: #232323 !important;
+		background-color: #232323 !important;
+		color: #fff !important;
+	}
 
 /* ==========================================================================
    =Contact form
@@ -4933,4 +4949,27 @@ fieldset p {
 
 .brand-fixed {
 	width:1420px;
+}
+
+.sfl h1 {
+	font-size:72px;
+	text-transform:uppercase;
+	color:#fff;
+	line-height:68px;
+	margin-bottom:15px;
+}
+
+.sfl h6 {
+	color:#fff;
+	font-family:'Noto Serif', Arial, sans-serif;
+		font-style:italic;
+		text-transform: none!important;
+    letter-spacing: 0!important;
+    font-weight: 300!important;
+    font-size: 16px!important;
+	margin-bottom:25px;
+}
+
+.sfl {
+	    max-width: 500px!important;
 }
