@@ -339,26 +339,34 @@
                     </div>
                     </div>
                     </div>
-                    <div id="dialog-form" title="Contact Retailer" class="contact-modal">
+                    <div class="modal fade" id="retModal" tabindex="-1" role="dialog" aria-labelledby="retModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
  <!-- <span class="required-right">Required*</span>-->
  
   <form method="post" id="retailermodal">
-    <div class="col-xs-6 no-left-pad">
+    <div class="col-sm-6 no-left-pad form-group">
       <label for="fname">First Name*</label>
       <input type="text" name="fname" id="fname" value="" class="text ui-widget-content ui-corner-all">
       </div>
-      <div class="col-xs-6 no-right-pad">
+      <div class="col-sm-6 no-right-pad form-group">
        <label for="lname">Last Name*</label>
       <input type="text" name="lname" id="lname" value="" class="text ui-widget-content ui-corner-all">
       </div>
-      <div class="clear"></div>
+       <div class="col-sm-12 no-right-pad form-group">
       <label for="email">Email*</label>
       <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
-      <div class="col-xs-6 no-left-pad">
+      </div>
+      <div class="col-sm-6 no-left-pad form-group">
       <label for="phone">Phone</label>
       <input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all">
       </div>
-      <div class="col-xs-6 no-right-pad">
+      <div class="col-sm-6 no-right-pad form-group">
        <label for="product">Product</label>
       <input type="text" name="product" id="product" value="Richard Mille RM 011 Felipe Massa Flyback" class="text ui-widget-content ui-corner-all" disabled> </div>
       <div class="clear"></div>
@@ -369,10 +377,13 @@
   <div class="g-recaptcha" data-sitekey="6Ld_rxsTAAAAAI1-UXkjFlomt0jzbTLKhC9IxEaZ"></div>
   <br>
       <!-- Allow form submission with keyboard without duplicating the dialog button -->
-      <div class="span12 text-center">
-  <input class="btn" type="submit" name="inquire" id="inquire" value="Inquire for Price">
+      <div class="col-sm-12 text-center form-group">
+  <button class="btn" type="submit"> Inquire for Price</button>
   </div>
   </form>
+</div>
+</div>
+</div>
 </div>
                     
                     
@@ -382,7 +393,9 @@
                 <div class="divider single-line-side"></div>
 					<div class="span4 retailer-text">
                     <img src="assets/images/tag-logo-1.png" alt=""/>
-							<input class="btn" type="submit" name="inquire" id="inquire" value="Contact Retailer">
+							<button type="button" class="btn" data-toggle="modal" data-target="#retModal">
+  Contact Retailer
+</button>
                         </div>
                         <div class="span4 retailer-text">
 							<h6>MARTIN JEWELERS</h6>
@@ -403,7 +416,9 @@
                         <div class="container retailer-break">
 					<div class="span4 retailer-text">
                     <img src="assets/images/tag-logo-1.png" alt=""/>
-							<input class="btn" type="submit" name="inquire" value="Contact Retailer">
+							<button type="button" class="btn" data-toggle="modal" data-target="#retModal">
+  Contact Retailer
+</button>
                         </div>
                         <div class="span4 retailer-text">
 							<h6>MARTIN JEWELERS</h6>
@@ -602,10 +617,7 @@
 	
 	<!-- /// Custom JS ////////  -->
 	 <script src="assets/js/classie.js"></script>
-    <script src="assets/js/uisearch.js"></script>
-		<script>
-			new UISearch( document.getElementById( 'sb-search' ) );
-		</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         
         <!-- /// formValidation //////// -->
 
@@ -623,17 +635,54 @@ var addthis_config = {
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-529cb14c455bb6a6" async="async"></script>
 <script>
-	  $(document).ready(function(){
-
-var languages = ["Trusted","Tag Heuer", "Google", "Michael Godard","Stickman","National Geographic","eTitle"]; 
-  //Can add more,separate with commas.
-  //Added CSS,HTML cause people know them more.               
-
-  $("#s").autocomplete({
-    source: languages
+// Formvalidation.io //
+$(function() {
+    $('#retailermodal').formValidation({
+        framework: 'bootstrap',
+		excluded: ':disabled',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            fname: {
+                validators: {
+                    notEmpty: {
+                        message: 'Your first name is required'
+                    }
+                }
+            },
+            lname: {
+                validators: {
+                    notEmpty: {
+                        message: 'Your last name is required'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    emailAddress: {
+                            message: 'This is not a valid email address'
+                        },
+                        regexp: {
+                            regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                        }
+                }
+            },
+            message: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter a message for Trusted'
+                    },
+                }
+            },
+            
+        }
+    });
+	
 });
-}); 
-
+	 
 //Accordion//
 	   $(document).on('show','.accordion', function (e) {
          //$('.accordion-heading i').toggleClass(' ');
@@ -653,6 +702,11 @@ var languages = ["Trusted","Tag Heuer", "Google", "Michael Godard","Stickman","N
   e.preventDefault();
   $('.wish-add a').toggleClass('added');
   $('.wishlist').toggleClass('toggled animated');
+});
+
+//Bootstrap Modal//
+$('#retModal').on('hidden.bs.modal', function() {
+    $('#retailermodal').formValidation('resetForm', true);
 });
 
 //jQuery Modal//
@@ -798,53 +852,6 @@ function fluidDialog() {
     });
 
 }
-
-// Formvalidation.io //
-$(document).ready(function() {
-    $('#retailermodal').formValidation({
-        framework: 'bootstrap',
-        icon: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            fname: {
-                validators: {
-                    notEmpty: {
-                        message: 'Your first name is required'
-                    }
-                }
-            },
-            lname: {
-                validators: {
-                    notEmpty: {
-                        message: 'Your last name is required'
-                    }
-                }
-            },
-            email: {
-                validators: {
-                    emailAddress: {
-                            message: 'This is not a valid email address'
-                        },
-                        regexp: {
-                            regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
-                        }
-                }
-            },
-            message: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please enter a message for Trusted'
-                    },
-                }
-            },
-            
-        }
-    });
-	
-});
 	</script>
     
 </body>
