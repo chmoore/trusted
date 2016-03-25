@@ -4973,3 +4973,12 @@ fieldset p {
 .sfl {
 	    max-width: 500px!important;
 }
+
+#retailermodal label {
+	font-size:14px;
+	margin-top:-10px;
+}
+
+#retailermodal .form-group {
+	margin-bottom:0;
+}

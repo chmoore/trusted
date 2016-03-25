@@ -339,12 +339,12 @@
                     </div>
                     </div>
                     </div>
-                    <div class="modal fade" id="retModal" tabindex="-1" role="dialog" aria-labelledby="retModalLabel">
+                    <div class="modal fade" id="retModal" tabindex="-1" role="dialog" aria-labelledby="retModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Contact Retailer</h4>
       </div>
       <div class="modal-body">
  <!-- <span class="required-right">Required*</span>-->
@@ -352,26 +352,25 @@
   <form method="post" id="retailermodal">
     <div class="col-sm-6 no-left-pad form-group">
       <label for="fname">First Name*</label>
-      <input type="text" name="fname" id="fname" value="" class="text ui-widget-content ui-corner-all">
+      <input type="text" name="fname" id="fname" value="" class="text ui-widget-content ui-corner-all form-control">
       </div>
       <div class="col-sm-6 no-right-pad form-group">
        <label for="lname">Last Name*</label>
-      <input type="text" name="lname" id="lname" value="" class="text ui-widget-content ui-corner-all">
+      <input type="text" name="lname" id="lname" value="" class="text ui-widget-content ui-corner-all form-control">
       </div>
        <div class="col-sm-12 no-right-pad form-group">
       <label for="email">Email*</label>
-      <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
+      <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all form-control">
       </div>
       <div class="col-sm-6 no-left-pad form-group">
       <label for="phone">Phone</label>
-      <input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all">
+      <input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all form-control">
       </div>
       <div class="col-sm-6 no-right-pad form-group">
        <label for="product">Product</label>
       <input type="text" name="product" id="product" value="Richard Mille RM 011 Felipe Massa Flyback" class="text ui-widget-content ui-corner-all" disabled> </div>
-      <div class="clear"></div>
       <label for="comments">Comments</label>
-      <input type="text" name="comments" id="comments" value="" class="text ui-widget-content ui-corner-all">
+      <input type="text" name="comments" id="comments" value="" class="text ui-widget-content ui-corner-all form-control">
      
   <p><input type="checkbox" name="checkbox" value=""> Mailing List</p>
   <div class="g-recaptcha" data-sitekey="6Ld_rxsTAAAAAI1-UXkjFlomt0jzbTLKhC9IxEaZ"></div>
@@ -636,7 +635,7 @@ var addthis_config = {
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-529cb14c455bb6a6" async="async"></script>
 <script>
 // Formvalidation.io //
-$(function() {
+$(document).ready(function() {
     $('#retailermodal').formValidation({
         framework: 'bootstrap',
 		excluded: ':disabled',
@@ -685,15 +684,16 @@ $(function() {
 	 
 //Accordion//
 	   $(document).on('show','.accordion', function (e) {
-         //$('.accordion-heading i').toggleClass(' ');
+        $('.accordion-heading i').toggleClass(' ');
          $(e.target).prev('.accordion-heading').addClass('accordion-opened');
     });
     
     $(document).on('hide','.accordion', function (e) {
-        $(this).find('.accordion-heading').not($(e.target)).removeClass('accordion-opened');
-        //$('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
+       $(this).find('.accordion-heading').not($(e.target)).removeClass('accordion-opened');
+        $('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
     });
-	
+    
+
 	//Image Zoom//
 	$("#zoom").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true});
 	
