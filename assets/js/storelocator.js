@@ -141,12 +141,19 @@ var StoreLocator = {
             success: function (response) {
                 var cleanResponse = [];
 
+
                 for (var result = 0; result < response.length; result++) {
+                  var calculatedMeter = StoreLocator.GetDistance(currentLatlng, { 'lat': response[result].latitude, 'lng': response[result].longitude });
                   var validPlaceCond = (response[result].latitude !== null || response[result].longitude !== null);
                   if (validPlaceCond) {
+                    response[result].metersAway = calculatedMeter;
                     cleanResponse.push(response[result]);
                   }
                 }
+
+                var distSortData = cleanResponse.sort(function(a, b) {
+                  return a.metersAway - b.metersAway;
+                });
 
                 var completeHtml = [];
                 for (var con = 0; con < cleanResponse.length; con++) {
@@ -158,18 +165,14 @@ var StoreLocator = {
                     scrollwheel: false,
                 });
 
-                var sortedHtml = completeHtml.sort(function(a, b){
-                  return a.metersAway - b.metersAway;
-                });
-
                 var sortedHtmlString = '';
-                for (var res = 0; res < sortedHtml.length; res++) {
-                  sortedHtmlString += sortedHtml[res].templateCard.replace(/@/g,'<div class="numberCircle">' + (res + 1) + '</div>');
+                for (var res = 0; res < completeHtml.length; res++) {
+                  sortedHtmlString += completeHtml[res].templateCard.replace(/@/g,'<div class="numberCircle">' + (res + 1) + '</div>');
                 }
 
                 if (cleanResponse.length > 0) {
                     $('#dvResult').html(sortedHtmlString);
-                    StoreLocator.DrawMarker(cleanResponse);
+                    StoreLocator.DrawMarker(distSortData);
                     $('.resultCard').click(function(e) {
                       $('.resultCard').removeClass('selected');
                       $(this).addClass('selected');
@@ -206,14 +209,12 @@ var StoreLocator = {
         //3 Richard Mille Boutique
         //4 9700 Collins Ave, Bal Harbour, FL 33154
         var cardNum = idx + 1;
-        var calculatedMeter = StoreLocator.GetDistance(currentLatlng, { 'lat': item.latitude, 'lng': item.longitude });
-        var calculatedmile = (calculatedMeter / 1609.34).toFixed(2);
+        var calculatedmile = (item.metersAway / 1609.34).toFixed(2);
         var addressLine = item.address1 !== null && item.address2 !== null ? (item.address1 + '<br />' + item.address2) : (item.address1 || item.address2);
         var taddress = addressLine + ', ' + item.city + ', ' + item.state + ' ' + item.zipCode;
         var itemID = StoreLocator.SanitizeId(item.brandUniqueName+'_'+item.locationUniqueName);
         var logoOrNot = item.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + item.brandLogo + '" />'  : '';
         var templateObj = {
-          'metersAway' : calculatedMeter,
           'templateCard' : '<div class="resultCard card span12" id="'+ itemID + '">' + '<div class="span3 nopadding">' +
           //Index when sorted
           '@' +
