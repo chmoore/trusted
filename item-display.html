@@ -662,11 +662,12 @@ $(document).ready(function() {
             },
             email: {
                 validators: {
-                    emailAddress: {
-                            message: 'This is not a valid email address'
-                        },
-                        regexp: {
+					notEmpty: {
+                            message: 'Your email address is required'
+						},
+                    regexp: {
                             regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                            message: 'The value is not a valid email address'
                         }
                 }
             },
