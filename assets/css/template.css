@@ -1466,3 +1466,11 @@
   width: 10px;
 }
 
+/*=====================================
+    STORE DETAILS GOOGLE MAP CSS
+=======================================*/
+
+#detailsGMap{
+  height: 450px;
+  width: 682px;
+}
