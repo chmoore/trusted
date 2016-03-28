@@ -1241,7 +1241,7 @@
 		margin-right: 20px;
 		margin-bottom: 0;
 		padding-left:20px;
-		color: #e1e1e1!important;
+		/*color: #e1e1e1!important;*/
 	}
 
 	#newsletter-subscribe-form input[type="submit"] {
@@ -1414,7 +1414,8 @@
 }
 
 .sidebar a {
-	font-size:14px;
+	/*font-size:14px;*/
+	font: 12px 'gotham_htfmedium', Arial, sans-serif;
 }
 
 .no-left-pad {
