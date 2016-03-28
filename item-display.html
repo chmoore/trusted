@@ -18,8 +18,8 @@
 	
 	
 	<!-- /// Google Fonts ////////  -->
-   <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
 <!-- /// FontAwesome Icons 4.3.0 ////////  -->
 	<link rel="stylesheet" href="assets/fonts/fontawesome/font-awesome.min.css">
     
@@ -34,23 +34,16 @@
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    
-	
-	<!-- /// Template CSS ////////  -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-	<link rel="stylesheet" href="assets/css/grid.css">
-	<link rel="stylesheet" href="assets/css/elements.css">
-	<link rel="stylesheet" href="assets/css/layout.css">
-	<link rel="stylesheet" href="assets/css/components.css">
-	<link rel="stylesheet" href="assets/css/template.css">
- 
- 	
-    
+
+<!-- /// Template CSS ////////  -->
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/grid.css">
+<link rel="stylesheet" href="assets/css/elements.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/template.css"> 
 </head>
 <body class="sticky-header">
-	
-   
-    
     <noscript>
         <div class="javascript-required">
             You seem to have Javascript disabled. This website needs javascript in order to function properly!
@@ -339,7 +332,7 @@
                     </div>
                     </div>
                     </div>
-                    <div class="modal fade" id="retModal" tabindex="-1" role="dialog" aria-labelledby="retModalLabel" aria-hidden="true">
+                   <div class="modal fade" id="retModal" tabindex="-1" role="dialog" aria-labelledby="retModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -352,40 +345,50 @@
   <form method="post" id="retailermodal">
     <div class="col-sm-6 no-left-pad form-group">
       <label for="fname">First Name*</label>
-      <input type="text" name="fname" id="fname" value="" class="text ui-widget-content ui-corner-all form-control">
+       <div class="col-xs-12 no-pad">
+      <input type="text" name="fname" id="fname">
+      </div>
       </div>
       <div class="col-sm-6 no-right-pad form-group">
        <label for="lname">Last Name*</label>
-      <input type="text" name="lname" id="lname" value="" class="text ui-widget-content ui-corner-all form-control">
+        <div class="col-xs-12 no-pad">
+      <input type="text" name="lname" id="lname">
+      </div>
       </div>
        <div class="col-sm-12 no-right-pad form-group">
       <label for="email">Email*</label>
-      <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all form-control">
+       <div class="col-xs-12 no-pad">
+      <input type="text" name="email" id="email">
+      </div>
       </div>
       <div class="col-sm-6 no-left-pad form-group">
       <label for="phone">Phone</label>
-      <input type="text" name="phone" id="phone" value="" class="text ui-widget-content ui-corner-all form-control">
+       <div class="col-xs-12 no-pad">
+      <input type="text" name="phone" id="phone">
+      </div>
       </div>
       <div class="col-sm-6 no-right-pad form-group">
        <label for="product">Product</label>
-      <input type="text" name="product" id="product" value="Richard Mille RM 011 Felipe Massa Flyback" class="text ui-widget-content ui-corner-all" disabled> </div>
+        <div class="col-xs-12 no-pad">
+      <input type="text" name="product" id="product" value="Richard Mille RM 011 Felipe Massa Flyback" disabled> </div>
+      </div>
+      <div class="col-xs-12 no-pad">
       <label for="comments">Comments</label>
-      <input type="text" name="comments" id="comments" value="" class="text ui-widget-content ui-corner-all form-control">
-     
+       <div class="col-xs-12 no-pad">
+      <input type="text" name="comments" id="comments">
+      </div>
+      </div>
   <p><input type="checkbox" name="checkbox" value=""> Mailing List</p>
   <div class="g-recaptcha" data-sitekey="6Ld_rxsTAAAAAI1-UXkjFlomt0jzbTLKhC9IxEaZ"></div>
   <br>
       <!-- Allow form submission with keyboard without duplicating the dialog button -->
-      <div class="col-sm-12 text-center form-group">
   <button class="btn" type="submit"> Inquire for Price</button>
-  </div>
+  
   </form>
 </div>
 </div>
 </div>
 </div>
-                    
-                    
                     <div class="fullwidth-section" id="bg-retail">
             	<div class="container">
                 <h4 id="trustedret">Trusted Retailers</h4>
@@ -600,37 +603,35 @@
     	<i class="ifc-up4"></i>
         <span class="visuallyhidden">Back to Top</span>
     </a>
+    <!-- /// jQuery ////////  --> 
+<script src="assets/vendors/jquery-2.1.3.min.js"></script> 
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
 
-    <!-- /// jQuery ////////  -->
-	 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     
-         <!-- /// Revolution Slider ////////  -->
-    <script src="assets/vendors/revolutionslider/js/jquery.themepunch.tools.min.js"></script>
-    <script src="assets/vendors/revolutionslider/js/jquery.themepunch.revolution.min.js"></script>
-    
-    <!-- /// bxSlider ////////  -->
-	<script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+<!-- /// Revolution Slider ////////  --> 
+<script src="assets/vendors/revolutionslider/js/jquery.themepunch.tools.min.js"></script> 
+<script src="assets/vendors/revolutionslider/js/jquery.themepunch.revolution.min.js"></script> 
 
-	
-	<!-- /// Custom JS ////////  -->
-	 <script src="assets/js/classie.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        
-        <!-- /// formValidation //////// -->
+<!-- /// gMap ////////  --> 
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+<script src="assets/vendors/gmap/jquery.gmap.min.js"></script> 
+
+<!-- /// formValidation //////// -->
 
 <script src="assets/vendors/formvalidation/formValidation.js"></script> 
 <script src="assets/vendors/formvalidation/framework/bootstrap.min.js"></script>
-	
-	<!-- /// Custom JS ////////  -->
-	<script src="assets/js/main.js"></script>
-    <script src="assets/js/jquery.elevateZoom-3.0.8.min.js"></script>	
-    <script type="text/javascript">
-var addthis_config = {
-     pubid: "ra-529cb14c455bb6a6"
-}
-</script>
+<script src="assets/vendors/throbber/throbber.js"></script> 
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- /// Custom JS ////////  --> 
+<script src="assets/js/classie.js"></script> 
+<script src="assets/js/uisearch.js"></script> 
+<script>
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script> 
+<script src="assets/js/main.js"></script> 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-529cb14c455bb6a6" async="async"></script>
 <script>
@@ -638,7 +639,7 @@ var addthis_config = {
 $(document).ready(function() {
     $('#retailermodal').formValidation({
         framework: 'bootstrap',
-		excluded: ':disabled',
+		excluded: ':disabled, :hidden, :not(:visible)',
         icon: {
             valid: 'glyphicon glyphicon-ok',
             invalid: 'glyphicon glyphicon-remove',
@@ -705,9 +706,9 @@ $(document).ready(function() {
 });
 
 //Bootstrap Modal//
-$('#retModal').on('hidden.bs.modal', function() {
-    $('#retailermodal').formValidation('resetForm', true);
-});
+//$('#retModal').on('hidden.bs.modal', function() {
+   // $('#retailermodal').formValidation('resetForm', true);
+//});
 
 //jQuery Modal//
 $(function() {
