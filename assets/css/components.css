@@ -4787,6 +4787,10 @@ fieldset p {
 	    top: 50px;
 }
 
+.fullwidth-section-content .text-center {
+	margin-bottom:0!important;
+}
+
 }
 
 @media (max-width: 767px) {
@@ -5047,6 +5051,10 @@ fieldset p {
     margin-top: -10px;
     font: 14px 'gotham_htfmedium', Arial, sans-serif;
     margin-bottom: 10px;
+}
+
+#retailermodal p {
+	font: 14px 'gotham_htfmedium', Arial, sans-serif;
 }
 
 #retailermodal .form-group {
