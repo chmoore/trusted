@@ -15,7 +15,7 @@
 		/*padding: 14px 25px;
 		border: 2px solid #979797;*/
 		padding:25px 35px 0px 0px;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 		color: #979797;
 		font-family: 'gotham_htfbold', Arial, sans-serif;
 		font-weight: 500;
@@ -3542,11 +3542,25 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	letter-spacing:0;
 }
 
+.retail-text {
+        /*clear: both;*/
+	font: 14px 'gotham_htfbook', Arial, sans-serif;
+	color:#000;
+	letter-spacing:0;
+}
+
 /*.retailer-text ~ .retailer-text {
   clear: none;
 }*/
 
 .retailer-text strong{
+	font: 14px 'gotham_htfbold', Arial, sans-serif;
+	color:#000;
+	letter-spacing:0;
+	margin-bottom:20px;
+}
+
+.retail-text strong{
 	font: 14px 'gotham_htfbold', Arial, sans-serif;
 	color:#000;
 	letter-spacing:0;
@@ -3561,7 +3575,23 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	line-height: 42px;
 }
 
+.retail-text h6{
+	font: 16px 'gotham_htfbold', Arial, sans-serif;
+	color:#000;
+	letter-spacing:0;
+	margin-bottom:20px;
+	line-height: 42px;
+}
+
+
 .retailer-text h4 {
+	font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    margin: 30px 0;
+}
+
+.retail-text h4 {
 	font-size: 20px;
     line-height: 28px;
     letter-spacing: 0px;
@@ -3595,6 +3625,11 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
     line-height: 20px;
 }
 
+.retail-text p {
+	margin-bottom: 5px!important;
+    line-height: 20px;
+}
+
 .retailer-text-ind p {
 	margin-bottom: 5px;
     line-height: 20px;
@@ -3611,6 +3646,11 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 
 .retailer-text img {
 	width:50%;
+}
+
+.retail-text img {
+	width:50%;
+	margin-bottom:20px;
 }
 
 .retailer-text-ind img {
@@ -4719,6 +4759,34 @@ fieldset p {
 .brand-fixed {
     width: 100%!important;
 }
+
+.breadcrumbs li {
+	/*display: inline;
+	list-style-type: none;
+	padding-right: 2px;
+	width: 50%;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+	list-style-position:inside;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;   
+}
+
+.accordion-item-content .span5 {
+	width:50%;
+	float:left;
+}
+
+.accordion-item-content .span7 {
+	width:50%;
+	float:left;
+}
+.modal {
+	    top: 50px;
+}
+
 }
 
 @media (max-width: 767px) {
@@ -4975,10 +5043,16 @@ fieldset p {
 }
 
 #retailermodal label {
-	font-size:14px;
-	margin-top:-10px;
+	font-size: 14px;
+    margin-top: -10px;
+    font: 14px 'gotham_htfmedium', Arial, sans-serif;
+    margin-bottom: 10px;
 }
 
 #retailermodal .form-group {
 	margin-bottom:0;
+}
+
+#product-spec {
+	border-top:none!important;
 }

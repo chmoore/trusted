@@ -947,7 +947,7 @@
 }
 #mobile-menu-trigger {
 			display: block;
-			margin-top: 20px;
+			/*margin-top: 20px;*/
 			margin-right: 0;
 			position:relative;
 			right:0;
