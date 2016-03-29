@@ -184,12 +184,13 @@
             
               <div class="divider single-line-side"></div>
                <h6>Brands</h6>
-               <a href="#">Clear</a>
+               <a id="clear-brand">Clear</a>
             <ul id="brand-filters">
             <li>
-              <input type="checkbox" name="checkbox" value="richard-mille" checked>
+              <input type="checkbox" name="checkbox" id="richard-mille" value="richard-mille" checked>
               Richard Mille</li>
-              <a href="" id="collections-all-show" class="blue-link text-div" onclick="showHide('collections-all');return false;">View All Brands</a>
+              <p><a href="" id="collections-all-show" class="blue-link text-div" onclick="showHide('collections-all');return false;">View All Brands</a></p>
+              <br><br>
 <div id="collections-all" class="show-all-div">
    <li>
               <input type="checkbox" name="checkbox" value="tag-heuer">
@@ -597,6 +598,13 @@ $(document).click(function() {
         },
         //Default is 75px, set to 0 for demo so any distance triggers swipe
         threshold: 45
+    });
+	
+	//Clear Brand Checkbox //
+    var clearbrand = document.getElementById("clear-brand");
+    var rmcheck = document.getElementById("richard-mille");
+    clearbrand.addEventListener("click", function() {
+        rmcheck.checked = false;
     });
 
 	  </script>
