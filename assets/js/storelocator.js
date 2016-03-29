@@ -356,14 +356,22 @@ var StoreLocator = {
           };
 
           for (var k = 0; k < storeHoursObj.length; k++) {
-                var OpenTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
-                    '<td class="dayCol" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
-                    '<td>' + storeHoursObj[k].startTime.replace(/\./g, '') + '</td>' +
-                    '<td class="timeSep">&ndash;</td>' +
-                    '<td>' + storeHoursObj[k].closeTime.replace(/\./g, '') + '</td>' +
-                    '</tr>';
-                    hoursTableArr.push(OpenTableLine);
+            if (!storeHoursObj[k].closed) {
+              var OpenTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
+                '<td class="dayCol" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
+                '<td>' + storeHoursObj[k].startTime.replace(/\./g, '') + '</td>' +
+                '<td class="timeSep">&ndash;</td>' +
+                '<td>' + storeHoursObj[k].closeTime.replace(/\./g, '') + '</td>' +
+                '</tr>';
+              hoursTableArr.push(OpenTableLine);
+            } else {
+              var ClosedTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
+                '<td class="dayCol' + isCurrentDay(storeHoursObj[k].day) + '" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
+                '<td>' + 'CLOSED' + '</td>' +
+                '</tr>';
+              hoursTableArr.push(ClosedTableLine);
             }
+          }
           return hoursTableArr.join();
       } else {
         return 'Call for Store Hours';
