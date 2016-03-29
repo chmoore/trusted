@@ -189,8 +189,7 @@
             <li>
               <input type="checkbox" name="checkbox" id="richard-mille" value="richard-mille" checked>
               Richard Mille</li>
-              <p><a href="" id="collections-all-show" class="blue-link text-div" onclick="showHide('collections-all');return false;">View All Brands</a></p>
-              <br><br>
+             <a href="" id="collections-all-show" class="blue-link text-div" onclick="showHide('collections-all');return false;">View All Brands</a>
 <div id="collections-all" class="show-all-div">
    <li>
               <input type="checkbox" name="checkbox" value="tag-heuer">
@@ -204,10 +203,10 @@
               <li>
               <input type="checkbox" name="checkbox" value="tag-heuer">
               Stickman</li>
-   <p><a href="" id="collections-all-hide" class="show-less" onclick="showHide('collections-all');return false;">- Show Less</a></p>
+   <p><a href="" id="collections-all-hide" class="blue-link text-div" onclick="showHide('collections-all');return false;">- Close</a></p>
           </div> 
                
-              </ul>
+              </ul><br>
               <h6>Price</h6>
              <!-- <p>
               <input type="checkbox" name="checkbox" value="">
@@ -255,7 +254,7 @@
       <li><a href="#">Artists</a></li>
     </ul>
   </div>-->
-         <input type="text" class="rounded" id="search-ret" name="text-input" value="" placeholder="Cool Watches">
+         <input type="text" class="rounded" id="search-ret" name="text-input" value="" placeholder="Richard Mille">
          </form>
          </div>
         <div class="col-xs-12 item-div">
@@ -534,10 +533,10 @@
 		</script> 
 <script src="assets/js/main.js"></script> 
 <script>
-function showHide(shID) {
+ function showHide(shID) {
  if (document.getElementById(shID)) {
-  if (document.getElementById(shID+'-show').style.display != 'block') {
-   document.getElementById(shID+'-show').style.display = 'block';
+  if (document.getElementById(shID+'-show').style.display != 'none') {
+   document.getElementById(shID+'-show').style.display = 'none';
    document.getElementById(shID).style.opacity = '1';
    document.getElementById(shID).style.visibility = 'visible';
    document.getElementById(shID).style.display = 'block';
