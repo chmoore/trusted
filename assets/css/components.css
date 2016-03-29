@@ -238,7 +238,7 @@
   line-height: 1.428571429;
   border-radius: 15px;
 }
-	
+
 	.btn {
 		display: inline-block;
 		padding: 11px 25px;
@@ -263,7 +263,7 @@
 		color: #fff;
 		text-decoration: none;
 	}
-	
+
 	.btn a {
 		color: #fff;
 		text-decoration: none;
@@ -342,7 +342,7 @@
 		background-color: #232323 !important;
 		color: #fff !important;
 	}
-	
+
 	.btn-blue {
 		border: none !important;
 		background-color: #0f88ca !important;
@@ -453,7 +453,7 @@
 	.headline-full { margin-bottom: 10px;margin-top: 60px;width: 100%;height: 55px;border-bottom: 1px solid #e1e1e1;}
 	.headline-retail {margin-bottom: 30px; margin-top:30px;width:100%;height:45px;/*border-bottom: 1px solid #e1e1e1;*/
     padding-bottom: 60px;}
-	
+
 	.headline-ret {
 		margin-bottom :30px;
 	}
@@ -461,7 +461,7 @@
 	.headline-full h4 {float:left;}
 
 	.headline-retail h4 {float:left;}
-	
+
 	.headline-retail h4:after {
     height: 2px;
     display: block;
@@ -1730,7 +1730,7 @@
 		line-height:18px;
 		text-align:left;
 	}
-	
+
 	.item-sm h6 a {
 		text-align:center;
 	}
@@ -1742,7 +1742,7 @@
 		font: 12px 'gotham_htfmedium', Arial, sans-serif!important;
 		margin-top: 15px;
 	}
-	
+
 	.item-sm .item-title a {
 		color: #0088cc!important;
     font-family: 'gotham_htfbold', Arial, sans-serif;
@@ -1853,7 +1853,7 @@
 		-webkit-transition: all 0.5s;
    		transition: all 0.5s;
 	}
-	
+
 	.item-txt {
 		text-align:left;
 	}
@@ -2477,7 +2477,7 @@
     /*border-top: 1px solid #dadada;
     border-bottom: 1px solid #dadada;*/
 }
-	
+
 	#bg-1-w {
 		padding: 40px 0 40px 0;
 		margin-bottom: 60px;
@@ -2579,9 +2579,9 @@
 		background-color: #fff;
 		color: #979797;
 	/*	border-top:1px solid #dadada;*/
-		
+
 	}
-	
+
 	#bg-ret {
     /* padding: 30px 0 50px 0; */
     margin-top: -95px;
@@ -2620,7 +2620,7 @@
 		color: #979797;
 
 	}
-	
+
 	#bg-brand {
 		padding: 0px 0 30px 0;
 		margin-top:0;
@@ -4270,7 +4270,7 @@ fieldset p {
  .button {
     padding: 0 20px;
  }
- 
+
  .small-close {
 	 display:none;
  }
@@ -4772,7 +4772,7 @@ fieldset p {
 	list-style-position:inside;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;   
+  text-overflow: ellipsis;
 }
 
 .accordion-item-content .span5 {
@@ -4799,7 +4799,7 @@ fieldset p {
 .menu-hidden {
 	display:block;
 }
-	
+
 
 	.retailer-col {
 	 -moz-column-count:2;
@@ -4922,7 +4922,7 @@ fieldset p {
     width:0%;
     height:50px;
     float:right;
-    overflow:hidden;    
+    overflow:hidden;
     -webkit-transition: width 0.3s;
     -moz-transition: width 0.3s;
     -ms-transition: width 0.3s;
@@ -5017,7 +5017,7 @@ fieldset p {
 	border:none;
 	font-size:12px;
 	padding: 6px 0!important;
-	
+
 }
 
 .brand-fixed {
@@ -5064,4 +5064,10 @@ fieldset p {
 
 #product-spec {
 	border-top:none!important;
+}
+/*==================================
+            STORE HOURS CSS
+====================================*/
+.detail-hours > p{
+  text-transform: uppercase;
 }
