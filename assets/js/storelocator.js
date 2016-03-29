@@ -339,27 +339,10 @@ var StoreLocator = {
     },
     FormatStoreHours: function (storeHoursObj) {
       if (typeof storeHoursObj === 'object' && storeHoursObj.length) {
-        var openDaysArr = [];
-          var closedDaysArr = [];
           var hoursTableArr = [];
           var itemsDone = [];
 
-          //Sort days of week
-          for (var i = 0; i < storeHoursObj.length; i++) {
-              var openCond = storeHoursObj[i].startTime !== null && storeHoursObj[i].closeTime !== null;
-              var closedCond = storeHoursObj[i].closed === true;
-              if (openCond && !closedCond) {
-                  openDaysArr.push(storeHoursObj[i].dayOfWeek);
-              } else {
-                  closedDaysArr.push(storeHoursObj[i].dayOfWeek);
-              }
-          }
-
-          openDaysArr.sort(function(a, b) {
-              return a - b;
-          });
-
-          var daysLength = openDaysArr.length && closedDaysArr.length ? openDaysArr.length + closedDaysArr.length : openDaysArr.length || closedDaysArr.length;
+          var daysLength = storeHoursObj.length;
           var isCurrentDay = function(dayName) {
             var dateNow = new Date();
             var dayIndex = dateNow.getDay();
@@ -372,31 +355,20 @@ var StoreLocator = {
             }
           };
 
-          for (var j = 0; j < daysLength; j++) {
-              for (var k = 0; k < storeHoursObj.length; k++) {
-                  if (storeHoursObj[k].dayOfWeek === j) {
-                      if (openDaysArr.indexOf(storeHoursObj[k].dayOfWeek) !== -1) {
-                          var OpenTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
-                              '<td class="dayCol" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
-                              '<td>' + storeHoursObj[k].startTime.replace(/\./g, '') + '</td>' +
-                              '<td class="timeSep">&ndash;</td>' +
-                              '<td>' + storeHoursObj[k].closeTime.replace(/\./g, '') + '</td>' +
-                              '</tr>';
-                          hoursTableArr.push(OpenTableLine);
-                      } else if (closedDaysArr.indexOf(storeHoursObj[k].dayOfWeek) !== -1) {
-                          var ClosedTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
-                              '<td class="dayCol' + isCurrentDay(storeHoursObj[k].day) + '" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
-                              '<td>' + 'CLOSED' + '</td>' +
-                              '</tr>';
-                          hoursTableArr.push(ClosedTableLine);
-                      }
-                  }
-              }
-          }
+          for (var k = 0; k < storeHoursObj.length; k++) {
+                var OpenTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
+                    '<td class="dayCol" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
+                    '<td>' + storeHoursObj[k].startTime.replace(/\./g, '') + '</td>' +
+                    '<td class="timeSep">&ndash;</td>' +
+                    '<td>' + storeHoursObj[k].closeTime.replace(/\./g, '') + '</td>' +
+                    '</tr>';
+                    hoursTableArr.push(OpenTableLine);
+            }
           return hoursTableArr.join();
       } else {
         return 'Call for Store Hours';
       }
+
     },
     DetectCurrentLocation: function () {
         if (navigator.geolocation) {
