@@ -1,5 +1,4 @@
 /*jshint loopfunc: true*/
-/*global Transparency */
 /*global google */
 /*global Throbber */
 /*global InfoBox */
@@ -7,7 +6,7 @@
 /*global handleLocationError */
 /*global trustedAssetsURL*/
 
-var map, markerList = [], locations = [];
+var map, markerList, locations = [];
 var infowindow;
 var placeSearch, autocomplete;
 var currentLatlng;
@@ -24,7 +23,6 @@ var locatorForm = document.getElementById('storelocator');
 var brandDropdown = document.getElementById('brandselect');
 var geoDetectButton = document.getElementById('currentLocationBtn');
 var addressInput = document.getElementById('autocomplete');
-
 var selectedOption = {
   'brand' : 'all-brands'
 };
@@ -32,9 +30,7 @@ var endpoints = {
   'all' : '/webservices/store/storelist',
   'brandAll' : '/webservices/store/manufacturer/storelist/'
 };
-
 var webserviceUrl = endpoints.all;
-
 var resultsVisible = false;
 
 function initialize() {
@@ -136,11 +132,9 @@ var StoreLocator = {
         $.ajax({
             type: 'GET',
             url: webserviceUrl,
-            data: { 'textSearch': textCriteria, 'address': addresstext, 'city': $('#locality').val(), 'state': $('#administrative_area_level_1').val(), 'zipcode': $('#postal_code').val() },
             dataType: 'json',
             success: function (response) {
                 var cleanResponse = [];
-
 
                 for (var result = 0; result < response.length; result++) {
                   var calculatedMeter = StoreLocator.GetDistance(currentLatlng, { 'lat': response[result].latitude, 'lng': response[result].longitude });
@@ -346,7 +340,7 @@ var StoreLocator = {
           var isCurrentDay = function(dayName) {
             var dateNow = new Date();
             var dayIndex = dateNow.getDay();
-            var dayNames = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
+            var dayNames = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
             var todayIs = dayNames[dayIndex];
             if (todayIs === dayName) {
                 return ' class="currentDay"';
@@ -380,9 +374,6 @@ var StoreLocator = {
     },
     DetectCurrentLocation: function () {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function (position) {
-              console.log(position.coords);
-            });
             navigator.geolocation.getCurrentPosition(function (position) {
                 var pos = {
                     lat: position.coords.latitude,
