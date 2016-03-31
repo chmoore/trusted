@@ -5071,3 +5071,8 @@ fieldset p {
 .detail-hours > p{
   text-transform: uppercase;
 }
+
+.retailer-text-ind .currentDay{
+  font-weight: 700;
+}
+
