@@ -1577,11 +1577,11 @@
 	.testimonial blockquote :last-child { margin-bottom: 0; }
 
 	.testimonial img {
-		display: inline-block;
+		/*display: inline-block;
 		margin-bottom: 20px;
 		width:80%;
 		display:block;
-		margin:20px;
+		margin:20px;*/
 	}
 
 	.testimonial img:hover {
@@ -1840,7 +1840,7 @@
 		border:1px solid #e1e1e1;
 		color:#000;
 		font-family: 'gotham_htfmedium', Arial, sans-serif!important;
-		height:197px;
+		height:185px;
 		display: table-cell;
    		 vertical-align: middle;
 	}
