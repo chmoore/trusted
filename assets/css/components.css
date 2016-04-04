@@ -1261,7 +1261,8 @@
 			padding: 15px;
 			font-size: 12px;
 			line-height: 12px;
-			margin-left:-70px;
+			margin-left:0;
+			width: 50%!important;
 		}
 
 	}

@@ -1187,8 +1187,14 @@
 	font-size:28px;}
 	#bg-1-sm {
 		margin-top:50px!important;
-		margin-bottom:0px;
+		margin-bottom:0px!important;
 	}
+	textarea {
+		    font: 13px 'gotham_htfmedium', Arial, sans-serif;
+	}
+	.caption.text-2 {
+    margin-left: 20px!important;
+}
 	}
 
 /* ==========================================================================
