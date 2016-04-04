@@ -1264,7 +1264,9 @@
 			margin-left:0;
 			width: 50%!important;
 		}
-
+		.lead-slide {
+    		height: auto!important;
+		}
 	}
 
 /* ==========================================================================
