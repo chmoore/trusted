@@ -3552,6 +3552,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	font: 14px 'gotham_htfbook', Arial, sans-serif;
 	color:#000;
 	letter-spacing:0;
+	margin-bottom: 20px;
 }
 
 /*.retailer-text ~ .retailer-text {
