@@ -732,6 +732,22 @@ $(document).ready(function() {
 	//Image Zoom//
 	$("#zoom").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true});
 	
+	$('#primaryImage').click(function(){
+   if($(window).width()>768){
+        $(this).elevateZoom({
+            zoomWindowPosition:1,
+            zoomWindowOffetx: 5,
+            zoomWindowWidth:$(this).width(), 
+            zoomWindowHeight:$(this).height(),
+        }); 
+    }
+    else{
+        $.removeData($(this), 'elevateZoom');//remove zoom instance from image
+        $('.zoomContainer').remove(); // remove zoom container from DOM
+        return false;
+    }
+});
+	
 	//Wishlist//
 	$('.wish-add').bind('click', function(e) {
   e.preventDefault();
@@ -744,150 +760,7 @@ $(document).ready(function() {
    // $('#retailermodal').formValidation('resetForm', true);
 //});
 
-//jQuery Modal//
-$(function() {
-    var dialog, form,
- 
-      // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
-      emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-      name = $( "#name" ),
-      email = $( "#email" ),
-      password = $( "#password" ),
-      allFields = $( [] ).add( name ).add( email ).add( password ),
-      tips = $( ".validateTips" );
- 
-    function updateTips( t ) {
-      tips
-        .text( t )
-        .addClass( "ui-state-highlight" );
-      setTimeout(function() {
-        tips.removeClass( "ui-state-highlight", 1500 );
-      }, 500 );
-    }
- 
-    function checkLength( o, n, min, max ) {
-      if ( o.val().length > max || o.val().length < min ) {
-        o.addClass( "ui-state-error" );
-        updateTips( "Length of " + n + " must be between " +
-          min + " and " + max + "." );
-        return false;
-      } else {
-        return true;
-      }
-    }
- 
-    function checkRegexp( o, regexp, n ) {
-      if ( !( regexp.test( o.val() ) ) ) {
-        o.addClass( "ui-state-error" );
-        updateTips( n );
-        return false;
-      } else {
-        return true;
-      }
-    }
- 
-    function addUser() {
-      var valid = true;
-      allFields.removeClass( "ui-state-error" );
- 
-      valid = valid && checkLength( name, "username", 3, 16 );
-      valid = valid && checkLength( email, "email", 6, 80 );
-      valid = valid && checkLength( password, "password", 5, 16 );
- 
-      valid = valid && checkRegexp( name, /^[a-z]([0-9a-z_\s])+$/i, "Username may consist of a-z, 0-9, underscores, spaces and must begin with a letter." );
-      valid = valid && checkRegexp( email, emailRegex, "eg. ui@jquery.com" );
-      valid = valid && checkRegexp( password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9" );
- 
-      if ( valid ) {
-        $( "#users tbody" ).append( "<tr>" +
-          "<td>" + name.val() + "</td>" +
-          "<td>" + email.val() + "</td>" +
-          "<td>" + password.val() + "</td>" +
-        "</tr>" );
-        dialog.dialog( "close" );
-      }
-      return valid;
-    }
- 
-    dialog = $( "#dialog-form" ).dialog({
-      autoOpen: false,
-      height: 500,
-      width: 650,
-      modal: true,
-      buttons: {
-        "Create an account": addUser,
-        Cancel: function() {
-          dialog.dialog( "close" );
-        }
-      },
-      close: function() {
-        form[ 0 ].reset();
-        allFields.removeClass( "ui-state-error" );
-      }
-    });
- 
-    form = dialog.find( "form" ).on( "submit", function( event ) {
-      event.preventDefault();
-      addUser();
-    });
- 
-    $( "#inquire" ).button().on( "click", function() {
-      dialog.dialog( "open" );
-    });
-  });
-  $("#dialog-form").dialog({autoOpen:false,modal:true});
-
-$("#inquire").click(function()
-                {
-                    $("#dialog-form").dialog('open');  
-                    $('.ui-widget-overlay').css('background', 'black');
-                });
-				
-//Responsive Modal//
-$("#dialog-form").dialog({
-    width: 'auto', // overcomes width:'auto' and maxWidth bug
-    maxWidth: 600,
-    height: 'auto',
-    modal: true,
-    fluid: true, //new option
-    resizable: false
-});
-
-
-// on window resize run function
-$(window).resize(function () {
-    fluidDialog();
-});
-
-// catch dialog if opened within a viewport smaller than the dialog width
-$(document).on("dialogopen", ".ui-dialog", function (event, ui) {
-    fluidDialog();
-});
-
-function fluidDialog() {
-    var $visible = $(".ui-dialog:visible");
-    // each open dialog
-    $visible.each(function () {
-        var $this = $(this);
-        var dialog = $this.find(".ui-dialog-content").data("ui-dialog");
-        // if fluid option == true
-        if (dialog.options.fluid) {
-            var wWidth = $(window).width();
-            // check window width against dialog width
-            if (wWidth < (parseInt(dialog.options.maxWidth) + 50))  {
-                // keep dialog from filling entire screen
-                $this.css("max-width", "90%");
-            } else {
-                // fix maxWidth bug
-                $this.css("max-width", dialog.options.maxWidth + "px");
-            }
-            //reposition dialog
-            dialog.option("position", dialog.options.position);
-        }
-    });
-
-}
-	</script>
+				</script>
     
 </body>
 </html>

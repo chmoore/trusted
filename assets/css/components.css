@@ -3456,9 +3456,9 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 
 .product-div {height:153px;position:relative;}
 
-.product-div h6 {font-size:12px;line-height:16px;position: relative;
+.product-div h6 {font-size:12px;line-height:10px;position: relative;
   top: 50%;
-  transform: translateY(-50%);font-family: 'gotham_htfmedium', Arial, sans-serif;text-align:left;color: #767676;}
+  transform: translateY(-50%);font-family: 'gotham_htfmedium', Arial, sans-serif;text-align:left;color: #000;}
   
   .product-div h6 strong {color:#000;}
 
@@ -4147,6 +4147,7 @@ fieldset p {
 	width: 35%!important;
     float: left;
     height: auto;
+	margin-right: 20px;
 }
 
 
