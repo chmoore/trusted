@@ -5084,6 +5084,10 @@ fieldset p {
 #product-spec {
 	border-top:none!important;
 }
+.spec-link {
+	margin:20px 0;
+}
+
 /*==================================
             STORE HOURS CSS
 ====================================*/
