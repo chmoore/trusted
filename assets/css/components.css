@@ -5077,6 +5077,11 @@ fieldset p {
 	font: 14px 'gotham_htfmedium', Arial, sans-serif;
 }
 
+.share-txt {
+	font: 12px 'gotham_htfbold', Arial, sans-serif;
+	float:left;
+}
+
 #retailermodal .form-group {
 	margin-bottom:0;
 }
