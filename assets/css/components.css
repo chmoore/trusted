@@ -3777,7 +3777,9 @@ fieldset p {
 	text-align:left;
 	color:#939393;
 	font: 12px 'gotham_htfbold', Arial, sans-serif;
-	margin:20px 0 20px 100px;
+	margin: 20px 0 20px 0px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 20px;
 }
 
 .pagination-holder {
@@ -5078,8 +5080,10 @@ fieldset p {
 }
 
 .share-txt {
-	font: 12px 'gotham_htfbold', Arial, sans-serif;
+	font: 14px 'gotham_htfmedium', Arial, sans-serif;
 	float:left;
+	margin-right:20px;
+	padding-top:10px;
 }
 
 #retailermodal .form-group {
