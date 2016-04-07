@@ -732,19 +732,11 @@ $(document).ready(function() {
 	//Image Zoom//
 	$("#zoom").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true});
 	
-	$('#zoom').click(function(){
-   if($(window).width()>768){
-        $(this).elevateZoom({
-            zoomWindowPosition:1,
-            zoomWindowOffetx: 5,
-            zoomWindowWidth:$(this).width(), 
-            zoomWindowHeight:$(this).height(),
+	$('#zoom').ready(function(){
+   if($(window).width()<768){
+         $.removeData($(this), 'elevateZoom');
+        $('.zoomContainer').remove();
         }); 
-    }
-    else{
-        $.removeData($(this), 'elevateZoom');//remove zoom instance from image
-        $('.zoomContainer').remove(); // remove zoom container from DOM
-        return false;
     }
 });
 
