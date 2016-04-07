@@ -4807,6 +4807,11 @@ fieldset p {
 
 .zoom-txt {
 	margin:20px 0;
+	display:none;
+}
+
+.zoomContainer {
+	display:none;
 }
 
 }

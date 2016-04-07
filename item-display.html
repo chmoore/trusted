@@ -732,7 +732,7 @@ $(document).ready(function() {
 	//Image Zoom//
 	$("#zoom").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true});
 	
-	$('#primaryImage').click(function(){
+	$('#zoom').click(function(){
    if($(window).width()>768){
         $(this).elevateZoom({
             zoomWindowPosition:1,
@@ -747,6 +747,7 @@ $(document).ready(function() {
         return false;
     }
 });
+
 	
 	//Wishlist//
 	//$('.wish-add').bind('click', function(e) {
