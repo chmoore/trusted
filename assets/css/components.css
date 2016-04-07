@@ -5103,6 +5103,13 @@ fieldset p {
 	margin:20px 0;
 }
 
+.prod-blank {
+	height:300px;
+	width:100%;
+	z-index:999;
+	position:absolute;
+}
+
 /*==================================
             STORE HOURS CSS
 ====================================*/
