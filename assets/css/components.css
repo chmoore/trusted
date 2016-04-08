@@ -1102,7 +1102,7 @@
     .fullwidthbanner { visibility: hidden }
 
 	.brand-slide {
-		height:100%!important;
+		height:auto!important;
 		margin-top:0!important;
 	}
 
@@ -3459,7 +3459,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 .product-div h6 {font-size:12px;line-height:10px;position: relative;
   top: 50%;
   transform: translateY(-50%);font-family: 'gotham_htfmedium', Arial, sans-serif;text-align:left;color: #000;}
-  
+
   .product-div h6 strong {color:#000;}
 
   .product-div .btn {font-size:14px;position: relative;
