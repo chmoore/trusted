@@ -14,6 +14,8 @@ jQuery.fn.render = Transparency.jQueryPlugin;
       $retailerCont = $('.retailer-container.render').remove(),
       isLoading = true,
       brandIndex = [],
+      getUrl = window.location,
+      baseUrl = getUrl.protocol + '//' + getUrl.host + '/' + getUrl.pathname.split('/')[0],
       selectedOptions = {
         'brand' : 'all-brands',
         'country' : 'all-countries'
@@ -149,13 +151,13 @@ jQuery.fn.render = Transparency.jQueryPlugin;
             if (isDropdown === 'brandDropdown' || isDropdown === 'countryDropdown' || isDropdown === 'allDropdown') {
               //If false renderBool, endpoint only updates dropdowns (e.g. countryHasBrands, brandHasCountries)
               if (renderBool === undefined || renderBool === true) {
-                outputResults(data);      
+                outputResults(data);
               }
               if (isDropdown === 'allDropdown') {
                 updateDropdowns(data, 'brandDropdown');
                 updateDropdowns(data, 'countryDropdown');
               } else {
-                updateDropdowns(data, isDropdown);      
+                updateDropdowns(data, isDropdown);
               }
             } else {
               outputResults(data);
@@ -225,9 +227,9 @@ jQuery.fn.render = Transparency.jQueryPlugin;
             var $logoEle = $(params.element);
             var imgBasePath = $logoEle.attr('data-imgpath');
             if (this.brandLogo !== null) {
-                return '<img src="' + imgBasePath + this.brandLogo + '" alt="' + this.brandName + '" />';
+                return '<a href="' + baseUrl + 'shop/brand/' + this.brandUniqueName + '"><img src="' + imgBasePath + this.brandLogo + '" alt="' + this.brandName + '" /></a>';
             } else {
-              return '<h2>' + this.brandName + '</h2>';
+                return '<h2><a href="' + baseUrl + 'shop/brand/' + this.brandUniqueName + '">' + this.brandName + '</a></h2>';
             }
           };
 
@@ -238,11 +240,7 @@ jQuery.fn.render = Transparency.jQueryPlugin;
 
           //Helps when retailers don't have a defined URL
           var retailerDecorator = function() {
-            if (this.url !== null) {
-              return '<a href="' + this.url + '">' + this.retailerName + '</a>';
-            } else {
-              return this.retailerName;
-            }
+            return '<a href="' + baseUrl + 'stores/' + this.locationUniqueName + '">' + this.locationName + '</a>';
           };
 
           //Stamps on country data attr
