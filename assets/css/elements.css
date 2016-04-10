@@ -1206,8 +1206,10 @@ select{
 .info-card{
     width: 500px;
     background-color: #fff;
-    height: 200px;
+    /*height: 200px;*/
+	height:auto;
     padding:0px !important;
+	position:absolute;
 }
 .info-card img{
     width:160px;
