@@ -1345,3 +1345,7 @@ select{
 .map-list {
 	margin-bottom:-20px;
 }
+
+select::-ms-expand {
+    display: none;
+}
