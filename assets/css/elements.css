@@ -1302,6 +1302,7 @@ select{
     cursor: pointer;
     padding: 20px;
     border-bottom: 1px solid #dadada;
+	font-family: 'gotham_htfbook', Arial, sans-serif;
 }
 
 .card.selected{
@@ -1311,7 +1312,7 @@ select{
  .card .title{
  	font-size: 15px;
  	font-weight: bold;
- 	margin-bottom: 0px;
+ 	margin-bottom: 10px;
  	line-height: 18px;
  }
   .card .desc{
@@ -1319,8 +1320,9 @@ select{
  	font-weight: normal;
  }
  .card a.link{
- 	color: #54aadc;
+ 	color:#0088cc;
  	font-size: 13px;
+	font-weight:bold;
 }
 .numberCircle {
     border-radius: 50%;
