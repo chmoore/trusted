@@ -1222,8 +1222,9 @@ select{
 	background-color: #fff;
 }
 #dvResult img{
-    width:140px;
-    padding-bottom:10px;
+    width: auto;
+    padding-bottom: 10px;
+    max-height: 100px;
 }
 .r-title{
     font-weight:bold;
