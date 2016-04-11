@@ -3059,6 +3059,7 @@ border:1px solid #ccc;
 	opacity:0;
 	-webkit-transition: all 0.5s;
     	transition: all 0.5s;
+		display:none;
 }
 .fav:hover {
 	-webkit-transition: all 0.5s;
@@ -3086,6 +3087,7 @@ border:1px solid #ccc;
 	opacity:0;
 	-webkit-transition: all 0.5s;
     	transition: all 0.5s;
+		display:none;
 }
 .cart-icon:hover {
 	-webkit-transition: all 0.5s;
