@@ -1748,7 +1748,7 @@
 
 	.item-sm .item-title a {
 		color: #0088cc!important;
-    font-family: 'gotham_htfbold', Arial, sans-serif;
+    font-family: 'gotham_htfmedium', Arial, sans-serif;
     font-size: 12px;
 }
 
@@ -1764,9 +1764,9 @@
 
 	.item-sm p {
 		text-align:left;
-		font: 13px 'gotham_htfbold', Arial, sans-serif!important;
+		font: 14px 'gotham_htfbold', Arial, sans-serif!important;
    		text-transform: uppercase!important;
-    	margin-top: 10px;
+    	margin-top: 15px;
 	}
 
 	.item-img {
@@ -1843,7 +1843,7 @@
 		border:1px solid #e1e1e1;
 		color:#000;
 		font-family: 'gotham_htfmedium', Arial, sans-serif!important;
-		height:185px;
+		height:205px;
 		display: table-cell;
    		 vertical-align: middle;
 	}
