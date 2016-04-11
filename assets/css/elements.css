@@ -1210,6 +1210,7 @@ select{
 	height:auto;
     padding:0px !important;
 	position:absolute;
+	padding-top: 15px!important;
 }
 .info-card img{
     width:160px;
