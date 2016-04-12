@@ -240,6 +240,7 @@
    		top: 0px;
     	bottom: 0;
    		left: 0;
+                overflow: scroll;
 	}
 
 	.sidebar p {
@@ -1414,13 +1415,13 @@
 		#bg-1wc {
 			margin-bottom:30px!important;
 		}
-		
+
 		#bg-1-cut {
 			padding: 0!important;
 			margin-bottom: 0!important;
 		}
-		
-		#footer-bottom { 
+
+		#footer-bottom {
 			margin-top:0!important;
 		}
 
