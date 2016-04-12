@@ -337,22 +337,16 @@
   <div id="error" style="display: block;">
                         <div class="alert alert-danger"> <strong>Server Error!</strong> Our bad.</div>
                     </div>
-    <div class="col-sm-6 no-left-pad form-group">
-      <label for="fname">First Name*</label>
+    <div class="col-sm-12 no-right-pad form-group">
+      <label for="fname">Customer Name*</label>
        <div class="col-xs-12 no-pad">
-      <input type="text" name="fname" id="fname">
-      </div>
-      </div>
-      <div class="col-sm-6 no-right-pad form-group">
-       <label for="lname">Last Name*</label>
-        <div class="col-xs-12 no-pad">
-      <input type="text" name="lname" id="lname">
+      <input type="text" name="fname" id="fname" data-fv-notempty-message="Please provide a first and last name" required="required">
       </div>
       </div>
        <div class="col-sm-12 no-right-pad form-group">
       <label for="email">Email*</label>
        <div class="col-xs-12 no-pad">
-      <input type="text" name="email" id="email">
+      <input type="text" name="email" id="email" required="required">
       </div>
       </div>
       <div class="col-sm-6 no-left-pad form-group">
@@ -712,7 +706,7 @@ $(document).ready(function() {
             fname: {
                 validators: {
                     notEmpty: {
-                        message: 'Your first name is required'
+                        message: 'Please provide a first and last name'
                     }
                 }
             },
