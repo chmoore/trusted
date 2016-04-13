@@ -1799,6 +1799,9 @@
 
 	.item-img-full img {
 		margin-bottom:0;
+		max-width: 100%;
+    max-height: 100%;
+    width: auto;
 	}
 
 	.item:hover {
@@ -3944,6 +3947,7 @@ fieldset p {
 .zoomWrapper {
 	margin-bottom:40px;
 	width: auto!important;
+	height:auto!important;
 }
 
 .visuallyhidden {
@@ -4144,6 +4148,8 @@ fieldset p {
     transform: translateY(-50%);
     font-family: 'gotham_htfbold', Arial, sans-serif;
     text-align: left;
+	line-height: 20px;
+    margin-top: 20px;
 }
 .item-image {
 	width: 35%!important;
