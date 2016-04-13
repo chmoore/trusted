@@ -13,7 +13,7 @@
     intialRun = true;
 
 
-    var filterToggle = function () {
+      var filterToggle = function () {
       var controls = '.selectedBrand, .show-toggle';
       var toggleText = isToggled ? '+ Show More': '- Show Less';
       var $selectedBrands = $brandFilters.find('.selectedBrand');
@@ -21,7 +21,9 @@
       if (intialRun) {
         //initial stuff
         intialRun = false;
-        $brandFilters.find('li').not(controls).addClass('hide');
+        if ($brandFilters.hasClass('view-all')) {
+          $brandFilters.find('li').not(controls).addClass('hide');
+        }
       } else {
         if ($brandFilters.hasClass('view-all')) {
           $brandFilters.find('li').not(controls).toggleClass('hide');
@@ -57,7 +59,8 @@
       }}();
       if ($.query) {
         console.log('works', paramToSet, newVal);
-        var updateSearch = $.param($.query.set(paramToSet, newVal).keys); window.location.search = '?' + updateSearch;
+        var updateSearch = $.param($.query.set(paramToSet, newVal).keys);
+        window.location.search = '?' + updateSearch;
       } else {
         console.log('Failed to load jQuery.query plugin');
       }
@@ -74,7 +77,9 @@
     };
 
     var init = function () {
-      $brandFilters.append($toggleBrandsEle);
+      if ($brandFilters.hasClass('view-all')) {
+        $brandFilters.append($toggleBrandsEle);
+      }
       filterToggle();
       bindThem();
     };
