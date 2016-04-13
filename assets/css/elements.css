@@ -1321,6 +1321,8 @@ select{
   .card .desc{
  	font-size: 13px;
  	font-weight: normal;
+	line-height: 20px;
+    display: block;
  }
  .card a.link{
  	color:#0088cc;
