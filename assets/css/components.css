@@ -3657,6 +3657,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 
 .retailer-text img {
 	width:50%;
+	max-height:100px;
 }
 
 .retail-text img {
