@@ -3075,7 +3075,8 @@ border:1px solid #ccc;
 .fav:hover {
 	-webkit-transition: all 0.5s;
     	transition: all 0.5s;
-		display:block;
+		/*display:block;*/
+		display:none;
 }
 
 .fav a {
@@ -3083,7 +3084,8 @@ border:1px solid #ccc;
 }
 
 .item-sm:hover .cart-icon {
-	display: block;
+	/*display: block;*/
+	display:none;
 	-webkit-transition: all 0.5s;
     	transition: all 0.5s;
 		opacity:1;
@@ -3103,7 +3105,8 @@ border:1px solid #ccc;
 .cart-icon:hover {
 	-webkit-transition: all 0.5s;
     	transition: all 0.5s;
-		display:block;
+		/*display:block;*/
+		display:none;
 }
 
 .cart-icon a {
