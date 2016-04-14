@@ -1420,7 +1420,7 @@
 
 .no-left-pad {
 	padding-left:0!important;
-	padding-right:5px;
+	padding-right:0;
 	 margin-bottom: 15px;
 }
 
