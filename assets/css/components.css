@@ -4693,6 +4693,11 @@ fieldset p {
 	border-bottom: 1px solid #e1e1e1;
     margin-bottom: 20px!important;
     padding-bottom: 10px;
+	height:auto;
+}
+
+.item-img-full img {
+	position:relative!important;
 }
 
 #bg-1b {
