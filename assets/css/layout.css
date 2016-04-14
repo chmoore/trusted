@@ -241,6 +241,7 @@
     	bottom: 0;
    		left: 0;
                 overflow: scroll;
+                height: 100%;
 	}
 
 	.sidebar p {
