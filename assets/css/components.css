@@ -4104,10 +4104,10 @@ fieldset p {
  }
 
  .logo-brand img {
-	 width:70%;
+	 width:auto;
 	 margin-top: -5px;
      margin-bottom: 20px;
-	 height:100px;
+	 height:85px;
  }
 
  .logo-brand-sm img {
