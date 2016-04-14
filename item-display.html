@@ -361,9 +361,9 @@
       <input type="text" name="product" id="product" value="Richard Mille RM 011 Felipe Massa Flyback" disabled> </div>
       </div>
       <div class="col-xs-12 no-pad">
-      <label for="comments">Comments</label>
+      <label for="usercomments">Comments</label>
        <div class="col-xs-12 no-pad">
-      <input type="text" name="comments" id="comments" rows="4" placeholder="Hi, I am interested in this product. Please contact me. Thanks!">
+      <textarea type="text" name="usercomments" id="usercomments" rows="10" maxlength="2000" placeholder="Hi, I am interested in this product. Please contact me. Thanks!"></textarea>
       </div>
       </div>
   <p><input type="checkbox" name="checkbox" value=""> Sign up for Trusted.com Newsletters</p>
@@ -727,15 +727,7 @@ $(document).ready(function() {
                             message: 'The value is not a valid email address'
                         }
                 }
-            },
-            message: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please enter a message for Trusted'
-                    },
-                }
-            },
-            
+            }, 
         }
     });
 	
