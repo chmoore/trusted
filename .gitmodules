@@ -1,0 +1,3 @@
+[submodule "assets/vendors/twbs-pagination"]
+	path = assets/vendors/twbs-pagination
+	url = https://github.com/esimakin/twbs-pagination.git
