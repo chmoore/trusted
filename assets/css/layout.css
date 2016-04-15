@@ -230,17 +230,17 @@
 	}
 
 	.div-right {border-right:1px solid #ededed;padding-right:60px;}
-	.div-left {border-right:1px solid #ededed;padding-right:60px;height:100%;}
+	.div-left {/*border-right:1px solid #ededed;*/padding-right:60px;height:100%;}
    	.sidebar {
 		/*background:#efefef;*/
 		/*border:1px solid #dadada;*/
-		padding:20px;
+		padding:20px 30px 20px 20px;
 		width:300px;
-		position: absolute;
+		/*position: absolute;*/
    		top: 0px;
     	bottom: 0;
    		left: 0;
-                overflow: scroll;
+                overflow: auto;
                 height: 100%;
 	}
 
@@ -871,7 +871,18 @@
 		.search-wrap {
 			display:none;
 		}
-
+		
+		.sidebar {
+			width:auto;
+			padding:10px;
+		}
+		.div-left {
+			padding-right:0px;
+		}
+		
+		input.prices {
+			width:50px!important;
+		}
 	}
 
 	@media (max-width: 767px) {

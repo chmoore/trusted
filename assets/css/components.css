@@ -4378,7 +4378,7 @@ fieldset p {
   }
 
   input.prices {
-	  width: 80px;
+	  width: 70px;
 	  display: inline;
 	  padding:5px;
 	  margin-right:8px;
@@ -4823,6 +4823,14 @@ fieldset p {
 }
 
 .item-div p {
+	display:block;
+}
+
+.item-sort {
+	display:none;
+}
+
+.height40 {
 	display:none;
 }
 
