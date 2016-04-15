@@ -3825,7 +3825,7 @@ fieldset p {
     float: left;
 }
 
-.light-theme .current {
+.light-theme .current, .simple-pagination .productList .current a {
     background: #666;
     color: #FFF;
     border-color: #444;
@@ -3844,6 +3844,50 @@ fieldset p {
     padding: 0 7px;
     margin: 0 10px 0 0;
     border-radius: 3px;
+}
+
+.simple-pagination .productList .current, .simple-pagination .productList .disabled {
+  background: transparent;
+  box-shadow: none;
+  color: #000;
+  border: none;
+}
+
+.simple-pagination .productList {
+  padding-top:
+}
+
+.simple-pagination .productList li a {
+ line-height: 18px
+}
+
+.simple-pagination .productList .prev:before {
+  position: absolute;
+  left: 2px;
+  line-height: 20px;
+}
+
+.simple-pagination .productList .next:before {
+  line-height: 20px;
+  margin-left: -16px;
+  position: absolute;
+}
+
+.simple-pagination .productList .current a {
+  font-family: 'gotham_htf', Arial, sans-serif
+}
+
+.simple-pagination .productList .disabled a {
+  background: #666;
+  border-color: #444;
+  box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
+  cursor: default;
+  color: #FFF;
+  font-family: 'gotham_htf', Arial, sans-serif
+}
+
+.simple-pagination .productList .disabled:before {
+  color: #fff;
 }
 
 .item-sort {
