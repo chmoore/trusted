@@ -59,6 +59,7 @@
 
     var updateSearch = function (event) {
       var paramToSet = event.data.param;
+      var takeAction = event.data.action;
       var newVal = function() {
         switch(paramToSet) {
           case 'numPerPage' :
@@ -72,8 +73,14 @@
       }}();
       if ($.query) {
         var updateSearch = $.param($.query.set(paramToSet, newVal).keys);
-        console.log(updateSearch);
-        window.location.search = '?' + updateSearch;
+        if (paramToSet === 'numPerPage') {
+          var currPage = $.query.get('page');
+          //Reset pagination to page 1 since its shifted
+          updateSearch = updateSearch.replace(currPage, 1);
+        }
+        if (takeAction === true) {
+          window.location.search = '?' + updateSearch;
+        }
       } else {
         console.log('Failed to load jQuery.query plugin');
       }
@@ -87,23 +94,28 @@
       $formReset.on('click', resetForm);
 
       $searchLowPrice.on('change', {
-        param: 'priceLow'
+        param: 'priceLow',
+        action: false
       }, updateSearch);
 
       $searchHighPrice.on('change', {
-        param: 'priceHigh'
+        param: 'priceHigh',
+        action: false
       }, updateSearch);
 
       $resultLimitDropdowns.on('change', {
-        param: 'numPerPage'
+        param: 'numPerPage',
+        action: true
       }, mirrorDropdowns);
 
       $searchSortBy.on('change', {
-        param: 'sortBy'
+        param: 'sortBy',
+        action: true
       }, updateSearch);
 
       $priceFilterBtn.on('click', {
-        param: 'priceFilter'
+        param: 'priceFilter',
+        action: true
       }, updateSearch);
     };
 
@@ -129,8 +141,8 @@
               var newUrl = getUrl.replace(/\b\page.*/g, 'page/' + page);
               window.location = baseUrl + newUrl;
             } else {
-              //search params case here
-              console.log('do this');
+              var updatePageSearch = $.param($.query.set('page', page).keys);
+              window.location.search = '?' + updatePageSearch;
             }
           }
         });
