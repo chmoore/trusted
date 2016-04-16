@@ -4419,6 +4419,10 @@ fieldset p {
 		color:#000;
 		font: 14px 'gotham_htfbold', Arial, sans-serif;
 	}
+	
+	.prod-blank {
+    display:none;
+}
 
 #search-ret {
 	position: relative;
@@ -4828,6 +4832,13 @@ fieldset p {
 
 .item-sort {
 	display:none;
+}
+
+.prod-blank {
+    height: 300px;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
 }
 
 .height40 {
