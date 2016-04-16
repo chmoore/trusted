@@ -293,6 +293,8 @@
 	list-style:none;
 	margin-left:0px;
 	margin-bottom:0;
+	word-break: break-word;
+	width:85%;
 }
 
 .sidebar ul ul li{
