@@ -1618,7 +1618,7 @@ max-width:none;
 		width: 40px;
 		height: 40px;
 		border-radius: 5px;
-		background-color: #000;
+		background-color: #504E4E;
 		color: #fff;
 		font-size: 30px;
 		text-align: center;
@@ -1637,7 +1637,7 @@ max-width:none;
 				transition: all 0.4s ease 0s;
 	}
 
-	#back-to-top:hover { background-color: rgba(0, 0, 0, 0.7); }
+	#back-to-top:hover { background-color: rgba(0, 0, 0, 0.4); }
 	#back-to-top:hover i { color: #fff; }
 	#back-to-top.visible { right: 40px; }
 	#back-to-top.gone { right: -40px; }

@@ -3826,24 +3826,26 @@ fieldset p {
 }
 
 .light-theme .current, .simple-pagination .productList .current a {
-    background: #666;
+    background: #504E4E;
     color: #FFF;
-    border-color: #444;
-    box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
+    border-color: #504E4E;
+    /*box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;*/
     cursor: default;
 }
 .light-theme a, .light-theme span {
     float: left;
-    color: #666;
-    font-size: 14px;
+    color: #979797;
+    font-size: 12px;
     line-height: 24px;
     font-weight: normal;
     text-align: center;
-    border: 1px solid #BBB;
     min-width: 14px;
-    padding: 0 7px;
+    padding: 10px 10px 4px 10px;
     margin: 0 10px 0 0;
-    border-radius: 3px;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    height: 35px;
+	font: 12px 'gotham_htfmedium', Arial, sans-serif;
 }
 
 .simple-pagination .productList .current, .simple-pagination .productList .disabled {
