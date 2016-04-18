@@ -1676,6 +1676,7 @@ max-width:none;
 		 -webkit-box-sizing: content-box;
     	-moz-box-sizing: content-box;
   	    box-sizing: content-box;
+		z-index:1019;
 	}
 
 	.breadcrumbs-slider {
