@@ -306,6 +306,10 @@
 	margin-bottom:0;
 }
 
+#map-canvas { 
+max-width:none;
+}
+
 	.brand-desc .btn {
 		width:100%;
 		text-align:center;
@@ -1758,6 +1762,10 @@
 		    font: 13px 'gotham_htfbook', Arial, sans-serif;
     font-weight: 300;
     font-style: normal!important;
+	}
+	
+	.item-div:last-child {
+		border-bottom:none!important;
 	}
 
 	.item-border {
