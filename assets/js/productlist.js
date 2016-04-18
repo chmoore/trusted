@@ -11,8 +11,12 @@
     $searchSortBy = $('#search-sortBy'),
     $searchLowPrice = $('#searchLowPrice'),
     $searchHighPrice = $('#searchHighPrice'),
+    $searchTextInput = $('#searchProdText'),
     $priceFilterBtn = $('#priceFilterBtn'),
     $paginationEle = $('#productListPager'),
+    $formSearch = $('#searchProdForm'),
+    getUrl = window.location.pathname,
+    baseUrl = window.location.protocol + '//' + window.location.host,
     numPerPageInt = 15,
     isViewAll = true,
     currentParams = '',
@@ -41,8 +45,11 @@
       }
     };
 
-    var checkBoxUpdate = function () {
-      $(this).parent('li').addClass('selectedBrand');
+    var checkBoxUpdate = function (event) {
+      if (isViewAll) {
+        $(this).parent('li').addClass('selectedBrand');
+      }
+      updateSearch(event);
     };
 
     var resetForm = function () {
@@ -55,6 +62,25 @@
       $resultLimitDropdowns.val(this.value);
       numPerPageInt = this.value;
       updateSearch(event);
+    };
+
+    var textSubmit = function(event) {
+      if (event.which === 13) {
+        updateSearch(event);
+      }
+    };
+
+    var brandsChecked = function() {
+      var checkedInputs = $brandFilters.find('input:checked');
+      var brandVals = [];
+      if (checkedInputs.length) {
+        for (var i=0; i < checkedInputs.length; i++) {
+          brandVals.push(checkedInputs[i].value);
+        }
+      } else {
+        return 'null';
+      }
+      return brandVals.join('+');
     };
 
     var updateSearch = function (event) {
@@ -70,16 +96,23 @@
             return $searchLowPrice.val();
           case 'priceHigh' :
             return $searchHighPrice.val();
+          case 'brand' :
+            return brandsChecked();
       }}();
       if ($.query) {
-        var updateSearch = $.param($.query.set(paramToSet, newVal).keys);
+        //for each param in baseSearch, set its corresponding value then set the new
+        var searchString = $.param($.query.set(paramToSet, newVal).keys);
         if (paramToSet === 'numPerPage') {
           var currPage = $.query.get('page');
           //Reset pagination to page 1 since its shifted
-          updateSearch = updateSearch.replace(currPage, 1);
+          searchString = searchString.replace(currPage, 1);
         }
         if (takeAction === true) {
-          window.location.search = '?' + updateSearch;
+          if (event.data.path) {
+            window.location = baseUrl + '/'+ event.data.path + '?' + searchString;
+          } else {
+            window.location.search = '?' + searchString;
+          }
         }
       } else {
         console.log('Failed to load jQuery.query plugin');
@@ -87,11 +120,18 @@
     };
 
     var bindThem = function () {
-      var $brandFilters = $('#brand-filters');
+      var $brandCheckboxes = $('#brand-filters').find('input');
       var $toggleBrands = $('#toggleMoreBrands');
-      $brandFilters.find('input').on('change', checkBoxUpdate);
+
       $toggleBrands.on('click',  filterToggle);
+
       $formReset.on('click', resetForm);
+
+      $brandCheckboxes.find('input').on('change', {
+        param: 'brand',
+        action: false,
+        path: 'shop/search'
+      }, checkBoxUpdate);
 
       $searchLowPrice.on('change', {
         param: 'priceLow',
@@ -113,10 +153,21 @@
         action: true
       }, updateSearch);
 
-      $priceFilterBtn.on('click', {
-        param: 'priceFilter',
-        action: true
-      }, updateSearch);
+      $priceFilterBtn.on('click', function(event) {
+        //Send both low and high when price search
+        updateSearch({data: {param: 'priceLow', action: false}});
+        updateSearch({data: {param: 'priceHigh', action: true, path: 'shop/search'}});
+      });
+
+      $searchTextInput.on('keyup', {
+        param: 'searchText',
+        action: true,
+        path: 'shop/search'
+      }, textSubmit);
+
+      $formSearch.on('submit', function(e){
+        return false;
+      });
     };
 
     var paginateResults = function () {
@@ -124,8 +175,7 @@
         var currPage = parseInt($paginationEle.attr('current-page'));
         var lastPage = parseInt($paginationEle.attr('last-page'));
         var visPages = 7;
-        var getUrl = window.location.pathname;
-        var baseUrl = window.location.protocol + '//' + window.location.host;
+
         $paginationEle.twbsPagination({
           initiateStartPageClick: false,
           paginationClass: 'productList',
