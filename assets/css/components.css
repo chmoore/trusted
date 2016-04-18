@@ -3855,10 +3855,6 @@ fieldset p {
   border: none;
 }
 
-.simple-pagination .productList {
-  padding-top:
-}
-
 .simple-pagination .productList li a {
  line-height: 18px
 }
@@ -3866,12 +3862,12 @@ fieldset p {
 .simple-pagination .productList .prev:before {
   position: absolute;
   left: 2px;
-  line-height: 20px;
+  line-height: 40px;
 }
 
-.simple-pagination .productList .next:before {
-  line-height: 20px;
-  margin-left: -16px;
+.simple-pagination .productList .next:after {
+  line-height: 40px;
+  margin-left: -22px;
   position: absolute;
 }
 
