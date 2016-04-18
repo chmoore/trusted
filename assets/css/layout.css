@@ -241,7 +241,7 @@
     	bottom: 0;
    		left: 0;
                 overflow: auto;
-                height: 100%;
+                height: auto;
 	}
 
 	.sidebar p {
