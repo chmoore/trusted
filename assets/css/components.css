@@ -4927,6 +4927,7 @@ fieldset p {
 }
 .col-xs-3 {
 	width:100%;
+	height:auto;
 }
 .col-xs-4 {
 	width:100%;
