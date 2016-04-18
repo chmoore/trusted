@@ -425,7 +425,7 @@
 	.pagination .next {}
 
 	.pagination .prev:before,
-	.pagination .next:before { font-family: "FontAwesome"; }
+	.pagination .next:after { font-family: "FontAwesome"; }
 
 	.pagination .prev:hover,
 	.pagination .prev:focus,
@@ -434,11 +434,11 @@
 
 	.pagination .prev {}
 
-	.pagination .prev:before { content: "\f104"; }
+	.pagination .prev:before { content: "\f104";padding-right:5px; }
 
 	.pagination .next {}
 
-	.pagination .next:before { content: "\f105"; }
+	.pagination .next:after { content: "\f105";padding-left:5px; }
 
 /* ==========================================================================
    =WordPress Comments
