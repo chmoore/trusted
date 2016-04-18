@@ -401,7 +401,7 @@ max-width:none;
 
 	.sf-menu-1 li.dropdown ul { left: 15px; }
 
-	.sf-menu li.dropdown { position: relative; }
+	.sf-menu li.dropdown { position: relative;margin-bottom:0; }
 
 	.sf-menu-1 li.dropdown { position: relative; }
 
