@@ -4733,6 +4733,7 @@ fieldset p {
 		display:none;
 	}
 
+
 #retail-wrap { display:flex; flex-direction: column; text-align:left;}
 #ret-address { order: 2 }
 #ret-map { order: 1 }
@@ -5257,3 +5258,13 @@ fieldset p {
   font-weight: 700;
 }
 
+
+@media (min-width: 768px) {
+  .sidr {
+	  display:none;
+  }
+  
+  .sidr-animating {
+	  left:0!important;
+  }
+}
