@@ -45,7 +45,7 @@ $(document).ready(function(){
     }
   });
 
-  if (typeof $.fn.elevateZoom) {
+  if (typeof $.fn.elevateZoom === 'function') {
     $('#zoom').elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: false});
   }
 
