@@ -45,7 +45,10 @@ $(document).ready(function(){
     }
   });
 
-  $("#zoom").elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: false});
+  if (typeof $.fn.elevateZoom) {
+    $('#zoom').elevateZoom({gallery:'gallery_01', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: false});
+  }
+
   $('#zoom').ready(function(){
     if($(window).width()>768){
       $.removeData($(this), 'elevateZoom');
