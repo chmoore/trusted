@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  var $viewProdDescrip = $('#viewProdDescrip');
 
   $('#retailermodal').formValidation({
     framework: 'bootstrap',
@@ -53,6 +54,10 @@ $(document).ready(function(){
       $('.zoomWrapper img.zoom').unwrap();
       $('.zoomContainer').remove();
     }
+  });
+
+  $viewProdDescrip.on('click', function(){
+    $('#product-spec').trigger('click');
   });
 
 });
