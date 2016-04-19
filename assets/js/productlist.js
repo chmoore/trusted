@@ -19,9 +19,19 @@
     baseUrl = window.location.protocol + '//' + window.location.host,
     numPerPageInt = 15,
     isViewAll = true,
-    currentParams = '',
     isToggled = false,
-    intialRun = true;
+    intialRun = true,
+    searchParamState = {
+      'page': 1,
+      'priceLow': null,
+      'priceHigh': null,
+      'searchText': null,
+      'numPerPage': 15,
+      'sortBy': null,
+      'categories': null,
+      'brand': [
+      ]
+    };
 
 
     var filterToggle = function () {
@@ -70,17 +80,37 @@
       }
     };
 
+    var initialBrands = function() {
+      var brandsToCheck =  $.query.get('brand').split(' ');
+      if (brandsToCheck.length) {
+        for (var i=0; i < brandsToCheck.length; i++) {
+          $brandFilters.find('input[value=' + brandsToCheck[i] + ']').prop('checked', true);
+        }
+      }
+    };
+
     var brandsChecked = function() {
       var checkedInputs = $brandFilters.find('input:checked');
       var brandVals = [];
       if (checkedInputs.length) {
         for (var i=0; i < checkedInputs.length; i++) {
           brandVals.push(checkedInputs[i].value);
+          if (searchParamState.brand.indexOf(checkedInputs[i].value) === -1) {
+            searchParamState.brand.push(checkedInputs[i].value);
+          }
         }
       } else {
         return 'null';
       }
-      return brandVals.join('+');
+      return brandVals.join(' ');
+    };
+
+    var paramUpdate = function (searchObj) {
+      if (typeof searchObj === 'object') {
+        searchParamState.brand = brandsChecked();
+        searchParamState = $.extend(searchParamState, searchObj);
+        return searchParamState;
+      }
     };
 
     var updateSearch = function (event) {
@@ -96,18 +126,20 @@
             return $searchLowPrice.val();
           case 'priceHigh' :
             return $searchHighPrice.val();
-          case 'brand' :
-            return brandsChecked();
+          case 'page' :
+            return event.data.value;
       }}();
+
       if ($.query) {
         //for each param in baseSearch, set its corresponding value then set the new
-        var searchString = $.param($.query.set(paramToSet, newVal).keys);
-        if (paramToSet === 'numPerPage') {
-          var currPage = $.query.get('page');
-          //Reset pagination to page 1 since its shifted
-          searchString = searchString.replace(currPage, 1);
+        var searchObj = $.query.set(paramToSet, newVal).keys;
+        if (paramToSet === 'numPerPage' && !isViewAll) {
+          searchParamState.page = 1;
         }
-        if (takeAction === true) {
+
+        var searchString = $.param(paramUpdate(searchObj));
+
+        if (takeAction === true && searchString !== false) {
           if (event.data.path) {
             window.location = baseUrl + '/'+ event.data.path + '?' + searchString;
           } else {
@@ -126,12 +158,6 @@
       $toggleBrands.on('click',  filterToggle);
 
       $formReset.on('click', resetForm);
-
-      $brandCheckboxes.find('input').on('change', {
-        param: 'brand',
-        action: false,
-        path: 'shop/search'
-      }, checkBoxUpdate);
 
       $searchLowPrice.on('change', {
         param: 'priceLow',
@@ -191,8 +217,7 @@
               var newUrl = getUrl.replace(/\b\page.*/g, 'page/' + page);
               window.location = baseUrl + newUrl;
             } else {
-              var updatePageSearch = $.param($.query.set('page', page).keys);
-              window.location.search = '?' + updatePageSearch;
+              updateSearch({data: {param: 'page', value: page, action: true}});
             }
           }
         });
@@ -202,10 +227,12 @@
     var init = function () {
       if ($productList.length) {
         isViewAll = $productList.data('viewAll');
-        currentParams = $productList.data('search');
       }
       if ($brandFilters.hasClass('view-all')) {
         $brandFilters.append($toggleBrandsEle);
+      }
+      if (!isViewAll) {
+        initialBrands();
       }
       filterToggle();
       paginateResults();
