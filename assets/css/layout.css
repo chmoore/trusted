@@ -1661,8 +1661,8 @@ max-width:none;
 	}
 
 	.breadcrumbs {
-		height:15px;
-		padding:20px;
+		height:25px;
+		padding:10px;
 		position:relative;
 		/*top:60px;*/
 		top:50px;
@@ -1684,7 +1684,7 @@ max-width:none;
 		padding:20px;
 		position:relative;
 		/*top:60px;*/
-		top:50px;
+		top:65px;
 		margin:0 auto;
 		/*margin-bottom:20px;*/
 		margin-bottom:0px;
