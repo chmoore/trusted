@@ -1478,7 +1478,7 @@
 
 /* Contact retailer frame */
 #contactRetailerFrame {
-  width: auto;
+  width: 100%;
   height: auto;
   min-height: 600px;
   min-width: 200px;
