@@ -68,8 +68,9 @@ $(document).ready(function(){
   });
 
   $retailerModalBtn.click(function(){
-    $retailModal.on('show', function () {
+    $retailModal.on('shown.bs.modal', function () {
       $contactIframe.attr('src', $(this).attr('data-contact-src'));
+      console.log($contactIframe.attr('src'));
     });
     $retailModal.modal({show:true});
   });
