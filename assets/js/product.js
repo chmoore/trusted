@@ -67,12 +67,12 @@ $(document).ready(function(){
     $('#product-spec').trigger('click');
   });
 
-  $retailerModalBtn.click(function(){
-    $retailModal.on('shown.bs.modal', function () {
-      $contactIframe.attr('src', $(this).attr('data-contact-src'));
-      console.log($contactIframe.attr('src'));
+  $retailerModalBtn.on('click', function(){
+    var frameUrl = $(this).attr('data-contact-src');
+    $retailModal.removeClass('hide').on('shown.bs.modal', function (frameUrl) {
+      $(this).find('iframe').attr('src', frameUrl);
     });
-    $retailModal.modal({show:true});
+    $retailModal.modal({show:true}).removeClass('hide');
   });
 
 
