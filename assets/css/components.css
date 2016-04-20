@@ -4920,7 +4920,7 @@ fieldset p {
 }
 
 .tp-bgimg {
-    background-position: 50% 50%!important;
+    background-position: 70% 50%!important;
 }
 
 .brand-fixed {
@@ -4973,6 +4973,22 @@ fieldset p {
 
 .menu-hidden {
 	display:block;
+}
+
+.product-title {
+    margin-top: 40px;
+	border-top: 1px solid #e1e1e1;
+    padding-top: 30px;
+}
+
+.product-title h2 {
+	font-size:28px;
+	line-height: 34px;
+    letter-spacing: -0.5px;
+}
+
+.item-shop {
+	height:auto;
 }
 
 
