@@ -71,6 +71,7 @@ $(document).ready(function(){
     var frameUrl = $(this).attr('data-contact-src');
     $retailModal.removeClass('hide').on('shown.bs.modal', {param: frameUrl}, function (event) {
       $(this).find('iframe').attr('src', event.data.param);
+      $('#fname').focus();
     });
     $retailModal.modal({show:true});
   });
