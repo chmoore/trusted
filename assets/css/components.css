@@ -1730,9 +1730,10 @@
 	}
 
 	.item-sm h6 {
-		font-size:12px;
-		line-height:18px;
-		text-align:left;
+		color: #0088cc!important;
+    font-family: 'gotham_htfmedium', Arial, sans-serif;
+    font-size: 12px;
+	line-height:14px;
 	}
 
 	.item-sm h6 a {
@@ -1773,7 +1774,7 @@
 		text-align:left;
 		font: 14px 'gotham_htfbold', Arial, sans-serif!important;
    		text-transform: uppercase!important;
-    	margin-top: 15px;
+    	margin-top: 10px;
 	}
 
 	.item-img {
@@ -4064,7 +4065,7 @@ fieldset p {
 }
 
 .item-wrap h6 {
-	margin:20px 0;
+	margin:20px 0 0 0;
 }
 
 .display-wrap {
