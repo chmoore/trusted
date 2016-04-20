@@ -1747,7 +1747,7 @@
     line-height: 16px;
     letter-spacing: 0.1px;
 	}
-	
+
 	.item-sm h6 a:hover {
 		text-decoration:underline;
 	}
@@ -4438,11 +4438,11 @@ fieldset p {
 	.prod-blank {
       display:none;
     }
-	
+
 	.item-wrap h6 {
     margin: 0;
 }
-	
+
 	#search-ret {
     position: relative;
     top: 0;
@@ -5254,10 +5254,17 @@ fieldset p {
 }
 
 #retailermodal label {
-	font-size: 14px;
-    margin-top: -10px;
     font: 14px 'gotham_htfmedium', Arial, sans-serif;
     margin-bottom: 10px;
+}
+
+
+#retailermodal input {
+  position: relative;
+}
+
+#retailermodal .glyphicon {
+  z-index: 1000;
 }
 
 #retailermodal p {
@@ -5305,7 +5312,7 @@ fieldset p {
   .sidr {
 	  display:none;
   }
-  
+
   .sidr-animating {
 	  left:0!important;
   }
