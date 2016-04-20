@@ -69,10 +69,10 @@ $(document).ready(function(){
 
   $retailerModalBtn.on('click', function(){
     var frameUrl = $(this).attr('data-contact-src');
-    $retailModal.removeClass('hide').on('shown.bs.modal', function (frameUrl) {
-      $(this).find('iframe').attr('src', frameUrl);
+    $retailModal.removeClass('hide').on('shown.bs.modal', {param: frameUrl}, function (event) {
+      $(this).find('iframe').attr('src', event.data.param);
     });
-    $retailModal.modal({show:true}).removeClass('hide');
+    $retailModal.modal({show:true});
   });
 
 
