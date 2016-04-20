@@ -783,7 +783,7 @@ max-width:none;
 		margin-top: 60px;
    		position: fixed;
     	width: 100%;
-   		z-index: 99;
+   		z-index: 1020;
 	}
 
 	#mobile-menu li {
