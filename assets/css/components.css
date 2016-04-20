@@ -1737,7 +1737,7 @@
     font-family: 'gotham_htfmedium', Arial, sans-serif;
     font-size: 13px;
     line-height: 16px;
-    letter-spacing: 0.1;
+    letter-spacing: 0.1px;
 	}
 
 	.item-sm h6 a {
@@ -1745,7 +1745,7 @@
     font-family: 'gotham_htfmedium', Arial, sans-serif;
     font-size: 13px;
     line-height: 16px;
-    letter-spacing: 0.1;
+    letter-spacing: 0.1px;
 	}
 	
 	.item-sm h6 a:hover {
@@ -1757,7 +1757,7 @@
 		text-align:left;
 		font: 13px 'gotham_htfmedium', Arial, sans-serif!important;
 		margin-top: 15px;
-		letter-spacing:0.1;
+		letter-spacing:0.1px;
 	}
 
 	.item-sm .item-title a {
@@ -1765,7 +1765,7 @@
     font-family: 'gotham_htfmedium', Arial, sans-serif;
     font-size: 13px;
     line-height: 16px;
-    letter-spacing: 0.1;
+    letter-spacing: 0.1px;
 }
 
 .item-sm .item-title a:hover {
@@ -4438,6 +4438,10 @@ fieldset p {
 	.prod-blank {
       display:none;
     }
+	
+	.item-wrap h6 {
+    margin: 0;
+}
 	
 	#search-ret {
     position: relative;
