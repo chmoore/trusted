@@ -1736,7 +1736,13 @@
 	}
 
 	.item-sm h6 a {
-		text-align:center;
+		color: #0088cc!important;
+    font-family: 'gotham_htfmedium', Arial, sans-serif;
+    font-size: 12px;
+	}
+	
+	.item-sm h6 a:hover {
+		text-decoration:underline;
 	}
 
 	.item-sm .item-title {
