@@ -1,7 +1,11 @@
 $(document).ready(function(){
   var $viewProdDescrip = $('#viewProdDescrip');
+  var $retailModal = $('#retModal');
+  var $retailerModalBtn = $('.btn-contact-retailer');
+  var $contactIframe = $('#contactRetailerFrame');
+  var $retailModalForm = $('#retailermodal');
 
-  $('#retailermodal').formValidation({
+  $retailModalForm.formValidation({
     framework: 'bootstrap',
     excluded: ':disabled, :hidden, :not(:visible)',
     icon: {
@@ -62,5 +66,13 @@ $(document).ready(function(){
   $viewProdDescrip.on('click', function(){
     $('#product-spec').trigger('click');
   });
+
+  $retailerModalBtn.click(function(){
+    $retailModal.on('show', function () {
+      $contactIframe.attr('src', $(this).attr('data-contact-src'));
+    });
+    $retailModal.modal({show:true});
+  });
+
 
 });
