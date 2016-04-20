@@ -1475,3 +1475,12 @@
   height: 450px;
   width: 682px;
 }
+
+/* Contact retailer frame */
+#contactRetailerFrame {
+  width: auto;
+  height: auto;
+  min-height: 600px;
+  min-width: 200px;
+}
+
