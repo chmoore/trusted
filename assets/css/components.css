@@ -1670,6 +1670,9 @@
 
 	.item-shop-wrap {
 		/*padding:125px 0;*/
+		display: table-cell;
+ 	    text-align: center;
+ 	    vertical-align: middle;
 	}
 
 	.item-shop-wrap img {
@@ -1867,8 +1870,10 @@
 		color:#000;
 		font-family: 'gotham_htfmedium', Arial, sans-serif!important;
 		height:205px;
-		display: table-cell;
-   		 vertical-align: middle;
+		/*display: table-cell;
+   		 vertical-align: middle;*/
+		 display:table;
+		 width:100%;
 	}
 
 	.item-shop:hover {
