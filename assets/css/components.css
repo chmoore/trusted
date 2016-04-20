@@ -1677,7 +1677,7 @@
 
 	.item-shop-wrap img {
 		margin-bottom:12px;
-		width: 100%;
+		/*width: 100%;*/
 		margin:0;
 	}
 
@@ -4358,7 +4358,7 @@ fieldset p {
     width: 100%;
 	border: 1px solid #e1e1e1;
     border-radius: 8px;
-	margin-top: -20px;
+	margin-top: 0px;
 }
  .button {
     padding: 0 20px;
