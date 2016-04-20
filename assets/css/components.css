@@ -1732,14 +1732,17 @@
 	.item-sm h6 {
 		color: #0088cc!important;
     font-family: 'gotham_htfmedium', Arial, sans-serif;
-    font-size: 12px;
-	line-height:14px;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.1;
 	}
 
 	.item-sm h6 a {
 		color: #0088cc!important;
     font-family: 'gotham_htfmedium', Arial, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.1;
 	}
 	
 	.item-sm h6 a:hover {
@@ -1747,17 +1750,19 @@
 	}
 
 	.item-sm .item-title {
-		font-size:12px;
-		line-height:18px;
+		line-height:16px;
 		text-align:left;
-		font: 12px 'gotham_htfmedium', Arial, sans-serif!important;
+		font: 13px 'gotham_htfmedium', Arial, sans-serif!important;
 		margin-top: 15px;
+		letter-spacing:0.1;
 	}
 
 	.item-sm .item-title a {
 		color: #0088cc!important;
     font-family: 'gotham_htfmedium', Arial, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.1;
 }
 
 .item-sm .item-title a:hover {
