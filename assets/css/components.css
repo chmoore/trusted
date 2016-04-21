@@ -4170,7 +4170,7 @@ fieldset p {
 	 width:auto;
 	 margin-top: -5px;
      margin-bottom: 20px;
-	 height:85px;
+	 max-height:85px;
  }
 
  .logo-brand-sm img {
