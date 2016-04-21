@@ -3886,6 +3886,7 @@ fieldset p {
   line-height: 40px;
   margin-left: -22px;
   position: absolute;
+  color:#979797;
 }
 
 .simple-pagination .productList .current a {
@@ -5318,6 +5319,11 @@ fieldset p {
 }
 
 #product-spec {
+}
+
+#searchedCategories li {
+	margin-left:15px;
+	margin-bottom: 15px;
 }
 
 /*.prod-blank {
