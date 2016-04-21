@@ -3765,7 +3765,7 @@ fieldset p {
 
 .fv-form-bootstrap .fv-icon-no-label {
     top: 5px;
-    right: 25px;
+    right: 15px;
 }
 
 .help-block {
@@ -3784,7 +3784,7 @@ fieldset p {
 }
 
 .mc-input .fv-icon-no-label {
-	right:0;
+	right:15px;
 }
 
 .text-div {
