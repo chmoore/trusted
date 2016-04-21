@@ -1767,7 +1767,7 @@ max-width:none;
 	}
 	
 	.item-div:last-child {
-		border-bottom:none!important;
+		border-bottom:none;
 	}
 
 	.item-border {

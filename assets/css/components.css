@@ -3482,7 +3482,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 }
 
 .boxed {
-	border:1px solid #e1e1e1;position:relative; background:#fff;
+	border:1px solid #e1e1e1!important;position:relative; background:#fff;
 }
 
 .boxed:hover {cursor:pointer;background:#f7f7f7;}
