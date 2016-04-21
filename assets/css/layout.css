@@ -242,7 +242,7 @@
    		left: 0;
         overflow: auto;
         height: auto;
-		border-right: 1px solid #ededed;
+		/*border-right: 1px solid #ededed;*/
 	}
 
 	.sidebar p {
@@ -1771,7 +1771,7 @@ max-width:none;
 	}
 
 	.item-border {
-		/*border-left:1px solid #ededed;*/
+		border-left:1px solid #ededed;
 		padding-left:60px;
 		padding-top: 20px;
 	}
