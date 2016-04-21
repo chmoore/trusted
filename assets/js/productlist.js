@@ -109,6 +109,13 @@
       if (typeof searchObj === 'object') {
         searchParamState.brand = brandsChecked();
         searchParamState = $.extend(searchParamState, searchObj);
+        for (var propName in searchParamState) {
+          if (searchParamState.hasOwnProperty(propName)) {
+            if (searchParamState[propName] === true) {
+              searchParamState[propName] = '';
+            }
+          }
+        }
         return searchParamState;
       }
     };
