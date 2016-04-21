@@ -5298,6 +5298,10 @@ fieldset p {
 	letter-spacing:-0.3px;
 }
 
+.item-border .col-xs-8 .no-left-pad {
+	padding-right:20px;
+}
+
 .product-brand h6 {
 	font-size: 14px;
     text-transform: uppercase;
