@@ -122,12 +122,20 @@
             return numPerPageInt;
           case 'sortBy' :
             return $searchSortBy.val();
+          case 'brand' :
+            return brandsChecked();
           case 'priceLow' :
             return $searchLowPrice.val();
           case 'priceHigh' :
             return $searchHighPrice.val();
           case 'page' :
             return event.data.value;
+          case 'searchText' :
+            return $searchTextInput.val();
+          default:
+            if (event.data.value) {
+              return event.data.value;
+            }
       }}();
 
       if ($.query) {
@@ -158,6 +166,12 @@
       $toggleBrands.on('click',  filterToggle);
 
       $formReset.on('click', resetForm);
+
+      $brandCheckboxes.on('change', {
+        param: 'brand',
+        action: true,
+        path: 'shop/search'
+      }, checkBoxUpdate);
 
       $searchLowPrice.on('change', {
         param: 'priceLow',
