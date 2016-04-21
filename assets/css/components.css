@@ -269,7 +269,7 @@
 		text-decoration: none;
 	}
 
-	.btn:focus { outline: 0; }
+	.btn:focus { outline: 0; background-color:#504E4E;border-color:#504E4E;}
 
 	.btn-large {
 		padding: 10px 30px;
