@@ -1738,6 +1738,7 @@
     font-size: 13px;
     line-height: 16px;
     letter-spacing: 0.1px;
+	text-transform:none;
 	}
 
 	.item-sm h6 a {
