@@ -4441,6 +4441,7 @@ fieldset p {
 
 	.item-wrap h6 {
     margin: 0;
+	text-transform:none;
 }
 
 	#search-ret {
