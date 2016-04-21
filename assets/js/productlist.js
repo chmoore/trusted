@@ -28,7 +28,7 @@
       'searchText': null,
       'numPerPage': 15,
       'sortBy': null,
-      'categories': null,
+      'cat': null,
       'brand': [
       ]
     };
