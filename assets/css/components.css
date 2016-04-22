@@ -5336,6 +5336,10 @@ fieldset p {
 	margin-bottom: 15px;
 }
 
+#at-cv-lightbox {
+	display:none!important;
+}
+
 /*.prod-blank {
 	height:300px;
 	width:100%;
