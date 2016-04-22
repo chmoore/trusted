@@ -4958,6 +4958,11 @@ fieldset p {
 	float:left;
 }
 
+.slider-revolution.fullwidthbanner-container {
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+
 .accordion-item-content .span7 {
 	width:50%;
 	float:left;
