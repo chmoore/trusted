@@ -817,9 +817,11 @@
 		display: inline-block;
 		margin-right: 10px;
 		margin-bottom: 0;
-		margin-left: 5px;
+		margin-left: 0px;
 		vertical-align: baseline;
+		color: #000;
 	}
+	
 
 	input[type="file"] { width: 100%; }
 
