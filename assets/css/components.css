@@ -5336,6 +5336,10 @@ fieldset p {
 	margin-bottom: 15px;
 }
 
+#searchedCategories li .active{
+   font: 12px 'gotham_htfbold', Arial, sans-serif;
+}
+
 /*.prod-blank {
 	height:300px;
 	width:100%;
