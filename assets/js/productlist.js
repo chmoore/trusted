@@ -81,7 +81,7 @@
     };
 
     var initialBrands = function() {
-      var brandsToCheck =  $.query.get('brand').split(' ');
+      var brandsToCheck =  $.query.get('brand').split('+');
       if (brandsToCheck.length) {
         for (var i=0; i < brandsToCheck.length; i++) {
           $brandFilters.find('input[value=' + brandsToCheck[i] + ']').prop('checked', true);
@@ -102,7 +102,7 @@
       } else {
         return 'null';
       }
-      return brandVals.join(' ');
+      return brandVals.join('+');
     };
 
     var paramUpdate = function (searchObj) {
@@ -121,58 +121,82 @@
     };
 
     var updateSearch = function (event) {
-      var paramToSet = event.data.param;
-      var takeAction = event.data.action;
-      var newVal = function() {
-        switch(paramToSet) {
-          case 'numPerPage' :
-            return numPerPageInt;
-          case 'sortBy' :
-            return $searchSortBy.val();
-          case 'brand' :
-            return brandsChecked();
-          case 'priceLow' :
-            return $searchLowPrice.val();
-          case 'priceHigh' :
-            return $searchHighPrice.val();
-          case 'page' :
-            return event.data.value;
-          case 'searchText' :
-            return $searchTextInput.val();
-          default:
-            if (event.data.value) {
+      if (event) {
+        var paramToSet = event.data.param;
+        var takeAction = event.data.action;
+        var newVal = function() {
+          switch(paramToSet) {
+            case 'numPerPage' :
+              return numPerPageInt;
+            case 'sortBy' :
+              return $searchSortBy.val();
+            case 'brand' :
+              return brandsChecked();
+            case 'priceLow' :
+              return parseFloat($searchLowPrice.val());
+            case 'priceHigh' :
+              return parseFloat($searchHighPrice.val());
+            case 'page' :
               return event.data.value;
+            case 'searchText' :
+              return $searchTextInput.val();
+            case 'category' :
+              return event.data.value;
+            case 'trigger' :
+              return 'trigger';
+            default:
+              if (event.data.value) {
+                return event.data.value;
+              }
+        }}();
+
+        if ($.query) {
+          //for each param in baseSearch, set its corresponding value then set the new
+          var searchString;
+          if (paramToSet !== 'trigger') {
+            var searchObj = $.query.set(paramToSet, newVal).keys;
+            if (paramToSet === 'numPerPage' && !isViewAll) {
+              searchParamState.page = 1;
             }
-      }}();
-
-      if ($.query) {
-        //for each param in baseSearch, set its corresponding value then set the new
-        var searchObj = $.query.set(paramToSet, newVal).keys;
-        if (paramToSet === 'numPerPage' && !isViewAll) {
-          searchParamState.page = 1;
-        }
-
-        var searchString = $.param(paramUpdate(searchObj));
-
-        if (takeAction === true && searchString !== false) {
-          if (event.data.path) {
-            window.location = baseUrl + '/'+ event.data.path + '?' + searchString;
+            searchString = $.param(paramUpdate(searchObj));
           } else {
-            window.location.search = '?' + searchString;
+            searchString = $.param(paramUpdate(searchParamState));
           }
+
+
+          if (takeAction === true && searchString !== false) {
+            if (event.data.path) {
+              window.location = baseUrl + '/'+ event.data.path + '?' + searchString;
+            } else {
+              window.location.search = '?' + searchString;
+            }
+          }
+        } else {
+          console.log('Failed to load jQuery.query plugin');
         }
-      } else {
-        console.log('Failed to load jQuery.query plugin');
       }
     };
 
     var bindThem = function () {
       var $brandCheckboxes = $('#brand-filters').find('input');
+      var $categoryLinks = $('.category-search');
       var $toggleBrands = $('#toggleMoreBrands');
 
       $toggleBrands.on('click',  filterToggle);
 
       $formReset.on('click', resetForm);
+
+      $categoryLinks.on('click', function(event) {
+        event.preventDefault();
+        updateSearch({
+          data: {
+            param: 'cat',
+            value: $(this).data('cat'),
+            action: true,
+            path: 'shop/search'
+          }
+        });
+      });
 
       $brandCheckboxes.on('change', {
         param: 'brand',
@@ -202,8 +226,7 @@
 
       $priceFilterBtn.on('click', function(event) {
         //Send both low and high when price search
-        updateSearch({data: {param: 'priceLow', action: false}});
-        updateSearch({data: {param: 'priceHigh', action: true, path: 'shop/search'}});
+        updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
       });
 
       $searchTextInput.on('keyup', {
