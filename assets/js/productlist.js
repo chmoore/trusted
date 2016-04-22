@@ -68,6 +68,12 @@
       $searchHighPrice.val('');
     };
 
+    var clearParam = function (param) {
+      if (searchParamState.hasOwnProperty(param)) {
+        searchParamState[param] = '';
+      }
+    };
+
     var mirrorDropdowns = function(event) {
       $resultLimitDropdowns.val(this.value);
       numPerPageInt = this.value;
@@ -186,6 +192,7 @@
     var bindThem = function () {
       var $brandCheckboxes = $('#brand-filters').find('input');
       var $categoryLinks = $('.category-search');
+      var $activeCategories = $('.clear-category');
       var $toggleBrands = $('#toggleMoreBrands');
 
       $toggleBrands.on('click',  filterToggle);
@@ -202,6 +209,11 @@
             path: 'shop/search'
           }
         });
+      });
+
+      $activeCategories.on('click', function(event) {
+        clearParam('cat');
+        updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
       });
 
       $brandCheckboxes.on('change', {
