@@ -5283,7 +5283,11 @@ fieldset p {
 	font: 14px 'gotham_htfmedium', Arial, sans-serif;
 	float:left;
 	margin-right:20px;
-	padding-top:10px;
+	padding-top:30px;
+}
+
+.addthis_sharing_toolbox {
+	margin-top:20px;
 }
 
 #retailermodal .form-group {
