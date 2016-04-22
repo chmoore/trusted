@@ -81,7 +81,13 @@
     };
 
     var initialBrands = function() {
-      var brandsToCheck =  $.query.get('brand').split('+');
+      var brandsInQuery =  $.query.get('brand');
+      var brandsToCheck;
+      if (brandsInQuery.length) {
+        brandsToCheck = brandsInQuery.split('+');
+      } else {
+        return false;
+      }
       if (brandsToCheck.length) {
         for (var i=0; i < brandsToCheck.length; i++) {
           $brandFilters.find('input[value=' + brandsToCheck[i] + ']').prop('checked', true);
