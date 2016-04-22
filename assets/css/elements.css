@@ -9,6 +9,7 @@
 		line-height:28px;
 		font-weight: 300;
 		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 		text-rendering: optimizeLegibility; 
 		letter-spacing: -0.2px;
     	color: #000000;
