@@ -33,7 +33,6 @@
       ]
     };
 
-
     var filterToggle = function () {
       var controls = '.selectedBrand, .show-toggle';
       var toggleText = isToggled ? '+ Show More': '- Show Less';
@@ -167,14 +166,16 @@
           var searchString;
           if (paramToSet !== 'trigger') {
             var searchObj = $.query.set(paramToSet, newVal).keys;
-            if (paramToSet === 'numPerPage' && !isViewAll) {
-              searchParamState.page = 1;
+            var resetPageCond = (paramToSet === 'numPerPage' && !isViewAll || paramToSet === 'searchText' && !isViewAll);
+            if (resetPageCond) {
+              if (searchObj.hasOwnProperty('page')) {
+                searchObj.page = 1;
+              }
             }
             searchString = $.param(paramUpdate(searchObj));
           } else {
             searchString = $.param(paramUpdate(searchParamState));
           }
-
 
           if (takeAction === true && searchString !== false) {
             if (event.data.path) {
