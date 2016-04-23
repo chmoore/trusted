@@ -265,17 +265,13 @@
         var lastPage = parseInt($paginationEle.attr('last-page'));
         var visPages = 7;
 
-        $paginationEle.twbsPagination({
-          initiateStartPageClick: false,
-          paginationClass: 'productList',
-          activeClass: 'current',
-          prev: 'Prev',
-          first: false,
-          last: false,
-          startPage: currPage,
-          totalPages: lastPage,
-          visiblePages: visPages,
-          onPageClick: function (event, page) {
+        $paginationEle.pagination({
+          total_pages: lastPage,
+          current_page: currPage,
+          next: 'Next &gt;',
+          prev: '&lt; Prev',
+          display_max: 5,
+          callback: function(event, page) {
             if (isViewAll) {
               var newUrl = getUrl.replace(/\b\page.*/g, 'page/' + page);
               window.location = baseUrl + newUrl;
