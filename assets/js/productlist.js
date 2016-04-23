@@ -4,7 +4,6 @@
   $(document).ready(function () {
     var $brandFilters = $('#brand-filters'),
     $toggleBrandsEle = $('<li class="show-toggle"><a class="blue-link" id="toggleMoreBrands" href="javascript:;">+ Show More</a></li>'),
-    $selectedBrand = $('.selectedBrand'),
     $productList = $('#productList'),
     $formReset = $('#productListReset'),
     $resultLimitDropdowns = $('.searchLimitResults'),
@@ -212,7 +211,7 @@
         });
       });
 
-      $activeCategories.on('click', function(event) {
+      $activeCategories.on('click', function() {
         clearParam('cat');
         updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
       });
@@ -243,7 +242,7 @@
         action: true
       }, updateSearch);
 
-      $priceFilterBtn.on('click', function(event) {
+      $priceFilterBtn.on('click', function() {
         //Send both low and high when price search
         updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
       });
@@ -254,24 +253,25 @@
         path: 'shop/search'
       }, textSubmit);
 
-      $formSearch.on('submit', function(e){
+      $formSearch.on('submit', function(){
         return false;
       });
     };
 
     var paginateResults = function () {
       if ($paginationEle.length) {
-        var currPage = parseInt($paginationEle.attr('current-page'));
-        var lastPage = parseInt($paginationEle.attr('last-page'));
-        var visPages = 7;
-
+        var currPage = parseInt($paginationEle.attr('data-current-page'));
+        var totalPages = parseInt($paginationEle.attr('data-last-page'));
+        var perPage = parseInt($paginationEle.attr('data-results-per-page'));
         $paginationEle.pagination({
-          total_pages: lastPage,
-          current_page: currPage,
-          next: 'Next &gt;',
-          prev: '&lt; Prev',
-          display_max: 5,
-          callback: function(event, page) {
+          pages: totalPages,
+          currentPage: currPage,
+          itemsOnPage: perPage,
+          prevText: 'Prev',
+          nextText: 'Next',
+          cssStyle: 'light-theme',
+          onPageClick(page, event) {
+            event.preventDefault();
             if (isViewAll) {
               var newUrl = getUrl.replace(/\b\page.*/g, 'page/' + page);
               window.location = baseUrl + newUrl;
@@ -280,6 +280,22 @@
             }
           }
         });
+/*         $paginationEle.pagination({ */
+          // total_pages: totalPages,
+          // current_page: currPage,
+          // next: 'Next &gt;',
+          // prev: '&lt; Prev',
+          // display_max: 5,
+          // callback: function(event, page) {
+            // event.preventDefault();
+            // if (isViewAll) {
+              // var newUrl = getUrl.replace(/\b\page.*/g, 'page/' + page);
+              // window.location = baseUrl + newUrl;
+            // } else {
+              // updateSearch({data: {param: 'page', value: page, action: true}});
+            // }
+          // }
+        /* }); */
       }
     };
 
