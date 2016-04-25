@@ -11,7 +11,7 @@
     $searchLowPrice = $('#searchLowPrice'),
     $searchHighPrice = $('#searchHighPrice'),
     $searchTextInput = $('#searchProdText'),
-    $priceFilterBtn = $('#priceFilterBtn'),
+    $priceFilterForm = $('#priceFilterForm'),
     $paginationEle = $('#productListPager'),
     $formSearch = $('#searchProdForm'),
     getUrl = window.location.pathname,
@@ -242,8 +242,41 @@
         action: true
       }, updateSearch);
 
-      $priceFilterBtn.on('click', function() {
-        //Send both low and high when price search
+      $priceFilterForm.formValidation({
+          framework: 'bootstrap',
+          icon: {
+              valid: 'null',
+              invalid: 'null',
+              validating: 'null'
+          },
+          live: 'enabled',
+          trigger: 'keyup',
+          submitButtons: 'button[type="submit"]',
+          fields: {
+              priceLow: {
+                  validators: {
+                      between: {
+                          min: 0,
+                          max: 'priceHigh',
+                          message: ' '
+                      }
+                  }
+              },
+              priceHigh: {
+                  validators: {
+                      between: {
+                          min: 'priceLow',
+                          max: 1000000000,
+                          message: ' '
+                      }
+                  }
+              }
+          }
+      }).on(('keyup'), function(e) {
+        $priceFilterForm.formValidation('revalidateField', 'priceLow');
+        $priceFilterForm.formValidation('revalidateField', 'priceHigh');
+      }).on(('success.form.fv'), function(e) {
+        e.preventDefault();
         updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
       });
 
@@ -280,22 +313,6 @@
             }
           }
         });
-/*         $paginationEle.pagination({ */
-          // total_pages: totalPages,
-          // current_page: currPage,
-          // next: 'Next &gt;',
-          // prev: '&lt; Prev',
-          // display_max: 5,
-          // callback: function(event, page) {
-            // event.preventDefault();
-            // if (isViewAll) {
-              // var newUrl = getUrl.replace(/\b\page.*/g, 'page/' + page);
-              // window.location = baseUrl + newUrl;
-            // } else {
-              // updateSearch({data: {param: 'page', value: page, action: true}});
-            // }
-          // }
-        /* }); */
       }
     };
 

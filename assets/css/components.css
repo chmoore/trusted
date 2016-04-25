@@ -4403,6 +4403,14 @@ fieldset p {
 	  margin-right:8px;
 }
 
+  #priceFilterForm .help-block {
+    display: none;
+  }
+
+  #priceFilterForm .form-control {
+    padding-right: 5px;
+  }
+
   .dropdown-menu {
     position: absolute;
     top: calc(100% - 1px);
