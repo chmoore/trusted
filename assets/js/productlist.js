@@ -224,10 +224,12 @@
 
       $searchLowPrice.on('change', function(e) {
           $priceFilterForm.formValidation('revalidateField', 'priceLow');
+          $priceFilterForm.formValidation('revalidateField', 'priceHigh');
       });
 
       $searchHighPrice.on('change', function(e) {
           $priceFilterForm.formValidation('revalidateField', 'priceHigh');
+          $priceFilterForm.formValidation('revalidateField', 'priceLow');
       });
 
       $resultLimitDropdowns.on('change', {
@@ -293,8 +295,8 @@
 
       $priceFilterForm.on('submit', function(e) {
         e.preventDefault();
-        updateSearch({data: {param: 'priceLow', action: false, path: 'shop/search'}});
-        updateSearch({data: {param: 'priceHigh', action: false, path: 'shop/search'}});
+        searchParamState.priceLow = $searchLowPrice.val();
+        searchParamState.priceHigh = $searchHighPrice.val();
         updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
       });
 
