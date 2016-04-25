@@ -1,4 +1,4 @@
-// Store search view
+// S$priceFilterFormtore search viewfalse
 
 (function ($) {
   $(document).ready(function () {
@@ -222,15 +222,13 @@
         path: 'shop/search'
       }, checkBoxUpdate);
 
-      $searchLowPrice.on('change', {
-        param: 'priceLow',
-        action: false
-      }, updateSearch);
+      $searchLowPrice.on('change', function(e) {
+          $priceFilterForm.formValidation('revalidateField', 'priceLow');
+      });
 
-      $searchHighPrice.on('change', {
-        param: 'priceHigh',
-        action: false
-      }, updateSearch);
+      $searchHighPrice.on('change', function(e) {
+          $priceFilterForm.formValidation('revalidateField', 'priceHigh');
+      });
 
       $resultLimitDropdowns.on('change', {
         param: 'numPerPage',
@@ -253,31 +251,34 @@
           trigger: 'keyup',
           submitButtons: 'button[type="submit"]',
           fields: {
-              priceLow: {
-                  validators: {
-                      between: {
-                          min: 0,
-                          max: 'priceHigh',
+                  priceLow: {
+                      validators: {
+                        lessThan: {
+                          value: 'priceHigh',
                           message: ' '
+                        }
+                      },
+                      onSuccess: function(e, data) {
+                          if (!data.fv.isValidField('priceHigh')) {
+                              // Revalidate it
+                              data.fv.revalidateField('priceHigh');
+                          }
                       }
-                  }
-              },
-              priceHigh: {
-                  validators: {
-                      between: {
-                          min: 'priceLow',
-                          max: 1000000000,
+                  },
+                  priceHigh: {
+                      validators: {
+                        greaterThan: {
+                          value: 'priceLow',
                           message: ' '
+                        }
+                      },
+                      onSuccess: function(e, data) {
+                          if (!data.fv.isValidField('priceLow')) {
+                              data.fv.revalidateField('priceLow');
+                          }
                       }
                   }
               }
-          }
-      }).on(('keyup'), function(e) {
-        $priceFilterForm.formValidation('revalidateField', 'priceLow');
-        $priceFilterForm.formValidation('revalidateField', 'priceHigh');
-      }).on(('success.form.fv'), function(e) {
-        e.preventDefault();
-        updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
       });
 
       $searchTextInput.on('keyup', {
@@ -289,6 +290,14 @@
       $formSearch.on('submit', function(){
         return false;
       });
+
+      $priceFilterForm.on('submit', function(e) {
+        e.preventDefault();
+        updateSearch({data: {param: 'priceLow', action: false, path: 'shop/search'}});
+        updateSearch({data: {param: 'priceHigh', action: false, path: 'shop/search'}});
+        updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
+      });
+
     };
 
     var paginateResults = function () {
@@ -303,7 +312,7 @@
           prevText: 'Prev',
           nextText: 'Next',
           cssStyle: 'light-theme',
-          onPageClick(page, event) {
+          onPageClick: function (page, event) {
             event.preventDefault();
             if (isViewAll) {
               var newUrl = getUrl.replace(/\b\page.*/g, 'page/' + page);
