@@ -716,7 +716,9 @@ max-width:none;
 	width:100%;
 }
 
-.img-indent {float:right;}
+.img-indent {float:right;text-align: center;}
+
+.img-indent img {width:50%;}
 
 /* =Menu Arrows
    ========================================================================== */
