@@ -285,7 +285,6 @@
       })
       .on('input keyup', '[name="priceLow"]', function() {
         var validateHighBool = !(!$searchHighPrice.val()) && !(!$(this).val());
-        console.log('keyup bool on low', validateHighBool);
         $priceFilterForm
           .formValidation('enableFieldValidators', 'priceLow', validateHighBool, 'lessThan')
           .formValidation('enableFieldValidators', 'priceHigh', validateHighBool, 'greaterThan')
@@ -296,7 +295,6 @@
       })
       .on('input keyup', '[name="priceHigh"]', function() {
         var validateLowBool = !(!$searchLowPrice.val()) && !(!$(this).val());
-        console.log('keyup bool on high', validateLowBool);
         $priceFilterForm
           .formValidation('enableFieldValidators', 'priceLow', validateLowBool, 'lessThan')
           .formValidation('enableFieldValidators', 'priceHigh', validateLowBool, 'greaterThan')
