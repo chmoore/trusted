@@ -257,7 +257,7 @@
               validators: {
                 regexp: {
                   enabled: true,
-                  regexp: /^\+?\d+$/,
+                  regexp: /^[0-9]+(\.[0-9]{1,2})?$/,
                   message: ' '
                 },
                 lessThan: {
@@ -271,7 +271,7 @@
               validators: {
                 regexp: {
                   enabled: true,
-                  regexp: /^\+?\d+$/,
+                  regexp: /^[0-9]+(\.[0-9]{1,2})?$/,
                   message: ' '
                 },
                 greaterThan: {
