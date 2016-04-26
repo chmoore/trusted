@@ -307,7 +307,7 @@
 	margin-bottom:0;
 }
 
-#map-canvas { 
+#map-canvas {
 max-width:none;
 }
 
@@ -880,7 +880,7 @@ max-width:none;
 		.search-wrap {
 			display:none;
 		}
-		
+
 		.sidebar {
 			width:auto;
 			padding:10px;
@@ -888,7 +888,7 @@ max-width:none;
 		.div-left {
 			padding-right:0px;
 		}
-		
+
 		input.prices {
 			width:50px!important;
 		}
@@ -1765,7 +1765,7 @@ max-width:none;
     font-weight: 300;
     font-style: normal!important;
 	}
-	
+
 	.item-div:last-child {
 		border-bottom:none;
 	}
@@ -1811,9 +1811,12 @@ max-width:none;
 	}
 
 .product-desc {
-	
+
 }
 
 #prodDescription {
 }
 
+.call-hours {
+  font-size: 12px;
+}
