@@ -289,6 +289,8 @@
         $priceFilterForm
           .formValidation('enableFieldValidators', 'priceLow', validateHighBool, 'lessThan')
           .formValidation('enableFieldValidators', 'priceHigh', validateHighBool, 'greaterThan')
+          .formValidation('enableFieldValidators', 'priceLow', !validateHighBool, 'regexp')
+          .formValidation('enableFieldValidators', 'priceHigh', !validateHighBool, 'regexp')
           .formValidation('revalidateField', 'priceLow')
           .formValidation('revalidateField', 'priceHigh');
       })
@@ -298,6 +300,8 @@
         $priceFilterForm
           .formValidation('enableFieldValidators', 'priceLow', validateLowBool, 'lessThan')
           .formValidation('enableFieldValidators', 'priceHigh', validateLowBool, 'greaterThan')
+          .formValidation('enableFieldValidators', 'priceLow', !validateLowBool, 'regexp')
+          .formValidation('enableFieldValidators', 'priceHigh', !validateLowBool, 'regexp')
           .formValidation('revalidateField', 'priceLow')
           .formValidation('revalidateField', 'priceHigh');
       });
