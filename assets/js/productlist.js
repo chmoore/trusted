@@ -1,10 +1,9 @@
-// Store search view
+// S$priceFilterFormtore search viewfalse
 
 (function ($) {
   $(document).ready(function () {
     var $brandFilters = $('#brand-filters'),
     $toggleBrandsEle = $('<li class="show-toggle"><a class="blue-link" id="toggleMoreBrands" href="javascript:;">+ Show More</a></li>'),
-    $selectedBrand = $('.selectedBrand'),
     $productList = $('#productList'),
     $formReset = $('#productListReset'),
     $resultLimitDropdowns = $('.searchLimitResults'),
@@ -12,7 +11,7 @@
     $searchLowPrice = $('#searchLowPrice'),
     $searchHighPrice = $('#searchHighPrice'),
     $searchTextInput = $('#searchProdText'),
-    $priceFilterBtn = $('#priceFilterBtn'),
+    $priceFilterForm = $('#priceFilterForm'),
     $paginationEle = $('#productListPager'),
     $formSearch = $('#searchProdForm'),
     getUrl = window.location.pathname,
@@ -212,7 +211,7 @@
         });
       });
 
-      $activeCategories.on('click', function(event) {
+      $activeCategories.on('click', function() {
         clearParam('cat');
         updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
       });
@@ -223,15 +222,15 @@
         path: 'shop/search'
       }, checkBoxUpdate);
 
-      $searchLowPrice.on('change', {
-        param: 'priceLow',
-        action: false
-      }, updateSearch);
+      $searchLowPrice.on('change', function(e) {
+          $priceFilterForm.formValidation('revalidateField', 'priceLow');
+          $priceFilterForm.formValidation('revalidateField', 'priceHigh');
+      });
 
-      $searchHighPrice.on('change', {
-        param: 'priceHigh',
-        action: false
-      }, updateSearch);
+      $searchHighPrice.on('change', function(e) {
+          $priceFilterForm.formValidation('revalidateField', 'priceHigh');
+          $priceFilterForm.formValidation('revalidateField', 'priceLow');
+      });
 
       $resultLimitDropdowns.on('change', {
         param: 'numPerPage',
@@ -243,9 +242,77 @@
         action: true
       }, updateSearch);
 
-      $priceFilterBtn.on('click', function(event) {
-        //Send both low and high when price search
-        updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
+      $priceFilterForm.formValidation({
+          framework: 'bootstrap',
+          icon: {
+              valid: 'null',
+              invalid: 'null',
+              validating: 'null'
+          },
+          live: 'enabled',
+          trigger: 'keyup',
+          submitButtons: 'button[type="submit"]',
+          fields: {
+            priceLow: {
+              validators: {
+                regexp: {
+                  enabled: true,
+                  regexp: /^\d+((,\d+)+)?(.\d+)?(.\d+)?(,\d+)?$/,
+                  message: ' '
+                },
+                between: {
+                  enabled: false,
+                  min: 0,
+                  max: 'priceHigh',
+                  message: ' ',
+                  transformer: function($field, validatorName, validator) {
+                    var value = $field.val();
+                    var newValue = parseFloat(value.replace(/,/g,''));
+                    return value;
+                  }
+                }
+              }
+            },
+            priceHigh: {
+              validators: {
+                regexp: {
+                  enabled: true,
+                  regexp: /^\d+((,\d+)+)?(.\d+)?(.\d+)?(,\d+)?$/,
+                  message: ' '
+                },
+                greaterThan: {
+                  enabled: false,
+                  value: 'priceLow',
+                  message: ' ',
+                  transformer: function($field, validatorName, validator) {
+                    var value = $field.val();
+                    var newValue = parseFloat(value.replace(/,/g,''));
+                    return value;
+                  }
+                }
+              }
+            }
+          }
+      })
+      .on('input keyup', '[name="priceLow"]', function() {
+        var validateHighBool = !(!$searchHighPrice.val()) && !(!$(this).val());
+        $priceFilterForm
+          .formValidation('enableFieldValidators', 'priceLow', validateHighBool, 'between')
+          .formValidation('enableFieldValidators', 'priceHigh', validateHighBool, 'greaterThan')
+          .formValidation('enableFieldValidators', 'priceLow', !validateHighBool, 'regexp')
+          .formValidation('enableFieldValidators', 'priceHigh', !validateHighBool, 'regexp')
+          .formValidation('revalidateField', 'priceLow')
+          .formValidation('revalidateField', 'priceHigh');
+      })
+      .on('input keyup', '[name="priceHigh"]', function() {
+        var validateLowBool = !(!$searchLowPrice.val()) && !(!$(this).val());
+        $priceFilterForm
+          .formValidation('enableFieldValidators', 'priceLow', validateLowBool, 'between')
+          .formValidation('enableFieldValidators', 'priceHigh', validateLowBool, 'greaterThan')
+          .formValidation('enableFieldValidators', 'priceLow', !validateLowBool, 'regexp')
+          .formValidation('enableFieldValidators', 'priceHigh', !validateLowBool, 'regexp')
+          .formValidation('revalidateField', 'priceLow')
+          .formValidation('revalidateField', 'priceHigh');
       });
 
       $searchTextInput.on('keyup', {
@@ -254,28 +321,33 @@
         path: 'shop/search'
       }, textSubmit);
 
-      $formSearch.on('submit', function(e){
+      $formSearch.on('submit', function(){
         return false;
       });
+
+      $priceFilterForm.on('submit', function(e) {
+        e.preventDefault();
+        searchParamState.priceLow = $searchLowPrice.val();
+        searchParamState.priceHigh = $searchHighPrice.val();
+        updateSearch({data: {param: 'trigger', action: true, path: 'shop/search'}});
+      });
+
     };
 
     var paginateResults = function () {
       if ($paginationEle.length) {
-        var currPage = parseInt($paginationEle.attr('current-page'));
-        var lastPage = parseInt($paginationEle.attr('last-page'));
-        var visPages = 7;
-
-        $paginationEle.twbsPagination({
-          initiateStartPageClick: false,
-          paginationClass: 'productList',
-          activeClass: 'current',
-          prev: 'Prev',
-          first: false,
-          last: false,
-          startPage: currPage,
-          totalPages: lastPage,
-          visiblePages: visPages,
-          onPageClick: function (event, page) {
+        var currPage = parseInt($paginationEle.attr('data-current-page'));
+        var totalPages = parseInt($paginationEle.attr('data-last-page'));
+        var perPage = parseInt($paginationEle.attr('data-results-per-page'));
+        $paginationEle.pagination({
+          pages: totalPages,
+          currentPage: currPage,
+          itemsOnPage: perPage,
+          prevText: 'Prev',
+          nextText: 'Next',
+          cssStyle: 'light-theme',
+          onPageClick: function (page, event) {
+            event.preventDefault();
             if (isViewAll) {
               var newUrl = getUrl.replace(/\b\page.*/g, 'page/' + page);
               window.location = baseUrl + newUrl;

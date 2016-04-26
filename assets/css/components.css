@@ -3834,6 +3834,8 @@ fieldset p {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: left;
+    display: block;
 }
 
 .simple-pagination li {
@@ -3843,14 +3845,14 @@ fieldset p {
     float: left;
 }
 
-.light-theme .current, .simple-pagination .productList .current a {
+.light-theme .current, .simple-pagination ul.pagination .active a {
     background: #504E4E;
     color: #FFF;
     border-color: #504E4E;
     /*box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;*/
     cursor: default;
 }
-.light-theme a, .light-theme span {
+.light-theme a, .light-theme span, .pagination>li>a, .pagination>li>span {
     float: left;
     color: #979797;
     font-size: 12px;
@@ -3866,35 +3868,35 @@ fieldset p {
 	font: 12px 'gotham_htfmedium', Arial, sans-serif;
 }
 
-.simple-pagination .productList .current, .simple-pagination .productList .disabled {
+.simple-pagination ul.pagination .current, .simple-pagination ul.pagination .disabled {
   background: transparent;
   box-shadow: none;
   color: #000;
   border: none;
 }
 
-.simple-pagination .productList li a {
+.simple-pagination ul.pagination li a {
  line-height: 18px
 }
 
-.simple-pagination .productList .prev:before {
+.simple-pagination ul.pagination .prev:before {
   position: absolute;
   left: 2px;
   line-height: 40px;
 }
 
-.simple-pagination .productList .next:after {
+.simple-pagination ul.pagination .next:after {
   line-height: 40px;
   margin-left: -22px;
   position: absolute;
   color:#979797;
 }
 
-.simple-pagination .productList .current a {
+.simple-pagination ul.pagination .current a {
   font-family: 'gotham_htf', Arial, sans-serif
 }
 
-.simple-pagination .productList .disabled a {
+.simple-pagination ul.pagination .disabled a {
   background: #666;
   border-color: #444;
   box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
@@ -3903,7 +3905,7 @@ fieldset p {
   font-family: 'gotham_htf', Arial, sans-serif
 }
 
-.simple-pagination .productList .disabled:before {
+.simple-pagination ul.pagination .disabled:before {
   color: #fff;
 }
 
@@ -4401,6 +4403,14 @@ fieldset p {
 	  margin-right:8px;
 }
 
+  #priceFilterForm .help-block {
+    display: none;
+  }
+
+  #priceFilterForm .form-control {
+    padding-right: 5px;
+  }
+
   .dropdown-menu {
     position: absolute;
     top: calc(100% - 1px);
@@ -4494,7 +4504,7 @@ fieldset p {
     padding-left: 30px;
 }
 
-#productList input.rounded {
+ul.pagination input.rounded {
 	position: relative;
     top: 0;
     display: inline-block;
