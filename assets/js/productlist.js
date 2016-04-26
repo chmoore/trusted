@@ -253,34 +253,53 @@
           trigger: 'keyup',
           submitButtons: 'button[type="submit"]',
           fields: {
-                  priceLow: {
-                      validators: {
-                        lessThan: {
-                          value: 'priceHigh',
-                          message: ' '
-                        }
-                      },
-                      onSuccess: function(e, data) {
-                          if (!data.fv.isValidField('priceHigh')) {
-                              // Revalidate it
-                              data.fv.revalidateField('priceHigh');
-                          }
-                      }
-                  },
-                  priceHigh: {
-                      validators: {
-                        greaterThan: {
-                          value: 'priceLow',
-                          message: ' '
-                        }
-                      },
-                      onSuccess: function(e, data) {
-                          if (!data.fv.isValidField('priceLow')) {
-                              data.fv.revalidateField('priceLow');
-                          }
-                      }
-                  }
+            priceLow: {
+              validators: {
+                regexp: {
+                  enabled: true,
+                  regexp: /^\+?\d+$/,
+                  message: ' '
+                },
+                lessThan: {
+                  enabled: false,
+                  value: 'priceHigh',
+                  message: ' '
+                }
               }
+            },
+            priceHigh: {
+              validators: {
+                regexp: {
+                  enabled: true,
+                  regexp: /^\+?\d+$/,
+                  message: ' '
+                },
+                greaterThan: {
+                  enabled: false,
+                  value: 'priceLow',
+                  message: ' '
+                }
+              }
+            }
+          }
+      })
+      .on('input keyup', '[name="priceLow"]', function() {
+        var validateHighBool = !(!$searchHighPrice.val()) && !(!$(this).val());
+        console.log('keyup bool on low', validateHighBool);
+        $priceFilterForm
+          .formValidation('enableFieldValidators', 'priceLow', validateHighBool, 'lessThan')
+          .formValidation('enableFieldValidators', 'priceHigh', validateHighBool, 'greaterThan')
+          .formValidation('revalidateField', 'priceLow')
+          .formValidation('revalidateField', 'priceHigh');
+      })
+      .on('input keyup', '[name="priceHigh"]', function() {
+        var validateLowBool = !(!$searchLowPrice.val()) && !(!$(this).val());
+        console.log('keyup bool on high', validateLowBool);
+        $priceFilterForm
+          .formValidation('enableFieldValidators', 'priceLow', validateLowBool, 'lessThan')
+          .formValidation('enableFieldValidators', 'priceHigh', validateLowBool, 'greaterThan')
+          .formValidation('revalidateField', 'priceLow')
+          .formValidation('revalidateField', 'priceHigh');
       });
 
       $searchTextInput.on('keyup', {
