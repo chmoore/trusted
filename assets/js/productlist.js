@@ -257,13 +257,19 @@
               validators: {
                 regexp: {
                   enabled: true,
-                  regexp: /^[0-9]+(\.[0-9]{1,2})?$/,
+                  regexp: /^\d+((,\d+)+)?(.\d+)?(.\d+)?(,\d+)?$/,
                   message: ' '
                 },
-                lessThan: {
+                between: {
                   enabled: false,
-                  value: 'priceHigh',
-                  message: ' '
+                  min: 0,
+                  max: 'priceHigh',
+                  message: ' ',
+                  transformer: function($field, validatorName, validator) {
+                    var value = $field.val();
+                    var newValue = parseFloat(value.replace(/,/g,''));
+                    return value;
+                  }
                 }
               }
             },
@@ -271,13 +277,18 @@
               validators: {
                 regexp: {
                   enabled: true,
-                  regexp: /^[0-9]+(\.[0-9]{1,2})?$/,
+                  regexp: /^\d+((,\d+)+)?(.\d+)?(.\d+)?(,\d+)?$/,
                   message: ' '
                 },
                 greaterThan: {
                   enabled: false,
                   value: 'priceLow',
-                  message: ' '
+                  message: ' ',
+                  transformer: function($field, validatorName, validator) {
+                    var value = $field.val();
+                    var newValue = parseFloat(value.replace(/,/g,''));
+                    return value;
+                  }
                 }
               }
             }
@@ -286,7 +297,7 @@
       .on('input keyup', '[name="priceLow"]', function() {
         var validateHighBool = !(!$searchHighPrice.val()) && !(!$(this).val());
         $priceFilterForm
-          .formValidation('enableFieldValidators', 'priceLow', validateHighBool, 'lessThan')
+          .formValidation('enableFieldValidators', 'priceLow', validateHighBool, 'between')
           .formValidation('enableFieldValidators', 'priceHigh', validateHighBool, 'greaterThan')
           .formValidation('enableFieldValidators', 'priceLow', !validateHighBool, 'regexp')
           .formValidation('enableFieldValidators', 'priceHigh', !validateHighBool, 'regexp')
@@ -296,7 +307,7 @@
       .on('input keyup', '[name="priceHigh"]', function() {
         var validateLowBool = !(!$searchLowPrice.val()) && !(!$(this).val());
         $priceFilterForm
-          .formValidation('enableFieldValidators', 'priceLow', validateLowBool, 'lessThan')
+          .formValidation('enableFieldValidators', 'priceLow', validateLowBool, 'between')
           .formValidation('enableFieldValidators', 'priceHigh', validateLowBool, 'greaterThan')
           .formValidation('enableFieldValidators', 'priceLow', !validateLowBool, 'regexp')
           .formValidation('enableFieldValidators', 'priceHigh', !validateLowBool, 'regexp')
