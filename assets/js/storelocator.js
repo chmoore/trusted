@@ -42,6 +42,13 @@ function initialize() {
     return false;
   });
 
+  if (sessionStorageAvailable()) {
+    window.onbeforeunload = function () {
+      sessionStorage.setItem('Trusted.StoreLocator.Results', '');
+      sessionStorage.setItem('Trusted.StoreLocator.CurrentMarker', '');
+    };
+  }
+
   brandDropdown.addEventListener('change', selectEndpoint);
   geoDetectButton.addEventListener('click', StoreLocator.DetectCurrentLocation);
 
@@ -50,6 +57,11 @@ function initialize() {
       zoom: 4,
       scrollwheel: false,
   });
+
+  google.maps.event.addDomListener(window, 'resize', function() {
+    StoreLocator.RefreshMap(true);
+  });
+
   // Create the autocomplete object, restricting the search
   // to geographical location types.
   autocomplete = new google.maps.places.Autocomplete(
@@ -121,6 +133,14 @@ function geolocate() {
 }
 // [END region_geolocation]
 
+function sessionStorageAvailable() {
+    try {
+        return 'sessionStorage' in window && window.sessionStorage !== null;
+    } catch(e) {
+        return false;
+    }
+}
+
 var StoreLocator = {
     LocationSearch: function (webserviceUrl) {
         var textCriteria = '';
@@ -149,15 +169,14 @@ var StoreLocator = {
                   return a.metersAway - b.metersAway;
                 });
 
+                if (sessionStorageAvailable()) {
+                  sessionStorage.setItem('Trusted.StoreLocator.Results', JSON.stringify(distSortData));
+                }
+
                 var completeHtml = [];
                 for (var con = 0; con < cleanResponse.length; con++) {
                     completeHtml.push(StoreLocator.GenerateCard(cleanResponse[con], con));
                 }
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: { lat: 40.745812, lng: -100.913895 },
-                    zoom: 4,
-                    scrollwheel: false,
-                });
 
                 var sortedHtmlString = '';
                 for (var res = 0; res < completeHtml.length; res++) {
@@ -186,12 +205,13 @@ var StoreLocator = {
 
         $('.google-map').height($('#dvResult').height());
         $('#dvResult').height($('.google-map').height());
-
-        $(window).on('resize', function () {
-          $('.google-map').width($(document).width());
-          google.maps.event.trigger('resize');
-        });
-
+    },
+    RefreshMap: function(refreshBool) {
+      if (sessionStorageAvailable() && refreshBool && resultsVisible) {
+        var lastMarkerOpen = JSON.parse(sessionStorage.getItem('Trusted.StoreLocator.CurrentMarker'));
+        map.setCenter(lastMarkerOpen.latLng);
+      }
+      google.maps.event.trigger(map, 'resize');
     },
     SanitizeId: function(str) {
       return String(str).replace(/&/g, '_').replace(/</g, '_').replace(/>/g, '_').replace(/"/g, '_');
@@ -224,11 +244,23 @@ var StoreLocator = {
         };
                 return templateObj;
     },
+    CurrentMarker: function(id, latLng) {
+      if (sessionStorageAvailable() && id && latLng) {
+        var markerObj = {
+          'id': id,
+          'latLng': latLng
+        };
+        var currentMarkerString = JSON.stringify(markerObj);
+        sessionStorage.setItem('Trusted.StoreLocator.CurrentMarker', currentMarkerString);
+      }
+    },
     OpenMarker :function(id){
         for (var mc = 0; mc < markerList.length; mc++) {
             if (markerList[mc].Id === id) {
+                var markerLatLng = new google.maps.LatLng(markerList[mc].position.lat(), markerList[mc].position.lng());
                 google.maps.event.trigger(markerList[mc], 'click');
-
+                StoreLocator.CurrentMarker(id, markerLatLng);
+                map.setZoom(11);
             }
         }
     },
@@ -251,6 +283,7 @@ var StoreLocator = {
         infowindow = new InfoBox({
             disableAutoPan: false,
             maxWidth: 450,
+            //pixelOffset: new google.maps.Size(-220, -225),
             pixelOffset: new google.maps.Size(-220, -225),
             zIndex: null,
             boxStyle: {
@@ -306,7 +339,7 @@ var StoreLocator = {
                     var currentLng = isLatLngFn ? currentLatlng.lng() : currentLatlng.lng;
                     var localItem = locations[i];
                     $('#' + localItem.Id).addClass('selected');
-                    var $newHoursTable = $('<table class="store-hours"></table>');
+                    var $newHoursTable = $('<table border="2" class="store-hours"></table>');
                     var $storeHoursTable = $newHoursTable.html(StoreLocator.FormatStoreHours(localItem.storeHours)).get(0).outerHTML;
                     var localaddress = $('#street_number').val() + $('#route').val() + ', ' + $('#locality').val() + ', ' + $('#administrative_area_level_1').val() + $('#postal_code').val();
                     var drivinglink = 'https://maps.google.com/?saddr=' + currentLat + ',' + currentLng + '&daddr=' + localItem.latitude + ',' + localItem.longitude;
@@ -320,28 +353,34 @@ var StoreLocator = {
                      '<h1 class="title">Store Detail</h1>' + $storeHoursTable + '</div>');
                     infowindow.open(map, marker);
                     $('.gm-style-iw').next('div').remove();
-                    map.setCenter({ 'lat': localItem.latitude, 'lng': localItem.longitude });
+                    //map.setCenter({ 'lat': localItem.latitude, 'lng': localItem.longitude });
+                    map.setCenter(new google.maps.LatLng(localItem.latitude, localItem.longitude));
                 };
             })(marker, i));
             map.setOptions({ maxZoom: 18 });
             bounds.extend(marker.position);
             markerList.push(marker);
+            map.setCenter();
         }
-
-        map.fitBounds(bounds);
-        map.setCenter();
     },
     FormatStoreHours: function (storeHoursObj) {
       if (typeof storeHoursObj === 'object' && storeHoursObj.length) {
-          var hoursTableArr = [];
+
+        if(storeHoursObj.length !== 7){
+//         console.log('days of the week in this storeHoursObj = ' + storeHoursObj.length);
+          storeHoursObj = StoreLocator.ReplaceAnyMissingDays(storeHoursObj);
+        }
+
+        var hoursTableArr = [];
           var itemsDone = [];
 
           var daysLength = storeHoursObj.length;
           var isCurrentDay = function(dayName) {
             var dateNow = new Date();
             var dayIndex = dateNow.getDay();
-            var dayNames = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
-            var todayIs = dayNames[dayIndex];
+//            console.log(dayIndex);
+            var dayNames = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY','SUNDAY'];
+            var todayIs = dayNames[dayIndex-1];
             if (todayIs === dayName) {
                 return ' class="currentDay"';
             } else {
@@ -350,7 +389,9 @@ var StoreLocator = {
           };
 
           for (var k = 0; k < storeHoursObj.length; k++) {
-            if (!storeHoursObj[k].closed) {
+//            console.log('****' + storeHoursObj[k].day);
+            if (!storeHoursObj[k].closed && storeHoursObj[k].startTime !== '') {
+//             console.log('!storeHoursObj[k].closed');
               var OpenTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
                 '<td class="dayCol" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
                 '<td>' + storeHoursObj[k].startTime.replace(/\./g, '') + '</td>' +
@@ -358,19 +399,56 @@ var StoreLocator = {
                 '<td>' + storeHoursObj[k].closeTime.replace(/\./g, '') + '</td>' +
                 '</tr>';
               hoursTableArr.push(OpenTableLine);
-            } else {
+            }  else if (storeHoursObj[k].closed) {
+//              console.log('storeHoursObj[k].closed');
               var ClosedTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
                 '<td class="dayCol' + isCurrentDay(storeHoursObj[k].day) + '" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
-                '<td>' + 'CLOSED' + '</td>' +
+                '<td colspan="3">' + 'CLOSED' + '</td>' +
                 '</tr>';
               hoursTableArr.push(ClosedTableLine);
+            } else {
+ //             console.log('call for hours');
+              var CallForStoreHoursLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
+                '<td class="dayCol' + isCurrentDay(storeHoursObj[k].day) + '" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
+                '<td colspan="3">' + 'CALL FOR STORE HOURS' + '</td>' +
+                '</tr>';
+              hoursTableArr.push(CallForStoreHoursLine);
             }
+
           }
           return hoursTableArr.join();
       } else {
         return 'Call for Store Hours';
       }
 
+    },
+    ReplaceAnyMissingDays : function(storeHoursObj) {
+      var dayNamesInOrder = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY','SUNDAY'];
+      // Find the missing day(s)
+      var missingDays = [];
+      for(var i=0; i < dayNamesInOrder.length; i++){
+        var dayToLookFor = dayNamesInOrder[i];
+        var notSeen = true;
+        for(var j=0; j < storeHoursObj.length; j++){
+          if(dayToLookFor === storeHoursObj[j].day){
+            notSeen = false;
+            break;
+          }
+        }
+        if(notSeen){
+//          console.log(dayToLookFor + " is NOT in storeHoursObj.");
+          missingDays.push(dayToLookFor);
+        }
+      }
+      // Inject the missing Day(s)
+      for(var d=0; d < missingDays.length; d++){
+          var index = dayNamesInOrder.indexOf(missingDays[d]);
+//        console.log("Index of missing day is " + index);
+        var newItem = {day : missingDays[d], startTime : ''};
+        storeHoursObj.splice(index,0,newItem);
+      }
+
+      return storeHoursObj;
     },
     DetectCurrentLocation: function () {
         if (navigator.geolocation) {

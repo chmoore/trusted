@@ -1439,6 +1439,12 @@
   z-index: 1;
 }
 
+.infoBox img[align=right] {
+  z-index: 1;
+  height: 15px;
+  width: 15px;
+}
+
 .card .store-hours {
   border: 0;
   color: #000;
