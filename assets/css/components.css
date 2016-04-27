@@ -57,6 +57,12 @@
     line-height: 28px;
 }
 
+.accordion-item-content li {
+    color: #000;
+    font: 14px 'gotham_htfbook', Arial, sans-serif;
+    line-height: 28px;
+}
+
 .accordion-item-content h6 {
     color: #000;
     font: 16px 'gotham_htfbold', Arial, sans-serif!important;
@@ -4740,13 +4746,16 @@ ul.pagination input.rounded {
 }
 
 .logo-brand-sm {
-	float: left;
+	/*float: left;
     width: 50%;
+    margin-top: -10px;*/
+	width: 45%;
     margin-top: -10px;
+    display: inline-block;
 }
 
 .logo-brand-sm img{
-	width:60%;
+	width:80%;
 	text-align:center;
 	margin-bottom:10px;
 	padding-bottom:0;
