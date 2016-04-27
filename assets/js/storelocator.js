@@ -37,11 +37,6 @@ function initialize() {
   var defaultLat = 40.745812;
   var defaultLng = -100.913895;
 
-  $(locatorForm).bind('submit', function(e) {
-    e.preventDefault();
-    return false;
-  });
-
   if (sessionStorageAvailable()) {
     window.onbeforeunload = function () {
       sessionStorage.setItem('Trusted.StoreLocator.Results', '');
@@ -73,6 +68,14 @@ function initialize() {
     fillInAddress();
     StoreLocator.LocationSearch(webserviceUrl);
   });
+
+  $(locatorForm).bind('submit', function(e) {
+    e.preventDefault();
+    return false;
+  });
+
+  checkForParams();
+
 }
 
 function selectEndpoint() {
@@ -139,6 +142,26 @@ function sessionStorageAvailable() {
     } catch(e) {
         return false;
     }
+}
+
+function checkForParams() {
+  var passThruBrand = $.query.get('brand').toString();
+  var passThruAddress = $.query.get('address').toString();
+
+  if (passThruBrand.length) {
+    $(brandDropdown).find('option').removeAttr('selected');
+    $(brandDropdown).find('option[value='+passThruBrand+']').attr('selected',true);
+    $(brandDropdown).trigger('change');
+  }
+
+  if (passThruAddress.length) {
+    $(addressInput).val(passThruAddress);
+  }
+
+  if (passThruBrand.length || passThruAddress.length) {
+    StoreLocator.GetByRegularSearch(passThruAddress);
+  }
+
 }
 
 var StoreLocator = {
