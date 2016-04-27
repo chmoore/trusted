@@ -1813,7 +1813,10 @@ max-width:none;
 	}
 
 .product-desc {
-
+    line-height: 18px;
+	font: 13px 'gotham_htfbook', Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal!important;
 }
 
 #prodDescription {
