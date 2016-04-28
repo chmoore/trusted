@@ -7,7 +7,7 @@
 /* =Accordion
    ========================================================================== */
 
-	.accordion { margin-bottom: 50px; }
+	.accordion { margin-bottom: 50px; font: 14px 'gotham_htfbook', Arial, sans-serif!important;}
 
 	.accordion-item {
 		position: relative;
@@ -3667,12 +3667,12 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 }
 
 .retailer-text p {
-	margin-bottom: 5px!important;
+	margin-bottom: 5px;
     line-height: 20px;
 }
 
 .retail-text p {
-	margin-bottom: 5px!important;
+	margin-bottom: 5px;
     line-height: 20px;
 }
 
@@ -5361,6 +5361,10 @@ ul.pagination input.rounded {
 
 #at-cv-lightbox {
 	display:none!important;
+}
+
+.accordion h2 span {
+	font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 }
 
 /*.prod-blank {
