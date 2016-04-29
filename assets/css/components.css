@@ -4169,6 +4169,10 @@ fieldset p {
 	 height:auto;
 	 margin-bottom:20px;
  }
+ 
+ .state-container {
+	 padding:20px;
+ }
 
  .logo-brand {
 	 float:left;
