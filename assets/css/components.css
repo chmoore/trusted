@@ -4176,10 +4176,11 @@ fieldset p {
  }
 
  .logo-brand img {
-	 width:auto;
+	 width:100%;
 	 margin-top: -5px;
      margin-bottom: 20px;
-	 max-height:85px;
+	 /*max-height:85px;*/
+	 height:auto;
  }
 
  .logo-brand-sm img {
