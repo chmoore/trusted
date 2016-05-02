@@ -55,6 +55,8 @@
 		   -moz-box-sizing: border-box;
 				box-sizing: border-box;
 	}
+	
+	.product-content  { position:relative;margin-bottom:20px;}
 
 	@media (min-width: 768px) {
 
@@ -101,7 +103,7 @@
 		.offset1a  { margin-left: 4.33333333%; }
 		.offset0  { margin-left: 0%; }
 		.offset-content  { margin-left: 380px; position:relative;border-bottom: 1px solid #e1e1e1; margin-bottom:20px;}
-		.product-content  { position:relative;/*border-bottom: 1px solid #e1e1e1; */margin-bottom:20px;}
+		.product-content  { position:relative;margin-bottom:20px;}
 
 	}
 

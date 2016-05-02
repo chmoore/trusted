@@ -1683,7 +1683,7 @@
 
 	.item-shop-wrap img {
 		margin-bottom:12px;
-		/*width: 100%;*/
+		width: 100%;
 		margin:0;
 	}
 
@@ -4169,6 +4169,10 @@ fieldset p {
 	 height:auto;
 	 margin-bottom:20px;
  }
+ 
+ .state-container {
+	 padding:0 20px 0 0;
+ }
 
  .logo-brand {
 	 float:left;
@@ -4176,10 +4180,11 @@ fieldset p {
  }
 
  .logo-brand img {
-	 width:auto;
+	 width:100%;
 	 margin-top: -5px;
      margin-bottom: 20px;
-	 max-height:85px;
+	 /*max-height:85px;*/
+	 height:auto;
  }
 
  .logo-brand-sm img {
@@ -4900,10 +4905,10 @@ ul.pagination input.rounded {
 }
 
 .item-div h4 {
-    font-size: 14px;
-    line-height: 18px;
     letter-spacing: 0px;
     margin-top: 0px;
+	font-size: 22px!important;
+    line-height: 24px;
 }
 
 .item-div .col-xs-4 {
@@ -5324,6 +5329,10 @@ ul.pagination input.rounded {
 	font-size:26px;
 	text-transform:none;
 	letter-spacing:-0.3px;
+}
+
+.item-div h4:hover {
+	color:#504E4E;
 }
 
 .item-border .col-xs-8 .no-left-pad {
