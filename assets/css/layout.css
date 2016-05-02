@@ -1458,6 +1458,12 @@ max-width:none;
 	width:50%;
 	float:left;
 
+}.item-div .height40 {
+	display:none;
+}
+
+.row {
+	margin:0!important;
 }
 
 #bg-1 {
