@@ -707,9 +707,7 @@ max-width:none;
 }
 
 .press-img {
-	width:100px;
 	float:left;
-	margin-right:65px;
 }
 
 .press-img img {
@@ -968,7 +966,7 @@ max-width:none;
 .boxed {
 	margin-top:20px;
 	padding:20px;
-	display:inline-block; 
+	display:inline-block;
 }
 #mobile-menu-trigger {
 			display: block;
@@ -1522,7 +1520,7 @@ max-width:none;
     padding:0px!important;
 	margin-bottom:0px;
 	width:100%!important;
-	
+
 }
 
 .product-div .item-img-full img {
