@@ -968,7 +968,7 @@ max-width:none;
 .boxed {
 	margin-top:20px;
 	padding:20px;
-	display:inline-block;
+	display:inline-block; 
 }
 #mobile-menu-trigger {
 			display: block;
