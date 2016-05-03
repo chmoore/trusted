@@ -1520,7 +1520,7 @@ max-width:none;
     /* top: 50%; */
    transform: none!important;
     padding:0px!important;
-	/*margin-bottom:20px;*/
+	margin-bottom:0px;
 	width:100%!important;
 	
 }

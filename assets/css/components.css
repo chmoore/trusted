@@ -4984,6 +4984,7 @@ ul.pagination input.rounded {
 .slider-revolution.fullwidthbanner-container {
     margin-bottom: 0px;
     margin-top: 0;
+	height: auto!important;
 }
 
 .accordion-item-content .span7 {
