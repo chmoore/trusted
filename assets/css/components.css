@@ -3693,6 +3693,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 .retailer-text img {
 	width:60%;
 	max-height:100px;
+	margin-top: 40px;
 }
 
 .retail-text img {
@@ -4213,9 +4214,18 @@ fieldset p {
 .country-div:after {
     height: 2px;
     display: block;
-    width: 80px;
+    width: auto;
     background: #454545;
     content: '';
+}
+
+.country-div:before {
+    display: block;
+    width: auto;
+    background: #454545;
+    content: '';
+    margin-bottom: 12px;
+    height: 2px;
 }
 
 .item-name {
@@ -4811,6 +4821,14 @@ ul.pagination input.rounded {
 .retailer-text p {
     margin-bottom: 10px!important;
     line-height: 20px;
+}
+
+.retailer-text img {
+    margin-top: 0;
+}
+
+.retailer-text .col-xs-6 {
+	    width: 50%;
 }
 
 .item-img-full {
