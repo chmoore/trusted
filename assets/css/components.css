@@ -5401,6 +5401,13 @@ ul.pagination input.rounded {
 	position:absolute;
 }*/
 
+#productList img {
+    /* border: 1px solid #e1e1e1; */
+    padding: 15px;
+    /* position: relative; */
+    width: 200px;
+    height: auto;
+}
 /*==================================
             STORE HOURS CSS
 ====================================*/
