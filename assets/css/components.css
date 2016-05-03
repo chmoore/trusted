@@ -406,6 +406,10 @@
 
 	.divider.single-line { border-top: 1px solid #e1e1e1; }
 	.single-line { border-top: 1px solid #e1e1e1; margin-top: 40px; }
+	.retailer-container .single-line {
+    border-top: 2px solid #000;
+    margin-top: 40px;
+		}
 	.divider.single-line-side { border-top: 1px solid #e1e1e1; /*width: 298px;margin-left: -20px; */width:100%; /*margin: 20px 0;*/margin: 10px 0 20px;float: left;}
 
 
@@ -4212,20 +4216,20 @@ fieldset p {
 }
 
 .country-div:after {
-    height: 2px;
+    height: 1px;
     display: block;
     width: auto;
-    background: #454545;
+    background: #e1e1e1;
     content: '';
 }
 
 .country-div:before {
     display: block;
     width: auto;
-    background: #454545;
+    background: #e1e1e1;
     content: '';
     margin-bottom: 12px;
-    height: 2px;
+    height: 1px;
 }
 
 .item-name {
