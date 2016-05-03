@@ -1528,7 +1528,7 @@ max-width:none;
 .product-div .item-img-full img {
    /*position:absolute!important;*/
    display:inline-block;
-   height: 100%;
+   height: auto;
    width: 100%;
 }
 
