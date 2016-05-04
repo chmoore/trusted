@@ -1470,7 +1470,7 @@ max-width:none;
 }
 
 .item-image {
-	width:100%!important;
+	width:50%!important;
 }
 
 .item-view-btn {
@@ -1480,6 +1480,27 @@ max-width:none;
 .item-name {
 	width:100%;
 	margin-bottom:15px;
+	margin-left: 50%;
+    padding: 0;
+	float:none!important;
+}
+
+.item-id {
+	margin-left: 50%;
+    padding: 0;
+	float:none!important;
+}
+
+.item-make {
+	margin-left: 50%;
+    padding: 0;
+	float:none!important;
+}
+
+.item-status {
+	margin-left: 50%;
+    padding: 0;
+	float:none!important;
 }
 .widget.col-sm-8 {
 	width:100%!important;

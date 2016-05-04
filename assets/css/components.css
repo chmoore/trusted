@@ -4216,11 +4216,11 @@ fieldset p {
 }
 
 .country-div:after {
-    height: 1px;
+   /* height: 1px;
     display: block;
     width: auto;
     background: #e1e1e1;
-    content: '';
+    content: '';*/
 }
 
 .country-div:before {
@@ -4228,7 +4228,7 @@ fieldset p {
     width: auto;
     background: #e1e1e1;
     content: '';
-    margin-bottom: 12px;
+    margin-bottom: 40px;
     height: 1px;
 }
 
@@ -4253,7 +4253,7 @@ fieldset p {
     margin-top: 20px;
 }
 .item-image {
-	width: 35%!important;
+	width: 35%;
     float: left;
     height: auto;
 	margin-right: 20px;
