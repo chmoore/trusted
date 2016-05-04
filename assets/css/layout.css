@@ -1808,6 +1808,7 @@ max-width:none;
 
 	.item-div:last-child {
 		border-bottom:none;
+		margin-bottom: 0;
 	}
 
 	.item-border {
