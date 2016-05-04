@@ -70,6 +70,10 @@
 	margin-bottom:20px;
 }
 
+.accordion-item-content .span4 {
+	padding:0!important;
+}
+
 .acc-hdr {
 	 color: #000;
     font: 16px 'gotham_htfbold', Arial, sans-serif!important;
@@ -1601,6 +1605,10 @@
 	/*	  opacity: 0.5;
 		  -webkit-transition: all 0.3s;
    		 transition: all 0.3s;*/
+	}
+	
+	.testimonial h2 {
+		font-size:22px;
 	}
 
 
