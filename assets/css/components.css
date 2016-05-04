@@ -412,7 +412,7 @@
 	.single-line { border-top: 1px solid #e1e1e1; margin-top: 40px; }
 	.retailer-container .single-line {
     border-top: 2px solid #000;
-    margin-top: 40px;
+    margin-top: 80px;
 		}
 	.divider.single-line-side { border-top: 1px solid #e1e1e1; /*width: 298px;margin-left: -20px; */width:100%; /*margin: 20px 0;*/margin: 10px 0 20px;float: left;}
 
