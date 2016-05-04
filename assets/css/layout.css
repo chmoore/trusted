@@ -954,6 +954,7 @@ max-width:none;
     transform: none!important;
     font-family: 'gotham_htfmedium', Arial, sans-serif;
     text-align: left;
+	 margin-top: 0!important;
 }
 
 .product-div .btn {
@@ -1831,9 +1832,9 @@ max-width:none;
 	}
 
 	.price-list {
-		font-size:18px;
+		font-size:16px;
 		text-transform:none;
-		margin-bottom:20px;
+		margin-bottom:15px;
 	}
 
 	.brand-list {
@@ -1850,7 +1851,7 @@ max-width:none;
 	}
 
 .product-desc {
-    line-height: 18px;
+    line-height: 20px!important;
 	font: 13px 'gotham_htfbook', Arial, sans-serif;
     font-weight: 300;
     font-style: normal!important;

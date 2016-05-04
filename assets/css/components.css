@@ -54,7 +54,7 @@
 	.accordion-item-content p {
     color: #000;
     font: 14px 'gotham_htfbook', Arial, sans-serif;
-    line-height: 28px;
+    line-height: 22px;
 }
 
 .accordion-item-content li {
@@ -5349,7 +5349,7 @@ ul.pagination input.rounded {
 
 .item-div h4 {
 	margin-top:0;
-	font-size:26px;
+	font-size:22px;
 	text-transform:none;
 	letter-spacing:-0.3px;
 }
