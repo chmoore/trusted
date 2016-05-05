@@ -1799,9 +1799,17 @@
 
 	.item-sm p {
 		text-align:left;
-		font: 15px 'gotham_htfbold', Arial, sans-serif!important;
+		font: 14px 'gotham_htfbold', Arial, sans-serif!important;
    		text-transform: uppercase!important;
     	margin-top: 10px;
+	}
+	
+	h3.gray-price {
+    color: #5C5C5C;
+}
+
+	h6.gray-price {
+		font-size: 14px;
 	}
 
 	.item-img {
@@ -1819,7 +1827,7 @@
 		    position: relative;
     border: 1px solid #e1e1e1;
     height: 205px;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     overflow: hidden;
     text-align: center;
     vertical-align: middle;
@@ -3496,7 +3504,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 .warning-text {
 	color:#FF0004!important;
 	font-size:14px;
-	width:80%;
+	width:75%;
 	margin:0 auto;
 }
 
@@ -3942,7 +3950,7 @@ fieldset p {
 	height:35px;
 	padding:4px 25px 4px 12px;
 	width:auto;
-	margin:0 6px;
+	margin: 0 0 0 6px;
 }
 
 .item-sort-brand {
@@ -5377,6 +5385,7 @@ ul.pagination input.rounded {
     font-weight: bold;
     letter-spacing: 0px;
     margin-top: 0px;
+    padding-top: 0;
 }
 
 .product-brand .blue-link {
@@ -5419,6 +5428,10 @@ ul.pagination input.rounded {
     /* position: relative; */
     width: 200px;
     height: auto;
+}
+
+#priceFilterBtn .glyphicon {
+	    top: 1px!important;
 }
 /*==================================
             STORE HOURS CSS
