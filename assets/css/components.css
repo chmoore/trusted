@@ -1805,11 +1805,12 @@
 	}
 	
 	h3.gray-price {
-    color: #5C5C5C;
+    
 }
 
 	h6.gray-price {
 		font-size: 14px;
+		color: #5C5C5C;
 	}
 
 	.item-img {
@@ -3817,7 +3818,7 @@ fieldset p {
 
 .text-div {
 	padding-top:20px;
-	font-size:12px!important;
+	font-size:13px!important;
 }
 
 .checkform {
