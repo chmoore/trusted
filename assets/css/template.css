@@ -685,6 +685,10 @@
 	.widget > :last-child {
 		margin-bottom: 0; /* 1 */
 	}
+	
+	.text-center .widget {
+    padding-left: 20px;
+}
 
 	#footer .widget:first-child,
 	#footer-bottom .widget:first-child { padding-top: 0px; }
