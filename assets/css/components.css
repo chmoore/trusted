@@ -5395,9 +5395,9 @@ ul.pagination input.rounded {
 }
 
 .product-title h2 {
-	font-size:36px;
+	font-size:32px;
 	line-height:40px;
-	letter-spacing:-0.5px;
+	letter-spacing:0px;
 	text-transform:none;
 }
 
