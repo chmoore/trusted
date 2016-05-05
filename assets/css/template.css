@@ -688,6 +688,7 @@
 	
 	.text-center .widget {
     padding-left: 20px;
+	    margin-bottom: 0;
 }
 
 	#footer .widget:first-child,
