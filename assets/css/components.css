@@ -5299,7 +5299,7 @@ ul.pagination input.rounded {
 }
 
 .brand-fixed {
-	width:1420px;
+	max-width:1420px;
 }
 
 .sfl h1 {
