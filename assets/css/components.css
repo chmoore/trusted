@@ -5378,11 +5378,19 @@ ul.pagination input.rounded {
 }
 
 .item-div h4:hover {
-	color:#504E4E;
+	color:#0088cc;
 }
 
 .item-div h5:hover {
-	color:#504E4E;
+	color:#0088cc;
+}
+
+.pricelist:hover {
+	color:#0088cc;
+}
+
+.brand-list:hover {
+	color:#0088cc;
 }
 
 
