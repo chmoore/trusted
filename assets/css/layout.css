@@ -1833,7 +1833,7 @@ max-width:none;
 	}
 
 	.price-list {
-		font-size:16px;
+		font-size: 18px!important;
 		text-transform:none;
 		margin-bottom:15px;
 	}
@@ -1843,8 +1843,9 @@ max-width:none;
 		text-transform:uppercase;
 		color:#aaa;
 		font-weight:bold;
-		letter-spacing:1px;
-		margin-top: -10px;
+		letter-spacing:0px;
+		    margin-top: 10px;
+    margin-bottom: 20px;
 	}
 
 	.store-list {

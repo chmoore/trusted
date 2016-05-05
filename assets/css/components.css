@@ -5372,9 +5372,19 @@ ul.pagination input.rounded {
 	letter-spacing:-0.3px;
 }
 
+.item-div h5 {
+    font-size: 14px;
+    margin-top: -10px;
+}
+
 .item-div h4:hover {
 	color:#504E4E;
 }
+
+.item-div h5:hover {
+	color:#504E4E;
+}
+
 
 .item-border .col-xs-8 .no-left-pad {
 	padding-right:20px;
