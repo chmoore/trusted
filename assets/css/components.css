@@ -5088,7 +5088,7 @@ ul.pagination input.rounded {
 }
 
 .text-center .widget {
-    padding-left: 20px!important;
+    padding-left: 0px!important;
     margin-bottom: 0;
 }
 
