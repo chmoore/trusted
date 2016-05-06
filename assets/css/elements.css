@@ -200,6 +200,10 @@
 	.text-left-2 {text-align:left;margin-left:25px;margin-top:-7px;}
 
 	.text-uppercase { text-transform: uppercase; }
+	
+	.no-results-txt p {
+    	font: 20px/30px 'gotham_htfbold', Arial, sans-serif!important;
+}
 
 	.text-highlight {
 		padding: 1px 5px;

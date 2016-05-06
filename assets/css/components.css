@@ -5137,6 +5137,10 @@ form#findaretailer-form {
     margin-bottom: 40px;
 }
 
+.no-results-txt {
+	margin-bottom:0!important;
+}
+
 .press-img img {
     width: 100%;
     margin-bottom: 20px;
