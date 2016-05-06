@@ -4813,7 +4813,7 @@ ul.pagination input.rounded {
 	}
 
 
-#retail-wrap { display:flex; flex-direction: column; text-align:left;}
+#retail-wrap { display:flex; flex-direction: column; text-align:left;padding: 0!important;}
 #ret-address { order: 2 }
 #ret-map { order: 1 }
 
@@ -5094,6 +5094,19 @@ ul.pagination input.rounded {
 
 .zoomContainer {
 	display:none;
+}
+
+.card .span9 {
+    width: 85%;
+    padding: 0;
+}
+
+.card .title {
+    font-size: 22px!important;
+    font-weight: bold;
+    margin-bottom: 0px;
+    line-height: 18px;
+    width: 100%;
 }
 
 }
