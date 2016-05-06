@@ -5170,7 +5170,7 @@ input#currentLocationBtn {
 }
 
 #productList img {
-	padding:0;
+	padding:0!important;
 }
 .col-xs-4 {
 	width:100%;
