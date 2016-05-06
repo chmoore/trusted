@@ -4973,6 +4973,11 @@ ul.pagination input.rounded {
     margin-top: 30px;
 }
 
+.text-center .headline-nomar {
+    margin-bottom: 30px;
+    margin-top: 80px;
+}
+
 .item-prod {
 }
 
@@ -5075,7 +5080,6 @@ ul.pagination input.rounded {
 
 .fullwidth-section-content .text-center {
 	margin-bottom:0!important;
-	padding:0 20px;
 }
 
 .zoom-txt {
@@ -5084,7 +5088,7 @@ ul.pagination input.rounded {
 }
 
 .text-center .widget {
-    padding-left: 20px;
+    padding-left: 20px!important;
     margin-bottom: 0;
 }
 
@@ -5104,6 +5108,21 @@ ul.pagination input.rounded {
     margin-top: 40px;
 	border-top: 1px solid #e1e1e1;
     padding-top: 30px;
+}
+
+input#currentLocationBtn {
+    width: 100%;
+}
+
+.border {
+    border-right: 1px solid #dadada;
+    padding: 0px!important;
+}
+
+.view-all-location {
+    font-size: 14px;
+    padding: 15px;
+    padding-bottom: 20px!important;
 }
 
 .product-title h2 {
