@@ -5133,6 +5133,11 @@ input#currentLocationBtn {
     width: 100%;
 }
 
+.press-img img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
 .border {
     border-right: 1px solid #dadada;
     padding: 0px!important;
