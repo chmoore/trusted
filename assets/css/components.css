@@ -5109,6 +5109,12 @@ ul.pagination input.rounded {
     width: 100%;
 }
 
+.fullwidth-section-content {
+    position: relative;
+    z-index: 3;
+    padding: 0 20px;
+}
+
 }
 
 @media (max-width: 767px) {
@@ -5146,6 +5152,7 @@ input#currentLocationBtn {
 
 .item-shop {
 	height:auto;
+    margin-bottom: 20px;
 }
 
 
