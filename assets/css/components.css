@@ -4865,6 +4865,39 @@ ul.pagination input.rounded {
 	width:50%;*/
 }
 
+.item-sm h6 {
+    color: #0088cc!important;
+    font-family: 'gotham_htfmedium', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    text-transform: none;
+    float: right;
+    width: 40%;
+	word-wrap: break-word;
+}
+
+.item-title {
+    color: #0088cc!important;
+    font-family: 'gotham_htfmedium', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    text-transform: none;
+    float: right;
+    width: 40%;
+	word-wrap: break-word;
+}
+
+.price-ital {
+    text-align: left;
+    font: 14px 'gotham_htfbold', Arial, sans-serif!important;
+    text-transform: uppercase!important;
+    margin-top: 10px;
+    float: right;
+    width: 40%;
+}
+
 .ewf_widget_authenticate {
     width: 100%;
 }
@@ -5042,11 +5075,17 @@ ul.pagination input.rounded {
 
 .fullwidth-section-content .text-center {
 	margin-bottom:0!important;
+	padding:0 20px;
 }
 
 .zoom-txt {
 	margin:20px 0;
 	display:none;
+}
+
+.text-center .widget {
+    padding-left: 20px;
+    margin-bottom: 0;
 }
 
 .zoomContainer {
@@ -5068,9 +5107,9 @@ ul.pagination input.rounded {
 }
 
 .product-title h2 {
-	font-size:28px;
-	line-height: 34px;
-    letter-spacing: -0.5px;
+	font-size: 28px!important;
+    line-height: 34px!important;
+    letter-spacing: -0.5px!important;
 }
 
 .item-shop {
