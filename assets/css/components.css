@@ -5041,8 +5041,9 @@ ul.pagination input.rounded {
     background-position: 70% 50%!important;
 }
 
-.brand-fixed {
-    width: 100%!important;
+brand-fixed {
+    max-width: 1420px;
+    width: 100%;
 }
 
 .breadcrumbs li {
@@ -5402,8 +5403,9 @@ form#findaretailer-form {
 
 }
 
-.brand-fixed {
-	max-width:1420px;
+brand-fixed {
+    max-width: 1420px;
+    width: 100%;
 }
 
 .sfl h1 {
