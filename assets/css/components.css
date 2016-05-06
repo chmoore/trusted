@@ -5133,6 +5133,10 @@ input#currentLocationBtn {
     width: 100%;
 }
 
+form#findaretailer-form {
+    margin-bottom: 40px;
+}
+
 .press-img img {
     width: 100%;
     margin-bottom: 20px;
