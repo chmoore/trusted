@@ -5406,6 +5406,7 @@ form#findaretailer-form {
 brand-fixed {
     max-width: 1420px;
     width: 100%;
+	background: #000;
 }
 
 .sfl h1 {
