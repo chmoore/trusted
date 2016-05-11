@@ -5618,6 +5618,10 @@ brand-fixed {
 	font-weight: 300;
     padding-left: 5px;
 }
+
+.clear-category {
+    font-size: 16px;
+}
 /*==================================
             STORE HOURS CSS
 ====================================*/
