@@ -1608,7 +1608,7 @@
 		  -webkit-transition: all 0.3s;
    		 transition: all 0.3s;*/
 	}
-	
+
 	.testimonial h2 {
 		font-size:22px;
 	}
@@ -1806,9 +1806,9 @@
    		text-transform: uppercase!important;
     	margin-top: 10px;
 	}
-	
+
 	h3.gray-price {
-    
+
 }
 
 	h6.gray-price {
@@ -3617,18 +3617,12 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	color:#000;
 }
 
-.retailer-text {
-        /*clear: both;*/
+.retailer-text, .retail-text {
 	font: 14px 'gotham_htfbook', Arial, sans-serif;
 	color:#000;
 	letter-spacing:0;
 }
-
 .retail-text {
-        /*clear: both;*/
-	font: 14px 'gotham_htfbook', Arial, sans-serif;
-	color:#000;
-	letter-spacing:0;
 	margin-bottom: 20px;
 }
 
@@ -4212,7 +4206,7 @@ fieldset p {
 	 height:auto;
 	 margin-bottom:20px;
  }
- 
+
  .state-container {
 	 padding:0 20px 0 0;
  }
@@ -4311,7 +4305,7 @@ fieldset p {
 	text-transform:uppercase;
 	font-size: 12px;
 	letter-spacing: 0.5px;
-	
+
 }
 
 .item-status {
@@ -5617,7 +5611,7 @@ brand-fixed {
 	color:#999;
 }
 
-.product-id {	
+.product-id {
 	font-size: 16px!important;
     margin-top: -10px!important;
 }
