@@ -5614,7 +5614,9 @@ brand-fixed {
 
 .prod-avail {
 	color:#008a00!important;
-	font-size:12px;
+	font-size:20px;
+	font-weight: 300;
+    padding-left: 5px;
 }
 /*==================================
             STORE HOURS CSS
