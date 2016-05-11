@@ -1799,12 +1799,16 @@ max-width:none;
 
 	.item-div {
 		border-bottom:1px solid #e1e1e1;
-		padding:20px 0 20px 0;
-		margin-bottom:10px;
-		    font: 13px 'gotham_htfbook', Arial, sans-serif;
+		padding: 20px 0 0px 0;
+        margin-bottom: 20px;
+	    font: 13px 'gotham_htfbook', Arial, sans-serif;
     font-weight: 300;
     font-style: normal!important;
 	}
+	
+	.product-content:last-child {
+    margin-bottom: 40px!important;
+}
 
 	.item-div:last-child {
 		border-bottom:none;

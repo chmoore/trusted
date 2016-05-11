@@ -1779,6 +1779,7 @@
 		font: 13px 'gotham_htfmedium', Arial, sans-serif!important;
 		margin-top: 15px;
 		letter-spacing:0.1px;
+		margin-bottom: 15px;
 	}
 
 	.item-sm .item-title a {
@@ -3043,6 +3044,13 @@
 	font-size:14px;
 }
 
+.product-content .blue-link {
+    color: #0088cc!important;
+    margin-top: 0;
+    font-family: 'gotham_htfbold', Arial, sans-serif;
+    font-size: 12px;
+}
+
 .blue-link-14 {
 	color:#0088cc!important;
 	margin-top:-10px;
@@ -3508,7 +3516,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 	color:#FF0004!important;
 	font-size:14px;
 	width:75%;
-	margin:0 auto;
+	margin: 0 auto 30px auto;
 }
 
 .boxed {
@@ -4258,15 +4266,15 @@ fieldset p {
 	float:left;
 	height:auto;
 	    text-align: left;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+	margin-bottom:20px;
 }
 
 .item-name h6 {
-    font-size: 16px;
+    font-size: 14px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-family: 'gotham_htfbold', Arial, sans-serif;
     text-align: left;
 	line-height: 20px;
     margin-top: 20px;
@@ -4285,7 +4293,14 @@ fieldset p {
 	width:50%;
 	float:left;
 	height:auto;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.item-id h6 {
+	text-transform:uppercase;
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	
 }
 
 .item-status {
@@ -4294,7 +4309,13 @@ fieldset p {
 	width:50%;
 	float:left;
 	height:auto;
-	/*margin-bottom: 10px;*/
+	margin-bottom: 0px;
+}
+
+.item-status h6{
+	text-transform:uppercase;
+	font-size: 12px;
+	letter-spacing: 0.5px;
 }
 
 .item-make {
@@ -4303,7 +4324,13 @@ fieldset p {
 	width:50%;
 	float:left;
 	height:auto;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.item-make h6 {
+	text-transform:uppercase;
+	font-size: 12px;
+	letter-spacing: 0.5px;
 }
 
 
@@ -5481,8 +5508,19 @@ brand-fixed {
 }
 
 .item-div h5 {
-    font-size: 14px;
-    margin-top: -10px;
+     /*font-size: 14px;
+   margin-top: -10px;*/
+	margin-top: 10px;
+    font-size: 24px;
+    text-transform: none;
+    letter-spacing: -.3px;
+}
+
+.product-div h5 {
+    margin-top: 0px;
+    font-size: 24px;
+    text-transform: none;
+    letter-spacing: -.3px;
 }
 
 .item-div h4:hover {
@@ -5560,6 +5598,12 @@ brand-fixed {
 
 #priceFilterBtn .glyphicon {
 	    top: 1px!important;
+}
+
+.prod-id {
+	display:block;
+	font-size:11px;
+	color:#999;
 }
 /*==================================
             STORE HOURS CSS
