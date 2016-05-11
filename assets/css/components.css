@@ -3044,6 +3044,10 @@
 	font-size:14px;
 }
 
+.headline-retail .blue-link {
+	font-size:14px!important;
+}
+
 .product-content .blue-link {
     color: #0088cc!important;
     margin-top: 0;
@@ -5606,6 +5610,11 @@ brand-fixed {
 	display:block;
 	font-size:11px;
 	color:#999;
+}
+
+.prod-avail {
+	color:#008a00!important;
+	font-size:12px;
 }
 /*==================================
             STORE HOURS CSS
