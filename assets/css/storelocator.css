@@ -1,163 +1,162 @@
-select{
-    outline:none;
+select {
+  outline: none;
 }
-.my-location input{
-    outline:none;
+.my-location input {
+  outline: none;
 }
-#bg-1w{ 
-    padding: 30px 0 10px 0;
+#bg-1w {
+  padding: 30px 0 10px 0;
 }
-.map{
-	position: relative;
+.map {
+  position: relative;
 }
-.padding-top-zero{
-    padding-top:0px;
-} 
-.margin-top-zero{
-    margin-top:0px;
+.padding-top-zero {
+  padding-top: 0;
 }
-.view-all-location{
-    font-size:14px; 
-    padding:15px;
-    cursor:pointer;
-    
+.margin-top-zero {
+  margin-top: 0;
 }
-.view-all-location span{
-    border-bottom:1px solid #999;
+.view-all-location {
+  font-size: 14px;
+  padding: 15px;
+  cursor: pointer;
+}
+.view-all-location span {
+  border-bottom: 1px solid #999;
 }
 .labels {
-     color: white; 
-     font-size: 12px;
-     font-weight: bold;
-     text-align: center; 
-   }
-.info-card{
-    width: 500px;
-    background-color: #fff;
-    height: 200px;
-    padding:0px !important;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
 }
-.info-card img{
-    width:160px; 
-    padding-bottom:20px;
+.info-card {
+  width: 500px;
+  background-color: #fff;
+  height: 200px;
+  padding: 0 !important;
 }
-#dvResult{
-	display: none;
-	width: 400px;
-	position: absolute;
-	background-color: #fff;
+.info-card img {
+  width: 160px;
+  padding-bottom: 20px;
 }
-#dvResult img{
-    width:140px;
-    padding-bottom:10px;
+#dvResult {
+  /*display: none;*/
+  display: block; /* Changed for development puposes */
+  width: 400px;
+  position: absolute;
+  background-color: #fff;
 }
-.r-title{
-    font-weight:bold;
-    color:#454545;
+#dvResult img {
+  width: 140px;
+  padding-bottom: 10px;
 }
-.r-city{ 
-    color:#454545;
+.r-title {
+  font-weight: bold;
+  color: #454545;
 }
-.nopadding{
-    
-    padding-left: 0;
-    padding-right: 0;
-    text-align: left;
+.r-city {
+  color: #454545;
 }
-.google-map{ 
-    min-height:700px;
+.nopadding {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
 }
-.no-result p{
-	padding: 20px;
+.google-map {
+  min-height: 700px;
 }
-.relative-position{
-    position:relative;
+.no-result p {
+  padding: 20px;
 }
-.select-brand{
-    position:relative;
+.relative-position {
+  position: relative;
 }
-.select-country{
-    position:relative;
+.select-brand {
+  position: relative;
 }
-.arrow-position{
-    font-size: 25px;
-    position: absolute;
-    top: 10px; 
-    right: 30px;
+.select-country {
+  position: relative;
 }
-.search-area{
-    position:relative;
+.arrow-position {
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
 }
-.search-area input{
-    padding-left:40px;
+.search-area {
+  position: relative;
 }
-.search-area .fa-search{
-     font-size: 20px;
-    position: absolute;
-    top: 13px; 
-    left: 30px;
+.search-area input {
+  padding-left: 40px;
 }
-.search-area  .fa-times-circle{
-    font-size: 25px;
-    position: absolute;
-    top: 13px;  
-    right: 25px;
-    background-color:#fff;
-    display:none;
+.search-area .fa-search {
+  font-size: 20px;
+  position: absolute;
+  top: 13px;
+  left: 30px;
 }
-.back-to-search{
-    padding:5px;
+.search-area  .fa-times-circle {
+  font-size: 25px;
+  position: absolute;
+  top: 13px;
+  right: 25px;
+  background-color: #fff;
+  display: none;
 }
-.back-to-search span{
-    color:#08ADEF;
-    font-size:14px;
-    cursor:pointer;
-    border-bottom:1px solid #08ADEF;
+.back-to-search {
+  padding: 5px;
 }
-.my-location{
-    position:relative;
+.back-to-search span {
+  color: #08adef;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #08adef;
 }
-.my-location .fa-map-marker{
-    font-size: 24px;
-    position: absolute;
-    top: 10px;
-    left: 26px;
-    z-index: 555;
+.my-location {
+  position: relative;
 }
-.card{
-    cursor:pointer;
-    padding: 20px;
-    border-bottom: 1px solid #dadada;
+.my-location .fa-map-marker {
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  left: 26px;
+  z-index: 555;
 }
-.card.selected{ 
-    background-color: #E6E6E6;
+.card {
+  cursor: pointer;
+  padding: 20px;
+  border-bottom: 1px solid #dadada;
 }
- .card .title{
- 	font-size: 15px;
- 	font-weight: bold;
- 	margin-bottom: 0px;
- 	line-height: 18px;
- }
-  .card .desc{
- 	font-size: 13px;
- 	font-weight: normal;
- }
- .card a.link{ 
- 	color: #54aadc;
- 	font-size: 13px;
+.card.selected {
+  background-color: #e6e6e6;
+}
+.card .title {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 18px;
+}
+.card .desc {
+  font-size: 13px;
+  font-weight: normal;
+}
+.card a.link {
+  color: #54aadc;
+  font-size: 13px;
 }
 .numberCircle {
-    border-radius: 50%;
-    width: 14px;
-    height: 14px;
-    padding: 5px;
-    background: #000 none repeat scroll 0% 0%;
-    border: 2px solid #000;
-    color: #FFF;
-    text-align: center;
-    font: 12px Arial,sans-serif;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+  background: #000 none repeat scroll 0 0;
+  border: 2px solid #000;
+  color: #fff;
+  text-align: center;
+  font: 12px Arial,sans-serif;
 }
-.miles{
-	color: #666;
-	font-size: 13px;
+.miles {
+  color: #666;
+  font-size: 13px;
 }
