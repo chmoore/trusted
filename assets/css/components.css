@@ -5612,6 +5612,10 @@ brand-fixed {
 	color:#999;
 }
 
+.product-id {	
+	font-size:14px;
+}
+
 .prod-avail {
 	color:#008a00!important;
 	font-size:20px;
