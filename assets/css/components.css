@@ -3177,6 +3177,8 @@ border:1px solid #ccc;
 	opacity:1;
 	-webkit-transition: all 0.5s;
     	transition: all 0.5s;
+		    color: #25BB27;
+    font-size: 20px;
 }
 
   .wishlist-container {
