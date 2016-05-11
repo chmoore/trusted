@@ -3998,6 +3998,11 @@ fieldset p {
 	background:#F9F9F9;
 	height: auto;
     position: relative;
+	max-width:1420px;
+}
+
+.map-list .text-center {
+    max-width: 1170px;
 }
 
 .auto-height {
