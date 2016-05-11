@@ -3613,7 +3613,7 @@ Inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
     color: #FFF;
 }
 
-.widget .btn:hover: {
+.widget .btn:hover {
 	color:#000;
 }
 
