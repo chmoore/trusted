@@ -124,7 +124,7 @@ a.accordion-item {
   border: 2px solid #979797;
   margin-bottom: 30px;
   color: #979797;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'gotham_htfmedium', Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -188,7 +188,7 @@ a.toggle-item {
 		margin-bottom: 30px;
 		background-color: #fff;
 		color: #212121;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 	}*/
@@ -841,7 +841,7 @@ input.validation-error, textarea.validation-error, select.validation-error {
 .milestone .milestone-content {
   z-index: 1;
   color: #232323;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'gotham_htfmedium', Arial, sans-serif;
   font-size: 72px;
   line-height: 100px;
 }
@@ -1063,7 +1063,7 @@ input.validation-error, textarea.validation-error, select.validation-error {
 }
 
 .pie-chart .pie-chart-percent {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'gotham_htfmedium', Arial, sans-serif;
   font-size: 24px;
 }
 
@@ -1686,7 +1686,7 @@ a.yahoo-icon:hover {
   margin-right: 2px;
   background-color: #7c7c7c;
   color: #fff;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'gotham_htfmedium', Arial, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
@@ -1758,7 +1758,7 @@ a.yahoo-icon:hover {
   border-bottom: 2px solid #fff;
   background-color: #7c7c7c;
   color: #fff;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'gotham_htfmedium', Arial, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
@@ -2432,7 +2432,7 @@ h6.gray-price {
   height: 32px;
   border: 2px solid #232323;
   margin-right: 10px;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'gotham_htfmedium', Arial, sans-serif;
   font-size: 14px;
   line-height: 32px;
   text-align: center;
