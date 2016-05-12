@@ -58,8 +58,8 @@ a.accordion-item {
 }
 
 .accordion-item-content p {
-  color: #000;
-  font: 14px 'gotham_htfbook', Arial, sans-serif;
+  color: #000!important;
+  font: 14px 'gotham_htfbook', Arial, sans-serif!important;
   line-height: 22px;
 }
 
@@ -5466,6 +5466,10 @@ ul.pagination input.rounded {
     margin-bottom: 0;
     line-height: 22px!important;
     width: 100%;
+  }
+  
+  .store-list {
+	  padding: 40px 0 0 0!important;
   }
 
   .fullwidth-section-content {
