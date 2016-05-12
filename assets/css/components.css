@@ -5903,6 +5903,14 @@ brand-fixed {
   font-size: 14px;
 }
 
+.product-title h1 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+
 .product-title h2 {
   font-size: 32px;
   line-height: 40px;
@@ -5948,6 +5956,13 @@ brand-fixed {
   display: block;
   font-size: 11px;
   color: #000;
+}
+
+.item-code-main {
+  display: block;
+  font-size: 18px;
+  color: #000;
+  font-family: gotham_htfmedium,Arial,sans-serif;
 }
 
 .product-id {
