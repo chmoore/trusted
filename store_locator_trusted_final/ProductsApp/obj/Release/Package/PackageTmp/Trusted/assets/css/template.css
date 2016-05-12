@@ -174,7 +174,7 @@
 	
 	.post-header {
 		position: relative;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-weight: 700;
 		text-transform: uppercase;
 	}
@@ -290,7 +290,7 @@
 	.format-quote .post-content blockquote {
 		margin-bottom: 0;
 		color: #232323;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-size: 18px;
 		line-height: 28px;
 		font-weight: 700;
@@ -317,7 +317,7 @@
 	
 	.format-link .post-content a {
 		color: #232323;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-size: 18px;
 		line-height: 28px;
 		font-weight: 700;
@@ -329,7 +329,7 @@
 		border: 2px solid #232323;
 		margin-top: 50px;
 		color: #232323;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-size: 18px;
 		line-height: 28px;
 		font-weight: 700;
@@ -342,7 +342,7 @@
 		border: 2px solid #232323;
 		margin-top: 50px;
 		color: #232323;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-size: 18px;
 		line-height: 28px;
 		font-weight: 700;
@@ -393,7 +393,7 @@
 		height: 32px;
 		border: 2px solid #232323;
 		margin-right: 10px;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-size: 14px;
 		line-height: 32px;
 		text-align: center;
@@ -488,7 +488,7 @@
 	.comment-author a {
 		display: inline-block;
 		margin-top: 7px;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-size: 16px;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -832,7 +832,7 @@
 	}
 	
 	.widget_pages a {
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 	}
@@ -873,7 +873,7 @@
 	}
 	
 	.widget_archive a {
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 	}
@@ -916,7 +916,7 @@
 	}
 	
 	.widget_categories a {
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 	}
@@ -973,7 +973,7 @@
 	}
 	
 	.widget_meta a {
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 	}
@@ -1013,7 +1013,7 @@
 		margin-right: 5px;
 		margin-bottom: 10px;
 		color: #979797;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		text-decoration: none;
 		text-transform: uppercase;
 		-webkit-transition: all 0.3s;
@@ -1095,7 +1095,7 @@
 	}
 	
 	.widget_nav_menu a {
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 	}
@@ -1262,7 +1262,7 @@
 	
 	.ewf_widget_latest_posts ul li {
 		 margin-bottom: 30px;
-		 font-family: 'Montserrat', Arial, sans-serif;
+		 font-family: 'gotham_htfmedium', Arial, sans-serif;
 		 font-size: 10px;
 		 line-height: 22px;
 		 text-transform: uppercase;
@@ -1325,7 +1325,7 @@
 	}
 	
 	.ewf_widget_navigation a {
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		letter-spacing: 2px;
 		text-transform: uppercase;
 	}

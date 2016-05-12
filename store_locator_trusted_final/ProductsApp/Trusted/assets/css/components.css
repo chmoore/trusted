@@ -82,7 +82,7 @@
 		border: 2px solid #979797;
 		margin-bottom: 30px;
 		color: #979797;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-weight: 700;
 		letter-spacing: 2px;
 		text-transform: uppercase;
@@ -140,7 +140,7 @@
 		margin-bottom: 30px;
 		background-color: #fff;
 		color: #212121;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 	}
@@ -643,7 +643,7 @@
 	.milestone .milestone-content {
 		z-index: 1;
 		color: #232323;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-size: 72px;
 		line-height: 100px;
 	}
@@ -851,7 +851,7 @@
 	}
 	
 	.pie-chart .pie-chart-percent {
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-size: 24px;
 	}
 	
@@ -1278,7 +1278,7 @@
 		margin-right: 2px;
 		background-color: #7c7c7c;
 		color: #fff;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -1344,7 +1344,7 @@
 		border-bottom: 2px solid #fff;
 		background-color: #7c7c7c;
 		color: #fff;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -1882,7 +1882,7 @@
 		height: 32px;
 		border: 2px solid #232323;
 		margin-right: 10px;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: 'gotham_htfmedium', Arial, sans-serif;
 		font-size: 14px;
 		line-height: 32px;
 		text-align: center;
