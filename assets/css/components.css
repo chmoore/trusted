@@ -5348,7 +5348,7 @@ ul.pagination input.rounded {
   .item-div h4 {
     letter-spacing: 0;
     margin-top: 0;
-    font-size: 22px!important;
+    font-size: 20px!important;
     line-height: 24px;
   }
 
@@ -5642,7 +5642,9 @@ ul.pagination input.rounded {
     margin-bottom: 0;
     margin-top: 20px;
   }
-
+.map-list col-sm-12 {
+	padding:0!important;
+}
   .retail-text .col-xs-6 {
     width: 50%;
     float: left;
@@ -5846,7 +5848,6 @@ brand-fixed {
 
 .item-div h4 {
   margin-top: 0;
-  font-size: 24px;
   text-transform: none;
   letter-spacing: -0.3px;
 }
@@ -5902,6 +5903,14 @@ brand-fixed {
   font-size: 14px;
 }
 
+.product-title h1 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+
 .product-title h2 {
   font-size: 32px;
   line-height: 40px;
@@ -5943,22 +5952,42 @@ brand-fixed {
   top: 1px!important;
 }
 
-.prod-id {
+.item-code-car {
   display: block;
   font-size: 11px;
-  color: #999;
+  color: #000;
+}
+
+.item-code-main {
+  display: block;
+  font-size: 18px;
+  color: #000;
+  font-family: gotham_htfmedium,Arial,sans-serif;
 }
 
 .product-id {
-  font-size: 16px!important;
+  font-size: 14px!important;
   margin-top: -10px!important;
       word-wrap: break-word;
     line-height: 20px;
 	font-family: gotham_htfmedium,Arial,sans-serif;
 }
 
+.brand-list {
+	    line-height: 16px!important;
+}
+
+input.prices {
+    width: 65px!important;
+	}
+
 .map-list row .col-sm-12 {
 	padding:0!important;
+}
+
+#searchedCategories li {
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .prod-avail {
