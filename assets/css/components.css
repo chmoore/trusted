@@ -4857,8 +4857,8 @@ input.prices {
 }
 
 .etitle-text p {
-  color: #8b8b8b;
-  font: 14px 'gotham_htfmedium', Arial, sans-serif;
+  color: #000;
+  font: 14px 'gotham_htfbook', Arial, sans-serif;
 }
 
 .etitle-text strong {
