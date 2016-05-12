@@ -5464,7 +5464,7 @@ ul.pagination input.rounded {
     font-size: 22px!important;
     font-weight: bold;
     margin-bottom: 0;
-    line-height: 18px;
+    line-height: 22px!important;
     width: 100%;
   }
 
