@@ -5524,6 +5524,18 @@ ul.pagination input.rounded {
     height: auto;
     margin-bottom: 20px;
   }
+  
+  .brand-list {
+	      margin-bottom: 10px;
+  }
+  
+  .product-id {
+    font-size: 14px!important;
+    margin-top: -10px!important;
+    word-wrap: break-word;
+    line-height: 18px;
+    color: #404040;
+}
 
 
   .retailer-col {
@@ -5936,6 +5948,13 @@ brand-fixed {
 .product-id {
   font-size: 16px!important;
   margin-top: -10px!important;
+      word-wrap: break-word;
+    line-height: 20px;
+	font-family: gotham_htfmedium,Arial,sans-serif;
+}
+
+.map-list row .col-sm-12 {
+	padding:0!important;
 }
 
 .prod-avail {
