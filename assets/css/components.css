@@ -5969,6 +5969,11 @@ input.prices {
 	padding:0!important;
 }
 
+#searchedCategories li {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
 .prod-avail {
   color: #008a00!important;
   font-size: 20px;
