@@ -5642,7 +5642,9 @@ ul.pagination input.rounded {
     margin-bottom: 0;
     margin-top: 20px;
   }
-
+.map-list col-sm-12 {
+	padding:0!important;
+}
   .retail-text .col-xs-6 {
     width: 50%;
     float: left;
@@ -5942,10 +5944,10 @@ brand-fixed {
   top: 1px!important;
 }
 
-.prod-id {
+.item-code-car {
   display: block;
   font-size: 11px;
-  color: #999;
+  color: #000;
 }
 
 .product-id {
