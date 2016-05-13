@@ -5631,3 +5631,19 @@ input.prices {
     left: 0!important;
   }
 }
+
+[class^="ifc-"], [class*=" ifc-"] {
+    font-family: 'FontAwesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ifc-up4:before {
+	 content: "\f106";
+}
