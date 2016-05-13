@@ -4763,6 +4763,11 @@ ul.pagination input.rounded {
 .menu-hidden {
   display: none;
 }
+@media only screen and (max-width: 1200px) {
+#register-icon {
+    display: none;
+}
+}
 @media only screen and (max-width: 767px) {
   #mobile-header {
     display: block;
@@ -4770,6 +4775,10 @@ ul.pagination input.rounded {
   .sidebar {
     display: none;
   }
+  
+  #register-icon {
+    display: none;
+}
 
 
   #retail-wrap {
