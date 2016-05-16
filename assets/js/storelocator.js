@@ -390,6 +390,7 @@ var StoreLocator = {
       if (typeof storeHoursObj === 'object' && storeHoursObj.length) {
 
         if(storeHoursObj.length !== 7){
+//         console.log('days of the week in this storeHoursObj = ' + storeHoursObj.length);
           storeHoursObj = StoreLocator.ReplaceAnyMissingDays(storeHoursObj);
         }
 
@@ -400,6 +401,7 @@ var StoreLocator = {
           var isCurrentDay = function(dayName) {
             var dateNow = new Date();
             var dayIndex = dateNow.getDay();
+//            console.log(dayIndex);
             var dayNames = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY','SUNDAY'];
             var todayIs = dayNames[dayIndex-1];
             if (todayIs === dayName) {
@@ -410,9 +412,9 @@ var StoreLocator = {
           };
 
           for (var k = 0; k < storeHoursObj.length; k++) {
-            var nullHoursCheck = (storeHoursObj[k].startTime !== '' || storeHoursObj[k].startTime !== undefined) &&
-                (storeHoursObj[k].closeTime !== '' || storeHoursObj[k].closeTime !== undefined);
-            if (!storeHoursObj[k].closed && !nullHoursCheck) {
+//            console.log('****' + storeHoursObj[k].day);
+            if (!storeHoursObj[k].closed && storeHoursObj[k].startTime !== '') {
+//             console.log('!storeHoursObj[k].closed');
               var OpenTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
                 '<td class="dayCol" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
                 '<td>' + storeHoursObj[k].startTime.replace(/\./g, '') + '</td>' +
@@ -420,13 +422,15 @@ var StoreLocator = {
                 '<td>' + storeHoursObj[k].closeTime.replace(/\./g, '') + '</td>' +
                 '</tr>';
               hoursTableArr.push(OpenTableLine);
-            }  else if (storeHoursObj[k].closed || storeHoursObj[k].startTime === null) {
+            }  else if (storeHoursObj[k].closed) {
+//              console.log('storeHoursObj[k].closed');
               var ClosedTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
                 '<td class="dayCol' + isCurrentDay(storeHoursObj[k].day) + '" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
                 '<td colspan="3">' + 'CLOSED' + '</td>' +
                 '</tr>';
               hoursTableArr.push(ClosedTableLine);
             } else {
+ //             console.log('call for hours');
               var CallForStoreHoursLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
                 '<td class="dayCol' + isCurrentDay(storeHoursObj[k].day) + '" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
                 '<td colspan="3">' + 'CALL FOR STORE HOURS' + '</td>' +
@@ -455,12 +459,14 @@ var StoreLocator = {
           }
         }
         if(notSeen){
+//          console.log(dayToLookFor + " is NOT in storeHoursObj.");
           missingDays.push(dayToLookFor);
         }
       }
       // Inject the missing Day(s)
       for(var d=0; d < missingDays.length; d++){
           var index = dayNamesInOrder.indexOf(missingDays[d]);
+//        console.log("Index of missing day is " + index);
         var newItem = {day : missingDays[d], startTime : ''};
         storeHoursObj.splice(index,0,newItem);
       }
@@ -474,11 +480,11 @@ var StoreLocator = {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
                 };
-                $(addressInput).attr('placeholder', position.coords.latitude + ',' + position.coords.longitude);
                 map.setCenter(pos);
                 currentLatlng = pos;
                 var geocoder = new google.maps.Geocoder();
                 var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                var placeholderUpdate = '';
                 geocoder.geocode({ 'latLng': latlng }, function (results, status) {
                     if (status === google.maps.GeocoderStatus.OK) {
                         if (results.length > 0) {
@@ -494,11 +500,13 @@ var StoreLocator = {
                                 if (componentForm[addressType]) {
                                     var val = results[0].address_components[i][componentForm[addressType]];
                                     document.getElementById(addressType).value = val;
+                                    placeholderUpdate += ' ' + val;
                                 }
                             }
                             StoreLocator.LocationSearch(webserviceUrl);
                             requiredRegularSearch = false;
                         }
+                      $(addressInput).attr('placeholder', placeholderUpdate.trim());
                     }
                 });
             }, function () {
