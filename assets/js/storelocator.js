@@ -415,9 +415,14 @@ var StoreLocator = {
           };
 
           for (var k = 0; k < storeHoursObj.length; k++) {
-            console.log(storeHoursObj[k]);
-            console.log('testing');
-            if (!storeHoursObj[k].closed && storeHoursObj[k].startTime !== '') {
+            var notMissingStartOrEndTime = (
+              typeof storeHoursObj[k].startTime !== 'undefined' ||
+              typeof storeHoursObj[k].endTime !== 'undefined'
+            ) && (
+              storeHoursObj[k].startTime.length ||
+              storeHoursObj[k].endTime.length
+            );
+            if (!storeHoursObj[k].closed && notMissingStartOrEndTime) {
               var OpenTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
                 '<td class="dayCol" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
                 '<td>' + storeHoursObj[k].startTime.replace(/\./g, '') + '</td>' +
