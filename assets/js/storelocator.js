@@ -415,13 +415,22 @@ var StoreLocator = {
           };
 
           for (var k = 0; k < storeHoursObj.length; k++) {
-            var notMissingStartOrEndTime = (
-              typeof storeHoursObj[k].startTime !== 'undefined' ||
-              typeof storeHoursObj[k].endTime !== 'undefined'
-            ) && (
-              storeHoursObj[k].startTime.length ||
-              storeHoursObj[k].endTime.length
-            );
+            var notMissingStartOrEndTime = function () {
+              var checkUndefined = (
+                typeof storeHoursObj[k].startTime !== 'undefined' &&
+                typeof storeHoursObj[k].closeTime !== 'undefined'
+              );
+              if (checkUndefined) {
+                var checkEmpty = (
+                  storeHoursObj[k].startTime.length > 0 &&
+                  storeHoursObj[k].closeTime.length > 0
+                );
+                return checkEmpty;
+              } else {
+                return false;
+              }
+            }();
+
             if (!storeHoursObj[k].closed && notMissingStartOrEndTime) {
               var OpenTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
                 '<td class="dayCol" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
