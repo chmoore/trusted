@@ -3488,6 +3488,7 @@ inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 
 .product-div h6 strong {
   color: #000;
+  font-family: 'gotham_htfbold', Arial, sans-serif;
 }
 
 .product-div .btn {
@@ -3541,6 +3542,10 @@ inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
 .asterisk {
   color: #c60;
   font-size: 200%;
+}
+
+.etitle-wrap {
+	max-width:700px;
 }
 
 .widget input[type='email'] {
@@ -4273,7 +4278,7 @@ a.show-more, a.show-less {
 .item-status h6 {
   text-transform: uppercase;
   font-size: 12px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1px;
 }
 
 .item-make {
