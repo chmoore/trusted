@@ -1588,6 +1588,10 @@ span.posted-on {
   line-height: 20px;
 }
 
+.card .store-hours .callStore {
+  font: 10px 'gotham_htfbook', Arial, sans-serif;
+}
+
 .card .store-hours .timeSep {
   width: 10px;
 }
