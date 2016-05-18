@@ -2,9 +2,20 @@
 
 $(document).ready(function () {
   var $createAccountForm = $('#form-create-an-account'),
+      $signInForm = $('#signInForm'),
       $navTabItems = $('.nav-tabs > li'),
       $createAccountEle = $('#create-an-account'),
       $signInEle = $('#sign-in');
+
+  $signInForm.formValidation({
+      framework: 'bootstrap',
+      excluded: ':disabled, :hidden, :not(:visible)',
+      icon: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+      }
+  });
 
   $createAccountForm.formValidation({
       framework: 'bootstrap',
@@ -13,10 +24,7 @@ $(document).ready(function () {
         valid: 'glyphicon glyphicon-ok',
         invalid: 'glyphicon glyphicon-remove',
         validating: 'glyphicon glyphicon-refresh'
-      }
-  }).submit(function(event) {
-    var userName = $(this).find('input[name="username"]');
-    userName.val(userName.val().toLowerCase());
+      },
   });
 
   $navTabItems.removeClass('active');
