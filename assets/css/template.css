@@ -374,12 +374,13 @@ span.posted-on {
 }
 
 /* ==========================================================================
-   =WordPress pagination and navigation
+   =Pagination and navigation
    ========================================================================== */
 
 .pagination {
   margin-bottom: 0;
   text-align: right;
+  float:left;
 }
 
 /*

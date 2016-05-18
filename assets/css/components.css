@@ -3844,14 +3844,14 @@ fieldset p {
 }
 
 .light-theme .current, .simple-pagination ul.pagination .active a {
-  background: #504e4e;
-  color: #fff;
-  border-color: #504e4e;
+  color: #23527c;
+  background-color: #eee;
+  border-color: #e1e1e1;
   /*box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;*/
   cursor: default;
 }
 .light-theme a, .light-theme span, .pagination > li > a, .pagination > li > span {
-  float: left;
+ /* float: left;
   color: #979797;
   font-size: 12px;
   line-height: 24px;
@@ -3862,8 +3862,31 @@ fieldset p {
   margin: 0 10px 0 0;
   border-radius: 8px;
   border: 1px solid #e1e1e1;
-  height: 35px;
-  font: 12px 'gotham_htfmedium', Arial, sans-serif;
+  height: 35px;*/
+  position: relative;
+    float: left;
+    font-size: 14px;
+    color: #252525;
+    font-weight: 500;
+    padding: 12px 15px 8px 15px;
+    margin-left: -1px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    font: 12px 'gotham_htfmedium', Arial, sans-serif;
+    height:38px;
+}
+
+.simple-pagination .prev {
+	    margin-left: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.simple-pagination .next {
+	    margin-left: -1px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .simple-pagination ul.pagination .current, .simple-pagination ul.pagination .disabled {
@@ -3875,6 +3898,11 @@ fieldset p {
 
 .simple-pagination ul.pagination li a {
   line-height: 18px;
+}
+.light-theme a:hover {
+color: #23527c;
+  background-color: #eee;
+  border-color: #e1e1e1;
 }
 
 .simple-pagination ul.pagination .prev:before {

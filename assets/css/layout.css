@@ -1862,6 +1862,10 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
   font-style: normal!important;
 }
 
+.results-div {
+	background-color:#f9f9f9;
+}
+
 .product-content:last-child {
   margin-bottom: 20px!important;
 }
