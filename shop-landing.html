@@ -232,6 +232,25 @@
                 <h4>About Trusted's Secure Marketplace</h4>
                 <p>Welcome to the only secure online marketplace for genuine and authentic products from premier global luxury brands. Trusted.com is a leader in anti-counterfeiting and product authentication services enabling a marketplace which puts the trust back into the online buying experience. You no longer have to worry about the legitimacy of a product and credibility of the seller. Shop verified and authentic products from authorized and trusted dealers on <strong>Trusted.com</strong> today!</p>
                  <div class="divider single-line-side"></div>
+                 <div class="slider">
+    <div class="edge"></div>
+<ul class="slideContainer" id="logo_start">
+        <li class="slideItem" >
+              <img src="assets/images/ng-brand-logo.jpg" alt="">
+        </li>
+        <li class="slideItem">
+              <img src="assets/images/ng-brand-logo.jpg" alt="">
+        </li>
+        <li class="slideItem">
+               <img src="assets/images/ng-brand-logo.jpg" alt="">
+        </li>
+        <li class="slideItem">
+               <img src="assets/images/ng-brand-logo.jpg" alt="">
+        </li>
+</ul>
+</div>
+                 
+                 
                  </div>        
                 </div></div></div>
     <!-- fullwidthbanner-container -->
@@ -833,6 +852,26 @@
     $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
       " - $" + $( "#slider-range" ).slider( "values", 1 ) );
   });
+  //Logo Slider//
+  window.requestAnimationFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
+var speed = 8000;
+(function logoSlide(){
+    var logoPairWidth = $('.slideItem:first-child').outerWidth();
+    $(".slideContainer").animate({marginLeft:-logoPairWidth},speed, 'linear', function(){
+                $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+        });
+        requestAnimationFrame(logoSlide);
+})();
+  
+  
 	</script>
     
 </body>
