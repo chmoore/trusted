@@ -3,6 +3,7 @@
 $(document).ready(function () {
   var $createAccountForm = $('#form-create-an-account'),
       $signInForm = $('#signInForm'),
+      $forgotPassForm = $('#form-forgot-password'),
       $navTabItems = $('.nav-tabs > li'),
       $createAccountEle = $('#create-an-account'),
       $signInEle = $('#sign-in');
@@ -24,7 +25,17 @@ $(document).ready(function () {
         valid: 'glyphicon glyphicon-ok',
         invalid: 'glyphicon glyphicon-remove',
         validating: 'glyphicon glyphicon-refresh'
-      },
+      }
+  });
+
+  $forgotPassForm.formValidation({
+      framework: 'bootstrap',
+      excluded: ':disabled, :hidden, :not(:visible)',
+      icon: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+      }
   });
 
   $navTabItems.removeClass('active');
