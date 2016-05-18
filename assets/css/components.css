@@ -5661,3 +5661,47 @@ input.prices {
 .ifc-up4:before {
 	 content: "\f106";
 }
+
+.slider{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    margin:0;
+}
+.edge{
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    position:absolute;
+    height:100%;
+    display:block;
+}
+.edge:before{
+    content:'';
+    position:absolute;
+    left:0;
+    width:25%;
+    height:100%;
+}
+.edge:after{
+    content:'';
+    position:absolute;
+    right:0;
+    width:25%;
+    height:100%;
+}
+.slideContainer{
+    overflow:hidden;
+    width:1000%;
+    margin:0;
+}
+.slideItem{
+    list-style:none;
+    display:inline-block;
+    padding:0 10px;
+}
+
+.slideItem img{
+   max-width:250px;
+}
