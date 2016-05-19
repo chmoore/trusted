@@ -1047,7 +1047,7 @@ select {
   display: none;
 }
 .back-to-search {
-  padding: 5px;
+  padding: 15px 5px 5px;
 }
 .back-to-search span {
   color: #08adef;
