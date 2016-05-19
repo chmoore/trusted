@@ -4547,7 +4547,7 @@ input.prices {
   top: 0;
   display: inline-block;
   height: auto;
-  width: 87%;
+  width: 85%;
   float: left;
   border: 0;
   font-size: 16px;
@@ -4808,7 +4808,7 @@ ul.pagination input.rounded {
   .sidebar {
     display: none;
   }
-
+  
   #register-icon {
     display: none;
 }
@@ -5119,7 +5119,7 @@ ul.pagination input.rounded {
     line-height: 22px!important;
     width: 100%;
   }
-
+  
   .store-list {
 	  padding: 40px 0 0 0!important;
   }
@@ -5134,6 +5134,10 @@ ul.pagination input.rounded {
 @media (max-width: 767px) {
   .menu-hidden {
     display: block;
+  }
+  
+  #searchProdText {
+	  width:70%;
   }
 
   .product-title {
@@ -5180,11 +5184,11 @@ ul.pagination input.rounded {
     height: auto;
     margin-bottom: 20px;
   }
-
+  
   .brand-list {
 	      margin-bottom: 10px;
   }
-
+  
   .product-id {
     font-size: 14px!important;
     margin-top: -10px!important;
