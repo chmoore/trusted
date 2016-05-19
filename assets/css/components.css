@@ -4547,7 +4547,7 @@ input.prices {
   top: 0;
   display: inline-block;
   height: auto;
-  width: 90%;
+  width: 85%;
   float: left;
   border: 0;
   font-size: 16px;
@@ -5134,6 +5134,10 @@ ul.pagination input.rounded {
 @media (max-width: 767px) {
   .menu-hidden {
     display: block;
+  }
+  
+  #searchProdText {
+	  width:70%;
   }
 
   .product-title {
