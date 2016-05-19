@@ -4547,7 +4547,7 @@ input.prices {
   top: 0;
   display: inline-block;
   height: auto;
-  width: 150px;
+  width: 100%;
   float: left;
   border: 0;
   font-size: 16px;
