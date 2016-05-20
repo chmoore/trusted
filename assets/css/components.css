@@ -5656,6 +5656,10 @@ input.prices {
 .clear-category {
   font-size: 16px;
 }
+.g-recaptcha div:first-child {
+	    margin: 0 auto;
+}
+
 /*==================================
             STORE HOURS CSS
 ====================================*/
