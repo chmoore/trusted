@@ -5008,12 +5008,9 @@ ul.trusted-tabs h2 {
     font: 12px gotham_htfmedium,Arial,sans-serif;
 	padding:15px 35px;
 	margin-top: -1px;
-	-webkit-transition: opacity .15s linear;
-    -o-transition: opacity .15s linear;
-    transition: opacity .15s linear;
 }
 .tab-content.current {
-	display: inherit;
+	display: block;
 }
 
 .tab-content h1 {
@@ -5026,8 +5023,4 @@ ul.trusted-tabs h2 {
     height: auto;
     position: relative;
 	width:500px;
-}
-
-.fade.current {
-    opacity: 1;
 }
