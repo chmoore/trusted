@@ -5743,5 +5743,6 @@ input.prices {
 }
 
 .slideItem img{
-   max-width:250px;
+   max-width:200px;
+   margin-right:20px;
 }
