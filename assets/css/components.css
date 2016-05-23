@@ -4980,16 +4980,20 @@ ul.trusted-tabs {
 	list-style: none;
 }
 ul.trusted-tabs li {
-	background: none;
+	background: #ededed;
 	color: #222;
 	display: inline-block;
 	padding: 10px 15px;
 	cursor: pointer;
 	margin-bottom:0px;
+	border: 1px solid #e1e1e1;
+	
 }
 ul.trusted-tabs li.current {
-	background: #ededed;
-	color: #222;
+	border: 1px solid #e1e1e1;
+	color: #979797;
+	background:#fff;
+	border-bottom:1px solid #fff;
 }
 
 ul.trusted-tabs h2 {
@@ -4997,9 +5001,13 @@ ul.trusted-tabs h2 {
 }
 .tab-content {
 	display: none;
-	background: #ededed;
-	padding: 15px;
-	color:#000!important;
+	border: 1px solid #e1e1e1;
+    margin-bottom: 10px;
+    background-color: #fff;
+    color: #979797;
+    font: 12px gotham_htfmedium,Arial,sans-serif;
+	padding:15px 35px;
+	margin-top: -1px;
 }
 .tab-content.current {
 	display: inherit;
