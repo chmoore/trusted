@@ -4593,6 +4593,23 @@ form#findaretailer-form {
 	width: 50%;
 	float: left;
 }
+
+.reg-lead {
+    margin-top: 120px;
+    background: #fff;
+    height: auto;
+    position: relative;
+	width:100%!important;
+}
+
+ul.trusted-tabs h1 {
+    font-size: 16px!important;
+}
+
+ul.trusted-tabs li {
+	width:100%;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -4983,7 +5000,7 @@ ul.trusted-tabs li {
 	background: #ededed;
 	color: #222;
 	display: inline-block;
-	padding: 10px 25px;
+	padding: 10px 35.2px;
 	cursor: pointer;
 	margin-bottom:0px;
 	border: 1px solid #e1e1e1;
