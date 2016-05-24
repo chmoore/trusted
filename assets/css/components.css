@@ -2576,6 +2576,10 @@ h6.gray-price {
 	font-family: 'gotham_htfbold', Arial, sans-serif;
 	font-size: 14px;
 }
+.blue-link:hover {
+	text-decoration:underline;
+}
+
 .text-center .blue-link {
 	font-style: normal;
 	font-size: 14px;
@@ -5022,7 +5026,7 @@ ul.trusted-tabs h1 {
     margin-bottom: 10px;
     background-color: #fff;
     color: #979797;
-    font: 12px gotham_htfmedium,Arial,sans-serif;
+    font: 12px 'gotham_htfbook',Arial,sans-serif;
 	padding:35px 35px 10px 35px;
 	margin-top: -1px;
 }
