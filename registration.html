@@ -180,85 +180,53 @@
             <div class="container reg-lead">   
 				<div class="row">
                 <ul class="trusted-tabs">
-		<li class="tab-link current" data-tab="sign-tab"> <h2>SIGN IN TO TRUSTED.COM</h2></li>
-		<li class="tab-link" data-tab="reg-tab"> <h2>CREATE AN ACCOUNT</h2></li>
+		<li class="tab-link current" data-tab="sign-tab"> <h1>SIGN IN TO TRUSTED.COM</h1></li>
+		<li class="tab-link" data-tab="reg-tab"> <h1>CREATE AN ACCOUNT</h1></li>
 	</ul>
-                
-                
-                
-                
-						<div id="sign-tab" class="tab-content current">
-                    <h1>SIGN IN TO TRUSTED.COM</h1>
-
+<div id="sign-tab" class="tab-content current">
                     <form id="fm1" class="fm-v clearfix fv-form fv-form-bootstrap" action="/usersso/login?service=https%3A%2F%2Fwww.trusted.com%2FUserModule%2Fj_spring_cas_security_check" method="post" novalidate><button type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-                        
-
-
                         <div class="form-group has-feedback">
                             <label class="sr-only">Email Address</label>
-                            <input type="email" class="form-control" name="username" placeholder="Email Address" data-fv-message="Please enter an email address." required="" data-fv-field="username"><i class="form-control-feedback fa fa-check-circle" data-fv-icon-for="username" style=""></i>
-                        <small class="help-block" data-fv-validator="emailAddress" data-fv-for="username" data-fv-result="VALID" style="display: none;">Please enter an email address.</small><small class="help-block" data-fv-validator="notEmpty" data-fv-for="username" data-fv-result="VALID" style="display: none;">Please enter an email address.</small></div>
+                            <input type="email" class="" name="username" placeholder="Email Address" data-fv-message="Please enter an email address." required="" data-fv-field="username"></div>
                         <div class="form-group has-feedback">
                             <label class="sr-only">Password</label>
-                            <input id="pwdField" type="password" class="form-control" name="password" placeholder="Password" data-fv-identical-message="The password must contain at least one number and one letter." data-fv-notempty-message="Please enter a password." required="" data-fv-field="password">
-                        <small class="help-block" data-fv-validator="notEmpty" data-fv-for="password" data-fv-result="VALID" style="display: none;">Please enter a password.</small></div>
-
-                        <input type="hidden" name="lt" value="LT-653-Z5UabdpSsRZiWdktCYdziCE39DY3P7">
-                        <input type="hidden" name="execution" value="e1s1">
-                        <input type="hidden" name="_eventId" value="submit">
-
-                        <p class="pull-right">
-                            <small>Forgot <a id="forgotpassword" href="#forgot-password" data-toggle="tab" title="forgot password?">Password?</a></small>
-                        </p>
+                            <input id="pwdField" type="password" class="" name="password" placeholder="Password" data-fv-identical-message="The password must contain at least one number and one letter." data-fv-notempty-message="Please enter a password." required="" data-fv-field="password"></div>
                         <button type="submit" class="btn btn-default btn-block">SIGN IN</button>
 
-                        <p>
-                            <small>Questions? <a href="/contact-us" title="contact customer support">Contact
-                                Customer Support.</a></small>
-                        </p>
+                       <a id="forgotpassword" href="#forgot-password" data-toggle="tab" title="forgot password?" class="blue-link">Forgot your Password?</a>
+                        <div class="divider single-line-side"></div>
 
-                        <p>
-                            <small>Are you a Manufacturer, Retailer or Distributor? 
-                            <a href="/corporate/login" title="Click Here">Click Here</a>.
-                            </small>
+                        <p>Are you a Manufacturer, Retailer or Distributor? 
+                            <a href="/corporate/login" title="Click Here" class="blue-link">Click Here</a>.
                         </p>
                     </form>
 
                 </div>	
                 
                 <div id="reg-tab" class="tab-content">
-                    <h1>CREATE AN ACCOUNT</h1>
-
                     <form action="/UserModule/registernotice" method="post" id="form-create-an-account" role="form" novalidate class="fv-form fv-form-bootstrap"><button type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group has-feedback">
                                     <label class="sr-only">Customer Name</label>
-                                    <input type="text" class="form-control" name="firstName" placeholder="Customer Name" data-fv-message="Please provide customer name." required="" data-fv-field="firstName"><i class="form-control-feedback" data-fv-icon-for="firstName" style="display: none;"></i>
-                                <small class="help-block" data-fv-validator="notEmpty" data-fv-for="firstName" data-fv-result="NOT_VALIDATED" style="display: none;">Please provide customer name.</small></div>
+                                    <input type="text" class="" name="firstName" placeholder="Customer Name" data-fv-message="Please provide customer name." required="" data-fv-field="firstName"></div>
                             </div>
                         </div>
                         <div class="form-group has-feedback">
                             <label class="sr-only">Email Address</label>
-                            <input id="userName" type="email" class="form-control" name="email" placeholder="Email Address" data-fv-remote="true" data-fv-remote-message="An account already exists for this email address. Please login into your account." data-fv-remote-url="/webservices/user/email/isnotused" data-fv-message="Please enter a valid email address, for example: youremail@mail.com." data-fv-notempty-message="Please provide an email address." required="" data-fv-verbose="false" data-fv-field="email"><i class="form-control-feedback" data-fv-icon-for="email" style="display: none;"></i>
-                        <small class="help-block" data-fv-validator="emailAddress" data-fv-for="email" data-fv-result="NOT_VALIDATED" style="display: none;">Please enter a valid email address, for example: youremail@mail.com.</small><small class="help-block" data-fv-validator="notEmpty" data-fv-for="email" data-fv-result="NOT_VALIDATED" style="display: none;">Please provide an email address.</small><small class="help-block" data-fv-validator="remote" data-fv-for="email" data-fv-result="NOT_VALIDATED" style="display: none;">An account already exists for this email address. Please login into your account.</small></div>
+                            <input id="userName" type="email" class="" name="email" placeholder="Email Address" data-fv-remote="true" data-fv-remote-message="An account already exists for this email address. Please login into your account." data-fv-remote-url="/webservices/user/email/isnotused" data-fv-message="Please enter a valid email address, for example: youremail@mail.com." data-fv-notempty-message="Please provide an email address." required="" data-fv-verbose="false" data-fv-field="email"></div>
                         <div class="form-group has-feedback">
                             <label class="sr-only">Password</label>
-                            <input type="password" class="form-control" name="pxxWord" placeholder="Password" pattern=".*(([a-zA-Z]+.*(\d)+)|((\d)+.*[a-zA-Z]+)).*" data-fv-regexp-message="The password must contain at least one number and one letter." data-fv-notempty-message="Please provide a password." minlength="8" maxlength="12" data-fv-stringlength-message="The password must be 8 to 12 characters in length." data-fv-message="The password must contain at least one number and one letter." required="" data-fv-field="pxxWord"><i class="form-control-feedback" data-fv-icon-for="pxxWord" style="display: none;"></i>
-                        <small class="help-block" data-fv-validator="notEmpty" data-fv-for="pxxWord" data-fv-result="NOT_VALIDATED" style="display: none;">Please provide a password.</small><small class="help-block" data-fv-validator="regexp" data-fv-for="pxxWord" data-fv-result="NOT_VALIDATED" style="display: none;">The password must contain at least one number and one letter.</small><small class="help-block" data-fv-validator="stringLength" data-fv-for="pxxWord" data-fv-result="NOT_VALIDATED" style="display: none;">The password must be 8 to 12 characters in length.</small></div>
+                            <input type="password" class="" name="pxxWord" placeholder="Password" pattern=".*(([a-zA-Z]+.*(\d)+)|((\d)+.*[a-zA-Z]+)).*" data-fv-regexp-message="The password must contain at least one number and one letter." data-fv-notempty-message="Please provide a password." minlength="8" maxlength="12" data-fv-stringlength-message="The password must be 8 to 12 characters in length." data-fv-message="The password must contain at least one number and one letter." required="" data-fv-field="pxxWord"></div>
                         <div class="form-group has-feedback">
                             <label class="sr-only">Confirm Password</label>
-                            <input type="password" class="form-control" name="passwordConfirm" placeholder="Confirm Password" data-fv-identical-message="This password must match the new password." data-fv-identical="true" data-fv-identical-field="pxxWord" data-fv-notempty-message="Please confirm your password." required="" data-fv-field="passwordConfirm"><i class="form-control-feedback" data-fv-icon-for="passwordConfirm" style="display: none;"></i>
-                        <small class="help-block" data-fv-validator="identical" data-fv-for="passwordConfirm" data-fv-result="NOT_VALIDATED" style="display: none;">This password must match the new password.</small><small class="help-block" data-fv-validator="notEmpty" data-fv-for="passwordConfirm" data-fv-result="NOT_VALIDATED" style="display: none;">Please confirm your password.</small></div>
-                        <input type="hidden" name="termsAndConditions" value="agreed">
-                        <input type="hidden" name="userStatus" value="pending">
-                        <input type="hidden" name="userName" value="" id="userNameHidden">
+                            <input type="password" class="" name="passwordConfirm" placeholder="Confirm Password" data-fv-identical-message="This password must match the new password." data-fv-identical="true" data-fv-identical-field="pxxWord" data-fv-notempty-message="Please confirm your password." required="" data-fv-field="passwordConfirm"></div>
                         <button type="submit" class="btn btn-default btn-block">SIGN UP</button>
 
                         <p>
                             <small>
-                                By clicking Sign Up, you agree to Trusted.coms <a href="/terms-conditions" title="Terms of Service">Terms</a> and
-                                <a href="/privacy-policy" title="Privacy Policy">Privacy Policy</a>.
+                                By clicking Sign Up, you agree to Trusted.com's <a href="/terms-conditions" title="Terms of Service" class="blue-link">Terms</a> and
+                                <a href="/privacy-policy" title="Privacy Policy" class="blue-link">Privacy Policy</a>.
                             </small>
                         </p>
                     </form>
