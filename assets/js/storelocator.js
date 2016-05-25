@@ -33,6 +33,13 @@ var endpoints = {
 var webserviceUrl = endpoints.all;
 var resultsVisible = false;
 
+var throbber = Throbber({
+  color: 'black',
+  padding: 30,
+  size: 32,
+  fade: 200,
+}).appendTo(document.getElementById('address-form-group'));
+
 function initialize() {
   var defaultLat = 40.745812;
   var defaultLng = -100.913895;
@@ -165,10 +172,13 @@ function checkForParams() {
 }
 
 var StoreLocator = {
-    LocationSearch: function (webserviceUrl) {
+    LocationSearch: function (webserviceUrl, showLoaderBool) {
         var textCriteria = '';
         textCriteria = $('#autocomplete').val();
         var  addresstext = '';
+        if (!showLoaderBool) {
+          throbber.start();
+        }
         if($('#street_number').val() !== '' ||  $('#route').val() !== '') {
             addresstext = $('#street_number').val() + ',' + $('#route').val();
         }
@@ -209,7 +219,7 @@ var StoreLocator = {
 
                 var sortedHtmlString = '';
                 for (var res = 0; res < completeHtml.length; res++) {
-                  sortedHtmlString += completeHtml[res].templateCard.replace(/@/g,'<div class="numberCircle">' + (res + 1) + '</div>');
+                  sortedHtmlString += completeHtml[res].templateCard.replace(/@@/g,'<div class="numberCircle">' + (res + 1) + '</div>');
                 }
 
                 if (cleanResponse.length > 0) {
@@ -240,7 +250,7 @@ var StoreLocator = {
         var lastMarkerOpen = JSON.parse(sessionStorage.getItem('Trusted.StoreLocator.CurrentMarker'));
         map.setCenter(lastMarkerOpen.latLng);
       }
-      google.maps.event.trigger(map, 'resize');
+      google.maps.event.trigger(Map, 'resize');
     },
     SanitizeId: function(str) {
       return String(str).replace(/&/g, '_').replace(/</g, '_').replace(/>/g, '_').replace(/"/g, '_');
@@ -254,17 +264,15 @@ var StoreLocator = {
         var cardNum = idx + 1;
         var calculatedmile = (item.metersAway / 1609.34).toFixed(2);
         var addressLine = item.address1 !== null && item.address2 !== null ? (item.address1 + '<br />' + item.address2) : (item.address1 || item.address2);
-        var taddress = addressLine + ', ' + item.city + ', ' + item.state + ' ' + item.zipCode;
+        var taddress = addressLine + '<br /> ' + item.city + ', ' + item.state + ' ' + item.zipCode;
         var itemID = StoreLocator.SanitizeId(item.brandUniqueName+'_'+item.locationUniqueName);
-        var logoOrNot = item.brandLogo !== null ? '<img alt="'+ item.retailerName +'" src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + item.brandLogo + '" />'  : '';
         var templateObj = {
           'templateCard' : '<div class="resultCard card span12" id="'+ itemID + '">' + '<div class="span3 nopadding">' +
           //Index when sorted
-          '@' +
+          '@@' +
           '    <div> <span class="miles">' + calculatedmile + ' mile(s)</span></div>' +
           '</div>' +
           '<div class="span9">' +
-          logoOrNot +
           '    <h1 class="title">' + item.retailerName + '</h1>' +
           '    <span class="desc">' + taddress + '</span><br />' +
           '    <a class="link" href="/stores/' + item.locationUniqueName  + '">Store Details</a>' +
@@ -301,6 +309,7 @@ var StoreLocator = {
         $('#dvResult').show();
         $('.google-map').css('margin-left', $('#dvResult').width() + 'px');
         $('#map').width(window.innerWidth - $('#dvResult').width());
+        throbber.stop();
     },
     HideList: function () {
         $('#dvResult').hide();
@@ -375,11 +384,11 @@ var StoreLocator = {
                     var addressLine = localItem.address1 !== null && localItem.address2 !== null ? (localItem.address1 + '<br />' + localItem.address2) : (localItem.address1 || localItem.address2);
                     var logoArea = localItem.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + localItem.brandLogo + '" />'  : '';
                     infowindow.setContent('<div class="card info-card"><div class="span12 info-card-logo">' +
-                     logoArea + '</div><div class="span6">' + ' <h1 class="title">' + localItem.retailerName+ '</h1>' +
-                     ' <span class="desc">' + addressLine + ', '  + localItem.city + ', ' + localItem.state + ' ' + localItem.zipCode + '</span><br />' +
+                     logoArea + '</div><div class="col-sm-5">' + ' <h1 class="title">' + localItem.retailerName+ '</h1>' +
+                     ' <span class="desc">' + addressLine + '<br />'  + localItem.city + ', ' + localItem.state + ' ' + localItem.zipCode + '</span><br />' +
                      '<a class="link" target="_blank" href="/stores/' + localItem.locationUniqueName + '">View Store Details</a><br />' +
-                     '<a class="link" target="_blank" href="' + drivinglink + '">Driving Directions</a>' + '</div><div class="span6">' +
-                     '<h1 class="title">Store Detail</h1>' + $storeHoursTable + '</div>');
+                     '<a class="link" target="_blank" href="' + drivinglink + '">Driving Directions</a>' + '</div><div class="col-sm-7">' +
+                     '<h1 class="title">Store Details</h1>' + $storeHoursTable + '</div>');
                     infowindow.open(map, marker);
                     $('.gm-style-iw').next('div').remove();
                     //map.setCenter({ 'lat': localItem.latitude, 'lng': localItem.longitude });
@@ -488,6 +497,7 @@ var StoreLocator = {
     },
     DetectCurrentLocation: function () {
         if (navigator.geolocation) {
+            throbber.start();
             navigator.geolocation.getCurrentPosition(function (position) {
                 var pos = {
                     lat: position.coords.latitude,
@@ -516,7 +526,7 @@ var StoreLocator = {
                                     placeholderUpdate += ' ' + val;
                                 }
                             }
-                            StoreLocator.LocationSearch(webserviceUrl);
+                            StoreLocator.LocationSearch(webserviceUrl, 'false');
                             requiredRegularSearch = false;
                         }
                       $(addressInput).attr('placeholder', placeholderUpdate.trim());
