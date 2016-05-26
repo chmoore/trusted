@@ -319,20 +319,19 @@ var StoreLocator = {
         markerList = [];
         locations = data;
         infowindow = new InfoBox({
+            alignBottom: true,
             disableAutoPan: false,
             maxWidth: 450,
-            //pixelOffset: new google.maps.Size(-220, -225),
-            pixelOffset: new google.maps.Size(-220, -225),
+            pixelOffset: new google.maps.Size(-220, -205),
             zIndex: null,
             boxStyle: {
                 // top arrow in the info window
-                background: 'url("https://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/examples/tipbox.gif") no-repeat',
                 opacity: 0.9,
                 width: '450px'
             },
             closeBoxMargin: '12px -36px 2px 2px',
             closeBoxURL: 'https://www.google.com/intl/en_us/mapfiles/close.gif', //close button icon
-            infoBoxClearance: new google.maps.Size(1, 1)
+            infoBoxClearance: new google.maps.Size(10, 10)
         });
         var bounds = new google.maps.LatLngBounds();
         var marker;
@@ -377,18 +376,16 @@ var StoreLocator = {
                     var currentLng = isLatLngFn ? currentLatlng.lng() : currentLatlng.lng;
                     var localItem = locations[i];
                     $('#' + localItem.Id).addClass('selected');
-                    var $newHoursTable = $('<table border="2" class="store-hours"></table>');
-                    var $storeHoursTable = $newHoursTable.html(StoreLocator.FormatStoreHours(localItem.storeHours)).get(0).outerHTML;
                     var localaddress = $('#street_number').val() + $('#route').val() + ', ' + $('#locality').val() + ', ' + $('#administrative_area_level_1').val() + $('#postal_code').val();
                     var drivinglink = 'https://maps.google.com/?saddr=' + currentLat + ',' + currentLng + '&daddr=' + localItem.latitude + ',' + localItem.longitude;
                     var addressLine = localItem.address1 !== null && localItem.address2 !== null ? (localItem.address1 + '<br />' + localItem.address2) : (localItem.address1 || localItem.address2);
                     var logoArea = localItem.brandLogo !== null ? '<img src="' + $('#storeResultTemplate').find('img').attr('data-imgPath') + localItem.brandLogo + '" />'  : '';
+                    var drivingDirections = '<a class="link" target="_blank" href="' + drivinglink + '">Driving Directions</a>';
+                    var storePermalink = '<a class="link" target="_blank" href="/stores/' + localItem.locationUniqueName + '">View Store Details</a>';
                     infowindow.setContent('<div class="card info-card"><div class="span12 info-card-logo">' +
-                     logoArea + '</div><div class="col-sm-5">' + ' <h1 class="title">' + localItem.retailerName+ '</h1>' +
-                     ' <span class="desc">' + addressLine + '<br />'  + localItem.city + ', ' + localItem.state + ' ' + localItem.zipCode + '</span><br />' +
-                     '<a class="link" target="_blank" href="/stores/' + localItem.locationUniqueName + '">View Store Details</a><br />' +
-                     '<a class="link" target="_blank" href="' + drivinglink + '">Driving Directions</a>' + '</div><div class="col-sm-7">' +
-                     '<h1 class="title">Store Details</h1>' + $storeHoursTable + '</div>');
+                     logoArea + '</div><div class="col-sm-7">' + ' <h1 class="title">' + localItem.retailerName+ '</h1>' +
+                     ' <span class="desc">' + addressLine + '<br />'  + localItem.city + ', ' + localItem.state + ' ' + localItem.zipCode + '</span><br /></div>' +
+                     '<div class="col-sm-5"><h1 class="title">Store Details</h1>' + storePermalink + '<br />' + drivingDirections  + '</div>');
                     infowindow.open(map, marker);
                     $('.gm-style-iw').next('div').remove();
                     //map.setCenter({ 'lat': localItem.latitude, 'lng': localItem.longitude });
@@ -399,101 +396,6 @@ var StoreLocator = {
             bounds.extend(marker.position);
             markerList.push(marker); map.setCenter();
         }
-    },
-    FormatStoreHours: function (storeHoursObj) {
-      if (typeof storeHoursObj === 'object' && storeHoursObj.length) {
-
-        if(storeHoursObj.length !== 7){
-          storeHoursObj = StoreLocator.ReplaceAnyMissingDays(storeHoursObj);
-        }
-
-        var hoursTableArr = [];
-          var itemsDone = [];
-
-          var daysLength = storeHoursObj.length;
-          var isCurrentDay = function(dayName) {
-            var dateNow = new Date();
-            var dayIndex = dateNow.getDay();
-            var dayNames = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY','SUNDAY'];
-            var todayIs = dayNames[dayIndex-1];
-            if (todayIs === dayName) {
-                return ' class="currentDay"';
-            } else {
-              return '';
-            }
-          };
-
-          for (var k = 0; k < storeHoursObj.length; k++) {
-            var notMissingStartOrEndTime = function () {
-              var checkUndefined = (
-                typeof storeHoursObj[k].startTime !== 'undefined' &&
-                typeof storeHoursObj[k].closeTime !== 'undefined'
-              );
-              if (checkUndefined) {
-                var checkEmpty = (
-                  storeHoursObj[k].startTime.length > 0 &&
-                  storeHoursObj[k].closeTime.length > 0
-                );
-                return checkEmpty;
-              } else {
-                return false;
-              }
-            }();
-
-            if (!storeHoursObj[k].closed && notMissingStartOrEndTime) {
-              var OpenTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
-                '<td class="dayCol" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
-                '<td>' + storeHoursObj[k].startTime.replace(/\./g, '') + '</td>' +
-                '<td class="timeSep">&ndash;</td>' +
-                '<td>' + storeHoursObj[k].closeTime.replace(/\./g, '') + '</td>' +
-                '</tr>';
-              hoursTableArr.push(OpenTableLine);
-            }  else if (storeHoursObj[k].closed) {
-              var ClosedTableLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
-                '<td class="dayCol' + isCurrentDay(storeHoursObj[k].day) + '" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
-                '<td colspan="3">' + 'CLOSED' + '</td>' +
-                '</tr>';
-              hoursTableArr.push(ClosedTableLine);
-            } else {
-              var CallForStoreHoursLine = '<tr' + isCurrentDay(storeHoursObj[k].day) + '>' +
-                '<td class="dayCol' + isCurrentDay(storeHoursObj[k].day) + '" colspan="2">' + storeHoursObj[k].day.toLowerCase() + '</td>' +
-                '<td class="callStore" colspan="3">' + 'CALL FOR STORE HOURS' + '</td>' +
-                '</tr>';
-              hoursTableArr.push(CallForStoreHoursLine);
-            }
-
-          }
-          return hoursTableArr.join();
-      } else {
-        return '<span class="callStore">CALL FOR STORE HOURS</span>';
-      }
-
-    },
-    ReplaceAnyMissingDays : function(storeHoursObj) {
-      var dayNamesInOrder = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY','SUNDAY'];
-      // Find the missing day(s)
-      var missingDays = [];
-      for(var i=0; i < dayNamesInOrder.length; i++){
-        var dayToLookFor = dayNamesInOrder[i];
-        var notSeen = true;
-        for(var j=0; j < storeHoursObj.length; j++){
-          if(dayToLookFor === storeHoursObj[j].day){
-            notSeen = false;
-            break;
-          }
-        }
-        if(notSeen){
-          missingDays.push(dayToLookFor);
-        }
-      }
-      // Inject the missing Day(s)
-      for(var d=0; d < missingDays.length; d++){
-          var index = dayNamesInOrder.indexOf(missingDays[d]);
-        var newItem = {day : missingDays[d], startTime : ''};
-        storeHoursObj.splice(index,0,newItem);
-      }
-
-      return storeHoursObj;
     },
     DetectCurrentLocation: function () {
         if (navigator.geolocation) {

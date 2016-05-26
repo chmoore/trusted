@@ -979,7 +979,7 @@ select {
 }
 .info-card img {
   width: 160px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 #dvResult {
   display: none;
