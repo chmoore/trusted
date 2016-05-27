@@ -4913,9 +4913,16 @@ input.prices {
   margin-left: 10px;
   margin-bottom: 10px;
 }
-.prod-avail {
-  color: #008a00!important;
-  font-size: 20px;
+.prod-avail-online {
+  color: #08c!important;
+  font-size: 9px;
+  font-weight: 300;
+  padding-left: 5px;
+}
+
+.prod-avail-store {
+  color: #ff3100!important;
+  font-size: 9px;
   font-weight: 300;
   padding-left: 5px;
 }
