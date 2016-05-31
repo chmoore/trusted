@@ -1,0 +1,3 @@
+# Min directory should not version min files, remain empty in Git
+*
+!.gitignore
