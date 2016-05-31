@@ -338,8 +338,8 @@ nav {
 .product-zoom {
   /*background:#efefef;
 		border:1px solid #dadada;*/
-  padding: 20px;
-  top: 40px;
+  padding: 0px;
+  top: 0px;
   bottom: 0;
   left: 0;
 }
@@ -1845,8 +1845,8 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
   width: 100%;
   clear: both;
   border-top: 1px solid #e1e1e1;
-  margin-top: 25px;
-  padding: 25px 0;
+  margin-top: 5px;
+  padding: 15px 0;
 }
 
 .bc-sm {
@@ -1882,7 +1882,7 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
 }
 
 .item-div p {
-  margin-bottom: 8px!important;
+  margin-bottom: 15px!important;
   line-height: 18px;
 }
 
@@ -1900,10 +1900,11 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
   font-size: 18px!important;
   text-transform: none;
   margin-bottom: 15px;
+  color:#0088cc!important;
 }
 
 .brand-list {
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   color: #aaa;
   font-weight: bold;

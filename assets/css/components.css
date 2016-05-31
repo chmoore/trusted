@@ -4810,6 +4810,16 @@ brand-fixed {
   text-transform: none;
   letter-spacing: -0.3px;
 }
+
+.item-div h6 {
+  margin-top: 0;
+  text-transform: none;
+  letter-spacing: -0.3px;
+}
+
+.item-div .brand-list {
+	margin-bottom:5px;
+}
 .product-div h5 {
   margin-top: 0;
   font-size: 24px;
@@ -4834,7 +4844,7 @@ brand-fixed {
 .product-brand h6 {
   font-size: 14px;
   text-transform: uppercase;
-  color: #aaa;
+  color: #000;
   font-weight: bold;
   letter-spacing: 0;
   margin-top: 0;
@@ -4844,10 +4854,11 @@ brand-fixed {
   font-size: 14px;
 }
 .product-title h1 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 26px;
+  line-height: 32px;
   letter-spacing: 0;
   text-transform: none;
+  margin-bottom:5px;
 }
 .product-title h2 {
   font-size: 32px;
@@ -4889,9 +4900,9 @@ brand-fixed {
 }
 .item-code-main {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
-  font-family: gotham_htfmedium, Arial, sans-serif;
+  font-family: gotham_htfbook, Arial, sans-serif;
 }
 .product-id {
   font-size: 14px!important;
@@ -4914,17 +4925,22 @@ input.prices {
   margin-bottom: 10px;
 }
 .prod-avail-online {
-  color: #08c!important;
+  color: #fff!important;
   font-size: 9px;
   font-weight: 300;
-  padding-left: 5px;
+  padding: 5px;
+  background:#000;
+  border-radius:4px;
+  margin-left: 5px;
 }
 
 .prod-avail-store {
-  color: #ff3100!important;
+  color: #fff!important;
   font-size: 9px;
   font-weight: 300;
-  padding-left: 5px;
+  padding: 5px;
+  background:#000;
+  border-radius:4px;
 }
 .clear-category {
   font-size: 16px;
