@@ -1430,7 +1430,7 @@ a.yahoo-icon:hover {
 		height:220px;*/
   position: relative;
   padding: 0 15px 0 0;
-  height: 300px;
+  /*height: 300px;*/
 }
 .item-full {
   font-family: 'gotham_htfmedium', Arial, sans-serif!important;
@@ -4895,8 +4895,10 @@ brand-fixed {
 }
 .item-code-car {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   color: #000;
+  word-break: break-word;
+  line-height: 20px;
 }
 .item-code-main {
   display: block;
