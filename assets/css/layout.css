@@ -344,6 +344,12 @@ nav {
   left: 0;
 }
 
+h3.gray-price {
+    text-transform: none;
+    font-size: 22px;
+    color: #333;
+}
+
 #img_01 {
   border: 1px solid #e1e1e1;
   margin: 5px;

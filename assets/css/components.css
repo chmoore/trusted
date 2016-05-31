@@ -1459,10 +1459,10 @@ a.yahoo-icon:hover {
 }
 .item-sm h6 {
   color: #08c!important;
-  font-family: 'gotham_htfmedium', Arial, sans-serif;
-  font-size: 13px;
+  font-family: 'gotham_htfbold', Arial, sans-serif;
+  font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.1px;
+  letter-spacing: 0px;
   text-transform: none;
 }
 .item-sm h6 a {
@@ -1501,7 +1501,7 @@ a.yahoo-icon:hover {
 .item-sm p {
   text-align: left;
   font: 14px 'gotham_htfbold', Arial, sans-serif!important;
-  text-transform: uppercase!important;
+  text-transform: none;
   margin-top: 10px;
 }
 h6.gray-price {
@@ -4854,7 +4854,7 @@ brand-fixed {
   font-size: 14px;
 }
 .product-title h1 {
-  font-size: 26px;
+  font-size: 28px;
   line-height: 32px;
   letter-spacing: 0;
   text-transform: none;
@@ -4895,23 +4895,24 @@ brand-fixed {
 }
 .item-code-car {
   display: block;
-  font-size: 12px;
-  color: #000;
+  font-size: 13px;
+  color: #767676!important;
   word-break: break-word;
   line-height: 20px;
 }
 .item-code-main {
   display: block;
   font-size: 16px;
-  color: #000;
-  font-family: gotham_htfbook, Arial, sans-serif;
+  color: #767676!important;
+  font-family: 'gotham_htfmedium', Arial, sans-serif;
+  letter-spacing: -0.2px;
 }
 .product-id {
   font-size: 14px!important;
   margin-top: -10px!important;
   word-wrap: break-word;
   line-height: 20px;
-  font-family: gotham_htfmedium, Arial, sans-serif;
+  font-family: 'gotham_htfmedium', Arial, sans-serif;
 }
 .brand-list {
   line-height: 16px!important;
