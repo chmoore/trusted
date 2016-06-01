@@ -4276,11 +4276,10 @@ ul.pagination input.rounded {
   
   .product-div h5 {
     margin-top: 0;
-    font-size: 18px!important;
+    font-size: 14px!important;
 	line-height:24px;
     text-transform: none;
     letter-spacing: -0.3px;
-    word-break: break-word;
 }
 
 .etitle-icon {
