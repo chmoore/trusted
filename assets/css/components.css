@@ -2705,7 +2705,8 @@ h6.gray-price {
   opacity: 1;
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
-  color: #25bb27;
+  /*color: #25bb27;*/
+  color: #D62C01;
   font-size: 20px;
 }
 .wishlist-container {
