@@ -4929,6 +4929,7 @@ brand-fixed {
   color: #767676!important;
   word-break: break-word;
   line-height: 20px;
+  font: 13px gotham_htfmedium,Arial,sans-serif!important;
 }
 .item-code-main {
   display: block;
