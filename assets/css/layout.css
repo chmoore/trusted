@@ -1562,7 +1562,7 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
     position: relative;
     /* top: 50%; */
     transform: none!important;
-    padding: 0!important;
+    padding: 10px!important;
     margin-bottom: 0;
     width: 100%!important;
   }
