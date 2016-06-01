@@ -3684,7 +3684,7 @@ a.show-more, a.show-less {
 .item-name {
   text-transform: none;
   font: 16px 'gotham_htfbold', Arial, sans-serif!important;
-  width: 50%;
+  width: 50%!important;
   float: left;
   height: auto;
   text-align: left;
@@ -4266,6 +4266,35 @@ ul.pagination input.rounded {
     float: right;
     width: 40%;
   }
+  
+  .etitle-ret-wrap {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+}
+  
+  .product-div h5 {
+    margin-top: 0;
+    font-size: 18px!important;
+	line-height:24px;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    word-break: break-word;
+}
+
+.etitle-icon {
+    padding-top: 12px;
+    padding-right: 0px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 1;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #25bb27;
+    font-size: 14px;
+    z-index: 99999;
+}
   .ewf_widget_authenticate {
     width: 100%;
   }
