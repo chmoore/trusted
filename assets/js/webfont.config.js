@@ -1,6 +1,7 @@
 /*global WebFont */
+/*global __ENVASSETS */
 
-var trustedAssetsURL = trustedAssetsURL || '';
+var trustedAssetsURL = __ENVASSETS || '';
 
 WebFont.load({
   google: {
@@ -14,6 +15,6 @@ WebFont.load({
     urls: [
       '//opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css',
       trustedAssetsURL + 'assets/css/fonts.css'
-    ],
+    ]
   }
 });
