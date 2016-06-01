@@ -728,7 +728,7 @@ input[type='text'], input[type='password'], input[type='date'], input[type='date
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 13px;
+  padding: 14px;
   border: 1px solid #e1e1e1;
   margin-bottom: 10px;
   background-color: #fff;

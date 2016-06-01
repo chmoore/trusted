@@ -950,6 +950,7 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
     font-family: 'gotham_htfmedium', Arial, sans-serif;
     text-align: left;
     margin-top: 0!important;
+	line-height: 16px!important;
   }
 
   .product-div .btn {
@@ -1553,7 +1554,7 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
     height: auto!important;
     position: relative;
     margin-right: 0!important;
-    margin-bottom: 20px;
+    margin-bottom: 5px!important;
   }
 
   .product-div .item-img-full {

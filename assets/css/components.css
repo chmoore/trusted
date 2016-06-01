@@ -1478,7 +1478,7 @@ a.yahoo-icon:hover {
 .item-sm .item-title {
   line-height: 16px;
   text-align: left;
-  font: 13px 'gotham_htfmedium', Arial, sans-serif!important;
+  font: 14px 'gotham_htfbold', Arial, sans-serif!important;
   margin-top: 15px;
   letter-spacing: 0.1px;
   margin-bottom: 15px;
@@ -2585,7 +2585,7 @@ h6.gray-price {
   font-size: 14px;
 }
 .headline-retail .blue-link {
-  font-size: 14px!important;
+  font-size: 16px!important;
 }
 .product-content .blue-link {
   color: #08c!important;
@@ -2705,7 +2705,8 @@ h6.gray-price {
   opacity: 1;
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
-  color: #25bb27;
+  /*color: #25bb27;*/
+  color: #3c763d;
   font-size: 20px;
 }
 .wishlist-container {
@@ -3684,7 +3685,7 @@ a.show-more, a.show-less {
 .item-name {
   text-transform: none;
   font: 16px 'gotham_htfbold', Arial, sans-serif!important;
-  width: 50%;
+  width: 50%!important;
   float: left;
   height: auto;
   text-align: left;
@@ -4266,6 +4267,35 @@ ul.pagination input.rounded {
     float: right;
     width: 40%;
   }
+  
+  .etitle-ret-wrap {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+}
+  
+  .product-div h5 {
+    margin-top: 0;
+    font-size: 18px!important;
+	line-height:24px;
+    text-transform: none;
+    letter-spacing: -0.3px;
+    word-break: break-word;
+}
+
+.etitle-icon {
+    padding-top: 12px;
+    padding-right: 0px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 1;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #3c763d;
+    font-size: 14px;
+    z-index: 99999;
+}
   .ewf_widget_authenticate {
     width: 100%;
   }
@@ -4899,6 +4929,7 @@ brand-fixed {
   color: #767676!important;
   word-break: break-word;
   line-height: 20px;
+  font: 13px gotham_htfmedium,Arial,sans-serif!important;
 }
 .item-code-main {
   display: block;
