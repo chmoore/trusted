@@ -16,7 +16,7 @@
   display: block;
   /*padding: 14px 25px;
 		border: 2px solid #979797;*/
-  padding: 25px 35px 0 0;
+  padding: 15px 35px 0 0;
   margin-bottom: 15px;
   color: #979797;
   font-family: 'gotham_htfmedium', Arial, sans-serif;
@@ -4931,6 +4931,8 @@ brand-fixed {
   word-break: break-word;
   line-height: 20px;
   font: 13px gotham_htfmedium,Arial,sans-serif!important;
+  margin-top: 5px;
+  margin-bottom:15px;
 }
 .item-code-main {
   display: block;

@@ -530,10 +530,17 @@ img {
 #zoom {
   position: relative!important;
   display: block;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   height: auto;
-  width:100%;
+  width:auto;
+}
+
+#gallery_01 img {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    height: 100px;
+    margin-right: 10px;
 }
 
 .zoomLens {
