@@ -840,7 +840,7 @@ span.posted-on {
 
 #expand-all.open {
   opacity: 1;
-  max-height: 5000px;
+  max-height: 7000px;
   -webkit-transition: max-height 1.5s ease-in, opacity 0.5s ease-in ;
           transition: max-height 1.5s ease-in, opacity 0.5s ease-in ;
 }
