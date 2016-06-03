@@ -380,7 +380,7 @@ span.posted-on {
 .pagination {
   margin-bottom: 0;
   text-align: right;
-  float:left;
+  float: left;
 }
 
 /*
@@ -861,6 +861,10 @@ span.posted-on {
 #expand-all .warning-text {
   display: block;
   margin-bottom: 40px;
+}
+
+#captchaContainer div {
+  margin: 0 auto;
 }
 
 /* =Recent Entries Widget
@@ -1544,7 +1548,7 @@ span.posted-on {
 }
 
 .item-wrap .col-sm-3:last-child {
-	padding:0;
+  padding: 0;
 }
 
 
@@ -1568,7 +1572,7 @@ span.posted-on {
   color: #000;
   font: 12px 'gotham_htfbook', Arial, sans-serif;
   padding-top: 5px;
-  width:auto;
+  width: auto;
 }
 
 .card .store-hours td {
