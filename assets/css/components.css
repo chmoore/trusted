@@ -3462,7 +3462,7 @@ fieldset p {
   display:table;
 }
 
-.brand-lead:before {
+.brand-lead-row {
 	display:table-row;
 }
 
