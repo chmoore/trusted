@@ -751,7 +751,6 @@ input.validation-error, textarea.validation-error, select.validation-error {
   /*margin-bottom: -65px;*/ margin-bottom: 0;
   margin-top: 65px;
   position:relative;
-  display:table-cell;
 }
 .slider-revolution.fullwidthbanner-container .fullwidthbanner {
   height: 517px!important;
@@ -767,7 +766,6 @@ input.validation-error, textarea.validation-error, select.validation-error {
 }
 .brand-desc {
   /*width:435px;position:absolute;right:0;padding-left: 10px;overflow: scroll;height: 600px;*/padding: 40px 80px 12px 80px;
-  display:table-cell;
 }
 .slider-overlay {
   position: absolute;
@@ -3464,8 +3462,12 @@ fieldset p {
   display:table;
 }
 
-.brand-lead .col-sm-6 {
+.brand-lead .col-sm-6:before {
 	display:table-row;
+}
+
+.brand-lead .col-sm-6 {
+	display:table-cell;
 }
 .map-list .text-center {
   max-width: 1170px;
