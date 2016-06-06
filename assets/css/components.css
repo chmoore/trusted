@@ -5145,9 +5145,3 @@ ul.trusted-tabs li h1 {
   position: relative;
   width: 500px;
 }
-
-.rev_slider_wrapper {
-    position: relative;
-    z-index: 0;
-	width:100%;
-}
