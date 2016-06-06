@@ -757,7 +757,7 @@ input.validation-error, textarea.validation-error, select.validation-error {
   padding: 0; /*border-bottom:6px solid #000;*/
 }
 .slider-revolution.fullwidthbanner-container #shop-slider.fullwidthbanner {
-  height: 614px!important;
+  /*height: 614px!important;*/
 }
 .product-slide {
   border-bottom: 1px solid #e1e1e1;
