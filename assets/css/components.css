@@ -737,7 +737,7 @@ input.validation-error, textarea.validation-error, select.validation-error {
   /*height: 475px!important;*/
 }
 .product-banner {
- width: 700px!important;
+  /*width: 700px!important;*/
   float: left;
 }
 .fullwidthbanner-container ul {
@@ -3462,14 +3462,7 @@ fieldset p {
   display:table;
 }
 
-.brand-lead-row {
-	display:table-row;
-}
-
 .brand-lead .col-sm-6 {
-	display: table-cell;
-    height: auto;
-    max-height: 600px;
 }
 .map-list .text-center {
   max-width: 1170px;
