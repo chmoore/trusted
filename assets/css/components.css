@@ -757,7 +757,7 @@ input.validation-error, textarea.validation-error, select.validation-error {
   padding: 0; /*border-bottom:6px solid #000;*/
 }
 .slider-revolution.fullwidthbanner-container #shop-slider.fullwidthbanner {
-  /*height: 614px!important;*/
+  height: 614px!important;
 }
 .product-slide {
   border-bottom: 1px solid #e1e1e1;
@@ -3459,13 +3459,6 @@ fieldset p {
   height: auto;
   position: relative;
   max-width: 1420px;
-  max-height:615px;
-  display: table;
-  
-}
-
-.brand-lead .col-sm-6 {
-	display:table-cell;
 }
 .map-list .text-center {
   max-width: 1170px;
