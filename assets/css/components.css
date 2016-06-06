@@ -734,10 +734,10 @@ input.validation-error, textarea.validation-error, select.validation-error {
   margin-top: 0!important;
 }
 .lead-slide {
-  height: 475px!important;
+  /*height: 475px!important;*/
 }
 .product-banner {
-  width: 700px!important;
+  /*width: 700px!important;*/
   float: left;
 }
 .fullwidthbanner-container ul {
