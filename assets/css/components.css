@@ -3459,6 +3459,16 @@ fieldset p {
   height: auto;
   position: relative;
   max-width: 1420px;
+      clear: left;
+    float: left;
+    overflow: hidden;
+}
+
+.brand-lead .col-sm-6 {
+	loat: left;
+    width: 100%;
+    position: relative;
+    right: 50%;
 }
 .map-list .text-center {
   max-width: 1170px;
