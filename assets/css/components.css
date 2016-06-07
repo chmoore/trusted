@@ -749,7 +749,7 @@ input.validation-error, textarea.validation-error, select.validation-error {
 }
 
 #wrap .forcefullwidth_wrapper_tp_banner {
-    height: 430px!important;
+    height: 428px!important;
 }
 .slider-revolution.fullwidthbanner-container {
   /*margin-bottom: -65px;*/ margin-bottom: 0;
@@ -1531,7 +1531,7 @@ h6.gray-price {
 }
 .item-img-full {
   position: relative;
-  /*border: 1px solid #e1e1e1;*/
+  border: 1px solid #e1e1e1;
   height: 205px;
   margin-bottom: 18px;
   overflow: hidden;
@@ -1548,7 +1548,7 @@ h6.gray-price {
   margin-bottom: 0;
   max-width: 100%;
   max-height: 100%;
-  width: 100%;
+  width: auto;
   vertical-align: middle;
   position: absolute;
   top: 0;
