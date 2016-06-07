@@ -5186,3 +5186,16 @@ ul.trusted-tabs li h1 {
 	line-height:22px;
 	font-family: 'gotham_htfbold', Arial, sans-serif;
 }
+
+.grid-layout .item-prod {
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
+.grid-layout .item-prod img {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+	margin-bottom:10px;
+}
