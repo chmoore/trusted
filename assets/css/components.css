@@ -767,7 +767,6 @@ input.validation-error, textarea.validation-error, select.validation-error {
 }
 .brand-desc {
   /*width:435px;position:absolute;right:0;padding-left: 10px;overflow: scroll;height: 600px;*/padding: 40px 80px 12px 80px;
-  max-height:100%;
 }
 .slider-overlay {
   position: absolute;
@@ -2265,12 +2264,12 @@ h6.gray-price {
   color: #979797;
 }
 #bg-brand {
-  padding: 0 0 30px 0;
-  margin-top: 0;
-  background-color: #fff;
+  padding: 50px 0 30px 0;
+  margin-top: -20px;
+  background-color: #f9f9f9;
   color: #979797;
   border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 40px;
+  border-top: 1px solid #e1e1e1;  margin-bottom: 40px;
 }
 #bg-1a h4 {
   color: #fff!important;
@@ -3462,7 +3461,9 @@ fieldset p {
   height: auto;
   position: relative;
   max-width: 1420px;
-  max-height:600px;
+  display:table;
+  margin-left:0;
+  margin-right:0;
 }
 
 .brand-lead .col-sm-6 {
@@ -3500,7 +3501,8 @@ fieldset p {
   padding: 30px 0 0 0!important;
 }
 .gray-bkgd {
-  background: #f9f9f9;
+  /*background: #f9f9f9;*/
+ max-height: 100%!important;
 }
 .sent-msg {
   display: inline-block;
