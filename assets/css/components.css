@@ -748,13 +748,14 @@ input.validation-error, textarea.validation-error, select.validation-error {
   width: 100%;
 }
 
+.brand-lead .forcefullwidth_wrapper_tp_banner {
+    height: auto!important;
+}
+
 #wrap .forcefullwidth_wrapper_tp_banner {
     height: 470px!important;
 }
 
-.brand-lead .forcefullwidth_wrapper_tp_banner {
-    height: auto!important;
-}
 .slider-revolution.fullwidthbanner-container {
   /*margin-bottom: -65px;*/ margin-bottom: 0;
   margin-top: 65px;
