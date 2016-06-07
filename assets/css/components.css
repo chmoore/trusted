@@ -1526,7 +1526,7 @@ h6.gray-price {
 }
 .item-img-full {
   position: relative;
-  border: 1px solid #e1e1e1;
+  /*border: 1px solid #e1e1e1;*/
   height: 205px;
   margin-bottom: 18px;
   overflow: hidden;
@@ -1534,7 +1534,7 @@ h6.gray-price {
   vertical-align: middle;
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
-  padding: 20px;
+  padding: 0px;
 }
 .item-img-full:hover {
   border: 1px solid #000;
@@ -1543,7 +1543,7 @@ h6.gray-price {
   margin-bottom: 0;
   max-width: 100%;
   max-height: 100%;
-  width: auto;
+  width: 100%;
   vertical-align: middle;
   position: absolute;
   top: 0;
