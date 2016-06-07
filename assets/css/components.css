@@ -2264,12 +2264,12 @@ h6.gray-price {
   color: #979797;
 }
 #bg-brand {
-  padding: 30px 0 30px 0;
-  margin-top: -20px;
+  padding: 50px 0 30px 0;
+  margin-top: -40px;
   background-color: #f9f9f9;
   color: #979797;
   border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 40px;
+  border-top: 1px solid #e1e1e1;  margin-bottom: 40px;
 }
 #bg-1a h4 {
   color: #fff!important;
