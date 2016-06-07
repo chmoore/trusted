@@ -3269,6 +3269,7 @@ fieldset p {
 }
 .tp-bgimg {
   background-position: 0!important;
+  width:70%important;
 }
 .fv-form-bootstrap .fv-icon-no-label {
   top: 5px;
@@ -3465,7 +3466,8 @@ fieldset p {
 .brand-lead .col-sm-6 {
 	/*display: table-cell;
     height: auto;*/
-    max-height: 700px;
+    max-height: 500px;
+	overflow:hidden;
 }
 .map-list .text-center {
   max-width: 1170px;
