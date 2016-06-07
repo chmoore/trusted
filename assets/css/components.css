@@ -3463,8 +3463,8 @@ fieldset p {
 }
 
 .brand-lead .col-sm-6 {
-	display: table-cell;
-    height: auto;
+	/*display: table-cell;
+    height: auto;*/
     max-height: 700px;
 }
 .map-list .text-center {

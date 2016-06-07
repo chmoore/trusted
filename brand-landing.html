@@ -191,7 +191,6 @@
         </div>
         </div>
         <div class="brand-lead container no-pad brand-fixed">
-        <div class="brand-lead-row">
         <div class="col-sm-6 no-pad">
          <div class="fullwidthbanner-container slider-revolution brand-slide no-pad">
          <div class="container no-pad auto-height">
@@ -250,7 +249,7 @@
                     </div>
             </div>
                 
-                  </div>      
+                        
                 </div></div>
                 <div class="clearer"></div>
                 </div>
@@ -673,7 +672,21 @@
                 }
             }
 	</script>
-   
     
+    <script>	
+jQuery(document).ready(function() {		
+   jQuery("#shop-slider").revolution({
+      sliderType:"standard",
+      sliderLayout:"auto",
+	  fullScreenOffsetContainer:".brand-lead",
+      delay:9000,
+      navigation: {
+          arrows:{enable:false}				
+      },			
+      gridwidth:1230,
+      gridheight:720		
+    });		
+});	
+</script>
 </body>
 </html>
