@@ -5175,7 +5175,7 @@ ul.trusted-tabs li h1 {
     border: 1px solid #e4e4e4;
     overflow: hidden;
     margin: 0 0 -1px -1px;
-    padding: 40px;
+    padding: 20px 40px 40px 40px;
 }
 
 .grid-layout .col-xs-4 {
@@ -5190,6 +5190,12 @@ ul.trusted-tabs li h1 {
 	font-size:16px;
 	line-height:22px;
 	font-family: 'gotham_htfbold', Arial, sans-serif;
+}
+
+grid-layout h6 {
+	font-size:14px;
+	line-height:22px;
+	font-family: 'gotham_htfbook', Arial, sans-serif;
 }
 
 .grid-layout .item-prod {
