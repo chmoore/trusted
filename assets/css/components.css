@@ -3456,7 +3456,7 @@ fieldset p {
 .brand-lead {
   width: 100%;
   margin-top: 50px;
-  /*background: #f9f9f9;*/
+  background: #f9f9f9;
   height: auto;
   position: relative;
   max-width: 1420px;
@@ -3468,6 +3468,10 @@ fieldset p {
     height: auto;*/
     max-height: 600px;
 	overflow:hidden;
+}
+
+.forcefullwidth_wrapper_tp_banner .auto-height {
+	height:100%!important;
 }
 .map-list .text-center {
   max-width: 1170px;
@@ -4426,6 +4430,7 @@ ul.pagination input.rounded {
   }
   .tp-bgimg {
     background-position: 70% 50%!important;
+	width:100%!important;
   }
   brand-fixed {
     max-width: 1420px;
@@ -4451,7 +4456,7 @@ ul.pagination input.rounded {
   .slider-revolution.fullwidthbanner-container {
     margin-bottom: 0;
     margin-top: 0;
-    height: auto!important;
+    height: 400px!important;
   }
   .accordion-item-content .span7 {
     width: 50%;
