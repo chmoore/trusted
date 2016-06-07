@@ -753,7 +753,7 @@ input.validation-error, textarea.validation-error, select.validation-error {
 }
 .slider-revolution.fullwidthbanner-container {
   /*margin-bottom: -65px;*/ margin-bottom: 0;
-  margin-top: 65px!important;
+  margin-top: 65px;
   position:relative;
 }
 .slider-revolution.fullwidthbanner-container .fullwidthbanner {
