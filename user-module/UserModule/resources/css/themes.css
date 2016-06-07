@@ -1,0 +1,271 @@
+
+/* line 11, ../sass/themes/_theme.scss */
+body.trusted-default-theme a {
+  color: #0f7bbf;
+}
+/* line 14, ../sass/themes/_theme.scss */
+body.trusted-default-theme a:hover {
+  color: #4dbaff;
+}
+/* line 17, ../sass/themes/_theme.scss */
+body.trusted-default-theme a:focus {
+  color: #4dbaff;
+}
+/* line 24, ../sass/themes/_theme.scss */
+body.trusted-default-theme #header .navbar-toggle {
+  border-color: #939393;
+}
+/* line 27, ../sass/themes/_theme.scss */
+body.trusted-default-theme #header .navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+/* line 34, ../sass/themes/_theme.scss */
+body.trusted-default-theme #header #user-navbar li a {
+    display: block;
+    padding: 15px 0;
+    font: 12px 'gotham_htfbold', Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* line 37, ../sass/themes/_theme.scss */
+body.trusted-default-theme #header #user-navbar li a:hover {
+  color: #0f7bbf;
+}
+/* line 40, ../sass/themes/_theme.scss */
+body.trusted-default-theme #header #user-navbar li a:focus {
+  color: #0f7bbf;
+}
+@media (max-width: 767px) {
+  /* line 49, ../sass/themes/_theme.scss */
+  body.trusted-default-theme #header #login-navbar > li > a {
+    color: #ffffff;
+    background-color: #1380c5;
+  }
+}
+/* line 57, ../sass/themes/_theme.scss */
+body.trusted-default-theme #content {
+  background-color: #f5f5f5;
+}
+/* line 59, ../sass/themes/_theme.scss */
+body.trusted-default-theme #content .content-body {
+  background-color: #ffffff;
+}
+/* line 64, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer {
+  color: #ffffff;
+  background-color: #424242;
+}
+/* line 68, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #footer-navbar {
+  border-bottom-color: #ffffff;
+}
+/* line 71, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #footer-navbar a {
+  color: #ffffff;
+}
+/* line 74, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #footer-navbar a:focus {
+  color: #1380c5;
+}
+/* line 78, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #footer-navbar a:hover {
+  color: #1380c5;
+}
+/* line 85, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #footer-navbar li.dropup a.dropdown-toggle .triangle {
+  border-color: #6b6b6b transparent transparent;
+}
+/* line 89, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #footer-navbar li.dropup ul.dropdown-menu {
+  background-color: #6b6b6b;
+}
+/* line 92, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #footer-navbar li.dropup ul.dropdown-menu li {
+  border-top-color: #9a9a9a;
+}
+/* line 95, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #footer-navbar li.dropup ul.dropdown-menu li > a {
+  color: #ffffff;
+}
+/* line 98, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #footer-navbar li.dropup ul.dropdown-menu li > a:focus {
+  color: #ffffff;
+}
+/* line 102, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #footer-navbar li.dropup ul.dropdown-menu li > a:hover {
+  background: #9a9a9a;
+}
+/* line 111, ../sass/themes/_theme.scss */
+body.trusted-default-theme #footer #copyright {
+  background-color: #000000;
+}
+/* line 116, ../sass/themes/_theme.scss */
+body.trusted-default-theme .comment-count {
+  color: #ffffff;
+  background: #1d80c1;
+}
+/* line 120, ../sass/themes/_theme.scss */
+body.trusted-default-theme .comment-count span {
+  border-color: #1d80c1 transparent transparent transparent;
+}
+/* line 130, ../sass/themes/_theme.scss */
+body.trusted-default-theme .nav-tabs li a {
+  color: #0f7bbf;
+}
+/* line 135, ../sass/themes/_theme.scss */
+body.trusted-default-theme .nav-tabs li.active a {
+  color: #939393;
+}
+/* line 142, ../sass/themes/_theme.scss */
+body.trusted-default-theme .tab-content {
+  background-color: #ffffff;
+}
+/* line 150, ../sass/themes/_theme.scss */
+body.trusted-default-theme .owl-next,
+body.trusted-default-theme .owl-prev,
+body.trusted-default-theme .btn-default {
+  color: #ffffff;
+  background-color: #1d80c1;
+  border-color: transparent;
+}
+/* line 157, ../sass/themes/_theme.scss */
+body.trusted-default-theme .owl-next:hover,
+body.trusted-default-theme .owl-prev:hover,
+body.trusted-default-theme .btn-default:hover {
+  color: #ffffff;
+  background-color: #4dbaff;
+}
+/* line 163, ../sass/themes/_theme.scss */
+body.trusted-default-theme .btn-danger {
+  color: #ffffff;
+  background-color: #fe0000;
+  border-color: transparent;
+}
+/* line 169, ../sass/themes/_theme.scss */
+body.trusted-default-theme .btn-cancel {
+  color: #ffffff;
+  background-color: #939393;
+}
+/* line 173, ../sass/themes/_theme.scss */
+body.trusted-default-theme .btn-cancel:hover {
+  background-color: #7b7b7b;
+  color: #ffffff;
+}
+/* line 179, ../sass/themes/_theme.scss */
+body.trusted-default-theme .btn-verify {
+  color: #ffffff;
+  background-color: #ff0000;
+}
+/* line 183, ../sass/themes/_theme.scss */
+body.trusted-default-theme .btn-verify:hover {
+  background-color: #ce0606;
+  color: #ffffff;
+}
+/* line 189, ../sass/themes/_theme.scss */
+body.trusted-default-theme .btn-save {
+  color: #ffffff;
+  background-color: #1d80c1;
+}
+/* line 193, ../sass/themes/_theme.scss */
+body.trusted-default-theme .btn-save:hover {
+  background-color: #186aa0;
+  color: #ffffff;
+}
+/* line 202, ../sass/themes/_theme.scss */
+body.trusted-default-theme .alert {
+  color: #333333;
+  background: #ffebec;
+}
+/* line 206, ../sass/themes/_theme.scss */
+body.trusted-default-theme .alert .close {
+  color: #bf8785;
+}
+/* line 216, ../sass/themes/_theme.scss */
+body.trusted-default-theme form h2 {
+  border-bottom-color: #939393;
+}
+/* line 220, ../sass/themes/_theme.scss */
+body.trusted-default-theme input.form-control,
+body.trusted-default-theme textarea.form-control,
+body.trusted-default-theme select.form-control {
+  border-color: #aec2ea;
+}
+/* line 228, ../sass/themes/_theme.scss */
+body.trusted-default-theme .has-feedback .form-control-feedback.fa-asterisk {
+  color: #ff0000;
+}
+/* line 235, ../sass/themes/_theme.scss */
+body.trusted-default-theme .has-error > .form-control-feedback, body.trusted-default-theme .has-error.form-control-feedback {
+  color: #ff0000;
+}
+/* line 239, ../sass/themes/_theme.scss */
+body.trusted-default-theme .has-error > .help-block, body.trusted-default-theme .has-error.help-block {
+  color: #ff0000;
+}
+/* line 245, ../sass/themes/_theme.scss */
+body.trusted-default-theme .has-success > .form-control-feedback, body.trusted-default-theme .has-success.form-control-feedback {
+  color: #0eb90a;
+}
+/* line 249, ../sass/themes/_theme.scss */
+body.trusted-default-theme .has-success > .help-block, body.trusted-default-theme .has-success.help-block {
+  color: #0eb90a;
+}
+/* line 256, ../sass/themes/_theme.scss */
+body.trusted-default-theme .search .form-control {
+  border-color: #939393;
+}
+/* line 259, ../sass/themes/_theme.scss */
+body.trusted-default-theme .search .btn {
+  color: #8c8c8c;
+  border-color: #939393;
+  background-color: #ffffff;
+}
+/* line 268, ../sass/themes/_theme.scss */
+body.trusted-default-theme .thumbnail {
+  border: none;
+}
+/* line 275, ../sass/themes/_theme.scss */
+body.trusted-default-theme .cta {
+  color: #333333;
+  background: #ffffff;
+}
+/* line 279, ../sass/themes/_theme.scss */
+body.trusted-default-theme .cta h2, body.trusted-default-theme .cta .cta-title {
+  color: #333333;
+}
+/* line 283, ../sass/themes/_theme.scss */
+body.trusted-default-theme .cta:hover {
+  color: #ffffff;
+  background: #4dbaff;
+}
+/* line 287, ../sass/themes/_theme.scss */
+body.trusted-default-theme .cta:hover h2, body.trusted-default-theme .cta:hover .cta-title {
+  color: #ffffff;
+}
+/* line 293, ../sass/themes/_theme.scss */
+body.trusted-default-theme .bg-info {
+  background: #eeeeee;
+}
+/* line 300, ../sass/themes/_theme.scss */
+body.trusted-default-theme .border-top {
+  border-top-color: #939393;
+}
+/* line 301, ../sass/themes/_theme.scss */
+body.trusted-default-theme .border-bottom {
+  border-bottom-color: #939393;
+}
+/* line 302, ../sass/themes/_theme.scss */
+body.trusted-default-theme .border-right {
+  border-right-color: #939393;
+}
+/* line 303, ../sass/themes/_theme.scss */
+body.trusted-default-theme .border-left {
+  border-left-color: #939393;
+}
+/* line 304, ../sass/themes/_theme.scss */
+body.trusted-default-theme .low-point {
+  color: #8a8a8a;
+}
