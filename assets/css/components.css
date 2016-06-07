@@ -3457,7 +3457,7 @@ fieldset p {
 .brand-lead {
   width: 100%;
   margin-top: 50px;
-  background: #f9f9f9;
+  /*background: #f9f9f9;*/
   height: auto;
   position: relative;
   max-width: 1420px;
