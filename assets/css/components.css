@@ -2265,7 +2265,7 @@ h6.gray-price {
 }
 #bg-brand {
   padding: 50px 0 30px 0;
-  margin-top: -40px;
+  margin-top: -20px;
   background-color: #f9f9f9;
   color: #979797;
   border-bottom: 1px solid #e1e1e1;
@@ -3502,6 +3502,7 @@ fieldset p {
 }
 .gray-bkgd {
   /*background: #f9f9f9;*/
+ max-height: 100%!important;
 }
 .sent-msg {
   display: inline-block;
