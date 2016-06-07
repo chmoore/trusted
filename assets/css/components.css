@@ -3269,7 +3269,7 @@ fieldset p {
 }
 .tp-bgimg {
   background-position: 0!important;
-  width:65%!important;
+  width:50%!important;
 }
 .fv-form-bootstrap .fv-icon-no-label {
   top: 5px;
@@ -3456,7 +3456,7 @@ fieldset p {
 .brand-lead {
   width: 100%;
   margin-top: 50px;
-  background: #f9f9f9;
+  /*background: #f9f9f9;*/
   height: auto;
   position: relative;
   max-width: 1420px;
