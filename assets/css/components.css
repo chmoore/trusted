@@ -3466,7 +3466,7 @@ fieldset p {
 .brand-lead .col-sm-6 {
 	/*display: table-cell;
     height: auto;*/
-    max-height: 500px;
+    max-height: 600px;
 	overflow:hidden;
 }
 .map-list .text-center {
