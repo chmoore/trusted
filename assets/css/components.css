@@ -767,6 +767,7 @@ input.validation-error, textarea.validation-error, select.validation-error {
 }
 .brand-desc {
   /*width:435px;position:absolute;right:0;padding-left: 10px;overflow: scroll;height: 600px;*/padding: 40px 80px 12px 80px;
+  max-height:100%;
 }
 .slider-overlay {
   position: absolute;
@@ -3461,7 +3462,7 @@ fieldset p {
   height: auto;
   position: relative;
   max-width: 1420px;
-  display:table;
+  max-height:600px;
 }
 
 .brand-lead .col-sm-6 {
