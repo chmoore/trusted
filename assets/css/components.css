@@ -747,6 +747,10 @@ input.validation-error, textarea.validation-error, select.validation-error {
   position: relative;
   width: 100%;
 }
+
+#wrap .forcefullwidth_wrapper_tp_banner {
+    height: 430px!important;
+}
 .slider-revolution.fullwidthbanner-container {
   /*margin-bottom: -65px;*/ margin-bottom: 0;
   margin-top: 65px;
