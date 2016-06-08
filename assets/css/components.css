@@ -5225,3 +5225,8 @@ grid-layout h6 {
     margin-left: 0px;
 	margin-bottom:10px;
 }
+
+.avail-sm {
+	font-size:14px;
+	font-family: 'gotham_htfmedium', Arial, sans-serif;
+}
