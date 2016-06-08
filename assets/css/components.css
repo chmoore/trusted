@@ -5010,6 +5010,16 @@ input.prices {
   background:#000;
   border-radius:4px;
 }
+
+.prod-lightgray {
+	background:#999;
+}
+.prod-darkgray {
+	background:#777;
+}
+.prod-lightblue {
+	background: rgba(0, 136, 204, 0.56);
+}
 .clear-category {
   font-size: 16px;
 }
