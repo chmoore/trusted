@@ -1389,3 +1389,10 @@ article {
 .full-container {
 	width:1170px!important;
 }
+
+#logo {
+    margin-right: 50px;
+    padding: 15px 0 10px 0;
+    float: left;
+    width: 200px;
+}
