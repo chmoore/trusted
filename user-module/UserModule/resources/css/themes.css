@@ -234,6 +234,7 @@ body.trusted-default-theme .thumbnail {
 body.trusted-default-theme .cta {
   color: #333333;
   background: #ffffff;
+  height: 362.33px;
 }
 /* line 279, ../sass/themes/_theme.scss */
 body.trusted-default-theme .cta h2, body.trusted-default-theme .cta .cta-title {

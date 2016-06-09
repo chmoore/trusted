@@ -97,6 +97,8 @@ website:            http://michaelguild13.wordpress.com/
   padding-bottom: 2rem;
   padding-left: 0px;
   padding-left: 0rem;
+  width:700px;
+  margin:0 auto;
 }
 /* line 32, ../sass/partials/_scaffolding.scss */
 #content .content-header .page-title small {
@@ -288,9 +290,9 @@ h6, .h6 {
 /* line 58, ../sass/partials/_typography.scss */
 p, ul, ol, dl, address {
   font-size: 11px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 22px;
-  line-height: 2.2rem;
+  line-height: 2.0rem;
   word-wrap: break-word;
 }
 
@@ -800,6 +802,8 @@ website:            http://michaelguild13.wordpress.com/
     padding-left: 3.5rem;
     border: 1px solid;
     margin-bottom: 0;
+	 width: 700px;
+    margin: 0 auto;
   }
   /* line 183, ../sass/partials/_navigation.scss */
   #login-navbar > li > a .fa.fa-chevron-down {
@@ -1579,6 +1583,10 @@ a.behance-icon:hover {
 	display:block;
 	float:left;
 	width:auto;
+}
+
+.page-title {
+	font-family: "GothamHTF-Bold", "GothamHTF-Book", arial, helvetica, sans-serif;
 }
 
 @media (min-width: 768px) {
