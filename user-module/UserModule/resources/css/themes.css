@@ -23,20 +23,23 @@ body.trusted-default-theme #header .navbar-toggle .icon-bar {
 body.trusted-default-theme #header #user-navbar li a {
     display: block;
     padding: 15px 0;
-    font: 12px 'gotham_htfbold', Arial, sans-serif;
+    font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+	font-size:12px;
     font-weight: 500;
     letter-spacing: 1.5px;
-    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    color: #b2b3b3;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 /* line 37, ../sass/themes/_theme.scss */
 body.trusted-default-theme #header #user-navbar li a:hover {
-  color: #0f7bbf;
+  color: #fff;
 }
 /* line 40, ../sass/themes/_theme.scss */
 body.trusted-default-theme #header #user-navbar li a:focus {
-  color: #0f7bbf;
+  color: #fff;
 }
 @media (max-width: 767px) {
   /* line 49, ../sass/themes/_theme.scss */
@@ -64,15 +67,15 @@ body.trusted-default-theme #footer #footer-navbar {
 }
 /* line 71, ../sass/themes/_theme.scss */
 body.trusted-default-theme #footer #footer-navbar a {
-  color: #ffffff;
+  color: #b2b3b3;
 }
 /* line 74, ../sass/themes/_theme.scss */
 body.trusted-default-theme #footer #footer-navbar a:focus {
-  color: #1380c5;
+  color: #fff;
 }
 /* line 78, ../sass/themes/_theme.scss */
 body.trusted-default-theme #footer #footer-navbar a:hover {
-  color: #1380c5;
+  color: #fff;
 }
 /* line 85, ../sass/themes/_theme.scss */
 body.trusted-default-theme #footer #footer-navbar li.dropup a.dropdown-toggle .triangle {
