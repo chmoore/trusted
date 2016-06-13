@@ -1212,6 +1212,8 @@ website:            http://michaelguild13.wordpress.com/
   text-align: center;
   display: inline-block;
   min-height: 352px;
+  border: 1px solid #e4e4e4;
+  border-radius: 15px;
 }
 /* line 15, ../sass/modules/_calls-to-actions.scss */
 .cta h2, .cta .cta-title {
