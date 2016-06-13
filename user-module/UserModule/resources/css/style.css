@@ -651,6 +651,8 @@ website:            http://michaelguild13.wordpress.com/
 #footer-navbar .nav {
   font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
   margin-left:100px;
+      margin-bottom: 40px;
+    margin-top: 20px;
 }
 /* line 48, ../sass/partials/_navigation.scss */
 #footer-navbar .nav li a {
@@ -662,10 +664,10 @@ website:            http://michaelguild13.wordpress.com/
   padding-bottom: 2rem;
   padding-left: 0px;
   padding-left: 0rem;
-      padding: 35px 25px;
+      padding: 15px 15px;
     border: none;
     color: #b2b3b3;
-    font-size: 12px;
+    font-size: 11px;
     text-transform: uppercase;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
