@@ -242,12 +242,12 @@ body.trusted-default-theme .cta h2, body.trusted-default-theme .cta .cta-title {
 }
 /* line 283, ../sass/themes/_theme.scss */
 body.trusted-default-theme .cta:hover {
-  color: #ffffff;
-  background: #4dbaff;
+  color: #000!important;
+  background: #f7f7f7;
 }
 /* line 287, ../sass/themes/_theme.scss */
 body.trusted-default-theme .cta:hover h2, body.trusted-default-theme .cta:hover .cta-title {
-  color: #ffffff;
+  color: #000;
 }
 /* line 293, ../sass/themes/_theme.scss */
 body.trusted-default-theme .bg-info {
