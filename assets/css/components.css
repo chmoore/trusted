@@ -5007,7 +5007,7 @@ input.prices {
   font-size: 9px;
   font-weight: 300;
   padding: 5px;
-  background:#000;
+  background:#555;
   border-radius:4px;
 }
 
@@ -5187,7 +5187,7 @@ ul.trusted-tabs li h1 {
     width: 33.33%;
     height: 380px;
     border-bottom: none;
-    border: 1px solid #e4e4e4;
+    /*border: 1px solid #e4e4e4;*/
     overflow: hidden;
     margin: 0 0 -1px -1px;
     padding: 20px 40px 40px 40px;
