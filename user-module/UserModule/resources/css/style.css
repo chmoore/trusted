@@ -650,7 +650,7 @@ website:            http://michaelguild13.wordpress.com/
 /* line 44, ../sass/partials/_navigation.scss */
 #footer-navbar .nav {
   font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
-  margin-left:50px;
+  margin-left:30px;
       margin-bottom: 40px;
     margin-top: 20px;
 }
@@ -664,7 +664,7 @@ website:            http://michaelguild13.wordpress.com/
   padding-bottom: 2rem;
   padding-left: 0px;
   padding-left: 0rem;
-      padding: 15px 15px;
+      padding: 15px 20px;
     border: none;
     color: #b2b3b3;
     font-size: 11px;
@@ -1219,7 +1219,7 @@ website:            http://michaelguild13.wordpress.com/
 }
 /* line 15, ../sass/modules/_calls-to-actions.scss */
 .cta h2, .cta .cta-title {
-  font-family: "GothamHTF-Book", arial, helvetica, sans-serif;
+  font-family: "GothamHTF-Bold", arial, helvetica, sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
 }
@@ -1462,7 +1462,7 @@ body.trusted-default-theme a:hover {
 }
 
 .copyright {
-    font-family: "GothamHTF-Medium", "GothamHTF-Book", arial, helvetica, sans-serif;
+    font-family: "GothamHTF-Book", "GothamHTF-Book", arial, helvetica, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
