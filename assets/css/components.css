@@ -5230,3 +5230,7 @@ grid-layout h6 {
 	font-size:14px;
 	font-family: 'gotham_htfmedium', Arial, sans-serif;
 }
+
+.item-wrap .no-left-pad {
+    height: 335px;
+}

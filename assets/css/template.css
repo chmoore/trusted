@@ -1547,10 +1547,10 @@ span.posted-on {
   padding-right: 0;
 }
 
-.item-wrap .col-sm-3:last-child {
+/*.item-wrap .col-sm-3:last-child {
   padding: 0;
 }
-
+*/
 
 .testimonial .span4:last child {
   padding-right: 0!important;
