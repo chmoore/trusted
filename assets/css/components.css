@@ -4569,6 +4569,14 @@ ul.pagination input.rounded {
     line-height: 18px;
     color: #404040;
   }
+  
+  .reg-lead {
+    margin-top: 120px;
+    background: #fff;
+    height: auto;
+    position: relative;
+    width: auto;
+}
   .retailer-col {
        -moz-column-count: 2;
        -moz-column-gap: 2%;
