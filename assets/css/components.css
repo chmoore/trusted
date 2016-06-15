@@ -3471,8 +3471,8 @@ fieldset p {
   height: auto;
   position: relative;
   max-width: 1420px;
-  margin-left:0;
-  margin-right:0;
+/*  margin-left:0;
+  margin-right:0;*/
 }
 
 .brand-lead .col-sm-6 {
