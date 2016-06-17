@@ -351,8 +351,8 @@ body,
       }
 
       .no-pad {
-          padding-left: 0;
-          padding-right: 0
+          /*padding-left: 0;
+          padding-right: 0*/
       }
 
       .headline h1:before {
@@ -924,4 +924,8 @@ ul.trusted-tabs li {
     padding: 0;
 }
 
+.no-pad {
+    padding-left: 0;
+    padding-right: 0;
+}
 }
