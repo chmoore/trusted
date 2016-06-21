@@ -269,11 +269,18 @@
             </div>
             <div class="item-sort">
               <label for="sort">Sort: </label>
-              <select id="select-input" name="brandselect">
+              <select id="price-input" name="priceselect">
                 <option selected>Highest Price</option>
                 <option value="60">Lowest Price</option>
               </select>
-            </div>
+              </div>
+              <div class="view-sort">
+               <a href="" id="list-view" class="list-main">
+        <span class="list-icon"></span>&nbsp;List</a>
+        <a href="" id="grid-view" class="grid-main">
+        <span class="grid-icon"></span>&nbsp;Grid</a>
+        </div>
+            
             <!--<a href="brand-results.html" id="list-view" class=""> <span class="list-icon"></span>&nbsp;List</a> <a href="brand-results-grid.html" id="grid-view" class=""> <span class="grid-icon"></span>&nbsp;Grid</a>-->
             </div>
         </div>
@@ -284,7 +291,7 @@
      <div class="divider single-line-side"></div>
 </div>
 </div>
-<div class="grid-layout">
+<div id="searchgrid" class="">
       <div class="col-xs-12 item-div">
         <div class="col-xs-4 no-left-pad">
           <div class="item-prod"> <a href="item-display.html"> <img src="assets/images/godard-sm.jpg" alt=""> </a> </div>
@@ -615,6 +622,19 @@ $(document).click(function() {
     });
 
 	  </script>
+      <script>
+        $(".grid-main").click(function(){
+
+             $("#searchgrid").addClass("grid-layout");
+
+        });
+		$(".list-main").click(function(){
+
+             $("#searchgrid").removeClass("grid-layout");
+
+        });
+
+    </script>
     
 </body>
 </html>
