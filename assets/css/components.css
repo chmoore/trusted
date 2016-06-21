@@ -5207,6 +5207,8 @@ ul.trusted-tabs li h1 {
 
 .grid-layout .col-xs-8 {
 	width:100%;
+	border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 20px;
 }
 
 .grid-layout h4 {
