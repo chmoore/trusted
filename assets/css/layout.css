@@ -1893,3 +1893,12 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
 	  background-color: #efefef;
 	  padding:20px;
 }
+
+.restricted-div a {
+	    color: #08c!important;
+    font-family: 'gotham_htfbold', Arial, sans-serif;
+}
+
+.restricted-div i {
+	margin-right:10px;
+}
