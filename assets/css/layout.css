@@ -1889,3 +1889,7 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
 .call-hours {
   font-size: 12px;
 }
+.restricted-div {
+	  background-color: #efefef;
+	  padding:20px;
+}
