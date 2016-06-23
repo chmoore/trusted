@@ -4689,6 +4689,9 @@ ul.pagination input.rounded {
   ul.trusted-tabs li {
     width: 100%;
   }
+  .item-wrap .no-left-pad {
+    height: auto;
+}
 }
 
 @media (max-width: 480px) {
