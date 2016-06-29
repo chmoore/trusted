@@ -5312,3 +5312,7 @@ grid-layout h6 {
     margin-top: 10px;
     margin-bottom: 5px;
 }
+.title-large {
+	font: 16px 'gotham_htfbold', Arial, sans-serif!important;
+	text-transform:uppercase;
+}
