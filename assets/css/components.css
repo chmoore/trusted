@@ -5304,3 +5304,11 @@ grid-layout h6 {
 	list-style:none; 
 	margin-left: -25px;
 }
+.restricted-div-sm {
+	text-transform:uppercase;
+	font: 10px 'gotham_htfbold', Arial, sans-serif!important;
+	line-height:16px;
+    margin-left: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
