@@ -1805,6 +1805,7 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
   width: 100%;
   clear: both;
   border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
   margin-top: 5px;
   padding: 15px 0;
 }
