@@ -5307,3 +5307,7 @@ grid-layout h6 {
    border: 2px solid #504e4e;
    color:#504e4e;
 }
+
+.etitle-text li {
+	list-style:none;
+}
