@@ -5309,5 +5309,6 @@ grid-layout h6 {
 }
 
 .etitle-text li {
-	list-style:none;
+	list-style:none; 
+	margin-left: -25px;
 }
