@@ -3132,6 +3132,7 @@ inherited from button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-butt
   font: 14px 'gotham_htfbook', Arial, sans-serif;
   color: #000;
   letter-spacing: 0;
+  line-height: 22px;
 }
 .retail-text {
   margin-bottom: 20px;
@@ -4690,7 +4691,12 @@ ul.pagination input.rounded {
     width: 100%;
   }
   .item-wrap .no-left-pad {
-    height: auto;
+    height: auto!important;
+}
+.product-content {
+    position: relative;
+    margin-bottom: 20px;
+    clear: both;
 }
 }
 
