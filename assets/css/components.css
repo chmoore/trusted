@@ -98,6 +98,32 @@ a.accordion-item {
 }
 /* =Toggle
    ========================================================================== */
+   
+   .eTitles {
+  border-top: 1px solid #e1e1e1;
+  color: #232323;
+  display: inline-block;
+  font-family: gotham_htfmedium,Arial,sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  padding: 15px 35px 0 0;
+  position: relative;
+  width: 100%;
+}
+.etitle-text ul {
+  list-style-type: none;
+  margin-bottom: 0px
+}
+.etitle-text .spec-link {
+  margin-top: 0px;
+}
+.reqEtitle {
+  display: inline-block;
+  margin-top: 20px;
+  position: relative;
+}
 
 .toggle {
   margin-bottom: 50px;
@@ -5321,4 +5347,12 @@ grid-layout h6 {
 .title-large {
 	font: 16px 'gotham_htfbold', Arial, sans-serif!important;
 	text-transform:uppercase;
+}
+
+input[type=checkbox] {
+	float:left;
+}
+
+input[type=checkbox]+label, input[type=radio]+label {
+    display: block!important;
 }
