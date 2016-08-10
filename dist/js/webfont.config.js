@@ -1,7 +1,7 @@
 /*global WebFont */
 /*global "https://localhost/images/static35/global/" */
 
-var trustedAssetsURL = 'http://chmoore.github.io/trusted/' || '';
+var trustedAssetsURL = 'https://chmoore.github.io/trusted/' || '';
 
 WebFont.load({
   google: {
