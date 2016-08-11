@@ -586,38 +586,5 @@ $(document).ready(function(){
                 }
             }
 </script>
-<script type="text/javascript">
-    $(document).ready(function(){
-		
-		$("#loading").show();
-                    document.domain = 'trusted.com'; 
-                      $.ajax({
-                        type: "GET",
-                        url: "/articles/feed/",
-            //url will load https://www.example.com/articles/feed/
-                        dataType: "xml",
-                        success: parseXml
-});
-
-        function parse(document){
-            $(document).find("item").each(function(){
-                $("#posts").append(
-                    '<br /> Title: '+$(this).find('title').text()+
-                    '<br /> Author: '+$(this).find('link').text()+
-                    '</p>'
-                );
-            });
-        };
-
-        $.ajax({
-            url: 'authentic.trusted.com/articles/feed/', // name of file you want to parse
-            headers: {'X-Requested-With': 'XMLhttpsRequest'},
-            dataType: "xml",
-            success: parse,
-            error: function(){alert("Error: Something went wrong");}
-        });
-    });
-    </script>
-<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
 </body>
 </html>
