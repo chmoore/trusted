@@ -5356,3 +5356,19 @@ input[type=checkbox] {
 input[type=checkbox]+label, input[type=radio]+label {
     display: block!important;
 }
+
+#posts {
+	width:33%;
+	float:left;
+	height:200px;
+}
+
+#posts li {
+	display:none;
+}
+
+.post-title {
+	font-size:14px;
+	text-transform:uppercase;
+}
+
