@@ -4724,6 +4724,14 @@ ul.pagination input.rounded {
     margin-bottom: 20px;
     clear: both;
 }
+
+#posts li {
+	width:100%;
+	float:none;
+	height:auto;
+	list-style:none;
+	padding: 0 20px;
+}
 }
 
 @media (max-width: 480px) {
