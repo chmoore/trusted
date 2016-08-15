@@ -5369,6 +5369,11 @@ font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 	list-style:none;
 }
 
+#posts li:last-child {
+	    margin-right: 0!important;
+    float: right;
+}
+
 #posts p {
 	    font: 14px 'Noto Serif', Arial, sans-serif;
 		line-height:26px;
