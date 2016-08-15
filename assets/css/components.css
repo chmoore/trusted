@@ -5365,7 +5365,7 @@ font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 #posts li {
 	width:33%;
 	float:left;
-	height:200px;
+	height:auto;
 	list-style:none;
 }
 
