@@ -4726,8 +4726,8 @@ ul.pagination input.rounded {
 }
 
 #posts li {
-	width:100%;
-	float:none;
+	width:100%!important;
+	float:none!important;
 	height:auto;
 	list-style:none;
 	padding: 0 20px;
