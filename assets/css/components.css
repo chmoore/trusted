@@ -5358,13 +5358,15 @@ input[type=checkbox]+label, input[type=radio]+label {
 }
 
 #posts {
-	width:33%;
-	float:left;
-	height:200px;
+width:100%;
+font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 }
 
 #posts li {
-	display:none;
+	width:33%;
+	float:left;
+	height:200px;
+	list-style:none;
 }
 
 .post-title {
