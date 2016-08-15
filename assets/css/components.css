@@ -5382,11 +5382,13 @@ font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 #posts p {
 	    font: 14px 'Noto Serif', Arial, sans-serif;
 		line-height:26px;
+		padding-top:10px;
 }
 		
 
 .post-title {
 	font-size:14px;
 	text-transform:uppercase;
+    line-height: 20px;
 }
 
