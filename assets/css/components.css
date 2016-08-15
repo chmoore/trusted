@@ -5367,6 +5367,11 @@ font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 	float:left;
 	height:auto;
 	list-style:none;
+	padding: 0 20px;
+}
+
+#posts img {
+	width:100%;
 }
 
 #posts li:last-child {
