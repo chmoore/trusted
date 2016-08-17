@@ -4731,6 +4731,8 @@ ul.pagination input.rounded {
 	height:auto;
 	list-style:none;
 	padding: 0 20px;
+	border-bottom: 2px solid #000;
+    margin-bottom: 30px;
 }
 }
 
