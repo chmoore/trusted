@@ -256,7 +256,7 @@ nav {
   word-break: break-word;
   width: 90%;
   line-height: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .sidebar ul ul li {
@@ -1805,10 +1805,10 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
   width: 100%;
   clear: both;
   border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
+  /*border-bottom: 1px solid #e1e1e1;*/
   margin-top: 5px;
-  padding: 15px 0;
-  margin-bottom: 20px;
+  padding: 15px 0 0 0;
+  /*margin-bottom: 20px;*/
 }
 
 .bc-sm {
@@ -1906,4 +1906,18 @@ sf-menu-1 .sf-mega, .sf-menu-1 li.dropdown ul {
 
 .restricted-div i {
 	margin-right:10px;
+}
+
+.etitle-text ul {
+  padding-left: 25px;
+}
+
+#attachmentTxt span {
+  color: #08c !important;
+}
+
+#attachmentTxt p {
+  line-height: 18px;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
