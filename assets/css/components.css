@@ -1393,23 +1393,28 @@ a.yahoo-icon:hover {
   content: ' ';
   clear: both;
 }
-/* ==========================================================================
-   =Team Member
-   ========================================================================== */
+.post-wrap {
+	  margin: 0 auto;
+  text-align: left;
+}
 
-.team-member {
-  margin-bottom: 30px;
-  text-align: center;
+.post-center {
+    margin: 20px auto;
+    /* float: none; */
+    clear: both;
+    text-align: center;
 }
-.team-member img {
+
+.post-wrap:after {
+  /* 1 */
+  visibility: hidden;
   display: block;
-  width: 100%;
-  margin-bottom: 50px;
+  height: 0;
+  font-size: 0;
+  content: ' ';
+  clear: both;
 }
-.team-member h6 {
-  color: #979797;
-  font-size: 13px;
-}
+
 /* ==========================================================================
    =Portfolio Item
    ========================================================================== */
