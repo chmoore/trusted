@@ -2586,12 +2586,15 @@ h6.gray-price {
 }
 #grid-view {
   font-size: 12px;
+    margin-right: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #ccc;
+  color:#ccc;
 }
 #list-view {
   font-size: 12px;
-  margin-right: 20px;
-  padding-right: 20px;
-  border-right: 1px solid #ccc;
+  margin-right: 40px;
+  color:#ccc;
 }
 /* Open state */
 .sb-search.sb-search-open, .no-js .sb-search {
@@ -5406,5 +5409,10 @@ font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 	font-size:14px;
 	text-transform:uppercase;
     line-height: 20px;
+}
+
+.grid-active {
+    color: #08c!important;
+    font: 13px 'gotham_htfbold', Arial, sans-serif;
 }
 
