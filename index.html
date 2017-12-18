@@ -590,13 +590,13 @@ $.ajax({
 			$(xml).find('item').each(function(index){
 			if( index < limit ){
 				var title = $(this).find('title').text();
-				var title = $(this).find('image').text();
+				var image = $(this).find('image').text();
 				var url = $(this).find('link').text();
 				var pubDate = $(this).find('pubDate').text();
           var excerpt = $(this).find('description').text();
           var featured = $(this).find('featured').text();
           var content = $(this).find('content\\:encoded, encoded').text();
-				$('<li></li>').html('<a href="'+url+'">'+image+'<div class="post-title">'+title+'</div><br><p>'+featured+'</p></a>').appendTo(contain);
+				$('<li></li>').html('<a href="'+url+'">'+image+excerpt+'<div class="post-title">'+title+'</div><br><p>'+featured+'</p></a>').appendTo(contain);
 				return; 
 			}  
  
