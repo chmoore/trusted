@@ -596,7 +596,7 @@ $.ajax({
           var excerpt = $(this).find('description').text();
           var featured = $(this).find('featured').text();
           var content = $(this).find('content\\:encoded, encoded').text();
-				$('<li></li>').html('<a href="'+url+'"><div class="post-title">'+image+title+'</div><br><p>'+featured+excerpt+'</p></a>').appendTo(contain);
+				$('<li></li>').html('<a href="'+url+'"><div class="post-image">'+image+'</div><div class="post-title">'+title+'</div><br><p>'+featured+excerpt+'</p></a>').appendTo(contain);
 				return; 
 			}  
  
