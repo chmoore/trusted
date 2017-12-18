@@ -5381,11 +5381,13 @@ font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 }
 
 #posts li {
-	width:33%;
+	width:30%;
 	float:left;
 	height:auto;
 	list-style:none;
 	padding: 0 20px;
+	border: 1px solid #e1e1e1;
+	margin-right:20px;
 }
 
 #posts img {
@@ -5394,8 +5396,8 @@ font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 }
 
 #posts li:last-child {
-	    margin-right: 0!important;
-    float: right;
+	   /* margin-right: 0!important;
+    float: right;*/
 }
 
 #posts p {
@@ -5409,6 +5411,7 @@ font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 	font-size:14px;
 	text-transform:uppercase;
     line-height: 20px;
+	margin-top:20px;
 }
 
 .grid-active {
