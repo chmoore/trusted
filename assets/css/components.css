@@ -5407,10 +5407,15 @@ font: 14px 'gotham_htfbold', Arial, sans-serif!important;
 }
 		
 .post-title {
-	font-size:14px;
+	/*font-size:14px;
 	text-transform:uppercase;
     line-height: 20px;
-	margin-top:20px;
+	margin-top:20px;*/
+    font-size: 18px;
+    /* text-transform: uppercase; */
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: -15px!important;
 }
 
 .grid-active {
