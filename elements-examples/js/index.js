@@ -1,7 +1,5 @@
 (function() {
   "use strict";
-  
-var stripe = Stripe('pk_test_x7uftfLyZZnNwe9ci6k1hylo');
 
 function registerElements(elements, exampleName) {
   var formClass = '.' + exampleName;
