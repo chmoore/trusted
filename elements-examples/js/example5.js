@@ -3,12 +3,7 @@
   
   var stripe = Stripe('pk_test_x7uftfLyZZnNwe9ci6k1hylo');
 
-  var elements = stripe.elements({
-    // Stripe's examples are localized to specific languages, but if
-    // you wish to have Elements automatically detect your user's locale,
-    // use `locale: 'auto'` instead.
-    locale: window.__exampleLocale
-  });
+  var elements = stripe.elements();
 
   /**
    * Card Element
