@@ -1,5 +1,6 @@
-'use strict';
-
+(function() {
+  "use strict";
+  
 var stripe = Stripe('pk_test_x7uftfLyZZnNwe9ci6k1hylo');
 
 function registerElements(elements, exampleName) {
@@ -123,3 +124,4 @@ function registerElements(elements, exampleName) {
     example.classList.remove('submitted');
   });
 }
+})();
