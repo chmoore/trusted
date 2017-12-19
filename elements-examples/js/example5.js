@@ -1,7 +1,7 @@
 (function() {
   "use strict";
   
-  var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+  var stripe = Stripe('pk_test_x7uftfLyZZnNwe9ci6k1hylo');
 
   var elements = stripe.elements({
     // Stripe's examples are localized to specific languages, but if
@@ -18,7 +18,7 @@
     style: {
       base: {
         iconColor: "#999",
-        color: "#fff",
+        color: "#000",
         fontWeight: 400,
         fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
         fontSize: "15px",
@@ -28,12 +28,12 @@
           color: "#ccc"
         },
         ":-webkit-autofill": {
-          color: "#fce883"
+          color: "#999"
         }
       },
       invalid: {
-        iconColor: "#FFC7EE",
-        color: "#FFC7EE"
+        iconColor: "#eb1c26",
+        color: "#eb1c26"
       }
     }
   });
