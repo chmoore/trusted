@@ -101,7 +101,7 @@
 
 .example.example5 input:-webkit-autofill,
 .example.example5 select:-webkit-autofill {
-  -webkit-text-fill-color: #fce883;
+  -webkit-text-fill-color: #999;
   transition: background-color 100000000s;
   -webkit-animation: 1ms void-animation-out;
 }
@@ -150,7 +150,7 @@
 }
 
 .example.example5 .error svg .base {
-  fill: #fff;
+  fill: #000;
 }
 
 .example.example5 .error svg .glyph {
@@ -158,7 +158,7 @@
 }
 
 .example.example5 .error .message {
-  color: #fff;
+  color: #000;
 }
 
 .example.example5 .success .icon .border {
@@ -166,11 +166,11 @@
 }
 
 .example.example5 .success .icon .checkmark {
-  stroke: #fff;
+  stroke: #000;
 }
 
 .example.example5 .success .title {
-  color: #fff;
+  color: #000;
 }
 
 .example.example5 .success .message {
@@ -178,5 +178,5 @@
 }
 
 .example.example5 .success .reset path {
-  fill: #fff;
+  fill: #000;
 }
